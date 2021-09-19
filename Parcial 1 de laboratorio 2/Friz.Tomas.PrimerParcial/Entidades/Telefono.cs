@@ -8,6 +8,11 @@ namespace Entidades
 {
     public class Telefono
     {
+        string id;
+        string tipo;
+        string marca;
+        double costo;
+
 
     }
 }
