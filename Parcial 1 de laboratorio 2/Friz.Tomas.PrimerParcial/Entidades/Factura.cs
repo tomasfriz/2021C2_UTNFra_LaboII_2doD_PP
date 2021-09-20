@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public abstract class Usuario 
+    public sealed class Factura
     {
 
     }

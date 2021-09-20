@@ -8,11 +8,28 @@ namespace Entidades
 {
     public class Computadora
     {
-        string id;
-        string software;
-        string periferico;
-        string juegos;
-        string hardware;
-        double costo;
+        private string id;
+        private Software software;
+        private Periferico periferico;
+        private Juego juegos;
+        private Hardware hardware;
+        private double costo;
+
+        public Computadora(string id, Software software, Periferico periferico, Juego juegos, Hardware hardware, double costo)
+        {
+            this.id = id;
+            this.software = software;
+            this.periferico = periferico;
+            this.juegos = juegos;
+            this.hardware = hardware;
+            this.costo = costo;
+        }
+
+        public string Id { get => id; set => id = value; }
+        public Software Software { get => software; set => software = value; }
+        public Periferico Periferico { get => periferico; set => periferico = value; }
+        public Juego Juegos { get => juegos; set => juegos = value; }
+        public Hardware Hardware { get => hardware; set => hardware = value; }
+        public double Costo { get => costo; set => costo = value; }
     }
 }
