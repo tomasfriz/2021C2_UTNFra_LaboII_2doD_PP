@@ -37,20 +37,20 @@ namespace Cibercafe_ElVicio
             clientes[2] = new Cliente();
             clientes[2].Dni = 36897132;
             clientes[2].Nombre = "Belén";
-            clientes[2].Apellido = "Friz";
+            clientes[2].Apellido = "Trinidad";
             clientes[2].Edad = 16;
 
             clientes[3] = new Cliente();
             clientes[3].Dni = 34067132;
             clientes[3].Nombre = "Mauricio";
-            clientes[3].Apellido = "Cerizza";
+            clientes[3].Apellido = "Prieto";
             clientes[3].Edad = 35;
 
             clientes[4] = new Cliente();
             clientes[4].Dni = 27643934;
             clientes[4].Nombre = "Brisa";
             clientes[4].Apellido = "Catania";
-            clientes[4].Edad = 17;
+            clientes[4].Edad = 76;
 
             dgvEspera.DataSource = clientes;
         }
@@ -58,7 +58,7 @@ namespace Cibercafe_ElVicio
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está Seguro que Desea Salir, cerraras todas las ventanas abiertas?", "Cibercafe El Vicio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está Seguro que Desea Salir, cerraras todas las ventanas abiertas?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -66,13 +66,14 @@ namespace Cibercafe_ElVicio
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones", "Cibercafe El Vicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MessageBox.Show("El boton 'Cerrar' te preguntara si deseas cerrar. 'SI' cerrara la aplicacion, incluyendo las ventanas abiertas. 'NO' regresaras al menu principal", "Cibercafe El Vicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones\n" +
+                "-El boton 'Cerrar' te preguntara si deseas cerrar. 'SI' cerrara la aplicacion, incluyendo las ventanas abiertas. 'NO' regresaras al menu principal\n" +
+                "-El datagridview te mostrara lo clientes en espera a tener una computadora o telefono y desapareceran de la lista si ya fueron atendidos\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FrmCibercafe_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult msj = MessageBox.Show("¿Seguro de querer salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult msj = MessageBox.Show("¿Seguro de querer salir?", "Saliendo.....", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             e.Cancel = msj == DialogResult.No;
         }
 

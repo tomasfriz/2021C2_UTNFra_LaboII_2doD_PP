@@ -8,22 +8,65 @@ namespace Entidades
 {
     public class Telefono
     {
-        private string id;
         private Tipo tipo;
         private Marcas marca;
         private double costo;
 
-        public Telefono(string id, Tipo tipo, Marcas marca, double costo)
+        private string[] id = new string[5]
         {
-            this.id = id;
+            "T01", "T02", "T03", "T04", "T05"
+        };
+
+        public Telefono(Tipo tipo, Marcas marca, double costo)
+        {
             this.tipo = tipo;
             this.marca = marca;
             this.costo = costo;
         }
 
-        public string Id { get => id; set => id = value; }
-        public Tipo Tipo { get => tipo; set => tipo = value; }
-        public Marcas Marca { get => marca; set => marca = value; }
-        public double Costo { get => costo; set => costo = value; }
+        public string this[int index]
+        {
+            get
+            {
+                return id[index];
+            }
+            set
+            {
+                id[index] = value;
+            }
+        }
+        public Tipo Tipo 
+        {
+            get
+            {
+                return tipo;
+            }
+            set
+            {
+                tipo = value;
+            }
+        }
+        public Marcas Marca 
+        {
+            get
+            {
+                return marca;
+            }
+            set
+            {
+                marca = value;
+            }
+        }
+        public double Costo 
+        {
+            get
+            {
+                return costo;
+            }
+            set
+            {
+                costo = value;
+            }
+        }
     }
 }
