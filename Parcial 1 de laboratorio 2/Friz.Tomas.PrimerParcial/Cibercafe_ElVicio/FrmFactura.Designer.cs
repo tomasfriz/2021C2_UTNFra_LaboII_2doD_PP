@@ -37,6 +37,7 @@ namespace Cibercafe_ElVicio
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 311);
             this.Name = "FrmFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFactura";
             this.ResumeLayout(false);
 

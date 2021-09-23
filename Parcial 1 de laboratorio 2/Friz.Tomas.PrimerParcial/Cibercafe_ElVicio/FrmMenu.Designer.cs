@@ -40,6 +40,12 @@ namespace Cibercafe_ElVicio
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvEspera = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnEspecifClientes = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnAsigMaquina = new System.Windows.Forms.Button();
+            this.btnAsigCabina = new System.Windows.Forms.Button();
+            this.btnMostMaquina = new System.Windows.Forms.Button();
+            this.btnMostCabina = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspera)).BeginInit();
             this.SuspendLayout();
@@ -111,11 +117,53 @@ namespace Cibercafe_ElVicio
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
+            // btnEspecifClientes
+            // 
+            resources.ApplyResources(this.btnEspecifClientes, "btnEspecifClientes");
+            this.btnEspecifClientes.Name = "btnEspecifClientes";
+            this.btnEspecifClientes.UseVisualStyleBackColor = true;
+            // 
+            // btnHistorial
+            // 
+            resources.ApplyResources(this.btnHistorial, "btnHistorial");
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.UseVisualStyleBackColor = true;
+            // 
+            // btnAsigMaquina
+            // 
+            resources.ApplyResources(this.btnAsigMaquina, "btnAsigMaquina");
+            this.btnAsigMaquina.Name = "btnAsigMaquina";
+            this.btnAsigMaquina.UseVisualStyleBackColor = true;
+            // 
+            // btnAsigCabina
+            // 
+            resources.ApplyResources(this.btnAsigCabina, "btnAsigCabina");
+            this.btnAsigCabina.Name = "btnAsigCabina";
+            this.btnAsigCabina.UseVisualStyleBackColor = true;
+            // 
+            // btnMostMaquina
+            // 
+            resources.ApplyResources(this.btnMostMaquina, "btnMostMaquina");
+            this.btnMostMaquina.Name = "btnMostMaquina";
+            this.btnMostMaquina.UseVisualStyleBackColor = true;
+            // 
+            // btnMostCabina
+            // 
+            resources.ApplyResources(this.btnMostCabina, "btnMostCabina");
+            this.btnMostCabina.Name = "btnMostCabina";
+            this.btnMostCabina.UseVisualStyleBackColor = true;
+            // 
             // FrmMenu
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnMostCabina);
+            this.Controls.Add(this.btnMostMaquina);
+            this.Controls.Add(this.btnAsigCabina);
+            this.Controls.Add(this.btnAsigMaquina);
+            this.Controls.Add(this.btnHistorial);
+            this.Controls.Add(this.btnEspecifClientes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCerrar);
@@ -145,6 +193,12 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvEspera;
+        private System.Windows.Forms.Button btnEspecifClientes;
+        private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Button btnAsigMaquina;
+        private System.Windows.Forms.Button btnAsigCabina;
+        private System.Windows.Forms.Button btnMostMaquina;
+        private System.Windows.Forms.Button btnMostCabina;
     }
 }
 
