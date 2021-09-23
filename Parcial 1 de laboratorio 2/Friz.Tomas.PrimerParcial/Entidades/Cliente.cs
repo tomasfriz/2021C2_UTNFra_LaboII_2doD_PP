@@ -8,9 +8,15 @@ namespace Entidades
         private string nombre;
         private string apellido;
         private int edad;
+        private string equipo;
+
 
         public Cliente()
         {
+        }
+        public Cliente(int dni, string nombre, string apellido, int edad, string equipo) : this(dni, nombre, apellido, edad)
+        {
+            this.equipo = equipo;
         }
         public Cliente(int dni, string nombre, string apellido, int edad)
         {
@@ -18,6 +24,7 @@ namespace Entidades
             this.nombre = nombre;
             this.apellido = apellido;
             this.edad = edad;
+
         }
 
         public int Dni
@@ -62,6 +69,17 @@ namespace Entidades
             set 
             { 
                 edad = value; 
+            }
+        }
+        public string Equipo
+        {
+            get
+            {
+                return equipo;
+            }
+            set
+            {
+                equipo = value;
             }
         }
     }

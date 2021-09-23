@@ -27,30 +27,35 @@ namespace Cibercafe_ElVicio
             clientes[0].Nombre = "Tomás";
             clientes[0].Apellido = "Friz";
             clientes[0].Edad = 22;
+            clientes[0].Equipo = "Computadora";
 
             clientes[1] = new Cliente();
             clientes[1].Dni = 31456980;
             clientes[1].Nombre = "Gustavo";
             clientes[1].Apellido = "Doria";
             clientes[1].Edad = 53;
+            clientes[1].Equipo = "Computadora";
 
             clientes[2] = new Cliente();
             clientes[2].Dni = 36897132;
             clientes[2].Nombre = "Belén";
             clientes[2].Apellido = "Trinidad";
             clientes[2].Edad = 16;
+            clientes[2].Equipo = "Telefono";
 
             clientes[3] = new Cliente();
             clientes[3].Dni = 34067132;
             clientes[3].Nombre = "Mauricio";
             clientes[3].Apellido = "Prieto";
             clientes[3].Edad = 35;
+            clientes[3].Equipo = "Computadora";
 
             clientes[4] = new Cliente();
             clientes[4].Dni = 27643934;
             clientes[4].Nombre = "Brisa";
             clientes[4].Apellido = "Catania";
             clientes[4].Edad = 76;
+            clientes[4].Equipo = "Telefono";
 
             dgvEspera.DataSource = clientes;
         }
