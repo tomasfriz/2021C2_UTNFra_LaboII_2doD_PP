@@ -103,14 +103,15 @@ namespace Cibercafe_ElVicio
             // dgvEspera
             // 
             this.dgvEspera.AllowUserToAddRows = false;
-            this.dgvEspera.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEspera.AllowUserToDeleteRows = false;
+            this.dgvEspera.AllowUserToOrderColumns = true;
+            resources.ApplyResources(this.dgvEspera, "dgvEspera");
             this.dgvEspera.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEspera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgvEspera, "dgvEspera");
             this.dgvEspera.Name = "dgvEspera";
+            this.dgvEspera.ReadOnly = true;
             this.dgvEspera.RowTemplate.Height = 25;
             this.dgvEspera.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEspera.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEspera_CellFormatting);
             // 
             // label4
             // 
@@ -122,36 +123,42 @@ namespace Cibercafe_ElVicio
             resources.ApplyResources(this.btnEspecifClientes, "btnEspecifClientes");
             this.btnEspecifClientes.Name = "btnEspecifClientes";
             this.btnEspecifClientes.UseVisualStyleBackColor = true;
+            this.btnEspecifClientes.Click += new System.EventHandler(this.btnEspecifClientes_Click);
             // 
             // btnHistorial
             // 
             resources.ApplyResources(this.btnHistorial, "btnHistorial");
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.UseVisualStyleBackColor = true;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // btnAsigMaquina
             // 
             resources.ApplyResources(this.btnAsigMaquina, "btnAsigMaquina");
             this.btnAsigMaquina.Name = "btnAsigMaquina";
             this.btnAsigMaquina.UseVisualStyleBackColor = true;
+            this.btnAsigMaquina.Click += new System.EventHandler(this.btnAsigMaquina_Click);
             // 
             // btnAsigCabina
             // 
             resources.ApplyResources(this.btnAsigCabina, "btnAsigCabina");
             this.btnAsigCabina.Name = "btnAsigCabina";
             this.btnAsigCabina.UseVisualStyleBackColor = true;
+            this.btnAsigCabina.Click += new System.EventHandler(this.btnAsigCabina_Click);
             // 
             // btnMostMaquina
             // 
             resources.ApplyResources(this.btnMostMaquina, "btnMostMaquina");
             this.btnMostMaquina.Name = "btnMostMaquina";
             this.btnMostMaquina.UseVisualStyleBackColor = true;
+            this.btnMostMaquina.Click += new System.EventHandler(this.btnMostMaquina_Click);
             // 
             // btnMostCabina
             // 
             resources.ApplyResources(this.btnMostCabina, "btnMostCabina");
             this.btnMostCabina.Name = "btnMostCabina";
             this.btnMostCabina.UseVisualStyleBackColor = true;
+            this.btnMostCabina.Click += new System.EventHandler(this.btnMostCabina_Click);
             // 
             // FrmMenu
             // 

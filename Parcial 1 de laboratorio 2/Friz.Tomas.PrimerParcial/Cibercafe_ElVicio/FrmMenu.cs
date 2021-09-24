@@ -21,41 +21,11 @@ namespace Cibercafe_ElVicio
             lblFecha.Text = DateTime.Now.ToShortDateString();
             
             Cliente[] clientes = new Cliente[5];
-
-            clientes[0] = new Cliente();
-            clientes[0].Dni = 41918909;
-            clientes[0].Nombre = "Tomás";
-            clientes[0].Apellido = "Friz";
-            clientes[0].Edad = 22;
-            clientes[0].Equipo = "Computadora";
-
-            clientes[1] = new Cliente();
-            clientes[1].Dni = 31456980;
-            clientes[1].Nombre = "Gustavo";
-            clientes[1].Apellido = "Doria";
-            clientes[1].Edad = 53;
-            clientes[1].Equipo = "Computadora";
-
-            clientes[2] = new Cliente();
-            clientes[2].Dni = 36897132;
-            clientes[2].Nombre = "Belén";
-            clientes[2].Apellido = "Trinidad";
-            clientes[2].Edad = 16;
-            clientes[2].Equipo = "Telefono";
-
-            clientes[3] = new Cliente();
-            clientes[3].Dni = 34067132;
-            clientes[3].Nombre = "Mauricio";
-            clientes[3].Apellido = "Prieto";
-            clientes[3].Edad = 35;
-            clientes[3].Equipo = "Computadora";
-
-            clientes[4] = new Cliente();
-            clientes[4].Dni = 27643934;
-            clientes[4].Nombre = "Brisa";
-            clientes[4].Apellido = "Catania";
-            clientes[4].Edad = 76;
-            clientes[4].Equipo = "Telefono";
+            clientes[0] = new Cliente(41918909, "Tomás", "Friz", 22, "Computadora");
+            clientes[1] = new Cliente(31456980, "Gustavo", "Doria", 53, "Computadora");
+            clientes[2] = new Cliente(36897132, "Belén", "Trinidad", 16, "Telefono");
+            clientes[3] = new Cliente(34067132, "Mauricio", "Prieto", 35, "Computadora");
+            clientes[4] = new Cliente(27643934, "Brisa", "Catania", 76, "Telefono");
 
             dgvEspera.DataSource = clientes;
         }
@@ -82,48 +52,41 @@ namespace Cibercafe_ElVicio
             e.Cancel = msj == DialogResult.No;
         }
 
-        private void dgvEspera_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        
+        private void btnEspecifClientes_Click(object sender, EventArgs e)
         {
-            if ((dgvEspera.Rows[e.RowIndex].DataBoundItem != null) && (dgvEspera.Columns[e.ColumnIndex].DataPropertyName.Contains(".")))
-            {
-                e.Value = VincularPropiedad(dgvEspera.Rows[e.RowIndex].DataBoundItem, dgvEspera.Columns[e.ColumnIndex].DataPropertyName);
-            }    
+            FrmEspecificaionClientes frmEspecificaionClientes = new FrmEspecificaionClientes();
+            frmEspecificaionClientes.Show();
         }
 
-        private string VincularPropiedad(object propiedad, string nomPropiedad)
+        private void btnAsigMaquina_Click(object sender, EventArgs e)
         {
-            string retValue;
+            FrmComputadoras frmComputadoras = new FrmComputadoras();
+            frmComputadoras.Show();
+        }
 
-            retValue = "";
+        private void btnAsigCabina_Click(object sender, EventArgs e)
+        {
+            FrmTelefonos frmTelefonos = new FrmTelefonos();
+            frmTelefonos.Show();
+        }
 
-            if (nomPropiedad.Contains("."))
-            {
-                PropertyInfo[] arrayProperties;
-                string leftPropertyName;
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            FrmHistorial frmHistorial = new FrmHistorial();
+            frmHistorial.Show();
+        }
 
-                leftPropertyName = nomPropiedad.Substring(0, nomPropiedad.IndexOf("."));
-                arrayProperties = propiedad.GetType().GetProperties();
+        private void btnMostMaquina_Click(object sender, EventArgs e)
+        {
+            FrmMostrarComputadora frmMostrarComputadora = new FrmMostrarComputadora();
+            frmMostrarComputadora.Show();
+        }
 
-                foreach (PropertyInfo propertyInfo in arrayProperties)
-                {
-                    if (propertyInfo.Name == leftPropertyName)
-                    {
-                        retValue = VincularPropiedad(propertyInfo.GetValue(propiedad, null), nomPropiedad.Substring(nomPropiedad.IndexOf(".") + 1));
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                Type propertyType;
-                PropertyInfo propertyInfo;
-
-                propertyType = propiedad.GetType();
-                propertyInfo = propertyType.GetProperty(nomPropiedad);
-                retValue = propertyInfo.GetValue(propiedad, null).ToString();
-            }
-
-            return retValue;
+        private void btnMostCabina_Click(object sender, EventArgs e)
+        {
+            FrmMostrarTelefono frmMostrarTelefono = new FrmMostrarTelefono();
+            frmMostrarTelefono.Show();
         }
     }
 }

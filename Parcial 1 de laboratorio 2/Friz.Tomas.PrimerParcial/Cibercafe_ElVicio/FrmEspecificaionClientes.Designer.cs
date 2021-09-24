@@ -62,13 +62,19 @@ namespace Cibercafe_ElVicio
             // dgvMostrar
             // 
             this.dgvMostrar.AllowUserToAddRows = false;
+            this.dgvMostrar.AllowUserToDeleteRows = false;
+            this.dgvMostrar.AllowUserToOrderColumns = true;
+            this.dgvMostrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMostrar.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMostrar.GridColor = System.Drawing.SystemColors.Control;
             this.dgvMostrar.Location = new System.Drawing.Point(0, 0);
             this.dgvMostrar.Name = "dgvMostrar";
+            this.dgvMostrar.ReadOnly = true;
             this.dgvMostrar.RowTemplate.Height = 25;
+            this.dgvMostrar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMostrar.Size = new System.Drawing.Size(551, 275);
             this.dgvMostrar.TabIndex = 0;
             // 

@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace Cibercafe_ElVicio
 {
-    public partial class FrmComputadoras : Form
+    public partial class FrmMostrarTelefono : Form
     {
-        public FrmComputadoras()
+        public FrmMostrarTelefono()
         {
             InitializeComponent();
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
                 "-El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

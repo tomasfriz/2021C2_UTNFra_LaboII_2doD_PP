@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cibercafe_ElVicio
 {
-    public partial class FrmComputadoras : Form
+    public partial class FrmMostrarComputadora : Form
     {
-        public FrmComputadoras()
+        public FrmMostrarComputadora()
         {
             InitializeComponent();
         }

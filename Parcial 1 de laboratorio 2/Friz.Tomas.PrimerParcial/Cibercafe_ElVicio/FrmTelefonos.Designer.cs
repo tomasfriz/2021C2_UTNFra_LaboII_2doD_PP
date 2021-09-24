@@ -41,7 +41,6 @@ namespace Cibercafe_ElVicio
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnColgar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTelef)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +53,7 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.TabIndex = 16;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAyuda
             // 
@@ -63,6 +63,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.TabIndex = 15;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // dgvTelef
             // 
@@ -90,7 +91,7 @@ namespace Cibercafe_ElVicio
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(117, 206);
+            this.label2.Location = new System.Drawing.Point(165, 208);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(72, 18);
@@ -100,7 +101,7 @@ namespace Cibercafe_ElVicio
             // 
             // btnLlamar
             // 
-            this.btnLlamar.Location = new System.Drawing.Point(429, 228);
+            this.btnLlamar.Location = new System.Drawing.Point(477, 230);
             this.btnLlamar.Name = "btnLlamar";
             this.btnLlamar.Size = new System.Drawing.Size(75, 23);
             this.btnLlamar.TabIndex = 11;
@@ -109,35 +110,35 @@ namespace Cibercafe_ElVicio
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 226);
+            this.textBox1.Location = new System.Drawing.Point(165, 228);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(72, 23);
             this.textBox1.TabIndex = 29;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(195, 226);
+            this.textBox2.Location = new System.Drawing.Point(243, 228);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(72, 23);
             this.textBox2.TabIndex = 30;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(273, 226);
+            this.textBox3.Location = new System.Drawing.Point(321, 228);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(72, 23);
             this.textBox3.TabIndex = 31;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(351, 226);
+            this.textBox4.Location = new System.Drawing.Point(399, 228);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(72, 23);
             this.textBox4.TabIndex = 32;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(195, 206);
+            this.label1.Location = new System.Drawing.Point(243, 208);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(57, 18);
@@ -147,7 +148,7 @@ namespace Cibercafe_ElVicio
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(273, 205);
+            this.label3.Location = new System.Drawing.Point(321, 207);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(150, 18);
@@ -155,21 +156,11 @@ namespace Cibercafe_ElVicio
             this.label3.Text = "Numero Telefonico";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnColgar
-            // 
-            this.btnColgar.Location = new System.Drawing.Point(531, 228);
-            this.btnColgar.Name = "btnColgar";
-            this.btnColgar.Size = new System.Drawing.Size(75, 23);
-            this.btnColgar.TabIndex = 35;
-            this.btnColgar.Text = "Colgar";
-            this.btnColgar.UseVisualStyleBackColor = true;
-            // 
             // FrmTelefonos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 261);
-            this.Controls.Add(this.btnColgar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox4);
@@ -205,6 +196,5 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnColgar;
     }
 }

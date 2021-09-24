@@ -9,7 +9,10 @@ namespace Entidades
         private string apellido;
         private int edad;
         private string equipo;
-
+        private Periferico periferico;
+        private Hardware hardware;
+        private Software software;
+        private Juego juego;
 
         public Cliente()
         {
@@ -25,6 +28,14 @@ namespace Entidades
             this.apellido = apellido;
             this.edad = edad;
 
+        }
+
+        public Cliente(int dni, string nombre, string apellido, int edad, string equipo, Periferico periferico, Hardware hardware, Software software, Juego juego) : this(dni, nombre, apellido, edad, equipo)
+        {
+            this.periferico = periferico;
+            this.hardware = hardware;
+            this.software = software;
+            this.juego = juego;
         }
 
         public int Dni
@@ -80,6 +91,51 @@ namespace Entidades
             set
             {
                 equipo = value;
+            }
+        }
+
+        public Periferico Periferico
+        {
+            get
+            {
+                return periferico;
+            }
+            set
+            {
+                periferico = value;
+            }
+        }
+        public Hardware Hardware 
+        {
+            get
+            {
+                return hardware;
+            }
+            set
+            {
+                hardware = value;
+            }
+        }
+        public Software Software 
+        {
+            get
+            {
+                return software;
+            }
+            set
+            {
+                software = value;
+            }
+        }
+        public Juego Juego 
+        {
+            get
+            {
+               return juego;
+            }
+            set
+            {
+                juego = value;
             }
         }
     }
