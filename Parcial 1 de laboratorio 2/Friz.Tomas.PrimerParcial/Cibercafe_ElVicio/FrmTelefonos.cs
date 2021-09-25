@@ -13,6 +13,9 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmTelefonos : Form
     {
+        /// <summary>
+        /// Se encarga de hardcodear los datos de las computadoras.
+        /// </summary>
         public FrmTelefonos()
         {
             InitializeComponent();
@@ -25,12 +28,20 @@ namespace Cibercafe_ElVicio
 
             dgvTelef.DataSource = telefonos;
         }
-
+        /// <summary>
+        /// Sirve para cerrar la ventana.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// Sirve para orientar al usuario a saber que hace cada boton de la aplicacion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +

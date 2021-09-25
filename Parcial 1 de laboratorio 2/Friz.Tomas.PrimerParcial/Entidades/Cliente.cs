@@ -4,6 +4,7 @@ namespace Entidades
 {
     public class Cliente
     {
+        #region Atributos
         private int dni;
         private string nombre;
         private string apellido;
@@ -15,10 +16,22 @@ namespace Entidades
         private Juego juego;
         private Tipo tipo;
         private Marcas marca;
+        #endregion
 
+        #region Constructores
+        /// <summary>
+        /// Sobrecarga de constructor vacio.
+        /// </summary>
         public Cliente()
         {
         }
+        /// <summary>
+        /// Constructor para los datos de los clientes.
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="edad"></param>
         public Cliente(int dni, string nombre, string apellido, int edad)
         {
             this.dni = dni;
@@ -26,11 +39,30 @@ namespace Entidades
             this.apellido = apellido;
             this.edad = edad;
         }
+        /// <summary>
+        /// constructor para sobrecargar y asignar los equipos.
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="edad"></param>
+        /// <param name="equipo"></param>
         public Cliente(int dni, string nombre, string apellido, int edad, string equipo) : this(dni, nombre, apellido, edad)
         {
             this.equipo = equipo;
         }
-
+        /// <summary>
+        /// Constructor para sobrecargar y asignar los datos de las computadoras a los clientes.
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="edad"></param>
+        /// <param name="equipo"></param>
+        /// <param name="periferico"></param>
+        /// <param name="hardware"></param>
+        /// <param name="software"></param>
+        /// <param name="juego"></param>
         public Cliente(int dni, string nombre, string apellido, int edad, string equipo, Periferico periferico, Hardware hardware, Software software, Juego juego) : this(dni, nombre, apellido, edad, equipo)
         {
             this.periferico = periferico;
@@ -38,13 +70,24 @@ namespace Entidades
             this.software = software;
             this.juego = juego;
         }
-
+        /// <summary>
+        /// Constructor para sobrecargar y asignar los datos de los telefonos a los clientes.
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="edad"></param>
+        /// <param name="equipo"></param>
+        /// <param name="tipo"></param>
+        /// <param name="marca"></param>
         public Cliente(int dni, string nombre, string apellido, int edad, string equipo,Tipo tipo, Marcas marca) : this(dni, nombre, apellido, edad, equipo)
         {
             this.tipo = tipo;
             this.marca = marca;
         }
+        #endregion
 
+        #region Encapsulamiento
         public int Dni
         {
             get
@@ -128,7 +171,6 @@ namespace Entidades
                 return juego;
             }
         }
-
         public Tipo Tipo
         {
             get
@@ -151,5 +193,6 @@ namespace Entidades
                 marca = value;
             }
         }
+        #endregion
     }
 }
