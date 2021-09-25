@@ -10,8 +10,9 @@ namespace Entidades
     {
         private Software software;
         private Periferico periferico;
-        private Juego juegos;
+        private Juego juego;
         private Hardware hardware;
+        private string estado;
         private double costo;
 
         private string[] id = new string[10]
@@ -20,13 +21,21 @@ namespace Entidades
             "C06", "C07", "C08", "C09", "C10"
         };
 
-        public Computadora(Software software, Periferico periferico, Juego juegos, Hardware hardware, double costo)
+        public Computadora()
+        {
+        }
+
+        public Computadora(Software software, Periferico periferico, Juego juego, Hardware hardware)
         {
             this.software = software;
             this.periferico = periferico;
-            this.juegos = juegos;
+            this.juego = juego;
             this.hardware = hardware;
-            this.costo = costo;
+        }
+
+        public Computadora(Software software, Periferico periferico, Juego juego, Hardware hardware, string estado) : this(software, periferico, juego, hardware)
+        {
+            this.estado = estado;
         }
 
         public string this[int index]
@@ -35,16 +44,63 @@ namespace Entidades
             {
                 return id[index];
             }
+        }
+
+        public Periferico Periferico
+        {
+            get
+            {
+                return periferico;
+            }
             set
             {
-                id[index] = value;
+                periferico = value;
+            }
+        }
+        public Hardware Hardware
+        {
+            get
+            {
+                return hardware;
+            }
+            set
+            {
+                hardware = value;
+            }
+        }
+        public Software Software
+        {
+            get
+            {
+                return software;
+            }
+            set
+            {
+                software = value;
+            }
+        }
+        public Juego Juego
+        {
+            get
+            {
+                return juego;
+            }
+            set
+            {
+                juego = value;
             }
         }
 
-        public Software Software { get => software; set => software = value; }
-        public Periferico Periferico { get => periferico; set => periferico = value; }
-        public Juego Juegos { get => juegos; set => juegos = value; }
-        public Hardware Hardware { get => hardware; set => hardware = value; }
-        public double Costo { get => costo; set => costo = value; }
+        public string Estado 
+        {
+            get
+            { 
+                return estado; 
+            }
+            set
+            {
+                estado = value;
+            }
+        }
     }
 }

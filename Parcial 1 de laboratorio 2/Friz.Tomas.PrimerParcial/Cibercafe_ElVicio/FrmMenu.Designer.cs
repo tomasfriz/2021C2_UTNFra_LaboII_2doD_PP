@@ -40,12 +40,9 @@ namespace Cibercafe_ElVicio
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvEspera = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnEspecifClientes = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnAsigMaquina = new System.Windows.Forms.Button();
             this.btnAsigCabina = new System.Windows.Forms.Button();
-            this.btnMostMaquina = new System.Windows.Forms.Button();
-            this.btnMostCabina = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspera)).BeginInit();
             this.SuspendLayout();
@@ -105,11 +102,11 @@ namespace Cibercafe_ElVicio
             this.dgvEspera.AllowUserToAddRows = false;
             this.dgvEspera.AllowUserToDeleteRows = false;
             this.dgvEspera.AllowUserToOrderColumns = true;
-            resources.ApplyResources(this.dgvEspera, "dgvEspera");
             this.dgvEspera.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEspera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvEspera, "dgvEspera");
+            this.dgvEspera.MultiSelect = false;
             this.dgvEspera.Name = "dgvEspera";
-            this.dgvEspera.ReadOnly = true;
             this.dgvEspera.RowTemplate.Height = 25;
             this.dgvEspera.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
@@ -117,13 +114,6 @@ namespace Cibercafe_ElVicio
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            // 
-            // btnEspecifClientes
-            // 
-            resources.ApplyResources(this.btnEspecifClientes, "btnEspecifClientes");
-            this.btnEspecifClientes.Name = "btnEspecifClientes";
-            this.btnEspecifClientes.UseVisualStyleBackColor = true;
-            this.btnEspecifClientes.Click += new System.EventHandler(this.btnEspecifClientes_Click);
             // 
             // btnHistorial
             // 
@@ -146,31 +136,14 @@ namespace Cibercafe_ElVicio
             this.btnAsigCabina.UseVisualStyleBackColor = true;
             this.btnAsigCabina.Click += new System.EventHandler(this.btnAsigCabina_Click);
             // 
-            // btnMostMaquina
-            // 
-            resources.ApplyResources(this.btnMostMaquina, "btnMostMaquina");
-            this.btnMostMaquina.Name = "btnMostMaquina";
-            this.btnMostMaquina.UseVisualStyleBackColor = true;
-            this.btnMostMaquina.Click += new System.EventHandler(this.btnMostMaquina_Click);
-            // 
-            // btnMostCabina
-            // 
-            resources.ApplyResources(this.btnMostCabina, "btnMostCabina");
-            this.btnMostCabina.Name = "btnMostCabina";
-            this.btnMostCabina.UseVisualStyleBackColor = true;
-            this.btnMostCabina.Click += new System.EventHandler(this.btnMostCabina_Click);
-            // 
             // FrmMenu
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnMostCabina);
-            this.Controls.Add(this.btnMostMaquina);
             this.Controls.Add(this.btnAsigCabina);
             this.Controls.Add(this.btnAsigMaquina);
             this.Controls.Add(this.btnHistorial);
-            this.Controls.Add(this.btnEspecifClientes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCerrar);
@@ -200,12 +173,9 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvEspera;
-        private System.Windows.Forms.Button btnEspecifClientes;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnAsigMaquina;
         private System.Windows.Forms.Button btnAsigCabina;
-        private System.Windows.Forms.Button btnMostMaquina;
-        private System.Windows.Forms.Button btnMostCabina;
     }
 }
 

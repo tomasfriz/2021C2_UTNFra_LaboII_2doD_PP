@@ -31,13 +31,10 @@ namespace Cibercafe_ElVicio
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvCompu = new System.Windows.Forms.DataGridView();
-            this.cboxTemp = new System.Windows.Forms.ComboBox();
-            this.btnTemp = new System.Windows.Forms.Button();
             this.btnLibre = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnDesconectar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompu)).BeginInit();
             this.SuspendLayout();
@@ -51,41 +48,30 @@ namespace Cibercafe_ElVicio
             this.panel1.Controls.Add(this.dgvCompu);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(599, 362);
+            this.panel1.Size = new System.Drawing.Size(507, 362);
             this.panel1.TabIndex = 0;
             // 
             // dgvCompu
             // 
             this.dgvCompu.AllowUserToAddRows = false;
-            this.dgvCompu.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvCompu.AllowUserToDeleteRows = false;
+            this.dgvCompu.AllowUserToOrderColumns = true;
+            this.dgvCompu.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCompu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCompu.Location = new System.Drawing.Point(0, 0);
+            this.dgvCompu.MultiSelect = false;
             this.dgvCompu.Name = "dgvCompu";
+            this.dgvCompu.ReadOnly = true;
             this.dgvCompu.RowTemplate.Height = 25;
-            this.dgvCompu.Size = new System.Drawing.Size(595, 358);
+            this.dgvCompu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCompu.Size = new System.Drawing.Size(503, 358);
             this.dgvCompu.TabIndex = 0;
-            // 
-            // cboxTemp
-            // 
-            this.cboxTemp.FormattingEnabled = true;
-            this.cboxTemp.Location = new System.Drawing.Point(200, 399);
-            this.cboxTemp.Name = "cboxTemp";
-            this.cboxTemp.Size = new System.Drawing.Size(59, 23);
-            this.cboxTemp.TabIndex = 0;
-            // 
-            // btnTemp
-            // 
-            this.btnTemp.Location = new System.Drawing.Point(265, 399);
-            this.btnTemp.Name = "btnTemp";
-            this.btnTemp.Size = new System.Drawing.Size(75, 23);
-            this.btnTemp.TabIndex = 10;
-            this.btnTemp.Text = "Conectar";
-            this.btnTemp.UseVisualStyleBackColor = true;
             // 
             // btnLibre
             // 
-            this.btnLibre.Location = new System.Drawing.Point(367, 398);
+            this.btnLibre.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLibre.Location = new System.Drawing.Point(198, 380);
             this.btnLibre.Name = "btnLibre";
             this.btnLibre.Size = new System.Drawing.Size(75, 23);
             this.btnLibre.TabIndex = 11;
@@ -94,7 +80,8 @@ namespace Cibercafe_ElVicio
             // 
             // btnAyuda
             // 
-            this.btnAyuda.Location = new System.Drawing.Point(12, 398);
+            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAyuda.Location = new System.Drawing.Point(14, 380);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(75, 23);
             this.btnAyuda.TabIndex = 11;
@@ -104,7 +91,8 @@ namespace Cibercafe_ElVicio
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(536, 398);
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Location = new System.Drawing.Point(443, 380);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar.TabIndex = 12;
@@ -112,39 +100,27 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // label1
+            // btnDesconectar
             // 
-            this.label1.Location = new System.Drawing.Point(200, 377);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(140, 18);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Temporizador";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(367, 377);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(75, 18);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Libre";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDesconectar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDesconectar.Location = new System.Drawing.Point(279, 380);
+            this.btnDesconectar.Name = "btnDesconectar";
+            this.btnDesconectar.Size = new System.Drawing.Size(75, 23);
+            this.btnDesconectar.TabIndex = 13;
+            this.btnDesconectar.Text = "Desconectar";
+            this.btnDesconectar.UseVisualStyleBackColor = true;
             // 
             // FrmComputadoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 433);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(531, 410);
+            this.Controls.Add(this.btnDesconectar);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLibre);
-            this.Controls.Add(this.cboxTemp);
-            this.Controls.Add(this.btnTemp);
+            this.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "FrmComputadoras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmComputadoras";
@@ -157,13 +133,10 @@ namespace Cibercafe_ElVicio
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cboxTemp;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLibre;
-        private System.Windows.Forms.Button btnTemp;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvCompu;
+        private System.Windows.Forms.Button btnDesconectar;
     }
 }

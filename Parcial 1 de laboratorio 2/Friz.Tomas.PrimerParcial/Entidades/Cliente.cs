@@ -13,13 +13,11 @@ namespace Entidades
         private Hardware hardware;
         private Software software;
         private Juego juego;
+        private Tipo tipo;
+        private Marcas marca;
 
         public Cliente()
         {
-        }
-        public Cliente(int dni, string nombre, string apellido, int edad, string equipo) : this(dni, nombre, apellido, edad)
-        {
-            this.equipo = equipo;
         }
         public Cliente(int dni, string nombre, string apellido, int edad)
         {
@@ -27,7 +25,10 @@ namespace Entidades
             this.nombre = nombre;
             this.apellido = apellido;
             this.edad = edad;
-
+        }
+        public Cliente(int dni, string nombre, string apellido, int edad, string equipo) : this(dni, nombre, apellido, edad)
+        {
+            this.equipo = equipo;
         }
 
         public Cliente(int dni, string nombre, string apellido, int edad, string equipo, Periferico periferico, Hardware hardware, Software software, Juego juego) : this(dni, nombre, apellido, edad, equipo)
@@ -36,6 +37,12 @@ namespace Entidades
             this.hardware = hardware;
             this.software = software;
             this.juego = juego;
+        }
+
+        public Cliente(int dni, string nombre, string apellido, int edad, string equipo,Tipo tipo, Marcas marca) : this(dni, nombre, apellido, edad, equipo)
+        {
+            this.tipo = tipo;
+            this.marca = marca;
         }
 
         public int Dni
@@ -93,49 +100,55 @@ namespace Entidades
                 equipo = value;
             }
         }
-
         public Periferico Periferico
         {
             get
             {
                 return periferico;
             }
-            set
-            {
-                periferico = value;
-            }
         }
-        public Hardware Hardware 
+        public Hardware Hardware
         {
             get
             {
                 return hardware;
             }
-            set
-            {
-                hardware = value;
-            }
         }
-        public Software Software 
+        public Software Software
         {
             get
             {
                 return software;
             }
-            set
-            {
-                software = value;
-            }
         }
-        public Juego Juego 
+        public Juego Juego
         {
             get
             {
-               return juego;
+                return juego;
+            }
+        }
+
+        public Tipo Tipo
+        {
+            get
+            {
+                return tipo;
             }
             set
             {
-                juego = value;
+                tipo = value;
+            }
+        }
+        public Marcas Marca 
+        {
+            get
+            {
+                return marca;
+            }
+            set
+            {
+                marca = value;
             }
         }
     }

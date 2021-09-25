@@ -2,6 +2,4 @@
 {
     Panasonic,
     Siemens,
-    Elgin,
-    Telefonica
 }

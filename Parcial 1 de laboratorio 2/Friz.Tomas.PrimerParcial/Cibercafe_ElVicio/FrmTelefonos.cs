@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace Cibercafe_ElVicio
 {
@@ -15,6 +16,14 @@ namespace Cibercafe_ElVicio
         public FrmTelefonos()
         {
             InitializeComponent();
+            Telefono[] telefonos = new Telefono[5];
+            telefonos[0] = new Telefono(Tipo.Disco, Marcas.Siemens, "Disponible");
+            telefonos[1] = new Telefono(Tipo.Teclado, Marcas.Panasonic, "Disponible");
+            telefonos[2] = new Telefono(Tipo.Disco, Marcas.Siemens, "Disponible");
+            telefonos[3] = new Telefono(Tipo.Teclado, Marcas.Panasonic, "Disponible");
+            telefonos[4] = new Telefono(Tipo.Disco, Marcas.Siemens, "Disponible");
+
+            dgvTelef.DataSource = telefonos;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

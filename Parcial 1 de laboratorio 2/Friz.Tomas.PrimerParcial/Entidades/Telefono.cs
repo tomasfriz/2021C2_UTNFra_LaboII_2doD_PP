@@ -10,6 +10,7 @@ namespace Entidades
     {
         private Tipo tipo;
         private Marcas marca;
+        private string estado;
         private double costo;
 
         private string[] id = new string[5]
@@ -17,11 +18,19 @@ namespace Entidades
             "T01", "T02", "T03", "T04", "T05"
         };
 
-        public Telefono(Tipo tipo, Marcas marca, double costo)
+        public Telefono()
+        {
+        }
+
+        public Telefono(Tipo tipo, Marcas marca)
         {
             this.tipo = tipo;
             this.marca = marca;
-            this.costo = costo;
+        }
+
+        public Telefono(Tipo tipo, Marcas marca, string estado) : this(tipo, marca)
+        {
+            this.estado = estado;
         }
 
         public string this[int index]
@@ -57,16 +66,17 @@ namespace Entidades
                 marca = value;
             }
         }
-        public double Costo 
+
+        public string Estado 
         {
             get
             {
-                return costo;
+                return estado;
             }
             set
             {
-                costo = value;
-            }
+                estado = value;
+            }        
         }
     }
 }
