@@ -29,94 +29,109 @@ namespace Cibercafe_ElVicio
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnListCompu = new System.Windows.Forms.Button();
+            this.btnListCabin = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnGanancias = new System.Windows.Forms.Button();
+            this.btnRecaudacion = new System.Windows.Forms.Button();
+            this.btnSoftware = new System.Windows.Forms.Button();
+            this.btnPeriferico = new System.Windows.Forms.Button();
+            this.btnJuego = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnListCompu
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnListCompu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListCompu.Location = new System.Drawing.Point(10, 12);
+            this.btnListCompu.Name = "btnListCompu";
+            this.btnListCompu.Size = new System.Drawing.Size(487, 27);
+            this.btnListCompu.TabIndex = 1;
+            this.btnListCompu.Text = "Lista de computadoras ordenadas por minutos de uso de forma descendente";
+            this.btnListCompu.UseVisualStyleBackColor = true;
+            this.btnListCompu.Click += new System.EventHandler(this.btnListCompu_Click);
             // 
-            // button2
+            // btnListCabin
             // 
-            this.button2.Location = new System.Drawing.Point(12, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnListCabin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListCabin.Location = new System.Drawing.Point(10, 45);
+            this.btnListCabin.Name = "btnListCabin";
+            this.btnListCabin.Size = new System.Drawing.Size(487, 23);
+            this.btnListCabin.TabIndex = 2;
+            this.btnListCabin.Text = "Lista de cabinas ordenadas por minutos de uso de forma descendente";
+            this.btnListCabin.UseVisualStyleBackColor = true;
+            this.btnListCabin.Click += new System.EventHandler(this.btnListCabin_Click);
             // 
             // btnAyuda
             // 
-            this.btnAyuda.Location = new System.Drawing.Point(12, 94);
+            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAyuda.Location = new System.Drawing.Point(12, 227);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(75, 23);
-            this.btnAyuda.TabIndex = 2;
+            this.btnAyuda.TabIndex = 0;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = true;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
-            // button4
+            // btnGanancias
             // 
-            this.button4.Location = new System.Drawing.Point(119, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnGanancias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGanancias.Location = new System.Drawing.Point(12, 74);
+            this.btnGanancias.Name = "btnGanancias";
+            this.btnGanancias.Size = new System.Drawing.Size(485, 23);
+            this.btnGanancias.TabIndex = 3;
+            this.btnGanancias.Text = "Ganancias totales y clasificadas por servicio (teléfono/computadora)";
+            this.btnGanancias.UseVisualStyleBackColor = true;
+            this.btnGanancias.Click += new System.EventHandler(this.btnGanancias_Click);
             // 
-            // button5
+            // btnRecaudacion
             // 
-            this.button5.Location = new System.Drawing.Point(119, 51);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnRecaudacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecaudacion.Location = new System.Drawing.Point(12, 103);
+            this.btnRecaudacion.Name = "btnRecaudacion";
+            this.btnRecaudacion.Size = new System.Drawing.Size(485, 23);
+            this.btnRecaudacion.TabIndex = 4;
+            this.btnRecaudacion.Text = "Horas totales y la recaudación por tipo de llamada";
+            this.btnRecaudacion.UseVisualStyleBackColor = true;
+            this.btnRecaudacion.Click += new System.EventHandler(this.btnRecaudacion_Click);
             // 
-            // button6
+            // btnSoftware
             // 
-            this.button6.Location = new System.Drawing.Point(119, 94);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSoftware.Location = new System.Drawing.Point(12, 133);
+            this.btnSoftware.Name = "btnSoftware";
+            this.btnSoftware.Size = new System.Drawing.Size(485, 23);
+            this.btnSoftware.TabIndex = 5;
+            this.btnSoftware.Text = "El software más pedido por los clientes";
+            this.btnSoftware.UseVisualStyleBackColor = true;
+            this.btnSoftware.Click += new System.EventHandler(this.btnSoftware_Click);
             // 
-            // button7
+            // btnPeriferico
             // 
-            this.button7.Location = new System.Drawing.Point(217, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnPeriferico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPeriferico.Location = new System.Drawing.Point(12, 161);
+            this.btnPeriferico.Name = "btnPeriferico";
+            this.btnPeriferico.Size = new System.Drawing.Size(485, 23);
+            this.btnPeriferico.TabIndex = 6;
+            this.btnPeriferico.Text = "El periférico más pedido por los clientes";
+            this.btnPeriferico.UseVisualStyleBackColor = true;
+            this.btnPeriferico.Click += new System.EventHandler(this.btnPeriferico_Click);
             // 
-            // button8
+            // btnJuego
             // 
-            this.button8.Location = new System.Drawing.Point(217, 51);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnJuego.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnJuego.Location = new System.Drawing.Point(12, 190);
+            this.btnJuego.Name = "btnJuego";
+            this.btnJuego.Size = new System.Drawing.Size(485, 23);
+            this.btnJuego.TabIndex = 7;
+            this.btnJuego.Text = "El juego más pedido por los clientes";
+            this.btnJuego.UseVisualStyleBackColor = true;
+            this.btnJuego.Click += new System.EventHandler(this.btnJuego_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(217, 94);
+            this.btnSalir.Location = new System.Drawing.Point(422, 227);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 8;
@@ -128,16 +143,16 @@ namespace Cibercafe_ElVicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 129);
+            this.ClientSize = new System.Drawing.Size(505, 253);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnJuego);
+            this.Controls.Add(this.btnPeriferico);
+            this.Controls.Add(this.btnSoftware);
+            this.Controls.Add(this.btnRecaudacion);
+            this.Controls.Add(this.btnGanancias);
             this.Controls.Add(this.btnAyuda);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnListCabin);
+            this.Controls.Add(this.btnListCompu);
             this.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "FrmHistorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -148,14 +163,14 @@ namespace Cibercafe_ElVicio
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnListCompu;
+        private System.Windows.Forms.Button btnListCabin;
         private System.Windows.Forms.Button btnAyuda;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnGanancias;
+        private System.Windows.Forms.Button btnRecaudacion;
+        private System.Windows.Forms.Button btnSoftware;
+        private System.Windows.Forms.Button btnPeriferico;
+        private System.Windows.Forms.Button btnJuego;
         private System.Windows.Forms.Button btnSalir;
     }
 }

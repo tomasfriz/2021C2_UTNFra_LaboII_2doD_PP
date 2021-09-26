@@ -48,7 +48,7 @@ namespace Cibercafe_ElVicio
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCerrar.Location = new System.Drawing.Point(295, 298);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(72, 23);
@@ -59,7 +59,7 @@ namespace Cibercafe_ElVicio
             // 
             // btnAyuda
             // 
-            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAyuda.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAyuda.Location = new System.Drawing.Point(61, 297);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(72, 23);
@@ -79,6 +79,7 @@ namespace Cibercafe_ElVicio
             this.dgvTelef.Location = new System.Drawing.Point(0, 0);
             this.dgvTelef.MultiSelect = false;
             this.dgvTelef.Name = "dgvTelef";
+            this.dgvTelef.ReadOnly = true;
             this.dgvTelef.RowTemplate.Height = 25;
             this.dgvTelef.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTelef.Size = new System.Drawing.Size(410, 229);
@@ -116,6 +117,7 @@ namespace Cibercafe_ElVicio
             this.btnLlamar.TabIndex = 11;
             this.btnLlamar.Text = "Llamar";
             this.btnLlamar.UseVisualStyleBackColor = true;
+            this.btnLlamar.Click += new System.EventHandler(this.btnLlamar_Click);
             // 
             // textBox1
             // 
@@ -180,6 +182,7 @@ namespace Cibercafe_ElVicio
             this.btnColgar.TabIndex = 35;
             this.btnColgar.Text = "Colgar";
             this.btnColgar.UseVisualStyleBackColor = true;
+            this.btnColgar.Click += new System.EventHandler(this.btnColgar_Click);
             // 
             // FrmTelefonos
             // 

@@ -8,12 +8,11 @@ namespace Entidades
 {
     public abstract class Usuario : Cliente
     {
-        protected Usuario(int dni, string nombre, string apellido, int edad) : base(dni, nombre, apellido, edad)
-        {
+        //Aun no esta terminada esta clase.
+        //protected Usuario(int dni, string nombre, string apellido, int edad) : base(dni, nombre, apellido, edad)
+        //{
 
-        }
-
-
+        //}
 
     }
 }

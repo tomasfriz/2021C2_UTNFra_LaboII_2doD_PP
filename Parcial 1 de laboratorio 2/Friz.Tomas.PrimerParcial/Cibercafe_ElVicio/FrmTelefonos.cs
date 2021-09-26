@@ -47,5 +47,15 @@ namespace Cibercafe_ElVicio
             MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
                 "-El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnLlamar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnColgar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

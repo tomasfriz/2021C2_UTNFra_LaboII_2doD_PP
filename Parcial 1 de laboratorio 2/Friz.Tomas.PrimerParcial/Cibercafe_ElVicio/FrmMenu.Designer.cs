@@ -94,6 +94,7 @@ namespace Cibercafe_ElVicio
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.dgvEspera);
             this.panel1.Name = "panel1";
             // 
@@ -155,6 +156,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.btnAyuda);
             this.Name = "FrmMenu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCibercafe_FormClosing);
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspera)).EndInit();
             this.ResumeLayout(false);

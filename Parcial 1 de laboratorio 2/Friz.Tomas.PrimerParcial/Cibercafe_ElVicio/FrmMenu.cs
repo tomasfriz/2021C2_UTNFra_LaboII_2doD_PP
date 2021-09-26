@@ -105,5 +105,12 @@ namespace Cibercafe_ElVicio
             frmHistorial.Show();
         }
 
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("¡¡¡BIENVENIDO USUARIO!!!");
+            MessageBox.Show("¡¡¡AVISO!!!\n" +
+                "Posee algunos errores en la visualizacion de los datos que todavia estoy trabajando en eso.\n" +
+                "Disculpe las molestias.");
+        }
     }
 }

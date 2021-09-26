@@ -1,4 +1,10 @@
-﻿public enum Juego
+﻿
+
+#region Enumerados
+/// <summary>
+/// Enumera los tipos de juegos.
+/// </summary>
+public enum Juego
 {
     CounterStrike, 
     DiabloII, 
@@ -7,3 +13,4 @@
     WarcraftIII, 
     AgeOfEmpiresII
 }
+#endregion

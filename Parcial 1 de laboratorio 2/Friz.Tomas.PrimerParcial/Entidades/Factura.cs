@@ -8,6 +8,6 @@ namespace Entidades
 {
     public sealed class Factura
     {
-
+        //Aun no esta terminada esta clase.
     }
 }

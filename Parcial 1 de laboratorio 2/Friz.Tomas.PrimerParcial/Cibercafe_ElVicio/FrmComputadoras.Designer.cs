@@ -31,7 +31,7 @@ namespace Cibercafe_ElVicio
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvCompu = new System.Windows.Forms.DataGridView();
-            this.btnLibre = new System.Windows.Forms.Button();
+            this.btnConectar = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnDesconectar = new System.Windows.Forms.Button();
@@ -68,15 +68,16 @@ namespace Cibercafe_ElVicio
             this.dgvCompu.Size = new System.Drawing.Size(503, 358);
             this.dgvCompu.TabIndex = 0;
             // 
-            // btnLibre
+            // btnConectar
             // 
-            this.btnLibre.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnLibre.Location = new System.Drawing.Point(198, 380);
-            this.btnLibre.Name = "btnLibre";
-            this.btnLibre.Size = new System.Drawing.Size(75, 23);
-            this.btnLibre.TabIndex = 11;
-            this.btnLibre.Text = "Conectar";
-            this.btnLibre.UseVisualStyleBackColor = true;
+            this.btnConectar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConectar.Location = new System.Drawing.Point(171, 380);
+            this.btnConectar.Name = "btnConectar";
+            this.btnConectar.Size = new System.Drawing.Size(94, 23);
+            this.btnConectar.TabIndex = 11;
+            this.btnConectar.Text = "Conectar";
+            this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
             // btnAyuda
             // 
@@ -103,12 +104,13 @@ namespace Cibercafe_ElVicio
             // btnDesconectar
             // 
             this.btnDesconectar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDesconectar.Location = new System.Drawing.Point(279, 380);
+            this.btnDesconectar.Location = new System.Drawing.Point(271, 380);
             this.btnDesconectar.Name = "btnDesconectar";
-            this.btnDesconectar.Size = new System.Drawing.Size(75, 23);
+            this.btnDesconectar.Size = new System.Drawing.Size(94, 23);
             this.btnDesconectar.TabIndex = 13;
             this.btnDesconectar.Text = "Desconectar";
             this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
             // FrmComputadoras
             // 
@@ -119,7 +121,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnLibre);
+            this.Controls.Add(this.btnConectar);
             this.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "FrmComputadoras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -133,7 +135,7 @@ namespace Cibercafe_ElVicio
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLibre;
+        private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dgvCompu;

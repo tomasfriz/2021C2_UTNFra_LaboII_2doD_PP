@@ -40,7 +40,7 @@ namespace Entidades
             this.edad = edad;
         }
         /// <summary>
-        /// constructor para sobrecargar y asignar los equipos.
+        /// Constructor para sobrecargar y asignar los equipos.
         /// </summary>
         /// <param name="dni"></param>
         /// <param name="nombre"></param>
