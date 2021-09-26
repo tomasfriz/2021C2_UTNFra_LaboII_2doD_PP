@@ -50,52 +50,57 @@ namespace Cibercafe_ElVicio
             // btnAyuda
             // 
             resources.ApplyResources(this.btnAyuda, "btnAyuda");
+            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAyuda.ForeColor = System.Drawing.Color.Black;
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(172)))), ((int)(((byte)(245)))));
             this.label1.Name = "label1";
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(172)))), ((int)(((byte)(245)))));
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
             // lblUsuario
             // 
-            this.lblUsuario.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(172)))), ((int)(((byte)(245)))));
             resources.ApplyResources(this.lblUsuario, "lblUsuario");
             this.lblUsuario.Name = "lblUsuario";
             // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
-            this.label3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(172)))), ((int)(((byte)(245)))));
             this.label3.Name = "label3";
             // 
             // lblFecha
             // 
             resources.ApplyResources(this.lblFecha, "lblFecha");
-            this.lblFecha.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lblFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(172)))), ((int)(((byte)(245)))));
             this.lblFecha.Name = "lblFecha";
             // 
             // btnCerrar
             // 
             resources.ApplyResources(this.btnCerrar, "btnCerrar");
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.dgvEspera);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Name = "panel1";
             // 
             // dgvEspera
@@ -103,38 +108,44 @@ namespace Cibercafe_ElVicio
             this.dgvEspera.AllowUserToAddRows = false;
             this.dgvEspera.AllowUserToDeleteRows = false;
             this.dgvEspera.AllowUserToOrderColumns = true;
-            this.dgvEspera.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvEspera.BackgroundColor = System.Drawing.Color.White;
             this.dgvEspera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEspera.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             resources.ApplyResources(this.dgvEspera, "dgvEspera");
             this.dgvEspera.MultiSelect = false;
             this.dgvEspera.Name = "dgvEspera";
+            this.dgvEspera.ReadOnly = true;
             this.dgvEspera.RowTemplate.Height = 25;
             this.dgvEspera.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
             this.label4.Name = "label4";
             // 
             // btnHistorial
             // 
             resources.ApplyResources(this.btnHistorial, "btnHistorial");
+            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.UseVisualStyleBackColor = true;
+            this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // btnAsigMaquina
             // 
             resources.ApplyResources(this.btnAsigMaquina, "btnAsigMaquina");
+            this.btnAsigMaquina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAsigMaquina.Name = "btnAsigMaquina";
-            this.btnAsigMaquina.UseVisualStyleBackColor = true;
+            this.btnAsigMaquina.UseVisualStyleBackColor = false;
             this.btnAsigMaquina.Click += new System.EventHandler(this.btnAsigMaquina_Click);
             // 
             // btnAsigCabina
             // 
             resources.ApplyResources(this.btnAsigCabina, "btnAsigCabina");
+            this.btnAsigCabina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAsigCabina.Name = "btnAsigCabina";
-            this.btnAsigCabina.UseVisualStyleBackColor = true;
+            this.btnAsigCabina.UseVisualStyleBackColor = false;
             this.btnAsigCabina.Click += new System.EventHandler(this.btnAsigCabina_Click);
             // 
             // FrmMenu
@@ -142,10 +153,10 @@ namespace Cibercafe_ElVicio
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.Controls.Add(this.btnAsigCabina);
             this.Controls.Add(this.btnAsigMaquina);
             this.Controls.Add(this.btnHistorial);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblFecha);

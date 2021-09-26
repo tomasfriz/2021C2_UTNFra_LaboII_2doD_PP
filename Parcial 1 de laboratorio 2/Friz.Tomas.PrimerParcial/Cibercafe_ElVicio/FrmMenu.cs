@@ -24,11 +24,11 @@ namespace Cibercafe_ElVicio
             lblFecha.Text = DateTime.Now.ToShortDateString();
 
             Cliente[] clientes = new Cliente[5];
-            clientes[0] = new Cliente(41918909, "Tomás", "Friz", 22, "Computadora", Periferico.cámara, Hardware.procesador, Software.messenger, Juego.DiabloII);
+            clientes[0] = new Cliente(41918909, "Tomás", "Sánchez", 22, "Computadora", Periferico.cámara, Hardware.procesador, Software.messenger, Juego.DiabloII);
             clientes[1] = new Cliente(31456980, "Gustavo", "Doria", 53, "Computadora", Periferico.micrófono, Hardware.ram, Software.office, Juego.CounterStrike);
             clientes[2] = new Cliente(36897132, "Belén", "Trinidad", 16, "Telefono", Tipo.Disco,Marcas.Siemens);
             clientes[3] = new Cliente(34067132, "Mauricio", "Prieto", 35, "Computadora", Periferico.auriculares, Hardware.ram, Software.ares, Juego.WarcraftIII);
-            clientes[4] = new Cliente(27643934, "Brisa", "Catania", 76, "Telefono", Tipo.Teclado, Marcas.Panasonic);
+            clientes[4] = new Cliente(27643934, "Brisa", "Quinteros", 28, "Telefono", Tipo.Teclado, Marcas.Panasonic);
 
             dgvEspera.DataSource = clientes;
         }
@@ -43,7 +43,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está Seguro que Desea Salir, cerraras todas las ventanas abiertas?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro que desea salir, cerraras todas las ventanas abiertas?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -107,8 +107,8 @@ namespace Cibercafe_ElVicio
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("¡¡¡BIENVENIDO USUARIO!!!");
-            MessageBox.Show("¡¡¡AVISO!!!\n" +
+            MessageBox.Show("¡BIENVENIDO USUARIO!");
+            MessageBox.Show("¡AVISO!\n" +
                 "Posee algunos errores en la visualizacion de los datos que todavia estoy trabajando en eso.\n" +
                 "Disculpe las molestias.");
         }

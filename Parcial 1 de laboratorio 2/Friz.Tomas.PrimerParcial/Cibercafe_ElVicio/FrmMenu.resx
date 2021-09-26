@@ -63,13 +63,17 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAyuda.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bauhaus 93, 9.75pt</value>
+    <value>Gill Sans MT, 9.75pt, style=Bold</value>
   </data>
   <data name="btnAyuda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 447</value>
+    <value>14, 536</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnAyuda.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="btnAyuda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>86, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnAyuda.TabIndex" type="System.Int32, mscorlib">
@@ -88,7 +92,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAyuda.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -97,10 +101,10 @@
     <value>Bauhaus 93, 26.25pt, style=Underline</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
+    <value>12, 21</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>601, 83</value>
+    <value>687, 115</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -109,7 +113,7 @@
     <value>CIBERCAFE "EL VICIO"</value>
   </data>
   <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -121,16 +125,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bauhaus 93, 11.25pt</value>
+    <value>Gill Sans MT, 9.75pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 20</value>
+    <value>14, 27</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 23</value>
+    <value>126, 28</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -151,19 +155,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="lblUsuario.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bauhaus 93, 11.25pt</value>
+    <value>Gill Sans MT, 9.75pt, style=Bold</value>
   </data>
   <data name="lblUsuario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 20</value>
+    <value>134, 27</value>
   </data>
   <data name="lblUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 23</value>
+    <value>201, 28</value>
   </data>
   <data name="lblUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -181,19 +185,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUsuario.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bauhaus 93, 11.25pt</value>
+    <value>Gill Sans MT, 9.75pt, style=Bold</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>465, 20</value>
+    <value>529, 29</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 23</value>
+    <value>62, 28</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -214,22 +218,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="lblFecha.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="lblFecha.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bauhaus 93, 11.25pt</value>
+    <value>Gill Sans MT, 9.75pt, style=Bold</value>
   </data>
   <data name="lblFecha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblFecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>516, 20</value>
+    <value>588, 29</value>
   </data>
   <data name="lblFecha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 23</value>
+    <value>111, 28</value>
   </data>
   <data name="lblFecha.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -247,19 +251,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblFecha.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="btnCerrar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="btnCerrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bauhaus 93, 9.75pt</value>
+    <value>Gill Sans MT, 9.75pt, style=Bold</value>
   </data>
   <data name="btnCerrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>538, 447</value>
+    <value>613, 536</value>
+  </data>
+  <data name="btnCerrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="btnCerrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>86, 28</value>
   </data>
   <data name="btnCerrar.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -277,19 +284,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="dgvEspera.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="dgvEspera.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>20, 51</value>
+  </data>
+  <data name="dgvEspera.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="dgvEspera.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 306</value>
+    <value>637, 282</value>
   </data>
   <data name="dgvEspera.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -306,14 +313,50 @@
   <data name="&gt;&gt;dgvEspera.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bauhaus 93, 15.75pt, style=Underline</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-2, -2</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>684, 33</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Clientes en Espera</value>
+  </data>
+  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="panel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bauhaus 93, 11.25pt</value>
+    <value>Gill Sans MT, 9.75pt, style=Bold</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 131</value>
+    <value>15, 158</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>596, 310</value>
+    <value>681, 356</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -328,39 +371,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bauhaus 93, 15.75pt, style=Underline</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 105</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 23</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Clientes en Espera</value>
-  </data>
-  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="btnHistorial.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -370,10 +380,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnHistorial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 447</value>
+    <value>437, 536</value>
+  </data>
+  <data name="btnHistorial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="btnHistorial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
+    <value>169, 28</value>
   </data>
   <data name="btnHistorial.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -400,10 +413,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnAsigMaquina.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 447</value>
+    <value>108, 536</value>
+  </data>
+  <data name="btnAsigMaquina.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="btnAsigMaquina.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
+    <value>169, 28</value>
   </data>
   <data name="btnAsigMaquina.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -430,10 +446,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnAsigCabina.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 447</value>
+    <value>284, 536</value>
+  </data>
+  <data name="btnAsigCabina.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="btnAsigCabina.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 23</value>
+    <value>146, 28</value>
   </data>
   <data name="btnAsigCabina.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -457,13 +476,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+    <value>8, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>623, 482</value>
+    <value>712, 578</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bauhaus 93, 9.75pt</value>
+    <value>Gill Sans MT, 9.75pt, style=Bold</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
