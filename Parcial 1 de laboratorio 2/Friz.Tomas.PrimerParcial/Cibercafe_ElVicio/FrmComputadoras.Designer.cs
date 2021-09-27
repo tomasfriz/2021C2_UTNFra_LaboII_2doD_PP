@@ -44,78 +44,83 @@ namespace Cibercafe_ElVicio
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.dgvCompu);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(507, 362);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 4;
             // 
             // dgvCompu
             // 
             this.dgvCompu.AllowUserToAddRows = false;
             this.dgvCompu.AllowUserToDeleteRows = false;
             this.dgvCompu.AllowUserToOrderColumns = true;
-            this.dgvCompu.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvCompu.BackgroundColor = System.Drawing.Color.White;
             this.dgvCompu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCompu.Location = new System.Drawing.Point(0, 0);
+            this.dgvCompu.Location = new System.Drawing.Point(16, 13);
             this.dgvCompu.MultiSelect = false;
             this.dgvCompu.Name = "dgvCompu";
             this.dgvCompu.ReadOnly = true;
             this.dgvCompu.RowTemplate.Height = 25;
             this.dgvCompu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCompu.Size = new System.Drawing.Size(503, 358);
-            this.dgvCompu.TabIndex = 0;
+            this.dgvCompu.Size = new System.Drawing.Size(473, 333);
+            this.dgvCompu.TabIndex = 5;
             // 
             // btnConectar
             // 
             this.btnConectar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnConectar.Location = new System.Drawing.Point(171, 380);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(94, 23);
-            this.btnConectar.TabIndex = 11;
+            this.btnConectar.TabIndex = 1;
             this.btnConectar.Text = "Conectar";
-            this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.UseVisualStyleBackColor = false;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
             // btnAyuda
             // 
             this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAyuda.Location = new System.Drawing.Point(14, 380);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(75, 23);
-            this.btnAyuda.TabIndex = 11;
+            this.btnAyuda.TabIndex = 0;
             this.btnAyuda.Text = "Ayuda";
-            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnCerrar.Location = new System.Drawing.Point(443, 380);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCerrar.TabIndex = 12;
+            this.btnCerrar.TabIndex = 3;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnDesconectar
             // 
             this.btnDesconectar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDesconectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnDesconectar.Location = new System.Drawing.Point(271, 380);
             this.btnDesconectar.Name = "btnDesconectar";
             this.btnDesconectar.Size = new System.Drawing.Size(94, 23);
-            this.btnDesconectar.TabIndex = 13;
+            this.btnDesconectar.TabIndex = 2;
             this.btnDesconectar.Text = "Desconectar";
-            this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.UseVisualStyleBackColor = false;
             this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
             // FrmComputadoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(531, 410);
             this.Controls.Add(this.btnDesconectar);
             this.Controls.Add(this.btnCerrar);

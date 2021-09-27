@@ -53,7 +53,7 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.Location = new System.Drawing.Point(295, 298);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(72, 28);
-            this.btnCerrar.TabIndex = 16;
+            this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -66,7 +66,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.Location = new System.Drawing.Point(61, 297);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(72, 29);
-            this.btnAyuda.TabIndex = 15;
+            this.btnAyuda.TabIndex = 0;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
@@ -76,7 +76,7 @@ namespace Cibercafe_ElVicio
             this.dgvTelef.AllowUserToAddRows = false;
             this.dgvTelef.AllowUserToDeleteRows = false;
             this.dgvTelef.AllowUserToOrderColumns = true;
-            this.dgvTelef.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvTelef.BackgroundColor = System.Drawing.Color.White;
             this.dgvTelef.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTelef.Location = new System.Drawing.Point(16, 16);
             this.dgvTelef.MultiSelect = false;
@@ -85,7 +85,7 @@ namespace Cibercafe_ElVicio
             this.dgvTelef.RowTemplate.Height = 25;
             this.dgvTelef.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTelef.Size = new System.Drawing.Size(379, 198);
-            this.dgvTelef.TabIndex = 0;
+            this.dgvTelef.TabIndex = 8;
             // 
             // panel1
             // 
@@ -99,7 +99,7 @@ namespace Cibercafe_ElVicio
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(414, 233);
-            this.panel1.TabIndex = 13;
+            this.panel1.TabIndex = 7;
             // 
             // label2
             // 
@@ -121,7 +121,7 @@ namespace Cibercafe_ElVicio
             this.btnLlamar.Location = new System.Drawing.Point(139, 298);
             this.btnLlamar.Name = "btnLlamar";
             this.btnLlamar.Size = new System.Drawing.Size(72, 28);
-            this.btnLlamar.TabIndex = 11;
+            this.btnLlamar.TabIndex = 4;
             this.btnLlamar.Text = "Llamar";
             this.btnLlamar.UseVisualStyleBackColor = false;
             this.btnLlamar.Click += new System.EventHandler(this.btnLlamar_Click);
@@ -133,7 +133,7 @@ namespace Cibercafe_ElVicio
             this.textBox1.Location = new System.Drawing.Point(61, 271);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(72, 23);
-            this.textBox1.TabIndex = 29;
+            this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
@@ -142,7 +142,7 @@ namespace Cibercafe_ElVicio
             this.textBox2.Location = new System.Drawing.Point(139, 271);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(72, 23);
-            this.textBox2.TabIndex = 30;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
@@ -151,7 +151,7 @@ namespace Cibercafe_ElVicio
             this.textBox3.Location = new System.Drawing.Point(217, 272);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(149, 23);
-            this.textBox3.TabIndex = 31;
+            this.textBox3.TabIndex = 3;
             // 
             // label1
             // 
@@ -185,7 +185,7 @@ namespace Cibercafe_ElVicio
             this.btnColgar.Location = new System.Drawing.Point(217, 298);
             this.btnColgar.Name = "btnColgar";
             this.btnColgar.Size = new System.Drawing.Size(72, 28);
-            this.btnColgar.TabIndex = 35;
+            this.btnColgar.TabIndex = 5;
             this.btnColgar.Text = "Colgar";
             this.btnColgar.UseVisualStyleBackColor = false;
             this.btnColgar.Click += new System.EventHandler(this.btnColgar_Click);

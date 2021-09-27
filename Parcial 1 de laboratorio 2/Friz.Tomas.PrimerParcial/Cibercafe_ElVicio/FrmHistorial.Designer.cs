@@ -43,106 +43,116 @@ namespace Cibercafe_ElVicio
             // btnListCompu
             // 
             this.btnListCompu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListCompu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnListCompu.Location = new System.Drawing.Point(10, 12);
             this.btnListCompu.Name = "btnListCompu";
             this.btnListCompu.Size = new System.Drawing.Size(487, 27);
             this.btnListCompu.TabIndex = 1;
             this.btnListCompu.Text = "Lista de computadoras ordenadas por minutos de uso de forma descendente";
-            this.btnListCompu.UseVisualStyleBackColor = true;
+            this.btnListCompu.UseVisualStyleBackColor = false;
             this.btnListCompu.Click += new System.EventHandler(this.btnListCompu_Click);
             // 
             // btnListCabin
             // 
             this.btnListCabin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListCabin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnListCabin.Location = new System.Drawing.Point(10, 45);
             this.btnListCabin.Name = "btnListCabin";
             this.btnListCabin.Size = new System.Drawing.Size(487, 23);
             this.btnListCabin.TabIndex = 2;
             this.btnListCabin.Text = "Lista de cabinas ordenadas por minutos de uso de forma descendente";
-            this.btnListCabin.UseVisualStyleBackColor = true;
+            this.btnListCabin.UseVisualStyleBackColor = false;
             this.btnListCabin.Click += new System.EventHandler(this.btnListCabin_Click);
             // 
             // btnAyuda
             // 
             this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAyuda.Location = new System.Drawing.Point(12, 227);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(75, 23);
             this.btnAyuda.TabIndex = 0;
             this.btnAyuda.Text = "Ayuda";
-            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnGanancias
             // 
             this.btnGanancias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGanancias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnGanancias.Location = new System.Drawing.Point(12, 74);
             this.btnGanancias.Name = "btnGanancias";
             this.btnGanancias.Size = new System.Drawing.Size(485, 23);
             this.btnGanancias.TabIndex = 3;
             this.btnGanancias.Text = "Ganancias totales y clasificadas por servicio (teléfono/computadora)";
-            this.btnGanancias.UseVisualStyleBackColor = true;
+            this.btnGanancias.UseVisualStyleBackColor = false;
             this.btnGanancias.Click += new System.EventHandler(this.btnGanancias_Click);
             // 
             // btnRecaudacion
             // 
             this.btnRecaudacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecaudacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnRecaudacion.Location = new System.Drawing.Point(12, 103);
             this.btnRecaudacion.Name = "btnRecaudacion";
             this.btnRecaudacion.Size = new System.Drawing.Size(485, 23);
             this.btnRecaudacion.TabIndex = 4;
             this.btnRecaudacion.Text = "Horas totales y la recaudación por tipo de llamada";
-            this.btnRecaudacion.UseVisualStyleBackColor = true;
+            this.btnRecaudacion.UseVisualStyleBackColor = false;
             this.btnRecaudacion.Click += new System.EventHandler(this.btnRecaudacion_Click);
             // 
             // btnSoftware
             // 
             this.btnSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSoftware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSoftware.Location = new System.Drawing.Point(12, 133);
             this.btnSoftware.Name = "btnSoftware";
             this.btnSoftware.Size = new System.Drawing.Size(485, 23);
             this.btnSoftware.TabIndex = 5;
             this.btnSoftware.Text = "El software más pedido por los clientes";
-            this.btnSoftware.UseVisualStyleBackColor = true;
+            this.btnSoftware.UseVisualStyleBackColor = false;
             this.btnSoftware.Click += new System.EventHandler(this.btnSoftware_Click);
             // 
             // btnPeriferico
             // 
             this.btnPeriferico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPeriferico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnPeriferico.Location = new System.Drawing.Point(12, 161);
             this.btnPeriferico.Name = "btnPeriferico";
             this.btnPeriferico.Size = new System.Drawing.Size(485, 23);
             this.btnPeriferico.TabIndex = 6;
             this.btnPeriferico.Text = "El periférico más pedido por los clientes";
-            this.btnPeriferico.UseVisualStyleBackColor = true;
+            this.btnPeriferico.UseVisualStyleBackColor = false;
             this.btnPeriferico.Click += new System.EventHandler(this.btnPeriferico_Click);
             // 
             // btnJuego
             // 
             this.btnJuego.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnJuego.Location = new System.Drawing.Point(12, 190);
             this.btnJuego.Name = "btnJuego";
             this.btnJuego.Size = new System.Drawing.Size(485, 23);
             this.btnJuego.TabIndex = 7;
             this.btnJuego.Text = "El juego más pedido por los clientes";
-            this.btnJuego.UseVisualStyleBackColor = true;
+            this.btnJuego.UseVisualStyleBackColor = false;
             this.btnJuego.Click += new System.EventHandler(this.btnJuego_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSalir.Location = new System.Drawing.Point(422, 227);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(158)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(505, 253);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnJuego);

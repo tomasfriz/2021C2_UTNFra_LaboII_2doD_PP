@@ -269,7 +269,7 @@
     <value>86, 28</value>
   </data>
   <data name="btnCerrar.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>4</value>
   </data>
   <data name="btnCerrar.Text" xml:space="preserve">
     <value>Cerrar</value>
@@ -299,7 +299,7 @@
     <value>637, 282</value>
   </data>
   <data name="dgvEspera.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;dgvEspera.Name" xml:space="preserve">
     <value>dgvEspera</value>
@@ -359,7 +359,7 @@
     <value>681, 356</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
@@ -389,7 +389,7 @@
     <value>169, 28</value>
   </data>
   <data name="btnHistorial.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>3</value>
   </data>
   <data name="btnHistorial.Text" xml:space="preserve">
     <value>Estadisticas Historicas</value>
@@ -422,7 +422,7 @@
     <value>169, 28</value>
   </data>
   <data name="btnAsigMaquina.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>1</value>
   </data>
   <data name="btnAsigMaquina.Text" xml:space="preserve">
     <value>Mostrar Maquina</value>
@@ -455,7 +455,7 @@
     <value>146, 28</value>
   </data>
   <data name="btnAsigCabina.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>2</value>
   </data>
   <data name="btnAsigCabina.Text" xml:space="preserve">
     <value>Mostrar Cabina</value>
