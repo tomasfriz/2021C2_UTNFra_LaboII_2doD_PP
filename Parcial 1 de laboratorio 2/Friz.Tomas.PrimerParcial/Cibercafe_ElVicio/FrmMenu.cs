@@ -23,14 +23,16 @@ namespace Cibercafe_ElVicio
             lblUsuario.Text = "Tomás Agustín Friz";
             lblFecha.Text = DateTime.Now.ToShortDateString();
 
-            Cliente[] clientes = new Cliente[5];
-            clientes[0] = new Cliente(41918909, "Tomás", "Sánchez", 22, "Computadora", Periferico.cámara, Hardware.procesador, Software.messenger, Juego.DiabloII);
-            clientes[1] = new Cliente(31456980, "Gustavo", "Doria", 53, "Computadora", Periferico.micrófono, Hardware.ram, Software.office, Juego.CounterStrike);
-            clientes[2] = new Cliente(36897132, "Belén", "Trinidad", 16, "Telefono", Tipo.Disco,Marcas.Siemens);
-            clientes[3] = new Cliente(34067132, "Mauricio", "Prieto", 35, "Computadora", Periferico.auriculares, Hardware.ram, Software.ares, Juego.WarcraftIII);
-            clientes[4] = new Cliente(27643934, "Brisa", "Quinteros", 28, "Telefono", Tipo.Teclado, Marcas.Panasonic);
+            List<ClientesMaquina> clienteMaquina = new List<ClientesMaquina>();
+            clienteMaquina.Add(new ClientesMaquina(41918909, "Tomás", "Sánchez", 22, "Computadora"));
+            clienteMaquina.Add(new ClientesMaquina(31456980, "Gustavo", "Doria", 53, "Computadora"));
+            clienteMaquina.Add(new ClientesMaquina(34067132, "Mauricio", "Prieto", 35, "Computadora"));
+            dgvMaquina.DataSource = clienteMaquina;
 
-            dgvEspera.DataSource = clientes;
+            List<ClientesCabina> clienteCabina = new List<ClientesCabina>();
+            clienteCabina.Add(new ClientesCabina(36897132, "Belén", "Trinidad", 16, "Telefono"));
+            clienteCabina.Add(new ClientesCabina(27643934, "Brisa", "Quinteros", 28, "Telefono"));
+            dgvCabina.DataSource = clienteCabina;
         }
 
         /// <summary>
@@ -80,8 +82,10 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnAsigMaquina_Click(object sender, EventArgs e)
         {
+            Cliente clienteSelecionado = (Cliente)dgvMaquina.CurrentRow.DataBoundItem;
             FrmComputadoras frmComputadoras = new FrmComputadoras();
             frmComputadoras.Show();
+
         }
         /// <summary>
         /// Sirve tanto para asignar las cabinas de los clientes como para que el usuario vea un registro de las cabinas en uso o disponibles.
@@ -108,9 +112,6 @@ namespace Cibercafe_ElVicio
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             MessageBox.Show("¡BIENVENIDO USUARIO!");
-            MessageBox.Show("¡AVISO!\n" +
-                "Posee algunos errores en la visualizacion de los datos que todavia estoy trabajando en eso.\n" +
-                "Disculpe las molestias.");
         }
     }
 }

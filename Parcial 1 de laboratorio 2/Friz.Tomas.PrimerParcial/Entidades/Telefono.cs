@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Entidades.Enumerados;
 
 namespace Entidades
 {
@@ -13,16 +14,6 @@ namespace Entidades
         private Marcas marca;
         private string estado;
         private double costo;
-        #endregion
-
-        #region Indexador
-        /// <summary>
-        /// Sirve para indexar las id o identificadores de cada telefono.
-        /// </summary>
-        private string[] id = new string[5]
-        {
-            "T01", "T02", "T03", "T04", "T05"
-        };
         #endregion
 
         #region Constructores
@@ -55,17 +46,6 @@ namespace Entidades
         #endregion
 
         #region Encapsulamiento
-        public string this[int index]
-        {
-            get
-            {
-                return id[index];
-            }
-            set
-            {
-                id[index] = value;
-            }
-        }
         public Tipo Tipo 
         {
             get

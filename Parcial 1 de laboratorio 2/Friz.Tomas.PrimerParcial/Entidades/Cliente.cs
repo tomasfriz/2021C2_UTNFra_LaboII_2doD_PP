@@ -1,29 +1,32 @@
 ﻿using System;
+using static Entidades.Enumerados;
 
 namespace Entidades
 {
     public class Cliente
     {
         #region Atributos
+        protected Random random;
         private int dni;
         private string nombre;
         private string apellido;
         private int edad;
-        private string equipo;
-        private Periferico periferico;
-        private Hardware hardware;
-        private Software software;
-        private Juego juego;
-        private Tipo tipo;
-        private Marcas marca;
+        protected string equipo;
+        protected Periferico periferico;
+        protected Hardware hardware;
+        protected Software software;
+        protected Juego juego;
+        protected Tipo tipo;
+        protected Marcas marca;
         #endregion
 
         #region Constructores
         /// <summary>
         /// Sobrecarga de constructor vacio.
         /// </summary>
-        public Cliente()
+        private Cliente()
         {
+            random = new Random();
         }
         /// <summary>
         /// Constructor para los datos de los clientes.
@@ -32,7 +35,7 @@ namespace Entidades
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
         /// <param name="edad"></param>
-        public Cliente(int dni, string nombre, string apellido, int edad)
+        public Cliente(int dni, string nombre, string apellido, int edad) : this()
         {
             this.dni = dni;
             this.nombre = nombre;
@@ -50,40 +53,12 @@ namespace Entidades
         public Cliente(int dni, string nombre, string apellido, int edad, string equipo) : this(dni, nombre, apellido, edad)
         {
             this.equipo = equipo;
-        }
-        /// <summary>
-        /// Constructor para sobrecargar y asignar los datos de las computadoras a los clientes.
-        /// </summary>
-        /// <param name="dni"></param>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="edad"></param>
-        /// <param name="equipo"></param>
-        /// <param name="periferico"></param>
-        /// <param name="hardware"></param>
-        /// <param name="software"></param>
-        /// <param name="juego"></param>
-        public Cliente(int dni, string nombre, string apellido, int edad, string equipo, Periferico periferico, Hardware hardware, Software software, Juego juego) : this(dni, nombre, apellido, edad, equipo)
-        {
-            this.periferico = periferico;
-            this.hardware = hardware;
-            this.software = software;
-            this.juego = juego;
-        }
-        /// <summary>
-        /// Constructor para sobrecargar y asignar los datos de los telefonos a los clientes.
-        /// </summary>
-        /// <param name="dni"></param>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="edad"></param>
-        /// <param name="equipo"></param>
-        /// <param name="tipo"></param>
-        /// <param name="marca"></param>
-        public Cliente(int dni, string nombre, string apellido, int edad, string equipo,Tipo tipo, Marcas marca) : this(dni, nombre, apellido, edad, equipo)
-        {
-            this.tipo = tipo;
-            this.marca = marca;
+            this.periferico = (Periferico)random.Next(0, 3);
+            this.hardware = (Hardware)random.Next(0, 3);
+            this.software = (Software)random.Next(0, 4);
+            this.juego = (Juego)random.Next(0, 6);
+            this.tipo = (Tipo)random.Next(0, 2);
+            this.marca = (Marcas)random.Next(0, 2);
         }
         #endregion
 
@@ -94,20 +69,12 @@ namespace Entidades
             {
                 return dni;
             }
-            set
-            {
-                dni = value;
-            }
         }
         public string Nombre 
         { 
             get
             {
                 return nombre;
-            }
-            set
-            {
-                nombre = value;
             }
         }
         public string Apellido 
@@ -116,20 +83,12 @@ namespace Entidades
             {
                 return apellido;
             }
-            set
-            {
-                apellido = value;
-            }
         }
         public int Edad 
         {
             get 
             { 
                 return edad; 
-            }
-            set 
-            { 
-                edad = value; 
             }
         }
         public string Equipo
@@ -177,20 +136,12 @@ namespace Entidades
             {
                 return tipo;
             }
-            set
-            {
-                tipo = value;
-            }
         }
         public Marcas Marca 
         {
             get
             {
                 return marca;
-            }
-            set
-            {
-                marca = value;
             }
         }
         #endregion

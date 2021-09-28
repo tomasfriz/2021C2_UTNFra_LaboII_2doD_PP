@@ -38,13 +38,17 @@ namespace Cibercafe_ElVicio
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvEspera = new System.Windows.Forms.DataGridView();
+            this.dgvMaquina = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnAsigMaquina = new System.Windows.Forms.Button();
             this.btnAsigCabina = new System.Windows.Forms.Button();
+            this.dgvCabina = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEspera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCabina)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAyuda
@@ -99,24 +103,27 @@ namespace Cibercafe_ElVicio
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.dgvEspera);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.dgvCabina);
+            this.panel1.Controls.Add(this.dgvMaquina);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Name = "panel1";
             // 
-            // dgvEspera
+            // dgvMaquina
             // 
-            this.dgvEspera.AllowUserToAddRows = false;
-            this.dgvEspera.AllowUserToDeleteRows = false;
-            this.dgvEspera.AllowUserToOrderColumns = true;
-            this.dgvEspera.BackgroundColor = System.Drawing.Color.White;
-            this.dgvEspera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEspera.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            resources.ApplyResources(this.dgvEspera, "dgvEspera");
-            this.dgvEspera.MultiSelect = false;
-            this.dgvEspera.Name = "dgvEspera";
-            this.dgvEspera.ReadOnly = true;
-            this.dgvEspera.RowTemplate.Height = 25;
-            this.dgvEspera.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMaquina.AllowUserToAddRows = false;
+            this.dgvMaquina.AllowUserToDeleteRows = false;
+            this.dgvMaquina.AllowUserToOrderColumns = true;
+            this.dgvMaquina.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMaquina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaquina.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            resources.ApplyResources(this.dgvMaquina, "dgvMaquina");
+            this.dgvMaquina.MultiSelect = false;
+            this.dgvMaquina.Name = "dgvMaquina";
+            this.dgvMaquina.ReadOnly = true;
+            this.dgvMaquina.RowTemplate.Height = 25;
+            this.dgvMaquina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
             // label4
             // 
@@ -148,6 +155,33 @@ namespace Cibercafe_ElVicio
             this.btnAsigCabina.UseVisualStyleBackColor = false;
             this.btnAsigCabina.Click += new System.EventHandler(this.btnAsigCabina_Click);
             // 
+            // dgvCabina
+            // 
+            this.dgvCabina.AllowUserToAddRows = false;
+            this.dgvCabina.AllowUserToDeleteRows = false;
+            this.dgvCabina.AllowUserToOrderColumns = true;
+            this.dgvCabina.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCabina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCabina.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            resources.ApplyResources(this.dgvCabina, "dgvCabina");
+            this.dgvCabina.MultiSelect = false;
+            this.dgvCabina.Name = "dgvCabina";
+            this.dgvCabina.ReadOnly = true;
+            this.dgvCabina.RowTemplate.Height = 25;
+            this.dgvCabina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
             // FrmMenu
             // 
             this.AllowDrop = true;
@@ -169,7 +203,8 @@ namespace Cibercafe_ElVicio
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCibercafe_FormClosing);
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEspera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCabina)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,10 +220,13 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvEspera;
+        private System.Windows.Forms.DataGridView dgvMaquina;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnAsigMaquina;
         private System.Windows.Forms.Button btnAsigCabina;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dgvCabina;
     }
 }
 

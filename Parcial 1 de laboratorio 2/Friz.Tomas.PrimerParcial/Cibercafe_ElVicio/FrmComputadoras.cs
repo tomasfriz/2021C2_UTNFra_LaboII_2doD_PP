@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using static Entidades.Enumerados;
 
 namespace Cibercafe_ElVicio
 {
@@ -19,17 +20,18 @@ namespace Cibercafe_ElVicio
         public FrmComputadoras()
         {
             InitializeComponent();
+            //List<Computadora> clienteMaquina = new List<Computadora>();
             Computadora[] computadoras = new Computadora[10];
-            computadoras[0] = new Computadora(Software.ares, Periferico.auriculares, Juego.CounterStrike, Hardware.procesador,"Disponible");
-            computadoras[1] = new Computadora(Software.icq, Periferico.cámara, Juego.AgeOfEmpiresII, Hardware.placaDeVideo, "Disponible");
-            computadoras[2] = new Computadora(Software.messenger, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "Disponible");
-            computadoras[3] = new Computadora(Software.office, Periferico.auriculares, Juego.LineageII, Hardware.placaDeVideo, "Disponible");
-            computadoras[4] = new Computadora(Software.ares, Periferico.cámara, Juego.MuOnline, Hardware.procesador, "Disponible");
-            computadoras[5] = new Computadora(Software.icq, Periferico.micrófono, Juego.WarcraftIII, Hardware.ram, "Disponible");
-            computadoras[6] = new Computadora(Software.messenger, Periferico.auriculares, Juego.AgeOfEmpiresII, Hardware.procesador, "Disponible");
-            computadoras[7] = new Computadora(Software.office, Periferico.cámara, Juego.CounterStrike, Hardware.placaDeVideo, "Disponible");
-            computadoras[8] = new Computadora(Software.ares, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "Disponible");
-            computadoras[9] = new Computadora(Software.icq, Periferico.auriculares, Juego.LineageII, Hardware.procesador, "Disponible");
+            computadoras[0] = new Computadora("",Software.ares, Periferico.auriculares, Juego.CounterStrike, Hardware.procesador,"Disponible");
+            computadoras[1] = new Computadora("",Software.icq, Periferico.cámara, Juego.AgeOfEmpiresII, Hardware.placaDeVideo, "Disponible");
+            computadoras[2] = new Computadora("",Software.messenger, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "Disponible");
+            computadoras[3] = new Computadora("",Software.office, Periferico.auriculares, Juego.LineageII, Hardware.placaDeVideo, "Disponible");
+            computadoras[4] = new Computadora("",Software.ares, Periferico.cámara, Juego.MuOnline, Hardware.procesador, "Disponible");
+            computadoras[5] = new Computadora("",Software.icq, Periferico.micrófono, Juego.WarcraftIII, Hardware.ram, "Disponible");
+            computadoras[6] = new Computadora("",Software.messenger, Periferico.auriculares, Juego.AgeOfEmpiresII, Hardware.procesador, "Disponible");
+            computadoras[7] = new Computadora("",Software.office, Periferico.cámara, Juego.CounterStrike, Hardware.placaDeVideo, "Disponible");
+            computadoras[8] = new Computadora("",Software.ares, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "Disponible");
+            computadoras[9] = new Computadora("",Software.icq, Periferico.auriculares, Juego.LineageII, Hardware.procesador, "Disponible");
 
             dgvCompu.DataSource = computadoras;
         }
