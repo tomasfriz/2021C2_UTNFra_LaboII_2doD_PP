@@ -38,17 +38,26 @@ namespace Cibercafe_ElVicio
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dgvCabina = new System.Windows.Forms.DataGridView();
             this.dgvMaquina = new System.Windows.Forms.DataGridView();
+            this.Dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Equipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Periferico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hardware = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Software = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Juego = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnAsigMaquina = new System.Windows.Forms.Button();
             this.btnAsigCabina = new System.Windows.Forms.Button();
-            this.dgvCabina = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCabina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquina)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAyuda
@@ -110,13 +119,49 @@ namespace Cibercafe_ElVicio
             this.panel1.Controls.Add(this.label4);
             this.panel1.Name = "panel1";
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // dgvCabina
+            // 
+            this.dgvCabina.AllowUserToAddRows = false;
+            this.dgvCabina.AllowUserToDeleteRows = false;
+            this.dgvCabina.AllowUserToOrderColumns = true;
+            this.dgvCabina.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCabina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCabina.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            resources.ApplyResources(this.dgvCabina, "dgvCabina");
+            this.dgvCabina.MultiSelect = false;
+            this.dgvCabina.Name = "dgvCabina";
+            this.dgvCabina.ReadOnly = true;
+            this.dgvCabina.RowTemplate.Height = 25;
+            this.dgvCabina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
             // dgvMaquina
             // 
-            this.dgvMaquina.AllowUserToAddRows = false;
             this.dgvMaquina.AllowUserToDeleteRows = false;
             this.dgvMaquina.AllowUserToOrderColumns = true;
             this.dgvMaquina.BackgroundColor = System.Drawing.Color.White;
             this.dgvMaquina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaquina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Dni,
+            this.Nombre,
+            this.Apellido,
+            this.Edad,
+            this.Equipo,
+            this.Periferico,
+            this.Hardware,
+            this.Software,
+            this.Juego});
             this.dgvMaquina.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             resources.ApplyResources(this.dgvMaquina, "dgvMaquina");
             this.dgvMaquina.MultiSelect = false;
@@ -124,6 +169,60 @@ namespace Cibercafe_ElVicio
             this.dgvMaquina.ReadOnly = true;
             this.dgvMaquina.RowTemplate.Height = 25;
             this.dgvMaquina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // Dni
+            // 
+            resources.ApplyResources(this.Dni, "Dni");
+            this.Dni.Name = "Dni";
+            this.Dni.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            resources.ApplyResources(this.Nombre, "Nombre");
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            resources.ApplyResources(this.Apellido, "Apellido");
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Edad
+            // 
+            resources.ApplyResources(this.Edad, "Edad");
+            this.Edad.Name = "Edad";
+            this.Edad.ReadOnly = true;
+            // 
+            // Equipo
+            // 
+            resources.ApplyResources(this.Equipo, "Equipo");
+            this.Equipo.Name = "Equipo";
+            this.Equipo.ReadOnly = true;
+            // 
+            // Periferico
+            // 
+            resources.ApplyResources(this.Periferico, "Periferico");
+            this.Periferico.Name = "Periferico";
+            this.Periferico.ReadOnly = true;
+            // 
+            // Hardware
+            // 
+            resources.ApplyResources(this.Hardware, "Hardware");
+            this.Hardware.Name = "Hardware";
+            this.Hardware.ReadOnly = true;
+            // 
+            // Software
+            // 
+            resources.ApplyResources(this.Software, "Software");
+            this.Software.Name = "Software";
+            this.Software.ReadOnly = true;
+            // 
+            // Juego
+            // 
+            resources.ApplyResources(this.Juego, "Juego");
+            this.Juego.Name = "Juego";
+            this.Juego.ReadOnly = true;
             // 
             // label4
             // 
@@ -155,33 +254,6 @@ namespace Cibercafe_ElVicio
             this.btnAsigCabina.UseVisualStyleBackColor = false;
             this.btnAsigCabina.Click += new System.EventHandler(this.btnAsigCabina_Click);
             // 
-            // dgvCabina
-            // 
-            this.dgvCabina.AllowUserToAddRows = false;
-            this.dgvCabina.AllowUserToDeleteRows = false;
-            this.dgvCabina.AllowUserToOrderColumns = true;
-            this.dgvCabina.BackgroundColor = System.Drawing.Color.White;
-            this.dgvCabina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCabina.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            resources.ApplyResources(this.dgvCabina, "dgvCabina");
-            this.dgvCabina.MultiSelect = false;
-            this.dgvCabina.Name = "dgvCabina";
-            this.dgvCabina.ReadOnly = true;
-            this.dgvCabina.RowTemplate.Height = 25;
-            this.dgvCabina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
             // FrmMenu
             // 
             this.AllowDrop = true;
@@ -203,8 +275,8 @@ namespace Cibercafe_ElVicio
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCibercafe_FormClosing);
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCabina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquina)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,6 +299,15 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvCabina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Equipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Periferico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hardware;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Software;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Juego;
     }
 }
 

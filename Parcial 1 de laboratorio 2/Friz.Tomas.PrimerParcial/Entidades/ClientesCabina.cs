@@ -15,5 +15,20 @@ namespace Entidades
             this.tipo = (Tipo)random.Next(0, 2);
             this.marca = (Marcas)random.Next(0, 2);
         }
+
+        public Tipo Tipo
+        {
+            get
+            {
+                return tipo;
+            }
+        }
+        public Marcas Marca
+        {
+            get
+            {
+                return marca;
+            }
+        }
     }
 }

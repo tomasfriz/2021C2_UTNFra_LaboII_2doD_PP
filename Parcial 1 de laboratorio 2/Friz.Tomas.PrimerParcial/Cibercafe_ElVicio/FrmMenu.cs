@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 using Entidades;
 
 namespace Cibercafe_ElVicio
@@ -23,16 +24,7 @@ namespace Cibercafe_ElVicio
             lblUsuario.Text = "Tomás Agustín Friz";
             lblFecha.Text = DateTime.Now.ToShortDateString();
 
-            List<ClientesMaquina> clienteMaquina = new List<ClientesMaquina>();
-            clienteMaquina.Add(new ClientesMaquina(41918909, "Tomás", "Sánchez", 22, "Computadora"));
-            clienteMaquina.Add(new ClientesMaquina(31456980, "Gustavo", "Doria", 53, "Computadora"));
-            clienteMaquina.Add(new ClientesMaquina(34067132, "Mauricio", "Prieto", 35, "Computadora"));
-            dgvMaquina.DataSource = clienteMaquina;
 
-            List<ClientesCabina> clienteCabina = new List<ClientesCabina>();
-            clienteCabina.Add(new ClientesCabina(36897132, "Belén", "Trinidad", 16, "Telefono"));
-            clienteCabina.Add(new ClientesCabina(27643934, "Brisa", "Quinteros", 28, "Telefono"));
-            dgvCabina.DataSource = clienteCabina;
         }
 
         /// <summary>
@@ -112,6 +104,20 @@ namespace Cibercafe_ElVicio
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             MessageBox.Show("¡BIENVENIDO USUARIO!");
+
+            dgvMaquina.AutoGenerateColumns = false;
+            List<ClientesMaquina> clienteMaquina = new List<ClientesMaquina>();
+            clienteMaquina.Add(new ClientesMaquina(41918909, "Tomás", "Sánchez", 22, "Computadora"));
+            clienteMaquina.Add(new ClientesMaquina(31456980, "Gustavo", "Doria", 53, "Computadora"));
+            clienteMaquina.Add(new ClientesMaquina(34067132, "Mauricio", "Prieto", 35, "Computadora"));
+            dgvMaquina.DataSource = clienteMaquina;
+
+            dgvCabina.AutoGenerateColumns = false;
+            List<ClientesCabina> clienteCabina = new List<ClientesCabina>();
+            clienteCabina.Add(new ClientesCabina(36897132, "Belén", "Trinidad", 16, "Telefono"));
+            clienteCabina.Add(new ClientesCabina(27643934, "Brisa", "Quinteros", 28, "Telefono"));
+            dgvCabina.DataSource = clienteCabina;
         }
+
     }
 }

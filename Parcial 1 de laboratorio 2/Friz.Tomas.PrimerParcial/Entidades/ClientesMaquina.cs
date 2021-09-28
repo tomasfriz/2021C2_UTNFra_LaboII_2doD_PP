@@ -17,5 +17,33 @@ namespace Entidades
             this.software = (Software)random.Next(0, 4);
             this.juego = (Juego)random.Next(0, 6);
         }
+        public Periferico Periferico
+        {
+            get
+            {
+                return periferico;
+            }
+        }
+        public Hardware Hardware
+        {
+            get
+            {
+                return hardware;
+            }
+        }
+        public Software Software
+        {
+            get
+            {
+                return software;
+            }
+        }
+        public Juego Juego
+        {
+            get
+            {
+                return juego;
+            }
+        }
     }
 }

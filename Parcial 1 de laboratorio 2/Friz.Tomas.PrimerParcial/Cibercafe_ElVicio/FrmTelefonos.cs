@@ -20,6 +20,8 @@ namespace Cibercafe_ElVicio
         public FrmTelefonos()
         {
             InitializeComponent();
+            List<Telefono> clienteTelefono = new List<Telefono>();
+
             Telefono[] telefonos = new Telefono[5];
             telefonos[0] = new Telefono(Tipo.Disco, Marcas.Siemens, "Disponible");
             telefonos[1] = new Telefono(Tipo.Teclado, Marcas.Panasonic, "Disponible");

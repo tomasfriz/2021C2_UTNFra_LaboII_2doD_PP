@@ -102,48 +102,6 @@ namespace Entidades
                 equipo = value;
             }
         }
-        public Periferico Periferico
-        {
-            get
-            {
-                return periferico;
-            }
-        }
-        public Hardware Hardware
-        {
-            get
-            {
-                return hardware;
-            }
-        }
-        public Software Software
-        {
-            get
-            {
-                return software;
-            }
-        }
-        public Juego Juego
-        {
-            get
-            {
-                return juego;
-            }
-        }
-        public Tipo Tipo
-        {
-            get
-            {
-                return tipo;
-            }
-        }
-        public Marcas Marca 
-        {
-            get
-            {
-                return marca;
-            }
-        }
         #endregion
     }
 }
