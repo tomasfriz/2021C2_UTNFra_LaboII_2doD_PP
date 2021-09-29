@@ -105,14 +105,12 @@ namespace Cibercafe_ElVicio
         {
             MessageBox.Show("¡BIENVENIDO USUARIO!");
 
-            dgvMaquina.AutoGenerateColumns = false;
             List<ClientesMaquina> clienteMaquina = new List<ClientesMaquina>();
             clienteMaquina.Add(new ClientesMaquina(41918909, "Tomás", "Sánchez", 22, "Computadora"));
             clienteMaquina.Add(new ClientesMaquina(31456980, "Gustavo", "Doria", 53, "Computadora"));
             clienteMaquina.Add(new ClientesMaquina(34067132, "Mauricio", "Prieto", 35, "Computadora"));
             dgvMaquina.DataSource = clienteMaquina;
 
-            dgvCabina.AutoGenerateColumns = false;
             List<ClientesCabina> clienteCabina = new List<ClientesCabina>();
             clienteCabina.Add(new ClientesCabina(36897132, "Belén", "Trinidad", 16, "Telefono"));
             clienteCabina.Add(new ClientesCabina(27643934, "Brisa", "Quinteros", 28, "Telefono"));

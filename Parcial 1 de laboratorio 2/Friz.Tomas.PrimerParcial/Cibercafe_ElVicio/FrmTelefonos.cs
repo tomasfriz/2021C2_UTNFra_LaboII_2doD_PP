@@ -21,15 +21,12 @@ namespace Cibercafe_ElVicio
         {
             InitializeComponent();
             List<Telefono> clienteTelefono = new List<Telefono>();
-
-            Telefono[] telefonos = new Telefono[5];
-            telefonos[0] = new Telefono(Tipo.Disco, Marcas.Siemens, "Disponible");
-            telefonos[1] = new Telefono(Tipo.Teclado, Marcas.Panasonic, "Disponible");
-            telefonos[2] = new Telefono(Tipo.Disco, Marcas.Siemens, "Disponible");
-            telefonos[3] = new Telefono(Tipo.Teclado, Marcas.Panasonic, "Disponible");
-            telefonos[4] = new Telefono(Tipo.Disco, Marcas.Siemens, "Disponible");
-
-            dgvTelef.DataSource = telefonos;
+            clienteTelefono.Add(new Telefono("T01", Tipo.Disco, Marcas.Siemens, "Disponible"));
+            clienteTelefono.Add(new Telefono("T02", Tipo.Teclado, Marcas.Panasonic, "Disponible"));
+            clienteTelefono.Add(new Telefono("T03", Tipo.Disco, Marcas.Siemens, "Disponible"));
+            clienteTelefono.Add(new Telefono("T04", Tipo.Teclado, Marcas.Panasonic, "Disponible"));
+            clienteTelefono.Add(new Telefono("T05", Tipo.Disco, Marcas.Siemens, "Disponible"));
+            dgvTelef.DataSource = clienteTelefono;
         }
         /// <summary>
         /// Sirve para cerrar la ventana.

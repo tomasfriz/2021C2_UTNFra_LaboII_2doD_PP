@@ -7,10 +7,10 @@ namespace Entidades
     {
         #region Atributos
         protected Random random;
-        private int dni;
-        private string nombre;
-        private string apellido;
-        private int edad;
+        protected int dni;
+        protected string nombre;
+        protected string apellido;
+        protected int edad;
         protected string equipo;
         protected Periferico periferico;
         protected Hardware hardware;
@@ -53,54 +53,6 @@ namespace Entidades
         public Cliente(int dni, string nombre, string apellido, int edad, string equipo) : this(dni, nombre, apellido, edad)
         {
             this.equipo = equipo;
-            this.periferico = (Periferico)random.Next(0, 3);
-            this.hardware = (Hardware)random.Next(0, 3);
-            this.software = (Software)random.Next(0, 4);
-            this.juego = (Juego)random.Next(0, 6);
-            this.tipo = (Tipo)random.Next(0, 2);
-            this.marca = (Marcas)random.Next(0, 2);
-        }
-        #endregion
-
-        #region Encapsulamiento
-        public int Dni
-        {
-            get
-            {
-                return dni;
-            }
-        }
-        public string Nombre 
-        { 
-            get
-            {
-                return nombre;
-            }
-        }
-        public string Apellido 
-        {
-            get
-            {
-                return apellido;
-            }
-        }
-        public int Edad 
-        {
-            get 
-            { 
-                return edad; 
-            }
-        }
-        public string Equipo
-        {
-            get
-            {
-                return equipo;
-            }
-            set
-            {
-                equipo = value;
-            }
         }
         #endregion
     }

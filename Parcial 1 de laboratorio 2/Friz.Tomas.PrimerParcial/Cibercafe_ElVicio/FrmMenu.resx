@@ -379,60 +379,6 @@
   <data name="&gt;&gt;dgvCabina.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="Dni.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Dni.HeaderText" xml:space="preserve">
-    <value>Dni</value>
-  </data>
-  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Nombre.HeaderText" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <metadata name="Apellido.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Apellido.HeaderText" xml:space="preserve">
-    <value>Apellido</value>
-  </data>
-  <metadata name="Edad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Edad.HeaderText" xml:space="preserve">
-    <value>Edad</value>
-  </data>
-  <metadata name="Equipo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Equipo.HeaderText" xml:space="preserve">
-    <value>Equipo</value>
-  </data>
-  <metadata name="Periferico.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Periferico.HeaderText" xml:space="preserve">
-    <value>Periferico</value>
-  </data>
-  <metadata name="Hardware.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Hardware.HeaderText" xml:space="preserve">
-    <value>Hardware</value>
-  </data>
-  <metadata name="Software.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Software.HeaderText" xml:space="preserve">
-    <value>Software</value>
-  </data>
-  <metadata name="Juego.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Juego.HeaderText" xml:space="preserve">
-    <value>Juego</value>
-  </data>
   <data name="dgvMaquina.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 63</value>
   </data>
@@ -636,60 +582,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cibercafe "El Vicio"</value>
-  </data>
-  <data name="&gt;&gt;Dni.Name" xml:space="preserve">
-    <value>Dni</value>
-  </data>
-  <data name="&gt;&gt;Dni.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Nombre.Name" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="&gt;&gt;Nombre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Apellido.Name" xml:space="preserve">
-    <value>Apellido</value>
-  </data>
-  <data name="&gt;&gt;Apellido.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Edad.Name" xml:space="preserve">
-    <value>Edad</value>
-  </data>
-  <data name="&gt;&gt;Edad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Equipo.Name" xml:space="preserve">
-    <value>Equipo</value>
-  </data>
-  <data name="&gt;&gt;Equipo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Periferico.Name" xml:space="preserve">
-    <value>Periferico</value>
-  </data>
-  <data name="&gt;&gt;Periferico.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Hardware.Name" xml:space="preserve">
-    <value>Hardware</value>
-  </data>
-  <data name="&gt;&gt;Hardware.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Software.Name" xml:space="preserve">
-    <value>Software</value>
-  </data>
-  <data name="&gt;&gt;Software.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Juego.Name" xml:space="preserve">
-    <value>Juego</value>
-  </data>
-  <data name="&gt;&gt;Juego.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMenu</value>

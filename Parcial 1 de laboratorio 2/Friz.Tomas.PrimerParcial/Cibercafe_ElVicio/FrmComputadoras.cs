@@ -32,7 +32,6 @@ namespace Cibercafe_ElVicio
             clienteMaquina.Add(new Computadora("C08", Software.office, Periferico.cámara, Juego.CounterStrike, Hardware.placaDeVideo, "Disponible"));
             clienteMaquina.Add(new Computadora("C09", Software.ares, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "Disponible"));
             clienteMaquina.Add(new Computadora("C10", Software.icq, Periferico.auriculares, Juego.LineageII, Hardware.procesador, "Disponible"));
-
             dgvCompu.DataSource = clienteMaquina;
         }
         /// <summary>

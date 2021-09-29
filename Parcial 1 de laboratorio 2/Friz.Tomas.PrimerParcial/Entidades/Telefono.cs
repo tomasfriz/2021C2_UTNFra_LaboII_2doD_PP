@@ -10,6 +10,7 @@ namespace Entidades
     public class Telefono
     {
         #region Atributos
+        private string id;
         private Tipo tipo;
         private Marcas marca;
         private string estado;
@@ -39,13 +40,25 @@ namespace Entidades
         /// <param name="tipo"></param>
         /// <param name="marca"></param>
         /// <param name="estado"></param>
-        public Telefono(Tipo tipo, Marcas marca, string estado) : this(tipo, marca)
+        public Telefono(string id,Tipo tipo, Marcas marca, string estado) : this(tipo, marca)
         {
-            this.estado = estado;
+            this.id = id;
+            this.estado = estado;            
         }
         #endregion
 
         #region Encapsulamiento
+        public string Id 
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
         public Tipo Tipo 
         {
             get
@@ -79,6 +92,8 @@ namespace Entidades
                 estado = value;
             }        
         }
+
+        
         #endregion
     }
 }

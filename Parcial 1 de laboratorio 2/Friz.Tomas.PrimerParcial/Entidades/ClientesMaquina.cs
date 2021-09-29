@@ -12,10 +12,51 @@ namespace Entidades
         public ClientesMaquina(int dni, string nombre, string apellido, int edad, string equipo) : base(dni, nombre, apellido, edad)
         {
             this.equipo = equipo;
-            this.periferico = (Periferico)random.Next(0, 3);
-            this.hardware = (Hardware)random.Next(0, 3);
-            this.software = (Software)random.Next(0, 4);
-            this.juego = (Juego)random.Next(0, 6);
+            this.periferico = (Periferico)random.Next(0, 4);
+            this.hardware = (Hardware)random.Next(0, 4);
+            this.software = (Software)random.Next(0, 5);
+            this.juego = (Juego)random.Next(0, 7);
+        }
+
+        #region Encapsulamiento
+        public int Dni
+        {
+            get
+            {
+                return dni;
+            }
+        }
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+        }
+        public string Apellido
+        {
+            get
+            {
+                return apellido;
+            }
+        }
+        public int Edad
+        {
+            get
+            {
+                return edad;
+            }
+        }
+        public string Equipo
+        {
+            get
+            {
+                return equipo;
+            }
+            set
+            {
+                equipo = value;
+            }
         }
         public Periferico Periferico
         {
@@ -45,5 +86,7 @@ namespace Entidades
                 return juego;
             }
         }
+        #endregion
+
     }
 }

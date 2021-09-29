@@ -75,7 +75,6 @@ namespace Cibercafe_ElVicio
             // 
             this.dgvTelef.AllowUserToAddRows = false;
             this.dgvTelef.AllowUserToDeleteRows = false;
-            this.dgvTelef.AllowUserToOrderColumns = true;
             this.dgvTelef.BackgroundColor = System.Drawing.Color.White;
             this.dgvTelef.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTelef.Location = new System.Drawing.Point(16, 16);
