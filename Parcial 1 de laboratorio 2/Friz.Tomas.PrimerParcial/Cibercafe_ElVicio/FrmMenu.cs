@@ -8,7 +8,6 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Reflection;
 using Entidades;
 
 namespace Cibercafe_ElVicio
@@ -23,8 +22,6 @@ namespace Cibercafe_ElVicio
             InitializeComponent();
             lblUsuario.Text = "Tomás Agustín Friz";
             lblFecha.Text = DateTime.Now.ToShortDateString();
-
-
         }
 
         /// <summary>
