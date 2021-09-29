@@ -9,6 +9,7 @@ namespace Entidades
 {
     public class ClientesMaquina : Cliente
     {
+        #region Constructor
         public ClientesMaquina(int dni, string nombre, string apellido, int edad, string equipo) : base(dni, nombre, apellido, edad)
         {
             this.equipo = equipo;
@@ -17,6 +18,7 @@ namespace Entidades
             this.software = (Software)random.Next(0, 5);
             this.juego = (Juego)random.Next(0, 7);
         }
+        #endregion 
 
         #region Encapsulamiento
         public int Dni
@@ -88,5 +90,31 @@ namespace Entidades
         }
         #endregion
 
+        #region Operadores
+        public override bool Equals(object obj)
+        {
+            return obj is ClientesMaquina maquina &&
+                   dni == maquina.dni &&
+                   periferico == maquina.periferico &&
+                   hardware == maquina.hardware &&
+                   software == maquina.software &&
+                   juego == maquina.juego;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(dni, periferico, hardware, software, juego);
+        }
+
+        public static bool operator ==(ClientesMaquina left, ClientesMaquina right)
+        {
+            return EqualityComparer<ClientesMaquina>.Default.Equals(left, right);
+        }
+
+        public static bool operator !=(ClientesMaquina left, ClientesMaquina right)
+        {
+            return !(left == right);
+        }
+        #endregion
     }
 }

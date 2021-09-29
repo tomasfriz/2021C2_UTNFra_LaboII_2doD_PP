@@ -16,5 +16,10 @@ namespace Cibercafe_ElVicio
         {
             InitializeComponent();
         }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

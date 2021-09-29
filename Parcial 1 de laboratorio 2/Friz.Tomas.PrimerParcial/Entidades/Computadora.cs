@@ -104,6 +104,30 @@ namespace Entidades
         }
         #endregion
 
-        
+        #region Operadores
+        public override bool Equals(object obj)
+        {
+            return obj is Computadora computadora &&
+                   software == computadora.software &&
+                   periferico == computadora.periferico &&
+                   juego == computadora.juego &&
+                   hardware == computadora.hardware;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(software, periferico, juego, hardware);
+        }
+
+        public static bool operator ==(Computadora left, Computadora right)
+        {
+            return EqualityComparer<Computadora>.Default.Equals(left, right);
+        }
+
+        public static bool operator !=(Computadora left, Computadora right)
+        {
+            return !(left == right);
+        }
+        #endregion
     }
 }

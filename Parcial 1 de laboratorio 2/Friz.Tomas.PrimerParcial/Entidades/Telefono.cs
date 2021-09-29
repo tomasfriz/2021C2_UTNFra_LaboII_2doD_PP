@@ -92,8 +92,30 @@ namespace Entidades
                 estado = value;
             }        
         }
+        #endregion
 
-        
+        #region Operadores
+        public override bool Equals(object obj)
+        {
+            return obj is Telefono telefono &&
+                   tipo == telefono.tipo &&
+                   marca == telefono.marca;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(tipo, marca);
+        }
+
+        public static bool operator ==(Telefono left, Telefono right)
+        {
+            return EqualityComparer<Telefono>.Default.Equals(left, right);
+        }
+
+        public static bool operator !=(Telefono left, Telefono right)
+        {
+            return !(left == right);
+        }
         #endregion
     }
 }

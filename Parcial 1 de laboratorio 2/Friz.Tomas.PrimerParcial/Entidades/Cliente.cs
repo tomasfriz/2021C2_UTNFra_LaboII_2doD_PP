@@ -55,5 +55,7 @@ namespace Entidades
             this.equipo = equipo;
         }
         #endregion
+
+
     }
 }
