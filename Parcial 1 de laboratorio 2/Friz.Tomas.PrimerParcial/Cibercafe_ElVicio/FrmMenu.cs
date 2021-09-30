@@ -71,7 +71,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnAsigMaquina_Click(object sender, EventArgs e)
         {
-            Cliente clienteSelecionado = (Cliente)dgvMaquina.CurrentRow.DataBoundItem;
+            //Cliente clienteSelecionado = (Cliente)dgvClientes.CurrentRow.DataBoundItem;
             FrmComputadoras frmComputadoras = new FrmComputadoras();
             frmComputadoras.Show();
 
@@ -102,16 +102,13 @@ namespace Cibercafe_ElVicio
         {
             MessageBox.Show("¡BIENVENIDO USUARIO!");
 
-            List<ClientesMaquina> clienteMaquina = new List<ClientesMaquina>();
-            clienteMaquina.Add(new ClientesMaquina(41918909, "Tomás", "Sánchez", 22, "Computadora"));
-            clienteMaquina.Add(new ClientesMaquina(31456980, "Gustavo", "Doria", 53, "Computadora"));
-            clienteMaquina.Add(new ClientesMaquina(34067132, "Mauricio", "Prieto", 35, "Computadora"));
-            dgvMaquina.DataSource = clienteMaquina;
-
-            List<ClientesCabina> clienteCabina = new List<ClientesCabina>();
-            clienteCabina.Add(new ClientesCabina(36897132, "Belén", "Trinidad", 16, "Telefono"));
-            clienteCabina.Add(new ClientesCabina(27643934, "Brisa", "Quinteros", 28, "Telefono"));
-            dgvCabina.DataSource = clienteCabina;
+            List<Cliente> clientes = new List<Cliente>();
+            clientes.Add(new Cliente(41918909, "Tomás", "Sánchez", 22));
+            clientes.Add(new Cliente(31456980, "Gustavo", "Doria", 53));
+            clientes.Add(new Cliente(34067132, "Mauricio", "Prieto", 35));
+            clientes.Add(new Cliente(36897132, "Belén", "Trinidad", 16));
+            clientes.Add(new Cliente(27643934, "Brisa", "Quinteros", 28));
+            listCliente.Text = clientes;
         }
 
     }

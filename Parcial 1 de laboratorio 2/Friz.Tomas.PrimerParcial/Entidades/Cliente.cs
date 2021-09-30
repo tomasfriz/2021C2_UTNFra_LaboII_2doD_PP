@@ -11,7 +11,6 @@ namespace Entidades
         protected string nombre;
         protected string apellido;
         protected int edad;
-        protected string equipo;
         protected Periferico periferico;
         protected Hardware hardware;
         protected Software software;
@@ -28,6 +27,10 @@ namespace Entidades
         {
             random = new Random();
         }
+        public Cliente(int dni)
+        {
+            this.dni = dni;
+        }
         /// <summary>
         /// Constructor para los datos de los clientes.
         /// </summary>
@@ -35,27 +38,41 @@ namespace Entidades
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
         /// <param name="edad"></param>
-        public Cliente(int dni, string nombre, string apellido, int edad) : this()
+        public Cliente(int dni, string nombre, string apellido, int edad): this(dni)
         {
-            this.dni = dni;
             this.nombre = nombre;
             this.apellido = apellido;
             this.edad = edad;
         }
-        /// <summary>
-        /// Constructor para sobrecargar y asignar los equipos.
-        /// </summary>
-        /// <param name="dni"></param>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="edad"></param>
-        /// <param name="equipo"></param>
-        public Cliente(int dni, string nombre, string apellido, int edad, string equipo) : this(dni, nombre, apellido, edad)
-        {
-            this.equipo = equipo;
-        }
         #endregion
 
-
+        public int Dni
+        {
+            get
+            {
+                return dni;
+            }
+        }
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+        }
+        public string Apellido
+        {
+            get
+            {
+                return apellido;
+            }
+        }
+        public int Edad
+        {
+            get
+            {
+                return edad;
+            }
+        }
     }
 }

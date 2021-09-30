@@ -41,8 +41,12 @@ namespace Cibercafe_ElVicio
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnColgar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTelef)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -50,7 +54,7 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnCerrar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCerrar.Location = new System.Drawing.Point(295, 298);
+            this.btnCerrar.Location = new System.Drawing.Point(375, 352);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(72, 28);
             this.btnCerrar.TabIndex = 6;
@@ -63,7 +67,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAyuda.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAyuda.Location = new System.Drawing.Point(61, 297);
+            this.btnAyuda.Location = new System.Drawing.Point(141, 351);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(72, 29);
             this.btnAyuda.TabIndex = 0;
@@ -77,13 +81,13 @@ namespace Cibercafe_ElVicio
             this.dgvTelef.AllowUserToDeleteRows = false;
             this.dgvTelef.BackgroundColor = System.Drawing.Color.White;
             this.dgvTelef.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvTelef.Location = new System.Drawing.Point(16, 16);
+            this.dgvTelef.Location = new System.Drawing.Point(16, 36);
             this.dgvTelef.MultiSelect = false;
             this.dgvTelef.Name = "dgvTelef";
             this.dgvTelef.ReadOnly = true;
             this.dgvTelef.RowTemplate.Height = 25;
             this.dgvTelef.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTelef.Size = new System.Drawing.Size(379, 198);
+            this.dgvTelef.Size = new System.Drawing.Size(261, 234);
             this.dgvTelef.TabIndex = 8;
             // 
             // panel1
@@ -93,18 +97,21 @@ namespace Cibercafe_ElVicio
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.dgvTelef);
             this.panel1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(414, 233);
+            this.panel1.Size = new System.Drawing.Size(575, 287);
             this.panel1.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(61, 248);
+            this.label2.Location = new System.Drawing.Point(141, 302);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(72, 20);
@@ -117,7 +124,7 @@ namespace Cibercafe_ElVicio
             this.btnLlamar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLlamar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnLlamar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLlamar.Location = new System.Drawing.Point(139, 298);
+            this.btnLlamar.Location = new System.Drawing.Point(219, 352);
             this.btnLlamar.Name = "btnLlamar";
             this.btnLlamar.Size = new System.Drawing.Size(72, 28);
             this.btnLlamar.TabIndex = 4;
@@ -129,7 +136,7 @@ namespace Cibercafe_ElVicio
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBox1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(61, 271);
+            this.textBox1.Location = new System.Drawing.Point(141, 325);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(72, 23);
             this.textBox1.TabIndex = 1;
@@ -138,7 +145,7 @@ namespace Cibercafe_ElVicio
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBox2.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(139, 271);
+            this.textBox2.Location = new System.Drawing.Point(219, 325);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(72, 23);
             this.textBox2.TabIndex = 2;
@@ -147,7 +154,7 @@ namespace Cibercafe_ElVicio
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBox3.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(217, 272);
+            this.textBox3.Location = new System.Drawing.Point(297, 326);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(149, 23);
             this.textBox3.TabIndex = 3;
@@ -156,7 +163,7 @@ namespace Cibercafe_ElVicio
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(146, 249);
+            this.label1.Location = new System.Drawing.Point(226, 303);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(57, 18);
@@ -168,7 +175,7 @@ namespace Cibercafe_ElVicio
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(216, 249);
+            this.label3.Location = new System.Drawing.Point(296, 303);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(150, 18);
@@ -181,7 +188,7 @@ namespace Cibercafe_ElVicio
             this.btnColgar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnColgar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnColgar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnColgar.Location = new System.Drawing.Point(217, 298);
+            this.btnColgar.Location = new System.Drawing.Point(297, 352);
             this.btnColgar.Name = "btnColgar";
             this.btnColgar.Size = new System.Drawing.Size(72, 28);
             this.btnColgar.TabIndex = 5;
@@ -189,12 +196,51 @@ namespace Cibercafe_ElVicio
             this.btnColgar.UseVisualStyleBackColor = false;
             this.btnColgar.Click += new System.EventHandler(this.btnColgar_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Location = new System.Drawing.Point(292, 36);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(261, 234);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.label6.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(292, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(261, 28);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Cabina";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(16, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(261, 28);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Clientes";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmTelefonos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(438, 332);
+            this.ClientSize = new System.Drawing.Size(599, 386);
             this.Controls.Add(this.btnColgar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -212,6 +258,7 @@ namespace Cibercafe_ElVicio
             this.Text = "FrmTelefonos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTelef)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +278,8 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnColgar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
     }
 }

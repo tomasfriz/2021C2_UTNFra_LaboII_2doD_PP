@@ -10,54 +10,41 @@ namespace Entidades
     public class ClientesMaquina : Cliente
     {
         #region Constructor
-        public ClientesMaquina(int dni, string nombre, string apellido, int edad, string equipo) : base(dni, nombre, apellido, edad)
+        public ClientesMaquina(int dni, string nombre, string apellido, int edad) : base(dni, nombre, apellido, edad)
         {
-            this.equipo = equipo;
             this.periferico = (Periferico)random.Next(0, 4);
             this.hardware = (Hardware)random.Next(0, 4);
             this.software = (Software)random.Next(0, 5);
             this.juego = (Juego)random.Next(0, 7);
         }
         #endregion 
-
         #region Encapsulamiento
-        public int Dni
+        public new int Dni
         {
             get
             {
                 return dni;
             }
         }
-        public string Nombre
+        public new string Nombre
         {
             get
             {
                 return nombre;
             }
         }
-        public string Apellido
+        public new string Apellido
         {
             get
             {
                 return apellido;
             }
         }
-        public int Edad
+        public new int Edad
         {
             get
             {
                 return edad;
-            }
-        }
-        public string Equipo
-        {
-            get
-            {
-                return equipo;
-            }
-            set
-            {
-                equipo = value;
             }
         }
         public Periferico Periferico

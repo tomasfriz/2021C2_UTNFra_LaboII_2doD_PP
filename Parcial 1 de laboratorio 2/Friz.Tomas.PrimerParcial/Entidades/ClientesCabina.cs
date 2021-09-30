@@ -10,52 +10,40 @@ namespace Entidades
     public class ClientesCabina: Cliente
     {
         #region Constructores
-        public ClientesCabina(int dni, string nombre, string apellido, int edad, string equipo) : base(dni, nombre, apellido, edad)
+        public ClientesCabina(int dni, string nombre, string apellido, int edad) : base(dni, nombre, apellido, edad)
         {
-            this.equipo = equipo;
             this.tipo = (Tipo)random.Next(0, 3);
             this.marca = (Marcas)random.Next(0, 3);
         }
         #endregion
 
         #region Encapsulamiento
-        public int Dni
+        public new int Dni
         {
             get
             {
                 return dni;
             }
         }
-        public string Nombre
+        public new string Nombre
         {
             get
             {
                 return nombre;
             }
         }
-        public string Apellido
+        public new string Apellido
         {
             get
             {
                 return apellido;
             }
         }
-        public int Edad
+        public new int Edad
         {
             get
             {
                 return edad;
-            }
-        }
-        public string Equipo
-        {
-            get
-            {
-                return equipo;
-            }
-            set
-            {
-                equipo = value;
             }
         }
         public Tipo Tipo
@@ -98,5 +86,6 @@ namespace Entidades
             return !(left == right);
         }
         #endregion
+
     }
 }
