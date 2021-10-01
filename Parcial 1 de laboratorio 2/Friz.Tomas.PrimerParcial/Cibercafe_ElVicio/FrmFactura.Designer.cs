@@ -29,7 +29,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbFactura = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,13 +40,13 @@ namespace Cibercafe_ElVicio
             this.cdDona = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // rtbFactura
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 34);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(403, 154);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rtbFactura.Location = new System.Drawing.Point(12, 34);
+            this.rtbFactura.Name = "rtbFactura";
+            this.rtbFactura.Size = new System.Drawing.Size(403, 154);
+            this.rtbFactura.TabIndex = 0;
+            this.rtbFactura.Text = "";
             // 
             // label1
             // 
@@ -134,7 +134,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtbFactura);
             this.MaximizeBox = false;
             this.Name = "FrmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -146,7 +146,7 @@ namespace Cibercafe_ElVicio
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbFactura;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;

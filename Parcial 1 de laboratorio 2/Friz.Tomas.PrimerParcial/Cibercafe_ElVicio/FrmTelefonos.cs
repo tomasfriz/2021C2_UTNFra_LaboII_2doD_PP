@@ -57,5 +57,10 @@ namespace Cibercafe_ElVicio
         {
 
         }
+
+        private void listCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

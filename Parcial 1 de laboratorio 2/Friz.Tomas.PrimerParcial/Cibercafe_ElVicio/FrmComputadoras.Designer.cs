@@ -32,15 +32,13 @@ namespace Cibercafe_ElVicio
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgvCompu = new System.Windows.Forms.DataGridView();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnConectar = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnDesconectar = new System.Windows.Forms.Button();
+            this.listCliente = new System.Windows.Forms.ListBox();
+            this.listMaquina = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,10 +48,10 @@ namespace Cibercafe_ElVicio
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.listMaquina);
+            this.panel1.Controls.Add(this.listCliente);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.dgvCompu);
-            this.panel1.Controls.Add(this.dgvClientes);
             this.panel1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -85,36 +83,6 @@ namespace Cibercafe_ElVicio
             this.label5.TabIndex = 14;
             this.label5.Text = "Maquinas";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgvCompu
-            // 
-            this.dgvCompu.AllowUserToAddRows = false;
-            this.dgvCompu.AllowUserToDeleteRows = false;
-            this.dgvCompu.BackgroundColor = System.Drawing.Color.White;
-            this.dgvCompu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompu.Location = new System.Drawing.Point(283, 34);
-            this.dgvCompu.MultiSelect = false;
-            this.dgvCompu.Name = "dgvCompu";
-            this.dgvCompu.ReadOnly = true;
-            this.dgvCompu.RowTemplate.Height = 25;
-            this.dgvCompu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCompu.Size = new System.Drawing.Size(259, 312);
-            this.dgvCompu.TabIndex = 6;
-            // 
-            // dgvClientes
-            // 
-            this.dgvClientes.AllowUserToAddRows = false;
-            this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(16, 34);
-            this.dgvClientes.MultiSelect = false;
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.RowTemplate.Height = 25;
-            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(261, 312);
-            this.dgvClientes.TabIndex = 5;
             // 
             // btnConectar
             // 
@@ -164,6 +132,24 @@ namespace Cibercafe_ElVicio
             this.btnDesconectar.UseVisualStyleBackColor = false;
             this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
+            // listCliente
+            // 
+            this.listCliente.FormattingEnabled = true;
+            this.listCliente.ItemHeight = 18;
+            this.listCliente.Location = new System.Drawing.Point(3, 34);
+            this.listCliente.Name = "listCliente";
+            this.listCliente.Size = new System.Drawing.Size(274, 310);
+            this.listCliente.TabIndex = 18;
+            // 
+            // listMaquina
+            // 
+            this.listMaquina.FormattingEnabled = true;
+            this.listMaquina.ItemHeight = 18;
+            this.listMaquina.Location = new System.Drawing.Point(283, 34);
+            this.listMaquina.Name = "listMaquina";
+            this.listMaquina.Size = new System.Drawing.Size(268, 310);
+            this.listMaquina.TabIndex = 19;
+            // 
             // FrmComputadoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -181,8 +167,6 @@ namespace Cibercafe_ElVicio
             this.Text = "FrmComputadoras";
             this.Load += new System.EventHandler(this.FrmComputadoras_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,10 +177,10 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Button btnDesconectar;
-        private System.Windows.Forms.DataGridView dgvCompu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox listMaquina;
+        private System.Windows.Forms.ListBox listCliente;
     }
 }
