@@ -11,7 +11,7 @@ namespace Entidades
     {
         #region Atributos
         private string id;
-        private Tipo tipo;
+        private Servicio tipo;
         private Marcas marca;
         private string estado;
         private double costo;
@@ -29,7 +29,7 @@ namespace Entidades
         /// </summary>
         /// <param name="tipo"></param>
         /// <param name="marca"></param>
-        public Telefono(Tipo tipo, Marcas marca)
+        public Telefono(Servicio tipo, Marcas marca)
         {
             this.tipo = tipo;
             this.marca = marca;
@@ -40,7 +40,7 @@ namespace Entidades
         /// <param name="tipo"></param>
         /// <param name="marca"></param>
         /// <param name="estado"></param>
-        public Telefono(string id,Tipo tipo, Marcas marca, string estado) : this(tipo, marca)
+        public Telefono(string id,Servicio tipo, Marcas marca, string estado) : this(tipo, marca)
         {
             this.id = id;
             this.estado = estado;            
@@ -59,7 +59,7 @@ namespace Entidades
                 id = value;
             }
         }
-        public Tipo Tipo 
+        public Servicio Tipo 
         {
             get
             {

@@ -12,7 +12,7 @@ namespace Entidades
         #region Constructores
         public ClientesCabina(int dni, string nombre, string apellido, int edad) : base(dni, nombre, apellido, edad)
         {
-            this.tipo = (Tipo)random.Next(0, 3);
+            this.tipo = (Servicio)random.Next(0, 3);
             this.marca = (Marcas)random.Next(0, 3);
         }
         #endregion
@@ -46,7 +46,7 @@ namespace Entidades
                 return edad;
             }
         }
-        public Tipo Tipo
+        public Servicio Tipo
         {
             get
             {

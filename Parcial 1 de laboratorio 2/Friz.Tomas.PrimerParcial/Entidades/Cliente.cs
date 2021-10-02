@@ -15,7 +15,7 @@ namespace Entidades
         protected Hardware hardware;
         protected Software software;
         protected Juego juego;
-        protected Tipo tipo;
+        protected Servicio tipo;
         protected Marcas marca;
         #endregion
 

@@ -32,6 +32,8 @@ namespace Cibercafe_ElVicio
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listCabina = new System.Windows.Forms.ListBox();
+            this.listCliente = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@ namespace Cibercafe_ElVicio
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnColgar = new System.Windows.Forms.Button();
-            this.listCliente = new System.Windows.Forms.ListBox();
-            this.listCabina = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +89,25 @@ namespace Cibercafe_ElVicio
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(575, 287);
             this.panel1.TabIndex = 7;
+            // 
+            // listCabina
+            // 
+            this.listCabina.FormattingEnabled = true;
+            this.listCabina.ItemHeight = 18;
+            this.listCabina.Location = new System.Drawing.Point(294, 36);
+            this.listCabina.Name = "listCabina";
+            this.listCabina.Size = new System.Drawing.Size(274, 238);
+            this.listCabina.TabIndex = 18;
+            // 
+            // listCliente
+            // 
+            this.listCliente.FormattingEnabled = true;
+            this.listCliente.ItemHeight = 18;
+            this.listCliente.Location = new System.Drawing.Point(3, 36);
+            this.listCliente.Name = "listCliente";
+            this.listCliente.Size = new System.Drawing.Size(274, 238);
+            this.listCliente.TabIndex = 17;
+            this.listCliente.SelectedIndexChanged += new System.EventHandler(this.listCliente_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -202,25 +221,6 @@ namespace Cibercafe_ElVicio
             this.btnColgar.Text = "Colgar";
             this.btnColgar.UseVisualStyleBackColor = false;
             this.btnColgar.Click += new System.EventHandler(this.btnColgar_Click);
-            // 
-            // listCliente
-            // 
-            this.listCliente.FormattingEnabled = true;
-            this.listCliente.ItemHeight = 18;
-            this.listCliente.Location = new System.Drawing.Point(3, 36);
-            this.listCliente.Name = "listCliente";
-            this.listCliente.Size = new System.Drawing.Size(274, 238);
-            this.listCliente.TabIndex = 17;
-            this.listCliente.SelectedIndexChanged += new System.EventHandler(this.listCliente_SelectedIndexChanged);
-            // 
-            // listCabina
-            // 
-            this.listCabina.FormattingEnabled = true;
-            this.listCabina.ItemHeight = 18;
-            this.listCabina.Location = new System.Drawing.Point(294, 36);
-            this.listCabina.Name = "listCabina";
-            this.listCabina.Size = new System.Drawing.Size(274, 238);
-            this.listCabina.TabIndex = 18;
             // 
             // FrmTelefonos
             // 

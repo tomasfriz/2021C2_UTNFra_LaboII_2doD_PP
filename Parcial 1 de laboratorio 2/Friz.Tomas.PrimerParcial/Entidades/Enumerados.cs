@@ -17,8 +17,7 @@ namespace Entidades
             office,
             messenger,
             icq,
-            ares,
-            cualquiera
+            ares
         }
         /// <summary>
         /// Enumera los tipos de hardware.
@@ -27,8 +26,7 @@ namespace Entidades
         {
             procesador,
             ram,
-            placaDeVideo,
-            cualquiera
+            placaDeVideo
         }
         /// <summary>
         /// Enumera los tipos de perifericos.
@@ -37,8 +35,7 @@ namespace Entidades
         {
             cámara,
             auriculares,
-            micrófono,
-            cualquiera
+            micrófono
         }
         /// <summary>
         /// Enumera los tipos de juegos.
@@ -50,17 +47,15 @@ namespace Entidades
             MuOnline,
             LineageII,
             WarcraftIII,
-            AgeOfEmpiresII,
-            cualquiera
+            AgeOfEmpiresII
         }
         /// <summary>
         /// Enumera los tipos de diferentes teclados de telefonos.
         /// </summary>
-        public enum Tipo
+        public enum TipoTecla
         {
             Disco,
-            Teclado,
-            cualquiera
+            Teclado
         }
         /// <summary>
         /// Enumera los tipos de Marcas.
@@ -68,8 +63,17 @@ namespace Entidades
         public enum Marcas
         {
             Panasonic,
-            Siemens,
-            cualquiera
+            Siemens
+        }
+        public enum TipoEquipo 
+        { 
+            Cabina, 
+            Computadora 
+        }
+        public enum Estado 
+        { 
+            Disponible,
+            En_Uso
         }
         #endregion
     }
