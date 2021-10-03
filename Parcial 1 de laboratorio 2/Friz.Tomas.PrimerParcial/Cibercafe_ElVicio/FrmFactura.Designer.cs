@@ -54,7 +54,7 @@ namespace Cibercafe_ElVicio
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(403, 18);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Factura";
+            this.label1.Text = "Equipo";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox1

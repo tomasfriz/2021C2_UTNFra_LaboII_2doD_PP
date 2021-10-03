@@ -11,92 +11,23 @@ namespace Entidades
     {
         #region Atributos
         protected string id;
-        protected Estado estado;
-        protected TipoEquipo tipo;
         protected int duracion;
-        protected List<Servicio> lista;
         #endregion
 
         #region Constructores
         protected Servicio()
         {
         }
-        protected Servicio(string id)
-        {
-            this.id = id;
-            this.lista = new List<Servicio>();
-            this.estado = Estado.Disponible;
-        }
         #endregion
 
         #region Propiedades
         /// <summary>
-        /// Solo lectura.
-        /// </summary>
-        public string Id
-        {
-            get
-            {
-                return id;
-            }
-        }
-        /// <summary>
-        /// Propiedad solo lectura del tipo de puesto
-        /// </summary>
-        public TipoEquipo TipoEquipo
-        {
-            get
-            {
-                return tipo;
-            }
-        }
-        /// <summary>
-        /// Propiedad solo lectura del estado
-        /// </summary>
-        public Estado Estado
-        {
-            get
-            {
-                return estado;
-            }
-            set
-            {
-                this.estado = value;
-            }
-        }
-        /// <summary>
         /// Propiedad lectura-escritura
         /// </summary>
-        abstract public int Duracion
-        { 
-            get; set; 
-        }
-        /// <summary>
-        /// Solo lectura
-        /// </summary>
-        public List<Servicio> Lista
-        {
-            get
-            {
-                return lista;
-            }
-        }
+        abstract public int Duracion { get; set; }
         #endregion
 
-        #region Metodos 
-        /// <summary>
-        /// Calcula los minutos de uso del servicio
-        /// </summary>
-        /// <returns>Minutos de uso</returns>
-        protected abstract int CalcularMinUso();
-        /// <summary>
-        /// Calcula el costo de un servicio
-        /// </summary>
-        /// <returns></returns>
-        abstract protected float CalcularCosto();
-        #endregion
-
-        #region Sobrecargas
+        #region Operadores
         /// <summary>
         /// Sobrecarga del operador ==
         /// </summary>
@@ -117,14 +48,17 @@ namespace Entidades
         {
             return !(s1 == s2);
         }
+        #endregion
+
+        #region Sobrecargas
         /// <summary>
         /// Sobrescribe el metodo Equals()
         /// </summary>
         /// <returns></returns>
         public override bool Equals(Object obj)
         {
-            Servicio servicio = obj as Servicio;
-            return servicio != null && this == servicio;
+            Servicio s = obj as Servicio;
+            return s != null && this == s;
         }
         /// <summary>
         /// Sobrecarga del metodo GetHashCode()
@@ -134,6 +68,14 @@ namespace Entidades
         {
             return id.GetHashCode();
         }
+        #endregion
+
+        #region Metodos 
+        /// <summary>
+        /// Calcula el costo de un servicio
+        /// </summary>
+        /// <returns></returns>
+        abstract protected float CalcularCosto();
         /// <summary>
         /// Sobrescribe el metodo ToString()
         /// </summary>

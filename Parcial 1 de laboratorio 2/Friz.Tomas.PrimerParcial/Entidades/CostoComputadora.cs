@@ -7,7 +7,7 @@ using static Entidades.Enumerados;
 
 namespace Entidades
 {
-    public sealed class Especificaciones : Servicio
+    public sealed class CostoComputadora : Servicio
     {
         #region Atributos
         private const float costo = 0.5F;
@@ -20,7 +20,7 @@ namespace Entidades
         /// <summary>
         /// Constructor privado de especificacion para crear listas.
         /// </summary>
-        private Especificaciones()
+        private CostoComputadora()
         {
             software = new List<Software>();
             periferico = new List<Periferico>();
@@ -32,7 +32,7 @@ namespace Entidades
         /// <param name="software"></param>
         /// <param name="periferico"></param>
         /// <param name="juego"></param>
-        public Especificaciones(List<Software> software,List<Periferico> periferico,List<Juego> juego): this()
+        public CostoComputadora(List<Software> software,List<Periferico> periferico,List<Juego> juego): this()
         {
             this.software = software;
             this.periferico = periferico;
@@ -96,8 +96,8 @@ namespace Entidades
         {
             if (Duracion % 30 > 0)
             {
-                double duracion = Duracion / 30;
-                return (float)Math.Ceiling(duracion) * costo;
+                double d = Duracion / 30;
+                return (float)Math.Ceiling(d) * costo;
             }
             return (Duracion / 30) * costo;
         }
