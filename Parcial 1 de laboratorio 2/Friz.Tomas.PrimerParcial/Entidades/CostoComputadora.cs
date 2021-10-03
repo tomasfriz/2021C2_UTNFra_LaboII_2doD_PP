@@ -12,8 +12,8 @@ namespace Entidades
         #region Atributos
         private const float costo = 0.5F;
         private List<Software> software;
-        private List<Periferico> periferico;
-        private List<Juego> juego;
+        private List<Periferico> perifericos;
+        private List<Juego> juegos;
         #endregion
 
         #region Constructores
@@ -23,8 +23,8 @@ namespace Entidades
         private CostoComputadora()
         {
             software = new List<Software>();
-            periferico = new List<Periferico>();
-            juego = new List<Juego>();
+            perifericos = new List<Periferico>();
+            juegos = new List<Juego>();
         }
         /// <summary>
         /// Constructor de la clase Especificacion
@@ -35,8 +35,8 @@ namespace Entidades
         public CostoComputadora(List<Software> software,List<Periferico> periferico,List<Juego> juego): this()
         {
             this.software = software;
-            this.periferico = periferico;
-            this.juego = juego;
+            this.perifericos = periferico;
+            this.juegos = juego;
         }
         #endregion
 
@@ -72,7 +72,7 @@ namespace Entidades
         {
             get
             {
-                return periferico;
+                return perifericos;
             }
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Entidades
         {
             get
             {
-                return juego;
+                return juegos;
             }
         }
         #endregion
@@ -114,12 +114,12 @@ namespace Entidades
                 sb.AppendLine($"- {software} \n");
             }
             sb.AppendLine($"Periferico: ");
-            foreach (Periferico periferico in periferico)
+            foreach (Periferico periferico in perifericos)
             {
                 sb.AppendLine($"- {periferico} \n");
             }
             sb.AppendLine($"Juegos requeridos: ");
-            foreach (Juego juego in juego)
+            foreach (Juego juego in juegos)
             {
                 sb.AppendLine($"- {juego} \n");
             }

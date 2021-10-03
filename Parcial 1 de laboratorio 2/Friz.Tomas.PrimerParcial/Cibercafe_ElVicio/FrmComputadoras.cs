@@ -22,16 +22,16 @@ namespace Cibercafe_ElVicio
             InitializeComponent();
 
             List<Computadora> clienteMaquina = new List<Computadora>();
-            clienteMaquina.Add(new Computadora("C01", Software.ares, Periferico.auriculares, Juego.CounterStrike, Hardware.procesador, "Disponible"));
-            clienteMaquina.Add(new Computadora("C02", Software.icq, Periferico.cámara, Juego.AgeOfEmpiresII, Hardware.placaDeVideo, "Disponible"));
-            clienteMaquina.Add(new Computadora("C03", Software.messenger, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "Disponible"));
-            clienteMaquina.Add(new Computadora("C04", Software.office, Periferico.auriculares, Juego.LineageII, Hardware.placaDeVideo, "Disponible"));
-            clienteMaquina.Add(new Computadora("C05", Software.ares, Periferico.cámara, Juego.MuOnline, Hardware.procesador, "Disponible"));
-            clienteMaquina.Add(new Computadora("C06", Software.icq, Periferico.micrófono, Juego.WarcraftIII, Hardware.ram, "Disponible"));
-            clienteMaquina.Add(new Computadora("C07", Software.messenger, Periferico.auriculares, Juego.AgeOfEmpiresII, Hardware.procesador, "Disponible"));
-            clienteMaquina.Add(new Computadora("C08", Software.office, Periferico.cámara, Juego.CounterStrike, Hardware.placaDeVideo, "Disponible"));
-            clienteMaquina.Add(new Computadora("C09", Software.ares, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "Disponible"));
-            clienteMaquina.Add(new Computadora("C10", Software.icq, Periferico.auriculares, Juego.LineageII, Hardware.procesador, "Disponible"));
+            clienteMaquina.Add(new Computadora("C01", Software.ares, Periferico.auriculares, Juego.CounterStrike, Hardware.procesador, "disponible"));
+            clienteMaquina.Add(new Computadora("C02", Software.icq, Periferico.cámara, Juego.AgeOfEmpiresII, Hardware.placaDeVideo, "disponible"));
+            clienteMaquina.Add(new Computadora("C03", Software.messenger, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "disponible"));
+            clienteMaquina.Add(new Computadora("C04", Software.office, Periferico.auriculares, Juego.LineageII, Hardware.placaDeVideo, "disponible"));
+            clienteMaquina.Add(new Computadora("C05", Software.ares, Periferico.cámara, Juego.MuOnline, Hardware.procesador, "disponible"));
+            clienteMaquina.Add(new Computadora("C06", Software.icq, Periferico.micrófono, Juego.WarcraftIII, Hardware.ram, "disponible"));
+            clienteMaquina.Add(new Computadora("C07", Software.messenger, Periferico.auriculares, Juego.AgeOfEmpiresII, Hardware.procesador, "disponible"));
+            clienteMaquina.Add(new Computadora("C08", Software.office, Periferico.cámara, Juego.CounterStrike, Hardware.placaDeVideo, "disponible"));
+            clienteMaquina.Add(new Computadora("C09", Software.ares, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "disponible"));
+            clienteMaquina.Add(new Computadora("C10", Software.icq, Periferico.auriculares, Juego.LineageII, Hardware.procesador, "disponible"));
             dgvClientes.DataSource = clienteMaquina;
         }
         /// <summary>
@@ -80,16 +80,16 @@ namespace Cibercafe_ElVicio
             dgvClientes.DataSource = clientesMaquinas;
 
             List<Computadora> computadoras = new List<Computadora>();
-            computadoras.Add(new Computadora("C01", Software.ares, Periferico.auriculares, Juego.CounterStrike, Hardware.procesador, "Disponible"));
-            computadoras.Add(new Computadora("C02", Software.icq, Periferico.cámara, Juego.AgeOfEmpiresII, Hardware.placaDeVideo, "Disponible"));
-            computadoras.Add(new Computadora("C03", Software.messenger, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "Disponible"));
-            computadoras.Add(new Computadora("C04", Software.office, Periferico.auriculares, Juego.LineageII, Hardware.placaDeVideo, "Disponible"));
-            computadoras.Add(new Computadora("C05", Software.ares, Periferico.cámara, Juego.MuOnline, Hardware.procesador, "Disponible"));
-            computadoras.Add(new Computadora("C06", Software.icq, Periferico.micrófono, Juego.WarcraftIII, Hardware.ram, "Disponible"));
-            computadoras.Add(new Computadora("C07", Software.messenger, Periferico.auriculares, Juego.AgeOfEmpiresII, Hardware.procesador, "Disponible"));
-            computadoras.Add(new Computadora("C08", Software.office, Periferico.cámara, Juego.CounterStrike, Hardware.placaDeVideo, "Disponible"));
-            computadoras.Add(new Computadora("C09", Software.ares, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "Disponible"));
-            computadoras.Add(new Computadora("C10", Software.icq, Periferico.auriculares, Juego.LineageII, Hardware.procesador, "Disponible"));
+            computadoras.Add(new Computadora("C01", Software.ares, Periferico.auriculares, Juego.CounterStrike, Hardware.procesador, "disponible"));
+            computadoras.Add(new Computadora("C02", Software.icq, Periferico.cámara, Juego.AgeOfEmpiresII, Hardware.placaDeVideo, "disponible"));
+            computadoras.Add(new Computadora("C03", Software.messenger, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "disponible"));
+            computadoras.Add(new Computadora("C04", Software.office, Periferico.auriculares, Juego.LineageII, Hardware.placaDeVideo, "disponible"));
+            computadoras.Add(new Computadora("C05", Software.ares, Periferico.cámara, Juego.MuOnline, Hardware.procesador, "disponible"));
+            computadoras.Add(new Computadora("C06", Software.icq, Periferico.micrófono, Juego.WarcraftIII, Hardware.ram, "disponible"));
+            computadoras.Add(new Computadora("C07", Software.messenger, Periferico.auriculares, Juego.AgeOfEmpiresII, Hardware.procesador, "disponible"));
+            computadoras.Add(new Computadora("C08", Software.office, Periferico.cámara, Juego.CounterStrike, Hardware.placaDeVideo, "disponible"));
+            computadoras.Add(new Computadora("C09", Software.ares, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "disponible"));
+            computadoras.Add(new Computadora("C10", Software.icq, Periferico.auriculares, Juego.LineageII, Hardware.procesador, "disponible"));
             dgvCompu.DataSource = computadoras;
         }
     }

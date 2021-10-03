@@ -65,19 +65,25 @@ namespace Entidades
             Panasonic,
             Siemens
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public enum TipoEquipo
         {
             Cabina,
             Computadora
         }
-
-        public enum Estado
+        /// <summary>
+        /// 
+        /// </summary>
+        public enum eEstado
         {
             Disponible,
             En_Uso
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public enum TipoLlamada
         {
             Local = 100, LargaDistancia = 250, Internacional = 500

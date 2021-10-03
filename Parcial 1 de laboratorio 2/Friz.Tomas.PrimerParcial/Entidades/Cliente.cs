@@ -51,9 +51,9 @@ namespace Entidades
         /// <returns></returns>
         public static Cliente operator +(Cliente c, Servicio s)
         {
-            if (s is Telefono)
+            if (s is CostoTelefono)
             {
-                c.servicio = (Telefono)s;
+                c.servicio = (CostoTelefono)s;
             }
             else
             {

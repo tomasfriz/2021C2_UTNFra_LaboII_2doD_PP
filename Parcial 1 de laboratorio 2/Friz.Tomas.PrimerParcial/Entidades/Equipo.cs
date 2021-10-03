@@ -11,7 +11,7 @@ namespace Entidades
     {
         #region Atributos
         protected string id;
-        protected Estado estado;
+        protected eEstado disponible;
         protected TipoEquipo tipo;
         protected List<Servicio> lista;
         #endregion
@@ -21,7 +21,7 @@ namespace Entidades
         {
             this.id = id;
             this.lista = new List<Servicio>();
-            this.estado = Estado.Disponible;
+            this.disponible = eEstado.Disponible;
         }
         #endregion
 
@@ -57,17 +57,17 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad solo lectura del estado
+        /// Propiedad solo lectura del disponible
         /// </summary>
-        public Estado Estado
+        public eEstado Disponible
         {
             get
             {
-                return estado;
+                return disponible;
             }
             set
             {
-                this.estado = value;
+                this.disponible = value;
             }
         }
         #endregion
@@ -121,10 +121,10 @@ namespace Entidades
 
         #region Metodos 
         /// <summary>
-        /// Calcula los minutos de uso del puesto
+        /// Calcula los minutos de uso del equipo.
         /// </summary>
         /// <returns>Minutos de uso</returns>
-        protected abstract int CalcularMinutosDeUso();
+        protected abstract int CalcularMinutos();
         /// <summary>
         /// Sobrescribe el metodo ToString()
         /// </summary>
