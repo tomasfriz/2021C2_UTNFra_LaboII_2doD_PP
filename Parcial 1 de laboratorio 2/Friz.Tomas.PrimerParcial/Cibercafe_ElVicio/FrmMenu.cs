@@ -15,8 +15,9 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmMenu : Form
     {
+        #region Constructor
         /// <summary>
-        /// Se encarga de hardcodear los datos de los clientes.
+        /// Coloca el nombre del usuario en la barra superior del form y tambien la hora actual.
         /// </summary>
         public FrmMenu()
         {
@@ -24,7 +25,9 @@ namespace Cibercafe_ElVicio
             lblUsuario.Text = "Tomás Agustín Friz";
             lblFecha.Text = DateTime.Now.ToShortDateString();
         }
+        #endregion
 
+        #region Botones
         /// <summary>
         /// Sirve para cerrar la aplicacion.
         /// Antes pregunta si desea cerrar la aplicacion porque se cerraran tambien todas las ventanas emergentes.
@@ -71,9 +74,12 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnAsigMaquina_Click(object sender, EventArgs e)
         {
-            FrmComputadoras frmComputadoras = new FrmComputadoras();
-            frmComputadoras.Show();
-
+            if (Usuario.Clientes.Count > 0)
+            {
+                Cliente c = Usuario.Clientes.Peek();
+                FrmComputadoras frmComputadoras = new FrmComputadoras(c);
+                frmComputadoras.Show();
+            }
         }
         /// <summary>
         /// Sirve tanto para asignar las cabinas de los clientes como para que el usuario vea un registro de las cabinas en uso o disponibles.
@@ -96,25 +102,22 @@ namespace Cibercafe_ElVicio
             FrmHistorial frmHistorial = new FrmHistorial();
             frmHistorial.Show();
         }
-
+        /// <summary>
+        /// Se encarga de hardcodear los datos de los clientes y saludar al usuario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             MessageBox.Show("¡BIENVENIDO USUARIO!");
 
-            //List<Cliente> clientes = new List<Cliente>();
-            //clientes.Add(new Cliente(41918909, "Tomás", "Sánchez", 22));
-            //clientes.Add(new Cliente(31456980, "Gustavo", "Doria", 53));
-            //clientes.Add(new Cliente(34067132, "Mauricio", "Prieto", 35));
-            //clientes.Add(new Cliente(36897132, "Belén", "Trinidad", 16));
-            //clientes.Add(new Cliente(27643934, "Brisa", "Quinteros", 28));
-            //listCliente.Text = clientes;
             List<Cliente> lista = new List<Cliente>()
             {
-            new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){Software.ares, Software.icq},new List<Periferico>(){Periferico.cámara,Periferico.auriculares},new List<Juego>(){Juego.DiabloII,Juego.WarcraftIII})),
+            new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){Software.ares},new List<Periferico>(){Periferico.cámara},new List<Juego>(){Juego.DiabloII})),
             new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono(54, 11, 48230912)),
-            new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>() {Software.messenger, Software.office}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara},new List<Juego>() {Juego.CounterStrike, Juego.MuOnline})),
+            new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){Software.messenger},new List<Periferico>(){Periferico.micrófono},new List<Juego>(){Juego.CounterStrike})),
             new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono(1, 378, 92740204)),
-            new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>() {Software.icq, Software.messenger},new List<Periferico>() {Periferico.auriculares, Periferico.micrófono},new List<Juego>() {Juego.AgeOfEmpiresII,Juego.LineageII})),
+            new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>(){Software.icq},new List<Periferico>(){Periferico.auriculares},new List<Juego>(){Juego.WarcraftIII})),
             new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono(54, 91, 62091837))};
             foreach (Cliente cliente in lista)
             {
@@ -122,6 +125,20 @@ namespace Cibercafe_ElVicio
             }
             ActualizarClientes();
         }
+        #endregion
+
+        #region Metodos del Form
+        /// <summary>
+        /// Actualiza los clientes.
+        /// Una vez que se le asignaron un equipo al cliente desaparecera de la lista de espera.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrmMenu_Activated(object sender, EventArgs e)
+        {
+            ActualizarClientes();
+        }
+        #endregion
 
         #region Metodos
         /// <summary>

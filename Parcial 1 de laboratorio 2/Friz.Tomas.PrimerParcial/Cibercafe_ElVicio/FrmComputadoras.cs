@@ -14,13 +14,23 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmComputadoras : Form
     {
-        /// <summary>
-        /// Se encarga de hardcodear los datos de las computadoras.
-        /// </summary>
+        #region Atributos
+        protected Cliente cliente;
+        #endregion
+
+        #region Constructor
         public FrmComputadoras()
         {
             InitializeComponent();
         }
+
+        public FrmComputadoras(Cliente cliente)
+        {
+            this.cliente = cliente;
+        }
+        #endregion
+
+        #region Botones
         /// <summary>
         /// Sirve para cerrar la ventana.
         /// </summary>
@@ -40,38 +50,54 @@ namespace Cibercafe_ElVicio
             MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
                 "-El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDesconectar_Click(object sender, EventArgs e)
         {
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            //Computadora computadoraSeleccionado = (Computadora)dgvClientes.CurrentRow.DataBoundItem;
-            //Cliente clienteSelecionado = (Cliente)dgvMaquina.CurrentRow.DataBoundItem;
-            //if (computadoraSeleccionado.Equals(Cliente))
-            //{
-
-            //}
+            
         }
-
+        /// <summary>
+        /// Se encarga de hardcodear los datos de las computadoras.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmComputadoras_Load(object sender, EventArgs e)
         {
-            //List<Computadora> computadoras = new List<Computadora>();
-            //computadoras.Add(new Computadora("C01", Software.ares, Periferico.auriculares, Juego.CounterStrike, Hardware.procesador, "disponible"));
-            //computadoras.Add(new Computadora("C02", Software.icq, Periferico.cámara, Juego.AgeOfEmpiresII, Hardware.placaDeVideo, "disponible"));
-            //computadoras.Add(new Computadora("C03", Software.messenger, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "disponible"));
-            //computadoras.Add(new Computadora("C04", Software.office, Periferico.auriculares, Juego.LineageII, Hardware.placaDeVideo, "disponible"));
-            //computadoras.Add(new Computadora("C05", Software.ares, Periferico.cámara, Juego.MuOnline, Hardware.procesador, "disponible"));
-            //computadoras.Add(new Computadora("C06", Software.icq, Periferico.micrófono, Juego.WarcraftIII, Hardware.ram, "disponible"));
-            //computadoras.Add(new Computadora("C07", Software.messenger, Periferico.auriculares, Juego.AgeOfEmpiresII, Hardware.procesador, "disponible"));
-            //computadoras.Add(new Computadora("C08", Software.office, Periferico.cámara, Juego.CounterStrike, Hardware.placaDeVideo, "disponible"));
-            //computadoras.Add(new Computadora("C09", Software.ares, Periferico.micrófono, Juego.DiabloII, Hardware.ram, "disponible"));
-            //computadoras.Add(new Computadora("C10", Software.icq, Periferico.auriculares, Juego.LineageII, Hardware.procesador, "disponible"));
-            //dgvCompu.DataSource = computadoras;
+            List<Equipo> listaComputadora = new List<Equipo>()
+            {
+                new Computadora("C01", new List<Software>(){Software.ares}, new List<Periferico>() {Periferico.auriculares}, new List<Juego>() {Juego.CounterStrike},new Dictionary<string, string> {{"RAM", "4GB"}, {"Procesador","Intel Pentium 4"}, {"Placa de video","486 DLC"}}),
+                new Computadora("C02", new List<Software>(){Software.icq}, new List<Periferico>() {Periferico.cámara}, new List<Juego>() {Juego.AgeOfEmpiresII}, new Dictionary<string, string> {{"RAM", "2GB"}, {"Procesador","Intel Pentium 2"}, {"Placa de video","Geforce 4"}}),
+                new Computadora("C03", new List<Software>(){Software.messenger}, new List<Periferico>() {Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike}, new Dictionary<string, string> {{"RAM","4GB"}, {"Procesador","Intel Pentium 2"}, {"Placa de video","9600GT"}}),
+                new Computadora("C04", new List<Software>(){Software.office}, new List<Periferico>() {Periferico.auriculares}, new List<Juego>() {Juego.DiabloII}, new Dictionary<string, string> {{"RAM","2GB"}, {"Procesador", "Intel Pentium"}, {"Placa de video","486 DLC"}}),
+                new Computadora("C05", new List<Software>(){Software.ares}, new List<Periferico>() {Periferico.cámara}, new List<Juego>() {Juego.LineageII}, new Dictionary<string, string> {{"RAM","1GB"}, {"Procesador","Intel 4004"}, {"Placa de video","9600GT"}}),
+                new Computadora("C06", new List<Software>(){Software.icq}, new List<Periferico>() {Periferico.micrófono}, new List<Juego>() {Juego.WarcraftIII}, new Dictionary<string, string> {{"RAM","4GB"}, {"Procesador","Intel Pentium 4"}, {"Placa de video","486 DLC"}}),
+                new Computadora("C07", new List<Software>(){Software.messenger}, new List<Periferico>() {Periferico.auriculares}, new List<Juego>() {Juego.MuOnline}, new Dictionary<string, string> {{"RAM","2GB"}, {"Procesador","Intel Pentium 2"}, {"Placa de video","Geforce 4"}}),
+                new Computadora("C08", new List<Software>(){Software.office}, new List<Periferico>() {Periferico.cámara}, new List<Juego>() {Juego.CounterStrike}, new Dictionary<string, string> {{"RAM","4GB"}, {"Procesador","Intel Pentium 2"}, {"Placa de video","9600GT"}}),
+                new Computadora("C09", new List<Software>(){Software.ares}, new List<Periferico>() {Periferico.micrófono}, new List<Juego>() {Juego.DiabloII}, new Dictionary<string, string> {{"RAM","2GB"}, {"Procesador","Intel Pentium"}, {"Placa de video","486 DLC"}}),
+                new Computadora("C10", new List<Software>(){Software.icq}, new List<Periferico>() {Periferico.auriculares}, new List<Juego>() {Juego.WarcraftIII}, new Dictionary<string, string> {{"RAM","1GB"}, {"Procesador","Intel 4004"}, {"Placa de video","9600GT"}}),
+            };
+            foreach (Equipo p in listaComputadora)
+            {
+                Usuario.AgregarEquipo(p);
+                
+            }
+            listComputadoras.Text = listaComputadora.ToString();
 
-
+            //listEspecificaciones.Text = $"{cliente.ToString()}";
+            //listEspecificaciones.Text = cliente.Servicio.ToString();
         }
+        #endregion
     }
 }

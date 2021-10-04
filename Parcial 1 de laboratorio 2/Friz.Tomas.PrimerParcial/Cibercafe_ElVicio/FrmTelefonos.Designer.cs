@@ -33,11 +33,11 @@ namespace Cibercafe_ElVicio
             this.btnAyuda = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.listTelefonos = new System.Windows.Forms.ListBox();
+            this.listEspecificaciones = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnLlamar = new System.Windows.Forms.Button();
             this.btnColgar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listEspecificaciones = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +93,27 @@ namespace Cibercafe_ElVicio
             this.listTelefonos.Size = new System.Drawing.Size(274, 238);
             this.listTelefonos.TabIndex = 18;
             // 
+            // listEspecificaciones
+            // 
+            this.listEspecificaciones.FormattingEnabled = true;
+            this.listEspecificaciones.ItemHeight = 18;
+            this.listEspecificaciones.Location = new System.Drawing.Point(3, 36);
+            this.listEspecificaciones.Name = "listEspecificaciones";
+            this.listEspecificaciones.Size = new System.Drawing.Size(274, 238);
+            this.listEspecificaciones.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(274, 28);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Especificaciones del clientes";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -110,7 +131,7 @@ namespace Cibercafe_ElVicio
             this.btnLlamar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLlamar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnLlamar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLlamar.Location = new System.Drawing.Point(214, 301);
+            this.btnLlamar.Location = new System.Drawing.Point(219, 301);
             this.btnLlamar.Name = "btnLlamar";
             this.btnLlamar.Size = new System.Drawing.Size(72, 28);
             this.btnLlamar.TabIndex = 4;
@@ -123,35 +144,13 @@ namespace Cibercafe_ElVicio
             this.btnColgar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnColgar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnColgar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnColgar.Location = new System.Drawing.Point(292, 301);
+            this.btnColgar.Location = new System.Drawing.Point(297, 301);
             this.btnColgar.Name = "btnColgar";
             this.btnColgar.Size = new System.Drawing.Size(72, 28);
             this.btnColgar.TabIndex = 5;
             this.btnColgar.Text = "Colgar";
             this.btnColgar.UseVisualStyleBackColor = false;
             this.btnColgar.Click += new System.EventHandler(this.btnColgar_Click);
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(3, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(274, 28);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Especificaciones del clientes";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // listEspecificaciones
-            // 
-            this.listEspecificaciones.FormattingEnabled = true;
-            this.listEspecificaciones.ItemHeight = 18;
-            this.listEspecificaciones.Location = new System.Drawing.Point(3, 36);
-            this.listEspecificaciones.Name = "listEspecificaciones";
-            this.listEspecificaciones.Size = new System.Drawing.Size(274, 238);
-            this.listEspecificaciones.TabIndex = 17;
-            this.listEspecificaciones.SelectedIndexChanged += new System.EventHandler(this.listCliente_SelectedIndexChanged);
             // 
             // FrmTelefonos
             // 
@@ -168,6 +167,7 @@ namespace Cibercafe_ElVicio
             this.Name = "FrmTelefonos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTelefonos";
+            this.Load += new System.EventHandler(this.FrmTelefonos_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

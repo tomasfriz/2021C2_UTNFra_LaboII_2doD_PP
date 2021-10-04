@@ -99,7 +99,7 @@ namespace Entidades
             List<Equipo> EquipoDisponible = new List<Equipo>();
             foreach (Equipo e in Lista)
             {
-                if (e.Disponible == Equipo.eEstado.Disponible)
+                if (e.Estado == Estado.Disponible)
                 {
                     EquipoDisponible.Add(e);
                 }
@@ -131,7 +131,7 @@ namespace Entidades
         /// <returns>true si sale todo bien</returns>
         public static bool AgregarServicio(Equipo equipo, Servicio servicio)
         {
-            if (equipo.Disponible == Equipo.eEstado.Disponible)
+            if (equipo.Estado == Estado.Disponible)
             {
                 equipo.Lista.Add(servicio);
                 return true;

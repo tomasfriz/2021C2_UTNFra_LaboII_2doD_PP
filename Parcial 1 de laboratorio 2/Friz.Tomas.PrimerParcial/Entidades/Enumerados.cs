@@ -20,15 +20,6 @@ namespace Entidades
             ares
         }
         /// <summary>
-        /// Enumera los tipos de hardware.
-        /// </summary>
-        public enum Hardware
-        {
-            procesador,
-            ram,
-            placaDeVideo
-        }
-        /// <summary>
         /// Enumera los tipos de perifericos.
         /// </summary>
         public enum Periferico
@@ -78,7 +69,7 @@ namespace Entidades
         /// <summary>
         /// 
         /// </summary>
-        public enum eEstado
+        public enum Estado
         {
             Disponible,
             En_Uso

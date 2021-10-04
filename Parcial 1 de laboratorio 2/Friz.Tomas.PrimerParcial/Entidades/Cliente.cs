@@ -117,9 +117,9 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($" Nombre: {nombre} Apellido: {apellido}");
-            sb.AppendLine($" DNI: {dni}");
-            sb.AppendLine($" Edad: ({edad} años)");
+            sb.AppendLine($" Nombre: {nombre} - Apellido: {apellido} ");
+            sb.AppendLine($"- DNI: {dni} ");
+            sb.AppendLine($"- Edad: ({edad} años)");
             return sb.ToString();
         }
         #endregion

@@ -14,20 +14,14 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmTelefonos : Form
     {
-        /// <summary>
-        /// Se encarga de hardcodear los datos de las computadoras.
-        /// </summary>
+        #region Constructor
         public FrmTelefonos()
         {
             InitializeComponent();
-            //List<Telefono> clienteTelefono = new List<Telefono>();
-            //clienteTelefono.Add(new Telefono("T01", Servicio.Disco, Marcas.Siemens, "disponible"));
-            //clienteTelefono.Add(new Telefono("T02", Servicio.Teclado, Marcas.Panasonic, "disponible"));
-            //clienteTelefono.Add(new Telefono("T03", Servicio.Disco, Marcas.Siemens, "disponible"));
-            //clienteTelefono.Add(new Telefono("T04", Servicio.Teclado, Marcas.Panasonic, "disponible"));
-            //clienteTelefono.Add(new Telefono("T05", Servicio.Disco, Marcas.Siemens, "disponible"));
-            //dgvTelef.DataSource = clienteTelefono;
         }
+        #endregion
+
+        #region Botones
         /// <summary>
         /// Sirve para cerrar la ventana.
         /// </summary>
@@ -47,20 +41,42 @@ namespace Cibercafe_ElVicio
             MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
                 "-El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLlamar_Click(object sender, EventArgs e)
         {
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnColgar_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void listCliente_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Se encarga de hardcodear los datos de las computadoras.
+        /// </summary>
+        private void FrmTelefonos_Load(object sender, EventArgs e)
         {
-
+            List<Equipo> listaTelefonos = new List<Equipo>()
+            {
+                new Telefono("T01", TipoTecla.Disco, "Telefonica"),
+                new Telefono("T02", TipoTecla.Teclado, "Panasonic"),
+                new Telefono("T03", TipoTecla.Disco, "Elgin"),
+                new Telefono("T04", TipoTecla.Teclado, "Siemens"),
+                new Telefono("T05", TipoTecla.Disco, "Panasonic")
+            };
+            foreach (Equipo p in listaTelefonos)
+            {
+                Usuario.AgregarEquipo(p);
+            }
         }
+        #endregion
     }
 }

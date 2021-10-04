@@ -38,11 +38,11 @@ namespace Cibercafe_ElVicio
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listCliente = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnAsigMaquina = new System.Windows.Forms.Button();
             this.btnAsigCabina = new System.Windows.Forms.Button();
-            this.listCliente = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,6 +102,12 @@ namespace Cibercafe_ElVicio
             this.panel1.Controls.Add(this.label4);
             this.panel1.Name = "panel1";
             // 
+            // listCliente
+            // 
+            this.listCliente.FormattingEnabled = true;
+            resources.ApplyResources(this.listCliente, "listCliente");
+            this.listCliente.Name = "listCliente";
+            // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
@@ -132,12 +138,6 @@ namespace Cibercafe_ElVicio
             this.btnAsigCabina.UseVisualStyleBackColor = false;
             this.btnAsigCabina.Click += new System.EventHandler(this.btnAsigCabina_Click);
             // 
-            // listCliente
-            // 
-            this.listCliente.FormattingEnabled = true;
-            resources.ApplyResources(this.listCliente, "listCliente");
-            this.listCliente.Name = "listCliente";
-            // 
             // FrmMenu
             // 
             this.AllowDrop = true;
@@ -156,6 +156,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAyuda);
             this.Name = "FrmMenu";
+            this.Activated += new System.EventHandler(this.FrmMenu_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCibercafe_FormClosing);
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.panel1.ResumeLayout(false);

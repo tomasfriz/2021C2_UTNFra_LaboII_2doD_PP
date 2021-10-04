@@ -11,7 +11,7 @@ namespace Entidades
     {
         #region Atributos
         protected string id;
-        protected eEstado disponible;
+        protected Estado estado;
         protected TipoEquipo tipo;
         protected List<Servicio> lista;
         #endregion
@@ -21,7 +21,7 @@ namespace Entidades
         {
             this.id = id;
             this.lista = new List<Servicio>();
-            this.disponible = eEstado.Disponible;
+            this.estado = Estado.Disponible;
         }
         #endregion
 
@@ -59,15 +59,15 @@ namespace Entidades
         /// <summary>
         /// Propiedad solo lectura de disponible
         /// </summary>
-        public eEstado Disponible
+        public Estado Estado
         {
             get
             {
-                return disponible;
+                return estado;
             }
             set
             {
-                this.disponible = value;
+                this.estado = value;
             }
         }
         #endregion
