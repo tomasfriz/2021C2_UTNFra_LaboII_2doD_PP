@@ -65,7 +65,7 @@ namespace Entidades
         /// <param name="especificaciones"></param>
         /// <param name="computadora"></param>
         /// <returns>True: si todo se cumple, False: si algo no se cumple</returns>
-        public static bool RevisarRequisitos(CostoComputadora especificaciones, Computadora computadora)
+        public static bool RevisarRequisitos(ClienteComputadora especificaciones, Computadora computadora)
         {
             foreach (Software software in especificaciones.Software)
             {

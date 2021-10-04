@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using static Entidades.Enumerados;
 
 namespace Cibercafe_ElVicio
 {
@@ -48,7 +49,6 @@ namespace Cibercafe_ElVicio
         {
             MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
                 "-El boton 'Cerrar' te preguntara si deseas cerrar. 'SI' cerrara la aplicacion, incluyendo las ventanas abiertas. 'NO' regresaras al menu principal.\n" +
-                "-El datagridview te mostrara lo clientes en espera a tener una computadora o telefono y desapareceran de la lista si ya fueron atendidos.\n" +
                 "-El boton 'Mostrar Maquina' te permitira asignar una maquina al cliente y tambien detener el uso de la misma.\n" +
                 "-El boton 'Mostrar Cabina' te permitira asignar una cabina al cliente y tambien detener el uso de la misma.\n" +
                 "-El boton 'Estadisticas Historicas' te permitira ver el historial", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -71,7 +71,6 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnAsigMaquina_Click(object sender, EventArgs e)
         {
-            //Cliente clienteSelecionado = (Cliente)dgvClientes.CurrentRow.DataBoundItem;
             FrmComputadoras frmComputadoras = new FrmComputadoras();
             frmComputadoras.Show();
 
@@ -102,14 +101,41 @@ namespace Cibercafe_ElVicio
         {
             MessageBox.Show("¡BIENVENIDO USUARIO!");
 
-            List<Cliente> clientes = new List<Cliente>();
-            clientes.Add(new Cliente(41918909, "Tomás", "Sánchez", 22));
-            clientes.Add(new Cliente(31456980, "Gustavo", "Doria", 53));
-            clientes.Add(new Cliente(34067132, "Mauricio", "Prieto", 35));
-            clientes.Add(new Cliente(36897132, "Belén", "Trinidad", 16));
-            clientes.Add(new Cliente(27643934, "Brisa", "Quinteros", 28));
-            listCliente.Text = clientes;
+            //List<Cliente> clientes = new List<Cliente>();
+            //clientes.Add(new Cliente(41918909, "Tomás", "Sánchez", 22));
+            //clientes.Add(new Cliente(31456980, "Gustavo", "Doria", 53));
+            //clientes.Add(new Cliente(34067132, "Mauricio", "Prieto", 35));
+            //clientes.Add(new Cliente(36897132, "Belén", "Trinidad", 16));
+            //clientes.Add(new Cliente(27643934, "Brisa", "Quinteros", 28));
+            //listCliente.Text = clientes;
+            List<Cliente> lista = new List<Cliente>()
+            {
+            new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){Software.ares, Software.icq},new List<Periferico>(){Periferico.cámara,Periferico.auriculares},new List<Juego>(){Juego.DiabloII,Juego.WarcraftIII})),
+            new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono(54, 11, 48230912)),
+            new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>() {Software.messenger, Software.office}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara},new List<Juego>() {Juego.CounterStrike, Juego.MuOnline})),
+            new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono(1, 378, 92740204)),
+            new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>() {Software.icq, Software.messenger},new List<Periferico>() {Periferico.auriculares, Periferico.micrófono},new List<Juego>() {Juego.AgeOfEmpiresII,Juego.LineageII})),
+            new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono(54, 91, 62091837))};
+            foreach (Cliente cliente in lista)
+            {
+                Usuario.AgregarCliente(cliente);
+            }
+            ActualizarClientes();
         }
 
+        #region Metodos
+        /// <summary>
+        /// Actualiza la lista de clientes en espera.
+        /// En otras palabras, saca a los clientes de la lista que ya fueron asignados a un equipo en particular.
+        /// </summary>
+        private void ActualizarClientes()
+        {
+            listCliente.Items.Clear();
+            foreach (Cliente cliente in Usuario.Clientes)
+            {
+                listCliente.Items.Add(cliente.ToString());
+            }
+        }
+        #endregion
     }
 }

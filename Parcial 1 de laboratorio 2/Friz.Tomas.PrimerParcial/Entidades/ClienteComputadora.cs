@@ -7,7 +7,7 @@ using static Entidades.Enumerados;
 
 namespace Entidades
 {
-    public sealed class CostoComputadora : Servicio
+    public sealed class ClienteComputadora : Servicio
     {
         #region Atributos
         private const float costo = 0.5F;
@@ -20,7 +20,7 @@ namespace Entidades
         /// <summary>
         /// Constructor privado de especificacion para crear listas.
         /// </summary>
-        private CostoComputadora()
+        private ClienteComputadora()
         {
             software = new List<Software>();
             perifericos = new List<Periferico>();
@@ -32,7 +32,7 @@ namespace Entidades
         /// <param name="software"></param>
         /// <param name="periferico"></param>
         /// <param name="juego"></param>
-        public CostoComputadora(List<Software> software,List<Periferico> periferico,List<Juego> juego): this()
+        public ClienteComputadora(List<Software> software,List<Periferico> periferico,List<Juego> juego): this()
         {
             this.software = software;
             this.perifericos = periferico;

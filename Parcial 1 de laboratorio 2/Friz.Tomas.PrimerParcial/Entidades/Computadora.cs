@@ -215,7 +215,7 @@ namespace Entidades
             int total = 0;
             if (Lista.Count > 0)
             {
-                foreach (CostoComputadora costo in Lista)
+                foreach (ClienteComputadora costo in Lista)
                 {
                     total += costo.Duracion;
                 }

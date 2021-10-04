@@ -7,7 +7,7 @@ using static Entidades.Enumerados;
 
 namespace Entidades
 {
-    public sealed class CostoTelefono : Servicio
+    public sealed class ClienteTelefono : Servicio
     {
         #region Atributos
         private int codigo;
@@ -22,7 +22,7 @@ namespace Entidades
         /// <param name="codigo"></param>
         /// <param name="localidad">loca</param>
         /// <param name="numero"></param>
-        public CostoTelefono(int codigo, int localidad, int numero)
+        public ClienteTelefono(int codigo, int localidad, int numero)
         {
             this.codigo = codigo;
             this.localidad = localidad;
@@ -84,7 +84,7 @@ namespace Entidades
         /// <param name="c1"></param>
         /// <param name="c2"></param>
         /// <returns></returns>
-        public static bool operator ==(CostoTelefono c1, CostoTelefono c2)
+        public static bool operator ==(ClienteTelefono c1, ClienteTelefono c2)
         {
             if (c1 is not null && c2 is not null)
             {
@@ -98,7 +98,7 @@ namespace Entidades
         /// <param name="c1"></param>
         /// <param name="c2"></param>
         /// <returns></returns>
-        public static bool operator !=(CostoTelefono c1, CostoTelefono c2)
+        public static bool operator !=(ClienteTelefono c1, ClienteTelefono c2)
         {
             return !(c1 == c2);
         }
@@ -111,7 +111,7 @@ namespace Entidades
         /// <returns></returns>
         public override bool Equals(Object obj)
         {
-            CostoTelefono c = obj as CostoTelefono;
+            ClienteTelefono c = obj as ClienteTelefono;
             return c != null && this == c;
         }
         /// <summary>

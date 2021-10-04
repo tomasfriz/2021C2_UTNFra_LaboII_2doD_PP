@@ -57,7 +57,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad solo lectura del disponible
+        /// Propiedad solo lectura de disponible
         /// </summary>
         public eEstado Disponible
         {

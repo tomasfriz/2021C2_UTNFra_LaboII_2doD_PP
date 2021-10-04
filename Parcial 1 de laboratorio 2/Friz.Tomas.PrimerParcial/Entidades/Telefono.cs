@@ -12,7 +12,7 @@ namespace Entidades
         #region Atributos
         private TipoTecla tipoTecla;
         private string marca;
-        private List<CostoTelefono> listaCosto;
+        private List<ClienteTelefono> listaCosto;
         #endregion
 
         #region Constructores
@@ -28,7 +28,7 @@ namespace Entidades
             this.tipoTecla = tipoTecla;
             this.marca = marca;
             this.tipo = TipoEquipo.Cabina;
-            this.listaCosto = new List<CostoTelefono>();
+            this.listaCosto = new List<ClienteTelefono>();
         }
         #endregion
 
@@ -63,7 +63,7 @@ namespace Entidades
         protected override int CalcularMinutos()
         {
             int total = 0;
-            foreach (CostoTelefono costo in listaCosto)
+            foreach (ClienteTelefono costo in listaCosto)
             {
                 total += costo.Duracion;
             }

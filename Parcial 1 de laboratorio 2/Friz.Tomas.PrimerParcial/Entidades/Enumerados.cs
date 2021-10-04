@@ -63,7 +63,9 @@ namespace Entidades
         public enum Marcas
         {
             Panasonic,
-            Siemens
+            Siemens,
+            Elgin,
+            Telefonica
         }
         /// <summary>
         /// 
