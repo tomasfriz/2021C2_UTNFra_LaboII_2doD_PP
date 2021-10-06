@@ -10,24 +10,9 @@ namespace Entidades
     public sealed class ClienteTelefono : Servicio
     {
         #region Atributos
-        private int codigo;
-        private int localidad;
-        private int numero;
-        #endregion
-
-        #region Constructores
-        /// <summary>
-        /// Constructor de la clase Llamada
-        /// </summary>
-        /// <param name="codigo"></param>
-        /// <param name="localidad">loca</param>
-        /// <param name="numero"></param>
-        public ClienteTelefono(int codigo, int localidad, int numero)
-        {
-            this.codigo = codigo;
-            this.localidad = localidad;
-            this.numero = numero;
-        }
+        private string codigo;
+        private string localidad;
+        private string num;
         #endregion
 
         #region Propiedades
@@ -38,31 +23,21 @@ namespace Entidades
         {
             get
             {
-                return $"+{codigo} ({localidad}) {numero}";
+                return $"+{codigo} ({localidad}) {num}";
             }
         }
         /// <summary>
-        /// Solo lectura = retorna el tipo de llamada
+        /// Solo lectura = devuelve el tipo de localidad.
         /// </summary>
-        public TipoLlamada Tipo
+        public TipoLocalidad Tipo
         {
             get
             {
-                return IdentificarLlamada();
+                return IdentificarLocalidad();
             }
         }
         /// <summary>
-        /// Solo lectura = Devuelve el costo de la llamada
-        /// </summary>
-        public float Costo
-        {
-            get
-            {
-                return CalcularCosto();
-            }
-        }
-        /// <summary>
-        /// Lectura/Escritura = Para establecer la duracion de una llamada una vez finalizada 
+        /// Lectura/Escritura = Para establecer la duracion de una llamada.
         /// </summary>
         public override int Duracion
         {
@@ -73,6 +48,50 @@ namespace Entidades
             set
             {
                 this.duracion = value;
+            }
+        }
+        /// <summary>
+        /// Propiedad lectura escritura
+        /// </summary>
+        public string Codigo
+        {
+            get
+            {
+                return codigo;
+            }
+            set
+            {
+                codigo = value;
+            }
+        }
+
+        /// <summary>
+        /// Propiedad lectura escritura
+        /// </summary>
+        public string Localidad
+        {
+            get
+            {
+                return localidad;
+            }
+            set
+            {
+                localidad = value;
+            }
+        }
+
+        /// <summary>
+        /// Propiedad lectura escritura
+        /// </summary>
+        public string Num
+        {
+            get
+            {
+                return num;
+            }
+            set
+            {
+                num = value;
             }
         }
         #endregion
@@ -120,34 +139,11 @@ namespace Entidades
         /// <returns></returns>
         public override int GetHashCode()
         {
-            string t = $"{codigo}{localidad}{numero}";
-            return t.GetHashCode() + Duracion.GetHashCode();
+            return base.GetHashCode() + NumDestino.GetHashCode();
         }
         #endregion
 
         #region Métodos
-        /// <summary>
-        /// Analiza el número de la llamada a fin de determinar si es local, larga distancia o internacional
-        /// </summary>
-        /// <returns>Tipo de llamada</returns>
-        private TipoLlamada IdentificarLlamada()
-        {
-            if (codigo != 54)
-            {
-                return TipoLlamada.Internacional;
-            }
-            else
-            {
-                if (localidad == 11)
-                {
-                    return TipoLlamada.Local;
-                }
-                else
-                {
-                    return TipoLlamada.LargaDistancia;
-                }
-            }
-        }
         /// <summary>
         /// Sobreescribe el metodo y calcula el costo de una llamada segun su duracion y el valor del minuto
         /// </summary>
@@ -157,6 +153,28 @@ namespace Entidades
             return (Duracion * (int)Tipo) / 100;
         }
         /// <summary>
+        /// Determina si el numero es local, Provincial o internacional.
+        /// </summary>
+        /// <returns>Tipo de llamada</returns>
+        private TipoLocalidad IdentificarLocalidad()
+        {
+            if (codigo != "54")
+            {
+                return TipoLocalidad.Internacional;
+            }
+            else
+            {
+                if (localidad == "011" || localidad == "11")
+                {
+                    return TipoLocalidad.Local;
+                }
+                else
+                {
+                    return TipoLocalidad.LargaDistancia;
+                }
+            }
+        }
+        /// <summary>
         /// Sobrescribe el metodo ToString()
         /// </summary>
         /// <returns></returns>
@@ -164,10 +182,23 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Tipo llamada: {Tipo}\n");
-            sb.AppendLine($"Numero: +{codigo} ({localidad}) {numero}\n");
+            sb.AppendLine($"Tipo de llamada: {Tipo}\n");
+            sb.AppendLine($"Numero: +{codigo} ({localidad}) {num}\n");
             return sb.ToString();
         }
         #endregion
     }
+
+    //public class ValidadorLlamada : AbstractValidator<ClienteTelefono>
+    //{
+    //    /// <summary>
+    //    /// Valida que los números ingresados.
+    //    /// </summary>
+    //    public ValidadorLlamada()
+    //    {
+    //        RuleFor(x => x.CodigoPais).NotEmpty().MaximumLength(4).Matches("^[0-9]*$").WithMessage("El código no es válido");
+    //        RuleFor(x => x.PrefijoLocalidad).NotEmpty().MinimumLength(2).MaximumLength(5).Matches("^[0-9]*$").WithMessage("El no es válido");
+    //        RuleFor(x => x.Numero).NotEmpty().MinimumLength(6).MaximumLength(8).Matches("^[0-9]*$").WithMessage("El número no es válido");
+    //    }
+    //}
 }

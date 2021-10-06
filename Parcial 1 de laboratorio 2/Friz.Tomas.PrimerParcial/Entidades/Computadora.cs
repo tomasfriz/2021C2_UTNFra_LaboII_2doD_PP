@@ -50,16 +50,6 @@ namespace Entidades
         /// <summary>
         /// Solo lectura
         /// </summary>
-        public int Minutos
-        {
-            get
-            {
-                return CalcularMinutos();
-            }
-        }
-        /// <summary>
-        /// Solo lectura
-        /// </summary>
         public List<Software> Software
         {
             get
@@ -89,7 +79,7 @@ namespace Entidades
         }
         #endregion
 
-        #region Sobrecargas
+        #region Operadores
         /// <summary>
         /// Revisa que el software este instalado en la compu.
         /// </summary>
@@ -98,19 +88,17 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Computadora c, Software s)
         {
-            bool estado = false;
             if (c.Software.Count > 0)
             {
                 foreach (Software software in c.Software)
                 {
                     if (software == s)
                     {
-                        estado = true;
-                        break;
+                        return true;
                     }
                 }
             }
-            return estado;
+            return false;
         }
         /// <summary>
         /// Revisa que el software no este instalado en la compu.
@@ -130,19 +118,17 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Computadora c, Periferico p)
         {
-            bool estado = false;
             if (c.Perifericos.Count > 0)
             {
                 foreach (Periferico periferico in c.Perifericos)
                 {
                     if (periferico == p)
                     {
-                        estado = true;
-                        break;
+                        return true;
                     }
                 }
             }
-            return estado;
+            return false;
         }
         /// <summary>
         /// Revisa que el periferico no este disponible en la compu.
@@ -162,19 +148,17 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Computadora c, Juego j)
         {
-            bool estado = false;
             if (c.Juegos.Count > 0)
             {
                 foreach (Juego juego in c.Juegos)
                 {
                     if (juego == j)
                     {
-                        estado = true;
-                        break;
+                        return true;
                     }
                 }
             }
-            return estado;
+            return false;
         }
         /// <summary>
         /// Revisa que el juego no este instalado en la compu.
@@ -186,6 +170,9 @@ namespace Entidades
         {
             return !(c == j);
         }
+        #endregion
+
+        #region Sobrecargas
         /// <summary>
         /// Sobrescribe el metodo Equals()
         /// </summary>
@@ -201,27 +188,11 @@ namespace Entidades
         /// <returns></returns>
         public override int GetHashCode()
         {
-            return (software,perifericos,juegos,hardware).GetHashCode();
+            return base.GetHashCode();
         }
         #endregion
 
         #region Metodos
-        /// <summary>
-        /// Sobrescribe el metodo abstracto CalcularMinutos()
-        /// </summary>
-        /// <returns>MinutosTotal</returns>
-        protected override int CalcularMinutos()
-        {
-            int total = 0;
-            if (Lista.Count > 0)
-            {
-                foreach (ClienteComputadora costo in Lista)
-                {
-                    total += costo.Duracion;
-                }
-            }
-            return total;
-        }
         /// <summary>
         /// Sobrescribe el metodo ToString()
         /// </summary>
@@ -229,28 +200,28 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Computadora: {id}\n");
+            sb.AppendLine(base.ToString());
             sb.AppendLine($"Software: ");
             foreach (Software software in software)
             {
-                sb.AppendLine($"- {software}\n");
+                sb.AppendLine($"{software}\n");
             }
             sb.AppendLine($"Perifericos: ");
             foreach (Periferico periferico in perifericos)
             {
-                sb.AppendLine($"- {periferico}\n");
+                sb.AppendLine($"{periferico}\n");
             }
             sb.AppendLine($"Juegos: ");
             foreach (Juego juego in juegos)
             {
-                sb.AppendLine($"- {juego}\n");
+                sb.AppendLine($"{juego}\n");
             }
             sb.AppendLine($"Hardware: ");
             foreach (KeyValuePair<string, string> e in hardware)
             {
-                sb.AppendLine($"- {e.Key}: {e.Value}\n");
+                sb.AppendLine($"{e.Key}: {e.Value}\n");
             }
-            sb.AppendLine($"Costo de uso: {Minutos}");
+            sb.AppendLine($"Costo: {Minutos}");
             return sb.ToString();
         }
         #endregion

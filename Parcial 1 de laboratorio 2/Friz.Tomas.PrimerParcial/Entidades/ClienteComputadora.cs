@@ -10,10 +10,12 @@ namespace Entidades
     public sealed class ClienteComputadora : Servicio
     {
         #region Atributos
-        private const float costo = 0.5F;
+        
         private List<Software> software;
         private List<Periferico> perifericos;
         private List<Juego> juegos;
+        private TipoCompu tipo;
+        private const float costo = 0.5F;
         #endregion
 
         #region Constructores
@@ -56,6 +58,20 @@ namespace Entidades
             }
         }
         /// <summary>
+        /// Propiedad lectura-escritura tipo sesion
+        /// </summary>
+        public TipoCompu Tipo
+        {
+            get
+            {
+                return tipo;
+            }
+            set
+            {
+                this.tipo = value;
+            }
+        }
+        /// <summary>
         /// Propiedad de solo letura Software
         /// </summary>
         public List<Software> Software
@@ -94,35 +110,53 @@ namespace Entidades
         /// <returns></returns>
         protected override float CalcularCosto()
         {
-            if (Duracion % 30 > 0)
-            {
-                double d = Duracion / 30;
-                return (float)Math.Ceiling(d) * costo;
-            }
-            return (Duracion / 30) * costo;
+            //if (Duracion % 30 > 0)
+            //{
+            //    double d = Duracion / 30;
+            //    return (float)Math.Ceiling(d) * costo;
+            //}
+            //return (Duracion / 30) * costo;
+
+            return (float)Math.Ceiling(Duracion / 30F) * costo;
         }
         /// <summary>
-        /// Sobrescribe el metodo ToString()
+        /// Muestra las especificaciones de la computadora.
         /// </summary>
         /// <returns></returns>
-        public override string ToString()
+        public string MostrarEspecificaciones()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Software: ");
             foreach (Software software in software)
             {
-                sb.AppendLine($"- {software} \n");
+                sb.AppendLine($"{software}\n");
             }
             sb.AppendLine($"Periferico: ");
             foreach (Periferico periferico in perifericos)
             {
-                sb.AppendLine($"- {periferico} \n");
+                sb.AppendLine($"{periferico}\n");
             }
-            sb.AppendLine($"Juegos requeridos: ");
+            sb.AppendLine($"Juego: ");
             foreach (Juego juego in juegos)
             {
-                sb.AppendLine($"- {juego} \n");
+                sb.AppendLine($"{juego}\n");
             }
+            return sb.ToString();
+        }
+        /// <summary>
+        /// Sobrescribe el metodo ToString()
+        /// Muestra los detalles de la computadora que pidio el cliente.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Tipo: {tipo}\n");
+            if (tipo != TipoCompu.Libre)
+            {
+                sb.AppendLine($"Minutos Establecidos: {Duracion}\n");
+            }
+            sb.AppendLine(MostrarEspecificaciones());
             return sb.ToString();
         }
         #endregion

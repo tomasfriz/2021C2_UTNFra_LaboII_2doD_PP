@@ -33,6 +33,9 @@ namespace Entidades
         #endregion
 
         #region Propiedades
+        /// <summary>
+        /// 
+        /// </summary>
         public Servicio Servicio
         {
             get
@@ -57,7 +60,7 @@ namespace Entidades
             }
             else
             {
-                c.servicio = s;
+                c.servicio = (ClienteComputadora)s;
 
             }
             return c;
@@ -119,7 +122,7 @@ namespace Entidades
 
             sb.AppendLine($" Nombre: {nombre} - Apellido: {apellido} ");
             sb.AppendLine($"- DNI: {dni} ");
-            sb.AppendLine($"- Edad: ({edad} años)");
+            sb.AppendLine($"- Edad: {edad} años\n");
             return sb.ToString();
         }
         #endregion

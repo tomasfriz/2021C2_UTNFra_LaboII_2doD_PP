@@ -15,15 +15,19 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmMenu : Form
     {
+        private Random random;
+
         #region Constructor
         /// <summary>
-        /// Coloca el nombre del usuario en la barra superior del form y tambien la hora actual.
+        /// Coloca el nombre del usuario en la barra superior del form y tambien la inicio actual.
         /// </summary>
         public FrmMenu()
         {
             InitializeComponent();
             lblUsuario.Text = "Tomás Agustín Friz";
             lblFecha.Text = DateTime.Now.ToShortDateString();
+            random = new Random();
+
         }
         #endregion
 
@@ -52,45 +56,40 @@ namespace Cibercafe_ElVicio
         {
             MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
                 "-El boton 'Cerrar' te preguntara si deseas cerrar. 'SI' cerrara la aplicacion, incluyendo las ventanas abiertas. 'NO' regresaras al menu principal.\n" +
-                "-El boton 'Mostrar Maquina' te permitira asignar una maquina al cliente y tambien detener el uso de la misma.\n" +
-                "-El boton 'Mostrar Cabina' te permitira asignar una cabina al cliente y tambien detener el uso de la misma.\n" +
+                "-El boton 'Asignar Equipo' te permitira asignar un equipo al cliente y tambien detener el uso de la misma.\n" +
+                "-El boton 'Mostrar Equipo' te permitira ver los equipo y sus especificaciones y tambien detener el uso de la misma.\n" +
                 "-El boton 'Estadisticas Historicas' te permitira ver el historial", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
-        /// Sirve para confirmar el cerrado del programa.
+        /// Sirve tanto para asignar los equipos de los clientes como para que el usuario vea un registro de las maquinas en uso o disponibles.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FrmCibercafe_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult msj = MessageBox.Show("¿Seguro de querer salir?", "Saliendo.....", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            e.Cancel = msj == DialogResult.No;
-        }
-        /// <summary>
-        /// Sirve tanto para asignar las maquinas de los clientes como para que el usuario vea un registro de las maquinas en uso o disponibles.
-        /// Tambien sirve para desconectar al cliente de la maquina.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnAsigMaquina_Click(object sender, EventArgs e)
+        private void btnAsigEquipo_Click(object sender, EventArgs e)
         {
             if (Usuario.Clientes.Count > 0)
             {
                 Cliente c = Usuario.Clientes.Peek();
-                FrmComputadoras frmComputadoras = new FrmComputadoras(c);
-                frmComputadoras.Show();
+                if (c.Servicio is ClienteComputadora)
+                {
+                    FrmComputadoras frmComputadoras = new FrmComputadoras();
+                    frmComputadoras.Show();
+                }
+                else
+                {
+                    FrmTelefonos frmTelefonos = new FrmTelefonos();
+                    frmTelefonos.Show();
+                }
             }
         }
         /// <summary>
-        /// Sirve tanto para asignar las cabinas de los clientes como para que el usuario vea un registro de las cabinas en uso o disponibles.
-        /// Tambien sirve para desconectar al cliente de la cabina.
+        /// Sirve para desconectar al cliente del equipo.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAsigCabina_Click(object sender, EventArgs e)
+        private void btnMostrarEquipo_Click(object sender, EventArgs e)
         {
-            FrmTelefonos frmTelefonos = new FrmTelefonos();
-            frmTelefonos.Show();
+
         }
         /// <summary>
         /// Sirve para ver las estadisticas historicas relacionadas con los clientes y el uso de las maquinas y cabinas.
@@ -113,21 +112,62 @@ namespace Cibercafe_ElVicio
 
             List<Cliente> lista = new List<Cliente>()
             {
-            new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){Software.ares},new List<Periferico>(){Periferico.cámara},new List<Juego>(){Juego.DiabloII})),
-            new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono(54, 11, 48230912)),
-            new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){Software.messenger},new List<Periferico>(){Periferico.micrófono},new List<Juego>(){Juego.CounterStrike})),
-            new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono(1, 378, 92740204)),
-            new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>(){Software.icq},new List<Periferico>(){Periferico.auriculares},new List<Juego>(){Juego.WarcraftIII})),
-            new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono(54, 91, 62091837))};
+                //Periferico p = (Periferico)random.Next(0,4):
+            new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
+            //new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
+            new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
+            //new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono()),
+            new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
+            //new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono())
+            };
             foreach (Cliente cliente in lista)
             {
                 Usuario.AgregarCliente(cliente);
             }
             ActualizarClientes();
+            List<Equipo> listaComputadora = new List<Equipo>()
+            {
+                new Computadora("C01", new List<Software>(){Software.ares,Software.messenger}, new List<Periferico>() {Periferico.auriculares}, new List<Juego>() {Juego.CounterStrike},new Dictionary<string, string> {{"RAM", "4GB"}, {"Procesador","Intel Pentium 4"}, {"Placa de video","486 DLC"}}),
+                new Computadora("C02", new List<Software>(){Software.icq,Software.office}, new List<Periferico>() {Periferico.cámara}, new List<Juego>() {Juego.AgeOfEmpiresII}, new Dictionary<string, string> {{"RAM", "2GB"}, {"Procesador","Intel Pentium 2"}, {"Placa de video","Geforce 4"}}),
+                new Computadora("C03", new List<Software>(){Software.messenger,Software.icq}, new List<Periferico>() {Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike}, new Dictionary<string, string> {{"RAM","4GB"}, {"Procesador","Intel Pentium 2"}, {"Placa de video","9600GT"}}),
+                new Computadora("C04", new List<Software>(){Software.office,Software.messenger}, new List<Periferico>() {Periferico.auriculares}, new List<Juego>() {Juego.DiabloII}, new Dictionary<string, string> {{"RAM","2GB"}, {"Procesador", "Intel Pentium"}, {"Placa de video","486 DLC"}}),
+                new Computadora("C05", new List<Software>(){Software.ares,Software.icq}, new List<Periferico>() {Periferico.cámara}, new List<Juego>() {Juego.LineageII}, new Dictionary<string, string> {{"RAM","1GB"}, {"Procesador","Intel 4004"}, {"Placa de video","9600GT"}}),
+                new Computadora("C06", new List<Software>(){Software.icq,Software.messenger}, new List<Periferico>() {Periferico.micrófono}, new List<Juego>() {Juego.WarcraftIII}, new Dictionary<string, string> {{"RAM","4GB"}, {"Procesador","Intel Pentium 4"}, {"Placa de video","486 DLC"}}),
+                new Computadora("C07", new List<Software>(){Software.messenger,Software.office}, new List<Periferico>() {Periferico.auriculares}, new List<Juego>() {Juego.MuOnline}, new Dictionary<string, string> {{"RAM","2GB"}, {"Procesador","Intel Pentium 2"}, {"Placa de video","Geforce 4"}}),
+                new Computadora("C08", new List<Software>(){Software.office,Software.ares}, new List<Periferico>() {Periferico.cámara}, new List<Juego>() {Juego.CounterStrike}, new Dictionary<string, string> {{"RAM","4GB"}, {"Procesador","Intel Pentium 2"}, {"Placa de video","9600GT"}}),
+                new Computadora("C09", new List<Software>(){Software.ares,Software.office}, new List<Periferico>() {Periferico.micrófono}, new List<Juego>() {Juego.DiabloII}, new Dictionary<string, string> {{"RAM","2GB"}, {"Procesador","Intel Pentium"}, {"Placa de video","486 DLC"}}),
+                new Computadora("C10", new List<Software>(){Software.icq,Software.ares}, new List<Periferico>() {Periferico.auriculares}, new List<Juego>() {Juego.WarcraftIII}, new Dictionary<string, string> {{"RAM","1GB"}, {"Procesador","Intel 4004"}, {"Placa de video","9600GT"}}),
+            };
+            foreach (Equipo p in listaComputadora)
+            {
+                Usuario.AgregarEquipo(p);
+            }
+            List<Equipo> listaTelefonos = new List<Equipo>()
+            {
+                new Telefono("T01", TipoTecla.Disco, "Telefonica"),
+                new Telefono("T02", TipoTecla.Teclado, "Panasonic"),
+                new Telefono("T03", TipoTecla.Disco, "Elgin"),
+                new Telefono("T04", TipoTecla.Teclado, "Siemens"),
+                new Telefono("T05", TipoTecla.Disco, "Panasonic")
+            };
+            foreach (Equipo p in listaTelefonos)
+            {
+                Usuario.AgregarEquipo(p);
+            }
         }
         #endregion
 
         #region Metodos del Form
+        /// <summary>
+        /// Sirve para confirmar el cerrado del programa.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrmCibercafe_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult msj = MessageBox.Show("¿Seguro de querer salir?", "Saliendo.....", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            e.Cancel = msj == DialogResult.No;
+        }
         /// <summary>
         /// Actualiza los clientes.
         /// Una vez que se le asignaron un equipo al cliente desaparecera de la lista de espera.
@@ -137,6 +177,8 @@ namespace Cibercafe_ElVicio
         private void FrmMenu_Activated(object sender, EventArgs e)
         {
             ActualizarClientes();
+            ActualizarComputadoras();
+            ActualizarTelefonos();
         }
         #endregion
 
@@ -153,6 +195,68 @@ namespace Cibercafe_ElVicio
                 listCliente.Items.Add(cliente.ToString());
             }
         }
+        /// <summary>
+        /// Actualiza listado computadoras asignandole el color lime (verde) si esta libre y el color crimson (rojo) si esta en uso.
+        /// </summary>
+        private void ActualizarComputadoras()
+        {
+            for (int i = 0; i < gpbComputadoras.Controls.Count; i++)
+            {
+                if (gpbComputadoras.Controls[i] is Label)
+                {
+                    foreach (Equipo e in Usuario.Lista)
+                    {
+                        if (gpbComputadoras.Controls[i].Text == e.Id)
+                        {
+                            if (e.Estado == Estado.Disponible)
+                            {
+                                gpbComputadoras.Controls[i].BackColor = Color.Lime;
+                            }
+                            else
+                            {
+                                gpbComputadoras.Controls[i].BackColor = Color.Crimson;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /// <summary>
+        /// Actualiza listado telefonos asignandole el color lime (verde) si esta libre y el color crimson (rojo) si esta en uso.
+        /// </summary>
+        private void ActualizarTelefonos()
+        {
+            for (int i = 0; i < gpbTelefonos.Controls.Count; i++)
+            {
+                if (gpbTelefonos.Controls[i] is Label)
+                {
+                    foreach (Equipo e in Usuario.Lista)
+                    {
+                        if (gpbTelefonos.Controls[i].Text == e.Id)
+                        {
+                            if (e.Estado == Estado.Disponible)
+                            {
+                                gpbTelefonos.Controls[i].BackColor = Color.Lime;
+                            }
+                            else
+                            {
+                                gpbTelefonos.Controls[i].BackColor = Color.Crimson;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         #endregion
+
+        private void lblComputadoras_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTelefonos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

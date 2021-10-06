@@ -37,7 +37,31 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad solo lectura del tipo de puesto
+        /// Devuelve los
+        /// </summary>
+        public int Minutos
+        {
+            get
+            {
+                return CalcularMinutos();
+            }
+        }
+        /// <summary>
+        /// Propiedad solo lectura de disponible
+        /// </summary>
+        public Estado Estado
+        {
+            get
+            {
+                return estado;
+            }
+            set
+            {
+                this.estado = value;
+            }
+        }
+        /// <summary>
+        /// Propiedad solo lectura del tipo
         /// </summary>
         public TipoEquipo Tipo
         {
@@ -54,20 +78,6 @@ namespace Entidades
             get
             {
                 return lista;
-            }
-        }
-        /// <summary>
-        /// Propiedad solo lectura de disponible
-        /// </summary>
-        public Estado Estado
-        {
-            get
-            {
-                return estado;
-            }
-            set
-            {
-                this.estado = value;
             }
         }
         #endregion
@@ -121,17 +131,29 @@ namespace Entidades
 
         #region Metodos 
         /// <summary>
-        /// Calcula los minutos de uso del equipo.
+        /// Calcula los minutos de uso del equipo mas la duracion del mismo.
         /// </summary>
         /// <returns>Minutos de uso</returns>
-        protected abstract int CalcularMinutos();
+        protected int CalcularMinutos()
+        {
+            int total = 0;
+            foreach (Servicio s in lista)
+            {
+                total += s.Duracion;
+            }
+            return total;
+        }
         /// <summary>
         /// Sobrescribe el metodo ToString()
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{id}";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Tipo: {tipo} - Id: {id}\n");
+            sb.AppendLine($"Estado: {estado}\n");
+            sb.AppendLine($"Minutos: {Minutos}\n");
+            return sb.ToString();
         }
         #endregion
     }

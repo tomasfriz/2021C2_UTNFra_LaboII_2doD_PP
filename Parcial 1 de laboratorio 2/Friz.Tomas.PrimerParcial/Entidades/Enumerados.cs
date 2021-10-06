@@ -77,9 +77,13 @@ namespace Entidades
         /// <summary>
         /// 
         /// </summary>
-        public enum TipoLlamada
+        public enum TipoLocalidad
         {
             Local = 100, LargaDistancia = 250, Internacional = 500
+        }
+        public enum TipoCompu
+        {
+            Libre, Limitado
         }
         #endregion
     }
