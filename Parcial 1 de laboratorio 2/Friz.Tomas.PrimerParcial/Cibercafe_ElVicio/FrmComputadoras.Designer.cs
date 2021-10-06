@@ -34,7 +34,7 @@ namespace Cibercafe_ElVicio
             this.label3 = new System.Windows.Forms.Label();
             this.cmbComputadoras = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.numTiempo = new System.Windows.Forms.NumericUpDown();
+            this.numTiempoLimite = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtLimitado = new System.Windows.Forms.RadioButton();
             this.rbtIlimitado = new System.Windows.Forms.RadioButton();
@@ -44,7 +44,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numTiempo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTiempoLimite)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@ namespace Cibercafe_ElVicio
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cmbComputadoras);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.numTiempo);
+            this.panel1.Controls.Add(this.numTiempoLimite);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblDatos);
@@ -111,34 +111,34 @@ namespace Cibercafe_ElVicio
             this.label2.Text = "Datos del cliente";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numTiempo
+            // numTiempoLimite
             // 
-            this.numTiempo.Increment = new decimal(new int[] {
+            this.numTiempoLimite.Increment = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numTiempo.Location = new System.Drawing.Point(283, 109);
-            this.numTiempo.Maximum = new decimal(new int[] {
+            this.numTiempoLimite.Location = new System.Drawing.Point(283, 109);
+            this.numTiempoLimite.Maximum = new decimal(new int[] {
             240,
             0,
             0,
             0});
-            this.numTiempo.Minimum = new decimal(new int[] {
+            this.numTiempoLimite.Minimum = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numTiempo.Name = "numTiempo";
-            this.numTiempo.Size = new System.Drawing.Size(268, 23);
-            this.numTiempo.TabIndex = 20;
-            this.numTiempo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numTiempo.Value = new decimal(new int[] {
+            this.numTiempoLimite.Name = "numTiempoLimite";
+            this.numTiempoLimite.Size = new System.Drawing.Size(268, 23);
+            this.numTiempoLimite.TabIndex = 20;
+            this.numTiempoLimite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numTiempoLimite.Value = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numTiempo.Visible = false;
+            this.numTiempoLimite.Visible = false;
             // 
             // groupBox1
             // 
@@ -201,9 +201,9 @@ namespace Cibercafe_ElVicio
             // 
             this.btnConectar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnConectar.Location = new System.Drawing.Point(246, 426);
+            this.btnConectar.Location = new System.Drawing.Point(220, 426);
             this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(94, 23);
+            this.btnConectar.Size = new System.Drawing.Size(142, 23);
             this.btnConectar.TabIndex = 1;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
@@ -213,7 +213,7 @@ namespace Cibercafe_ElVicio
             // 
             this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAyuda.Location = new System.Drawing.Point(14, 426);
+            this.btnAyuda.Location = new System.Drawing.Point(12, 426);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(75, 23);
             this.btnAyuda.TabIndex = 0;
@@ -225,7 +225,7 @@ namespace Cibercafe_ElVicio
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnCerrar.Location = new System.Drawing.Point(494, 426);
+            this.btnCerrar.Location = new System.Drawing.Point(495, 426);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar.TabIndex = 3;
@@ -249,7 +249,7 @@ namespace Cibercafe_ElVicio
             this.Text = "FrmComputadoras";
             this.Load += new System.EventHandler(this.FrmComputadoras_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numTiempo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTiempoLimite)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -267,7 +267,7 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.RadioButton rbtLimitado;
         private System.Windows.Forms.RadioButton rbtIlimitado;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numTiempo;
+        private System.Windows.Forms.NumericUpDown numTiempoLimite;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbComputadoras;
         private System.Windows.Forms.RichTextBox rctEspecificaciones;

@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Entidades.Enumerados;
 
 namespace Entidades
 {
     public sealed class ClienteComputadora : Servicio
     {
         #region Atributos
-        
         private List<Software> software;
         private List<Periferico> perifericos;
         private List<Juego> juegos;
@@ -20,7 +18,7 @@ namespace Entidades
 
         #region Constructores
         /// <summary>
-        /// Constructor privado de especificacion para crear listas.
+        /// Constructor de especificaciones para crear listas.
         /// </summary>
         private ClienteComputadora()
         {
@@ -29,7 +27,7 @@ namespace Entidades
             juegos = new List<Juego>();
         }
         /// <summary>
-        /// Constructor de la clase Especificacion
+        /// Constructor de la clase Especificacion para cargar las listas.
         /// </summary>
         /// <param name="software"></param>
         /// <param name="periferico"></param>
@@ -44,7 +42,7 @@ namespace Entidades
 
         #region Propiedades
         /// <summary>
-        /// Lectura-escrritura Duracion
+        /// Propiedad de Duracion.
         /// </summary>
         public override int Duracion
         {
@@ -58,7 +56,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad lectura-escritura tipo sesion
+        /// Propiedad del Enumerado de TipoCompu de Tipo.
         /// </summary>
         public TipoCompu Tipo
         {
@@ -72,7 +70,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad de solo letura Software
+        /// Propiedad del Enumerado de Software de Software.
         /// </summary>
         public List<Software> Software
         {
@@ -82,7 +80,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad de solo letura Periferico
+        /// Propiedad del Enumerado de Periferico de Perifericos.
         /// </summary>
         public List<Periferico> Periferico
         {
@@ -92,7 +90,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad de solo letura Juego
+        /// Propiedad del Enumerado de Juego de Juegos
         /// </summary>
         public List<Juego> Juego
         {
@@ -105,7 +103,7 @@ namespace Entidades
 
         #region Metodos
         /// <summary>
-        /// Sobreescribe el metodo y calcula el costo de un equipo(computadora o telefono) segun su duracion y el costo
+        /// Sobreescribe el metodo CalcularCosto() y calcula el costo de un equipo(computadora o telefono) segun su duracion y el costo del mismo.
         /// </summary>
         /// <returns></returns>
         protected override float CalcularCosto()

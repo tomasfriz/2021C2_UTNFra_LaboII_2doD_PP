@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-using static Entidades.Enumerados;
 
 namespace Cibercafe_ElVicio
 {
@@ -20,6 +19,9 @@ namespace Cibercafe_ElVicio
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// Constructor de FrmComputadoras.
+        /// </summary>
         public FrmComputadoras()
         {
             InitializeComponent();
@@ -49,13 +51,13 @@ namespace Cibercafe_ElVicio
                 "-El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
-        /// 
+        /// Sirve para conectar al cliente a una computadora.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            if (rbtLimitado.Checked == true && numTiempo.Value % 30 != 0)
+            if (rbtLimitado.Checked == true && numTiempoLimite.Value % 30 != 0)
             {
                 MessageBox.Show("La duración fija debe fijarse en bloques de media hora", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -67,7 +69,7 @@ namespace Cibercafe_ElVicio
                 }
                 else
                 {
-                    computadora.Duracion = (int)numTiempo.Value;
+                    computadora.Duracion = (int)numTiempoLimite.Value;
                     computadora.Tipo = TipoCompu.Limitado;
                 }
 
@@ -85,7 +87,7 @@ namespace Cibercafe_ElVicio
             }
         }
         /// <summary>
-        /// Se encarga de hardcodear los datos de las computadoras.
+        /// Se encarga de cargar los datos del cliente, las especificaciones del mismo y las computadoras que coinciden con las especificaciones del cliente.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -98,8 +100,9 @@ namespace Cibercafe_ElVicio
         }
         #endregion
 
+        #region Metodos
         /// <summary>
-        /// Muestra las computadoras disponibles que cumplen con los requerimientos del cliente
+        /// Muestra las computadoras disponibles que cumplen con los requerimientos del cliente.
         /// </summary>
         private void ListarComputadorasDisponibles()
         {
@@ -126,20 +129,32 @@ namespace Cibercafe_ElVicio
             else
             {                
                 btnConectar.Enabled = false;
-                btnConectar.BackColor = Color.Gray;
+                btnConectar.BackColor = Color.DarkGray;
                 //cmbComputadoras.SelectedIndex = 0;
                 cmbComputadoras.Items.Add("No hay computadoras con los requisitos esperados");
             }
         }
+        #endregion
 
+        #region Metodos del form
+        /// <summary>
+        /// Se encarga de poner invisible el numTiempoLimite cuando el check esta marcado en tiempo ilimitado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rbtIlimitado_CheckedChanged(object sender, EventArgs e)
         {
-            numTiempo.Visible = false;
+            numTiempoLimite.Visible = false;
         }
-
+        /// <summary>
+        /// Se encarga de poner visible el numTiempoLimite cuando el check esta marcado en tiempo limitado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rbtLimitado_CheckedChanged(object sender, EventArgs e)
         {
-            numTiempo.Visible = true;
+            numTiempoLimite.Visible = true;
         }
+        #endregion
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Entidades.Enumerados;
 
 namespace Entidades
 {
@@ -17,7 +16,7 @@ namespace Entidades
 
         #region Propiedades
         /// <summary>
-        /// Solo lectura = Devuelve el numero de destino
+        /// Propiedad de NumDestino y devuelve el numero de destino.
         /// </summary>
         public string NumDestino
         {
@@ -27,7 +26,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Solo lectura = devuelve el tipo de localidad.
+        /// Propiedad del Enumerado de TipoLocalidad de Tipo y devuelve el tipo de localidad.
         /// </summary>
         public TipoLocalidad Tipo
         {
@@ -37,7 +36,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Lectura/Escritura = Para establecer la duracion de una llamada.
+        /// Propiedad de Duracion.
         /// </summary>
         public override int Duracion
         {
@@ -51,7 +50,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad lectura escritura
+        /// Propiedad de codigo.
         /// </summary>
         public string Codigo
         {
@@ -66,7 +65,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Propiedad lectura escritura
+        /// Propiedad de Localidad.
         /// </summary>
         public string Localidad
         {
@@ -81,7 +80,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Propiedad lectura escritura
+        /// Propiedad de Num.
         /// </summary>
         public string Num
         {
@@ -98,7 +97,7 @@ namespace Entidades
 
         #region Operadores
         /// <summary>
-        /// Sobrecarga del operador ==
+        /// Operador == (igual) para comparar los datos del ClienteTelefono (Se reutiliza el metodo de GetHashCode).
         /// </summary>
         /// <param name="c1"></param>
         /// <param name="c2"></param>
@@ -112,7 +111,7 @@ namespace Entidades
             return false;
         }
         /// <summary>
-        /// Sobrecarga del operador !=
+        /// Operador != (distinto) para la comparacion del ClienteTelefono si son distintos.
         /// </summary>
         /// <param name="c1"></param>
         /// <param name="c2"></param>
@@ -125,7 +124,8 @@ namespace Entidades
 
         #region Sobrecargas
         /// <summary>
-        /// Sobrescribe el metodo Equals()
+        /// Sobrescribe el metodo Equals().
+        /// Requerido para el operador == (igual).
         /// </summary>
         /// <returns></returns>
         public override bool Equals(Object obj)
@@ -134,7 +134,9 @@ namespace Entidades
             return c != null && this == c;
         }
         /// <summary>
-        /// Sobrecarga del metodo GetHashCode()
+        /// Sobrecarga del metodo GetHashCode().
+        /// Requerido para el operador != (distinto).
+        /// Reutilisacion de la base de GetHashCode().
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode()
@@ -145,7 +147,7 @@ namespace Entidades
 
         #region Métodos
         /// <summary>
-        /// Sobreescribe el metodo y calcula el costo de una llamada segun su duracion y el valor del minuto
+        /// Calcula el costo de una llamada segun su duracion y el valor del minuto.
         /// </summary>
         /// <returns></returns>
         protected override float CalcularCosto()
@@ -176,6 +178,7 @@ namespace Entidades
         }
         /// <summary>
         /// Sobrescribe el metodo ToString()
+        /// Imprime los datos del telefono.
         /// </summary>
         /// <returns></returns>
         public override string ToString()

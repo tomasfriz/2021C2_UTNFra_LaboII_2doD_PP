@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-using static Entidades.Enumerados;
 
 namespace Cibercafe_ElVicio
 {
     public partial class FrmTelefonos : Form
     {
         #region Constructor
+        /// <summary>
+        /// Costructor de frmTelefonos
+        /// </summary>
         public FrmTelefonos()
         {
             InitializeComponent();
@@ -42,7 +44,7 @@ namespace Cibercafe_ElVicio
                 "-El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
-        /// 
+        /// Sirve para agregar un cliente a un telefono.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -51,16 +53,7 @@ namespace Cibercafe_ElVicio
 
         }
         /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnColgar_Click(object sender, EventArgs e)
-        {
-
-        }
-        /// <summary>
-        /// Se encarga de hardcodear los datos de las computadoras.
+        /// Se encarga de hardcodear los datos de los telefonos.
         /// </summary>
         private void FrmTelefonos_Load(object sender, EventArgs e)
         {

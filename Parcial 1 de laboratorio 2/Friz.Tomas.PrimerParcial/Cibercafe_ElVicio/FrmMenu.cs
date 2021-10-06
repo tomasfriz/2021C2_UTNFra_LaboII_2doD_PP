@@ -9,17 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-using static Entidades.Enumerados;
 
 namespace Cibercafe_ElVicio
 {
     public partial class FrmMenu : Form
     {
+        #region Atributos
         private Random random;
+        #endregion
 
         #region Constructor
         /// <summary>
-        /// Coloca el nombre del usuario en la barra superior del form y tambien la inicio actual.
+        /// Coloca el nombre del usuario en la barra superior del form y tambien la fecha de hoy.
         /// </summary>
         public FrmMenu()
         {
@@ -27,25 +28,18 @@ namespace Cibercafe_ElVicio
             lblUsuario.Text = "Tomás Agustín Friz";
             lblFecha.Text = DateTime.Now.ToShortDateString();
             random = new Random();
-
         }
         #endregion
 
         #region Botones
         /// <summary>
         /// Sirve para cerrar la aplicacion.
-        /// Antes pregunta si desea cerrar la aplicacion porque se cerraran tambien todas las ventanas emergentes.
-        /// SI, cerrara la aplicacion y todas las ventanas abiertas.
-        /// NO, volvera a la aplicacion y se anulara el cerrado.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea salir, cerraras todas las ventanas abiertas?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            this.Close();
         }
         /// <summary>
         /// Sirve para orientar al usuario a saber que hace cada boton de la aplicacion.
@@ -61,7 +55,7 @@ namespace Cibercafe_ElVicio
                 "-El boton 'Estadisticas Historicas' te permitira ver el historial", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
-        /// Sirve tanto para asignar los equipos de los clientes como para que el usuario vea un registro de las maquinas en uso o disponibles.
+        /// Sirve para asignar los equipos de los clientes en orden de llegada.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -81,15 +75,6 @@ namespace Cibercafe_ElVicio
                     frmTelefonos.Show();
                 }
             }
-        }
-        /// <summary>
-        /// Sirve para desconectar al cliente del equipo.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnMostrarEquipo_Click(object sender, EventArgs e)
-        {
-
         }
         /// <summary>
         /// Sirve para ver las estadisticas historicas relacionadas con los clientes y el uso de las maquinas y cabinas.
@@ -113,11 +98,11 @@ namespace Cibercafe_ElVicio
             List<Cliente> lista = new List<Cliente>()
             {
                 //Periferico p = (Periferico)random.Next(0,4):
-            new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
-            //new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
-            new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
-            //new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono()),
-            new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
+                new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
+                new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
+                new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
+                new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono()),
+                new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
             //new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono())
             };
             foreach (Cliente cliente in lista)
@@ -157,6 +142,27 @@ namespace Cibercafe_ElVicio
         }
         #endregion
 
+        #region Labels
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lblComputadoras_Click(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lblTelefonos_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
         #region Metodos del Form
         /// <summary>
         /// Sirve para confirmar el cerrado del programa.
@@ -169,8 +175,8 @@ namespace Cibercafe_ElVicio
             e.Cancel = msj == DialogResult.No;
         }
         /// <summary>
-        /// Actualiza los clientes.
-        /// Una vez que se le asignaron un equipo al cliente desaparecera de la lista de espera.
+        /// Actualiza los clientes (Una vez que se le asignaron un equipo al cliente desaparecera de la lista de espera).
+        /// Actualiza los labels de computadoras y telefonos (cambia de color si esta libre o en uso).
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -196,7 +202,7 @@ namespace Cibercafe_ElVicio
             }
         }
         /// <summary>
-        /// Actualiza listado computadoras asignandole el color lime (verde) si esta libre y el color crimson (rojo) si esta en uso.
+        /// Actualiza el listado de computadoras asignandole el color lime (verde) si esta libre y el color crimson (rojo) si esta en uso.
         /// </summary>
         private void ActualizarComputadoras()
         {
@@ -222,7 +228,7 @@ namespace Cibercafe_ElVicio
             }
         }
         /// <summary>
-        /// Actualiza listado telefonos asignandole el color lime (verde) si esta libre y el color crimson (rojo) si esta en uso.
+        /// Actualiza el listado de telefonos asignandole el color lime (verde) si esta libre y el color crimson (rojo) si esta en uso.
         /// </summary>
         private void ActualizarTelefonos()
         {
@@ -249,14 +255,5 @@ namespace Cibercafe_ElVicio
         }
         #endregion
 
-        private void lblComputadoras_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTelefonos_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

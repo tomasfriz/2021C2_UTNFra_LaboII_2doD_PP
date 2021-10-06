@@ -34,7 +34,7 @@ namespace Entidades
 
         #region Propiedades
         /// <summary>
-        /// 
+        /// Propiedad de Servicio.
         /// </summary>
         public Servicio Servicio
         {
@@ -47,7 +47,7 @@ namespace Entidades
 
         #region Operadores
         /// <summary>
-        /// 
+        /// Operador + para agregar un cliente a un servicio(Telefono/Computadora).
         /// </summary>
         /// <param name="c"></param>
         /// <param name="s"></param>
@@ -66,7 +66,7 @@ namespace Entidades
             return c;
         }
         /// <summary>
-        /// Sobrecarga del operador ==
+        /// Operador == (Igual) para comparar el DNI del cliente.
         /// </summary>
         /// <param name="c1"></param>
         /// <param name="c2"></param>
@@ -80,7 +80,7 @@ namespace Entidades
             return false;
         }
         /// <summary>
-        /// Sobrecarga del operador !=
+        /// Operador != (distinto) para la comparacion del DNI de cliente si son diferentes.
         /// </summary>
         /// <param name="c1"></param>
         /// <param name="c2"></param>
@@ -93,7 +93,8 @@ namespace Entidades
 
         #region Sobrecargas
         /// <summary>
-        /// Sobrescribe el metodo Equals()
+        /// Sobrescribe el metodo Equals().
+        /// Requerible para el operador == (igual).
         /// </summary>
         /// <returns></returns>
         public override bool Equals(Object obj)
@@ -102,7 +103,8 @@ namespace Entidades
             return c != null && this == c;
         }
         /// <summary>
-        /// Sobrecarga del metodo GetHashCode()
+        /// Sobrecarga del metodo GetHashCode().
+        /// Requerible para el operado != (distinto).
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode()
@@ -114,6 +116,7 @@ namespace Entidades
         #region Metodos
         /// <summary>
         /// Sobrescribe el metodo ToString()
+        /// Imprime los datos del cliente.
         /// </summary>
         /// <returns></returns>
         public override string ToString()

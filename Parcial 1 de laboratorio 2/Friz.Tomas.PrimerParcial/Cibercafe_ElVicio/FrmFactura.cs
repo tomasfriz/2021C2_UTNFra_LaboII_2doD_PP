@@ -12,14 +12,26 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmFactura : Form
     {
+        #region Constructor
+        /// <summary>
+        /// Constructor de Frmfactura
+        /// </summary>
         public FrmFactura()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Botones
+        /// <summary>
+        /// Sirve para pagar el uso de los equipos mas si pidio un aperitivo (incluye IVA integrado).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPagar_Click(object sender, EventArgs e)
         {
 
         }
+        #endregion
     }
 }

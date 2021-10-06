@@ -42,7 +42,6 @@ namespace Cibercafe_ElVicio
             this.label4 = new System.Windows.Forms.Label();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnAsigEquipo = new System.Windows.Forms.Button();
-            this.btnMostrarEquipo = new System.Windows.Forms.Button();
             this.gpbComputadoras = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -60,7 +59,6 @@ namespace Cibercafe_ElVicio
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gpbComputadoras.SuspendLayout();
             this.gpbTelefonos.SuspendLayout();
@@ -124,8 +122,8 @@ namespace Cibercafe_ElVicio
             // 
             // listCliente
             // 
-            this.listCliente.FormattingEnabled = true;
             resources.ApplyResources(this.listCliente, "listCliente");
+            this.listCliente.FormattingEnabled = true;
             this.listCliente.Name = "listCliente";
             // 
             // label4
@@ -149,14 +147,6 @@ namespace Cibercafe_ElVicio
             this.btnAsigEquipo.Name = "btnAsigEquipo";
             this.btnAsigEquipo.UseVisualStyleBackColor = false;
             this.btnAsigEquipo.Click += new System.EventHandler(this.btnAsigEquipo_Click);
-            // 
-            // btnMostrarEquipo
-            // 
-            resources.ApplyResources(this.btnMostrarEquipo, "btnMostrarEquipo");
-            this.btnMostrarEquipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnMostrarEquipo.Name = "btnMostrarEquipo";
-            this.btnMostrarEquipo.UseVisualStyleBackColor = false;
-            this.btnMostrarEquipo.Click += new System.EventHandler(this.btnMostrarEquipo_Click);
             // 
             // gpbComputadoras
             // 
@@ -292,23 +282,14 @@ namespace Cibercafe_ElVicio
             this.label19.Name = "label19";
             this.label19.Click += new System.EventHandler(this.lblTelefonos_Click);
             // 
-            // btnAgregar
-            // 
-            resources.ApplyResources(this.btnAgregar, "btnAgregar");
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            // 
             // FrmMenu
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gpbTelefonos);
             this.Controls.Add(this.gpbComputadoras);
-            this.Controls.Add(this.btnMostrarEquipo);
             this.Controls.Add(this.btnAsigEquipo);
             this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.panel1);
@@ -343,11 +324,9 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnAsigEquipo;
-        private System.Windows.Forms.Button btnMostrarEquipo;
         private System.Windows.Forms.ListBox listCliente;
         private System.Windows.Forms.GroupBox gpbComputadoras;
         private System.Windows.Forms.GroupBox gpbTelefonos;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
