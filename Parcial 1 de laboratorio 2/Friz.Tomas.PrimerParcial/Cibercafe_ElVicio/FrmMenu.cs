@@ -16,6 +16,7 @@ namespace Cibercafe_ElVicio
     {
         #region Atributos
         private Random random;
+        private Equipo equipo;
         #endregion
 
         #region Constructor
@@ -147,22 +148,34 @@ namespace Cibercafe_ElVicio
 
         #region Labels
         /// <summary>
-        /// 
+        /// Se encarga de desconectar la computadora y genera una factura.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void lblComputadoras_Click(object sender, EventArgs e)
+        private void lblComputadoras_Click(object sender, EventArgs e) ///posible error en ejecucu
         {
-
+            if (equipo.Estado == Estado.En_Uso)
+            {
+                Usuario.FinalizarServicio(equipo);
+                FrmFactura frmFactura = new FrmFactura(equipo.Lista.Last());
+                frmFactura.ShowDialog();
+                Close();
+            }
         }
         /// <summary>
-        /// 
+        /// Se encarga de colgar el telefono y genera una factura.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void lblTelefonos_Click(object sender, EventArgs e)
         {
-
+            if (equipo.Estado == Estado.En_Uso)
+            {
+                Usuario.FinalizarServicio(equipo);
+                FrmFactura frmFactura = new FrmFactura(equipo.Lista.Last());
+                frmFactura.ShowDialog();
+                Close();
+            }
         }
         #endregion
 

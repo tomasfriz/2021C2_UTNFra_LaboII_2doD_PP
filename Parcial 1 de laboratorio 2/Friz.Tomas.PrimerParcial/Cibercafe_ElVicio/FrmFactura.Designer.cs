@@ -30,10 +30,10 @@ namespace Cibercafe_ElVicio
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblIVA = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDuracion = new System.Windows.Forms.Label();
+            this.lblCosto = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbCafe = new System.Windows.Forms.CheckBox();
             this.cbSoda = new System.Windows.Forms.CheckBox();
@@ -41,7 +41,6 @@ namespace Cibercafe_ElVicio
             this.cbTostado = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,55 +48,55 @@ namespace Cibercafe_ElVicio
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 127);
+            this.label1.Location = new System.Drawing.Point(3, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(379, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Factura";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lblIVA
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.Location = new System.Drawing.Point(17, 205);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Costo a pagar con IVA:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIVA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblIVA.Location = new System.Drawing.Point(5, 205);
+            this.lblIVA.Name = "lblIVA";
+            this.lblIVA.Size = new System.Drawing.Size(377, 28);
+            this.lblIVA.TabIndex = 4;
+            this.lblIVA.Text = "Costo con IVA:";
+            this.lblIVA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPagar
             // 
             this.btnPagar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnPagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnPagar.Location = new System.Drawing.Point(120, 237);
+            this.btnPagar.Location = new System.Drawing.Point(200, 237);
             this.btnPagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(145, 28);
+            this.btnPagar.Size = new System.Drawing.Size(182, 28);
             this.btnPagar.TabIndex = 5;
             this.btnPagar.Text = "Pagar";
             this.btnPagar.UseVisualStyleBackColor = false;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
-            // label3
+            // lblDuracion
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.Location = new System.Drawing.Point(17, 149);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 28);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Duracion: ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDuracion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDuracion.Location = new System.Drawing.Point(5, 149);
+            this.lblDuracion.Name = "lblDuracion";
+            this.lblDuracion.Size = new System.Drawing.Size(377, 28);
+            this.lblDuracion.TabIndex = 10;
+            this.lblDuracion.Text = "Duracion: ";
+            this.lblDuracion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lblCosto
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.Location = new System.Drawing.Point(17, 177);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(154, 28);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Costo Bruto: ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCosto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCosto.Location = new System.Drawing.Point(5, 177);
+            this.lblCosto.Name = "lblCosto";
+            this.lblCosto.Size = new System.Drawing.Size(377, 28);
+            this.lblCosto.TabIndex = 11;
+            this.lblCosto.Text = "Costo: ";
+            this.lblCosto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -175,24 +174,11 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.Location = new System.Drawing.Point(3, 237);
             this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(111, 28);
+            this.btnAyuda.Size = new System.Drawing.Size(182, 28);
             this.btnAyuda.TabIndex = 14;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnCerrar.Location = new System.Drawing.Point(271, 237);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(111, 28);
-            this.btnCerrar.TabIndex = 15;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // FrmFactura
             // 
@@ -200,14 +186,13 @@ namespace Cibercafe_ElVicio
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(158)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(387, 274);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblCosto);
+            this.Controls.Add(this.lblDuracion);
             this.Controls.Add(this.btnPagar);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblIVA);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -215,6 +200,7 @@ namespace Cibercafe_ElVicio
             this.Name = "FrmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFactura";
+            this.Load += new System.EventHandler(this.FrmFactura_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -223,10 +209,10 @@ namespace Cibercafe_ElVicio
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblIVA;
         private System.Windows.Forms.Button btnPagar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDuracion;
+        private System.Windows.Forms.Label lblCosto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox cbCafe;
         private System.Windows.Forms.CheckBox cbSoda;
@@ -234,6 +220,5 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.CheckBox cbTostado;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAyuda;
-        private System.Windows.Forms.Button btnCerrar;
     }
 }
