@@ -40,6 +40,8 @@ namespace Cibercafe_ElVicio
             this.cdDona = new System.Windows.Forms.CheckBox();
             this.cbTostado = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +73,7 @@ namespace Cibercafe_ElVicio
             this.btnPagar.Location = new System.Drawing.Point(120, 237);
             this.btnPagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(135, 28);
+            this.btnPagar.Size = new System.Drawing.Size(145, 28);
             this.btnPagar.TabIndex = 5;
             this.btnPagar.Text = "Pagar";
             this.btnPagar.UseVisualStyleBackColor = false;
@@ -166,12 +168,40 @@ namespace Cibercafe_ElVicio
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipos de aperitivos";
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAyuda.Location = new System.Drawing.Point(3, 237);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(111, 28);
+            this.btnAyuda.TabIndex = 14;
+            this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnCerrar.Location = new System.Drawing.Point(271, 237);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(111, 28);
+            this.btnCerrar.TabIndex = 15;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // FrmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(158)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(387, 274);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -203,5 +233,7 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.CheckBox cdDona;
         private System.Windows.Forms.CheckBox cbTostado;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

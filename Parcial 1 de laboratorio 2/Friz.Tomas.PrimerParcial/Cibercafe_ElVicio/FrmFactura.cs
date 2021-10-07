@@ -32,6 +32,27 @@ namespace Cibercafe_ElVicio
         {
 
         }
+        /// <summary>
+        /// Sirve para orientar al usuario a saber que hace cada boton de la aplicacion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
+                "+ El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        /// <summary>
+        /// Sirve para cerrar la ventana.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
         #endregion
+
+
     }
 }

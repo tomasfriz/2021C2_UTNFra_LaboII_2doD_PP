@@ -122,10 +122,10 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine($" Nombre: {nombre} - Apellido: {apellido} ");
-            sb.AppendLine($"- DNI: {dni} ");
-            sb.AppendLine($"- Edad: {edad} años\n");
+            sb.AppendLine($"Nombre: {nombre}\n");
+            sb.AppendLine($"Apellido: {apellido}\n");
+            sb.AppendLine($"DNI: {dni}\n");
+            sb.AppendLine($"Edad: {edad} años\n");
             return sb.ToString();
         }
         #endregion

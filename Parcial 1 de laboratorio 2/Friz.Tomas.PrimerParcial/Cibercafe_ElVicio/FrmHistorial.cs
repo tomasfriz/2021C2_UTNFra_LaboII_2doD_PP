@@ -39,11 +39,11 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
-                "-El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
+                "+ El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
-        /// 
+        /// Muestra la lista de computadoras ordenadas por minutos de uso de forma descendente.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -52,7 +52,7 @@ namespace Cibercafe_ElVicio
 
         }
         /// <summary>
-        /// 
+        /// Muestra la lista de cabinas ordenadas por minutos de uso de forma descendente.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -61,7 +61,7 @@ namespace Cibercafe_ElVicio
 
         }
         /// <summary>
-        /// 
+        /// Muestra las ganancias totales y clasificadas por servicio (teléfono/computadora).
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -70,7 +70,7 @@ namespace Cibercafe_ElVicio
 
         }
         /// <summary>
-        /// 
+        /// Muestra las horas totales y la recaudación por tipo de llamada.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -79,7 +79,7 @@ namespace Cibercafe_ElVicio
 
         }
         /// <summary>
-        /// 
+        /// Muestra el software más pedido por los clientes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -88,7 +88,7 @@ namespace Cibercafe_ElVicio
 
         }
         /// <summary>
-        /// 
+        /// Muestra el periférico más pedido por los clientes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -97,7 +97,7 @@ namespace Cibercafe_ElVicio
 
         }
         /// <summary>
-        /// 
+        /// Muestra el juego más pedido por los clientes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

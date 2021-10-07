@@ -38,7 +38,7 @@ namespace Entidades
         /// <summary>
         /// Propiedad de la lista de Equipo de equipo disponibles, devuelve el estado del equipo.
         /// </summary>
-        public static List<Equipo> equipoDisponible
+        public static List<Equipo> EquipoDisponible
         {
             get
             {

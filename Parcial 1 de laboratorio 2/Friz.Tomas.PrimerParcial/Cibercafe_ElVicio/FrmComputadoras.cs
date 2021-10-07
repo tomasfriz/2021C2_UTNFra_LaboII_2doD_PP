@@ -88,6 +88,7 @@ namespace Cibercafe_ElVicio
         }
         /// <summary>
         /// Se encarga de cargar los datos del cliente, las especificaciones del mismo y las computadoras que coinciden con las especificaciones del cliente.
+        /// Si no hay computadoras disponibles se bloquara el boton de conectar y se oscurecera a un color DarkGray (gris oscuro).
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -96,27 +97,16 @@ namespace Cibercafe_ElVicio
             lblDatos.Text = cliente.ToString();
             rctEspecificaciones.Text = computadora.MostrarEspecificaciones();
             rbtIlimitado.Checked = true;
-            ListarComputadorasDisponibles();
-        }
-        #endregion
-
-        #region Metodos
-        /// <summary>
-        /// Muestra las computadoras disponibles que cumplen con los requerimientos del cliente.
-        /// </summary>
-        private void ListarComputadorasDisponibles()
-        {
             List<string> computadorasDisponibles = new List<string>();
-
-            foreach (Equipo e in Usuario.Lista)
+            foreach (Equipo equipo in Usuario.Lista)
             {
-                if (e is Computadora)
+                if (equipo is Computadora)
                 {
-                    if (e.Estado == Estado.Disponible)
+                    if (equipo.Estado == Estado.Disponible)
                     {
-                        if (Usuario.RevisarRequisitos((ClienteComputadora)(cliente.Servicio), (Computadora)e))
+                        if (Usuario.RevisarRequisitos((ClienteComputadora)(cliente.Servicio),(Computadora)equipo))
                         {
-                            computadorasDisponibles.Add(e.Id);
+                            computadorasDisponibles.Add(equipo.Id);
                         }
                     }
                 }
@@ -124,14 +114,12 @@ namespace Cibercafe_ElVicio
             if (computadorasDisponibles.Count > 0)
             {
                 cmbComputadoras.DataSource = computadorasDisponibles;
-
             }
             else
-            {                
+            {
                 btnConectar.Enabled = false;
                 btnConectar.BackColor = Color.DarkGray;
-                cmbComputadoras.SelectedIndex = 0;
-                cmbComputadoras.Items.Add("No hay computadoras disponibles");
+                cmbComputadoras.Items.Add("No hay computadoras disponibles.");
             }
         }
         #endregion

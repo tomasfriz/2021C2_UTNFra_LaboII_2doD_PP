@@ -48,11 +48,11 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
-                "-El boton 'Cerrar' te preguntara si deseas cerrar. 'SI' cerrara la aplicacion, incluyendo las ventanas abiertas. 'NO' regresaras al menu principal.\n" +
-                "-El boton 'Asignar Equipo' te permitira asignar un equipo al cliente y tambien detener el uso de la misma.\n" +
-                "-El boton 'Mostrar Equipo' te permitira ver los equipo y sus especificaciones y tambien detener el uso de la misma.\n" +
-                "-El boton 'Estadisticas Historicas' te permitira ver el historial", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
+                "+ El boton 'Cerrar' te preguntara si deseas cerrar. 'SI' cerrara la aplicacion, incluyendo las ventanas abiertas. 'NO' regresaras al menu principal.\n" +
+                "+ El boton 'Asignar Equipo' te permitira asignar un equipo al cliente y tambien detener el uso de la misma.\n" +
+                "+ El boton 'Mostrar Equipo' te permitira ver los equipo y sus especificaciones y tambien detener el uso de la misma.\n" +
+                "+ El boton 'Estadisticas Historicas' te permitira ver el historial", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
         /// Sirve para asignar los equipos de los clientes en orden de llegada.
@@ -94,34 +94,37 @@ namespace Cibercafe_ElVicio
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             MessageBox.Show("¡BIENVENIDO USUARIO!");
-
             List<Cliente> lista = new List<Cliente>()
             {
-                //Periferico p = (Periferico)random.Next(0,4):
                 new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
-                new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
+                //new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
                 new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
-                new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono()),
+                //new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono()),
                 new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
-            //new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono())
+                //new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono())
             };
             foreach (Cliente cliente in lista)
             {
                 Usuario.AgregarCliente(cliente);
             }
-            ActualizarClientes();
+            //Actualizo los clientes.
+            listCliente.Items.Clear();
+            foreach (Cliente cliente in Usuario.Clientes)
+            {
+                listCliente.Items.Add(cliente.ToString());
+            }
             List<Equipo> listaComputadora = new List<Equipo>()
             {
-                new Computadora("C01", new List<Software>(){Software.ares,Software.messenger}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike, Juego.MuOnline}, new Dictionary<string, string> {{"MEMORIA RAM", "6GB"}, {"PROCESADOR","Intel Pentium 2"}, {"PLACA DE VIDEO", "9600GT"} }),
-                new Computadora("C02", new List<Software>(){Software.icq,Software.office}, new List<Periferico>() {Periferico.cámara,Periferico.auriculares}, new List<Juego>() {Juego.AgeOfEmpiresII,Juego.CounterStrike}, new Dictionary<string, string> {{"MEMORIA RAM", "3GB"}, {"PROCESADOR", "Intel Pentium 4"}, {"PLACA DE VIDEO", "Geforce 4"}}),
-                new Computadora("C03", new List<Software>(){Software.messenger,Software.icq}, new List<Periferico>() {Periferico.micrófono,Periferico.auriculares}, new List<Juego>() {Juego.CounterStrike,Juego.MuOnline}, new Dictionary<string, string> {{"MEMORIA RAM ","1GB"}, {"PROCESADOR", "Intel Pentium 4"}, {"PLACA DE VIDEO", "486 DLC" } }),
-                new Computadora("C04", new List<Software>(){Software.office,Software.messenger}, new List<Periferico>() {Periferico.auriculares,Periferico.cámara}, new List<Juego>() {Juego.DiabloII,Juego.CounterStrike}, new Dictionary<string, string> {{"MEMORIA RAM ","7GB"}, {"PROCESADOR", "Intel Pentium 1"}, {"PLACA DE VIDEO", "Geforce 4" } }),
-                new Computadora("C05", new List<Software>(){Software.ares,Software.icq}, new List<Periferico>() {Periferico.cámara,Periferico.micrófono}, new List<Juego>() {Juego.LineageII,Juego.CounterStrike}, new Dictionary<string, string> {{"MEMORIA RAM ","14GB"}, {"PROCESADOR","Intel Pentium 3"}, {"PLACA DE VIDEO", "9600GT"}}),
-                new Computadora("C06", new List<Software>(){Software.icq,Software.messenger}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara}, new List<Juego>() {Juego.WarcraftIII,Juego.DiabloII}, new Dictionary<string, string> {{"MEMORIA RAM ","8GB"}, {"PROCESADOR","Intel 4004"}, {"PLACA DE VIDEO", "486 DLC"}}),
-                new Computadora("C07", new List<Software>(){Software.messenger,Software.office}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.MuOnline,Juego.AgeOfEmpiresII}, new Dictionary<string, string> {{"MEMORIA RAM","15GB"}, {"PROCESADOR", "Intel Pentium 3"}, {"PLACA DE VIDEO", "9600GT" } }),
-                new Computadora("C08", new List<Software>(){Software.office,Software.ares}, new List<Periferico>() {Periferico.cámara,Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike,Juego.WarcraftIII}, new Dictionary<string, string> {{"MEMORIA RAM ","2GB"}, {"PROCESADOR", "Intel 4004"}, {"PLACA DE VIDEO", "Geforce 4" } }),
-                new Computadora("C09", new List<Software>(){Software.ares,Software.office}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara}, new List<Juego>() {Juego.DiabloII,Juego.MuOnline}, new Dictionary<string, string> {{"MEMORIA RAM ","9GB"}, {"PROCESADOR", "Intel Pentium 1"}, {"PLACA DE VIDEO", "486 DLC"}}),
-                new Computadora("C10", new List<Software>(){Software.icq,Software.ares}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.WarcraftIII,Juego.AgeOfEmpiresII}, new Dictionary<string, string> {{"MEMORIA RAM ","7GB"}, {"PROCESADOR", "Intel Pentium 1"}, {"PLACA DE VIDEO", "9600GT"}}),
+                new Computadora("C01", new List<Software>(){Software.ares,Software.messenger}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike,Juego.MuOnline,Juego.DiabloII,Juego.WarcraftIII}, new Dictionary<string, string> {{"MEMORIA RAM", "6GB"}, {"PROCESADOR","Intel Pentium 2"}, {"PLACA DE VIDEO", "9600GT"} }),
+                new Computadora("C02", new List<Software>(){Software.icq,Software.office}, new List<Periferico>() {Periferico.cámara,Periferico.auriculares}, new List<Juego>() {Juego.AgeOfEmpiresII,Juego.CounterStrike,Juego.MuOnline,Juego.LineageII}, new Dictionary<string, string> {{"MEMORIA RAM", "3GB"}, {"PROCESADOR", "Intel Pentium 4"}, {"PLACA DE VIDEO", "Geforce 4"}}),
+                new Computadora("C03", new List<Software>(){Software.messenger,Software.icq}, new List<Periferico>() {Periferico.micrófono,Periferico.auriculares}, new List<Juego>() {Juego.CounterStrike,Juego.MuOnline,Juego.LineageII,Juego.AgeOfEmpiresII}, new Dictionary<string, string> {{"MEMORIA RAM ","1GB"}, {"PROCESADOR", "Intel Pentium 4"}, {"PLACA DE VIDEO", "486 DLC" } }),
+                new Computadora("C04", new List<Software>(){Software.office,Software.messenger}, new List<Periferico>() {Periferico.auriculares,Periferico.cámara}, new List<Juego>() {Juego.DiabloII,Juego.CounterStrike,Juego.WarcraftIII,Juego.MuOnline}, new Dictionary<string, string> {{"MEMORIA RAM ","7GB"}, {"PROCESADOR", "Intel Pentium 1"}, {"PLACA DE VIDEO", "Geforce 4" } }),
+                new Computadora("C05", new List<Software>(){Software.ares,Software.icq}, new List<Periferico>() {Periferico.cámara,Periferico.micrófono}, new List<Juego>() {Juego.LineageII,Juego.CounterStrike,Juego.AgeOfEmpiresII,Juego.MuOnline}, new Dictionary<string, string> {{"MEMORIA RAM ","14GB"}, {"PROCESADOR","Intel Pentium 3"}, {"PLACA DE VIDEO", "9600GT"}}),
+                new Computadora("C06", new List<Software>(){Software.icq,Software.messenger}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara}, new List<Juego>() {Juego.WarcraftIII,Juego.DiabloII,Juego.CounterStrike,Juego.LineageII}, new Dictionary<string, string> {{"MEMORIA RAM ","8GB"}, {"PROCESADOR","Intel 4004"}, {"PLACA DE VIDEO", "486 DLC"}}),
+                new Computadora("C07", new List<Software>(){Software.messenger,Software.office}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.MuOnline,Juego.AgeOfEmpiresII,Juego.LineageII,Juego.WarcraftIII}, new Dictionary<string, string> {{"MEMORIA RAM","15GB"}, {"PROCESADOR", "Intel Pentium 3"}, {"PLACA DE VIDEO", "9600GT" } }),
+                new Computadora("C08", new List<Software>(){Software.office,Software.ares}, new List<Periferico>() {Periferico.cámara,Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike,Juego.WarcraftIII,Juego.MuOnline,Juego.LineageII}, new Dictionary<string, string> {{"MEMORIA RAM ","2GB"}, {"PROCESADOR", "Intel 4004"}, {"PLACA DE VIDEO", "Geforce 4" } }),
+                new Computadora("C09", new List<Software>(){Software.ares,Software.office}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara}, new List<Juego>() {Juego.DiabloII,Juego.MuOnline,Juego.AgeOfEmpiresII,Juego.WarcraftIII}, new Dictionary<string, string> {{"MEMORIA RAM ","9GB"}, {"PROCESADOR", "Intel Pentium 1"}, {"PLACA DE VIDEO", "486 DLC"}}),
+                new Computadora("C10", new List<Software>(){Software.icq,Software.ares}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.WarcraftIII,Juego.AgeOfEmpiresII,Juego.LineageII,Juego.CounterStrike}, new Dictionary<string, string> {{"MEMORIA RAM ","7GB"}, {"PROCESADOR", "Intel Pentium 1"}, {"PLACA DE VIDEO", "9600GT"}}),
             };
             foreach (Equipo p in listaComputadora)
             {
@@ -182,39 +185,22 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void FrmMenu_Activated(object sender, EventArgs e)
         {
-            ActualizarClientes();
-            ActualizarComputadoras();
-            ActualizarTelefonos();
-        }
-        #endregion
-
-        #region Metodos
-        /// <summary>
-        /// Actualiza la lista de clientes en espera.
-        /// En otras palabras, saca a los clientes de la lista que ya fueron asignados a un equipo en particular.
-        /// </summary>
-        private void ActualizarClientes()
-        {
+            //Actualiza los clientes.
             listCliente.Items.Clear();
             foreach (Cliente cliente in Usuario.Clientes)
             {
                 listCliente.Items.Add(cliente.ToString());
             }
-        }
-        /// <summary>
-        /// Actualiza el listado de computadoras asignandole el color lime (verde) si esta libre y el color crimson (rojo) si esta en uso.
-        /// </summary>
-        private void ActualizarComputadoras()
-        {
+            //Actualiza las computadoras.
             for (int i = 0; i < gpbComputadoras.Controls.Count; i++)
             {
                 if (gpbComputadoras.Controls[i] is Label)
                 {
-                    foreach (Equipo e in Usuario.Lista)
+                    foreach (Equipo equipo in Usuario.Lista)
                     {
-                        if (gpbComputadoras.Controls[i].Text == e.Id)
+                        if (gpbComputadoras.Controls[i].Text == equipo.Id)
                         {
-                            if (e.Estado == Estado.Disponible)
+                            if (equipo.Estado == Estado.Disponible)
                             {
                                 gpbComputadoras.Controls[i].BackColor = Color.Lime;
                             }
@@ -226,21 +212,16 @@ namespace Cibercafe_ElVicio
                     }
                 }
             }
-        }
-        /// <summary>
-        /// Actualiza el listado de telefonos asignandole el color lime (verde) si esta libre y el color crimson (rojo) si esta en uso.
-        /// </summary>
-        private void ActualizarTelefonos()
-        {
+            //Actualiza los Telefonos.
             for (int i = 0; i < gpbTelefonos.Controls.Count; i++)
             {
                 if (gpbTelefonos.Controls[i] is Label)
                 {
-                    foreach (Equipo e in Usuario.Lista)
+                    foreach (Equipo equipo in Usuario.Lista)
                     {
-                        if (gpbTelefonos.Controls[i].Text == e.Id)
+                        if (gpbTelefonos.Controls[i].Text == equipo.Id)
                         {
-                            if (e.Estado == Estado.Disponible)
+                            if (equipo.Estado == Estado.Disponible)
                             {
                                 gpbTelefonos.Controls[i].BackColor = Color.Lime;
                             }
@@ -254,6 +235,5 @@ namespace Cibercafe_ElVicio
             }
         }
         #endregion
-
     }
 }

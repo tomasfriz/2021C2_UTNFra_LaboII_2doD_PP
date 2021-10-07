@@ -147,7 +147,7 @@ namespace Entidades
 
         #region Métodos
         /// <summary>
-        /// Calcula el costo de una llamada segun su duracion y el valor del minuto.
+        /// Calcula el costo de la llamada segun su duracion y el tipo de valor del minuto.
         /// </summary>
         /// <returns></returns>
         protected override float CalcularCosto()

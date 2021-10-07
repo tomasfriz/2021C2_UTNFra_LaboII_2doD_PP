@@ -71,6 +71,7 @@ namespace Cibercafe_ElVicio
             // 
             // rctEspecificaciones
             // 
+            this.rctEspecificaciones.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.rctEspecificaciones.Location = new System.Drawing.Point(3, 34);
             this.rctEspecificaciones.Name = "rctEspecificaciones";
             this.rctEspecificaciones.Size = new System.Drawing.Size(274, 364);
@@ -79,6 +80,7 @@ namespace Cibercafe_ElVicio
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.label3.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -92,6 +94,8 @@ namespace Cibercafe_ElVicio
             // 
             // cmbComputadoras
             // 
+            this.cmbComputadoras.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmbComputadoras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbComputadoras.FormattingEnabled = true;
             this.cmbComputadoras.Location = new System.Drawing.Point(283, 187);
             this.cmbComputadoras.Name = "cmbComputadoras";
@@ -100,6 +104,7 @@ namespace Cibercafe_ElVicio
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,6 +118,7 @@ namespace Cibercafe_ElVicio
             // 
             // numTiempoLimite
             // 
+            this.numTiempoLimite.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.numTiempoLimite.Increment = new decimal(new int[] {
             30,
             0,
@@ -142,6 +148,7 @@ namespace Cibercafe_ElVicio
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.rbtLimitado);
             this.groupBox1.Controls.Add(this.rbtIlimitado);
             this.groupBox1.Location = new System.Drawing.Point(283, 3);
@@ -153,6 +160,7 @@ namespace Cibercafe_ElVicio
             // 
             // rbtLimitado
             // 
+            this.rbtLimitado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rbtLimitado.Location = new System.Drawing.Point(15, 60);
             this.rbtLimitado.Name = "rbtLimitado";
             this.rbtLimitado.Size = new System.Drawing.Size(232, 34);
@@ -163,6 +171,7 @@ namespace Cibercafe_ElVicio
             // 
             // rbtIlimitado
             // 
+            this.rbtIlimitado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rbtIlimitado.Location = new System.Drawing.Point(15, 22);
             this.rbtIlimitado.Name = "rbtIlimitado";
             this.rbtIlimitado.Size = new System.Drawing.Size(232, 32);
@@ -186,6 +195,7 @@ namespace Cibercafe_ElVicio
             // 
             // lblDatos
             // 
+            this.lblDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.lblDatos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDatos.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -195,7 +205,7 @@ namespace Cibercafe_ElVicio
             this.lblDatos.Name = "lblDatos";
             this.lblDatos.Size = new System.Drawing.Size(268, 138);
             this.lblDatos.TabIndex = 14;
-            this.lblDatos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnConectar
             // 
