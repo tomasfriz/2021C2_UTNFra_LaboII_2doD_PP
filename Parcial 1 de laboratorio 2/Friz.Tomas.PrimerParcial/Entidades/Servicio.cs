@@ -15,7 +15,7 @@ namespace Entidades
 
         #region Propiedades
         /// <summary>
-        /// Propiedad de duracion
+        /// Propiedad de Duracion.
         /// </summary>
         abstract public int Duracion 
         { 
@@ -24,7 +24,7 @@ namespace Entidades
             set; 
         }
         /// <summary>
-        /// Devuelve el costo del servicio
+        /// Propiedad de Costo, devuelve el calculo del costo del servicio.
         /// </summary>
         public float Costo
         {
@@ -34,7 +34,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Establece el inicio del tiempo.
+        /// Propiedad del DateTime de inicio, establece el comienzo del tiempo del servicio dado.
         /// </summary>
         public DateTime Inicio
         {
@@ -51,23 +51,18 @@ namespace Entidades
 
         #region Operadores
         /// <summary>
-        /// Sobrecarga del operador ==
+        /// Operador == (igual) para comparar si los servicios son iguales.
+        /// Reutilizacion del metodo de GetHashCode().
         /// </summary>
         /// <param name="s1"></param>
         /// <param name="s2"></param>
         /// <returns></returns>
         public static bool operator ==(Servicio s1, Servicio s2)
         {
-            //if (s1 is not null && s2 is not null)
-            //{
-            //    return s1.GetHashCode() == s2.GetHashCode();
-            //}
-            //return false;
-
             return (s1 is not null && s2 is not null) && s1.GetHashCode() == s2.GetHashCode();
         }
         /// <summary>
-        /// Sobrecarga del operador !=
+        /// Operador != (distinto) para comparar si los servicios son distintos.
         /// </summary>
         /// <param name="s1"></param>
         /// <param name="s2"></param>
@@ -80,7 +75,8 @@ namespace Entidades
 
         #region Sobrecargas
         /// <summary>
-        /// Sobrescribe el metodo Equals()
+        /// Sobrecarga del metodo Equals().
+        /// Requerido para el operador == (igual).
         /// </summary>
         /// <returns></returns>
         public override bool Equals(Object obj)
@@ -89,7 +85,9 @@ namespace Entidades
             return s != null && this == s;
         }
         /// <summary>
-        /// Sobrecarga del metodo GetHashCode()
+        /// Sobrecarga del metodo GetHashCode().
+        /// Requerido para el operador != (distinto).
+        /// Reutilizacion del metodo GetType() para devolver el tipo de tiempo de ejecucion exacto.
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode()
@@ -100,12 +98,12 @@ namespace Entidades
 
         #region Metodos 
         /// <summary>
-        /// Calcula el costo del servicio
+        /// Calcula el costo del servicio.
         /// </summary>
         /// <returns></returns>
         abstract protected float CalcularCosto();
         /// <summary>
-        /// Le agrega un 21% en concepto de IVA al costo del servicio.
+        /// Agrega un 21% del IVA al costo del servicio.
         /// </summary>
         /// <returns></returns>
         public float AgregarIVA()
@@ -113,12 +111,13 @@ namespace Entidades
             return Costo * 1.21F;
         }
         /// <summary>
-        /// Sobrescribe el metodo ToString()
+        /// Sobrescribe el metodo ToString().
+        /// Imprime los datos del Servicio dado.
+        /// Reutilizacion del metodo GetType() para devolver el tipo de tiempo de ejecucion exacto.
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            //return $"{id}";
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Tipo: {GetType()}");
             sb.AppendLine($"Tiempo de inicio: {Inicio}");

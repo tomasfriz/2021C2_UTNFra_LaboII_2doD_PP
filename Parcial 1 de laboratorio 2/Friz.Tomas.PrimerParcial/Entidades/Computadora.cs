@@ -17,7 +17,7 @@ namespace Entidades
 
         #region Constructores
         /// <summary>
-        /// Constructor de Computadora para los componentes
+        /// Constructor de la clase de Computadora para los componentes del mismo.
         /// </summary>
         private Computadora(string id): base(id)
         {
@@ -27,7 +27,7 @@ namespace Entidades
             hardware = new Dictionary<string, string>();
         }
         /// <summary>
-        /// Constructor de Computadora en general
+        /// Constructor de Computadora en general(con todos los datos y especificaciones).
         /// </summary>
         /// <param name="id"></param>
         /// <param name="software"></param>
@@ -47,7 +47,7 @@ namespace Entidades
 
         #region Propiedades
         /// <summary>
-        /// Solo lectura
+        /// Propiedad del Enumerado de Software de software.
         /// </summary>
         public List<Software> Software
         {
@@ -57,7 +57,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Solo lectura
+        /// Propiedad del Enumerado de Periferico de perifericos.
         /// </summary>
         public List<Periferico> Perifericos
         {
@@ -67,7 +67,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Solo lectura
+        /// Propiedad del Enumerado de Juego de juegos.
         /// </summary>
         public List<Juego> Juegos
         {
@@ -80,7 +80,7 @@ namespace Entidades
 
         #region Operadores
         /// <summary>
-        /// Revisa que el software este instalado en la compu.
+        /// Operador == (igual) para comparar que el software este instalado en la computadora.
         /// </summary>
         /// <param name="c"></param>
         /// <param name="s"></param>
@@ -100,7 +100,7 @@ namespace Entidades
             return false;
         }
         /// <summary>
-        /// Revisa que el software no este instalado en la compu.
+        /// Operador != (distinto) para comparar que el software no este instalado en la computadora.
         /// </summary>
         /// <param name="c"></param>
         /// <param name="s"></param>
@@ -110,7 +110,7 @@ namespace Entidades
             return !(c == s);
         }
         /// <summary>
-        /// Revisa que el periferico este disponible en la compu.
+        /// Operador == (igual) para compara que el periferico este disponible en la computadora.
         /// </summary>
         /// <param name="c"></param>
         /// <param name="p"></param>
@@ -130,7 +130,7 @@ namespace Entidades
             return false;
         }
         /// <summary>
-        /// Revisa que el periferico no este disponible en la compu.
+        /// Operador != (distinto) para comparar que el periferico no este disponible en la computadora.
         /// </summary>
         /// <param name="c"></param>
         /// <param name="p"></param>
@@ -140,7 +140,7 @@ namespace Entidades
             return !(c == p);
         }
         /// <summary>
-        /// Revisa que el juego este instalado en la compu.
+        /// Operador == (igual) para compara que el juego este instalado en la computadora.
         /// </summary>
         /// <param name="c"></param>
         /// <param name="j"></param>
@@ -160,7 +160,7 @@ namespace Entidades
             return false;
         }
         /// <summary>
-        /// Revisa que el juego no este instalado en la compu.
+        /// Operador != (distinto) para comparar que el juego no este instalado en la computadora.
         /// </summary>
         /// <param name="c"></param>
         /// <param name="j"></param>
@@ -173,7 +173,8 @@ namespace Entidades
 
         #region Sobrecargas
         /// <summary>
-        /// Sobrescribe el metodo Equals()
+        /// Sobrecarga del metodo Equals().
+        /// Requerido para el operador == (igual).
         /// </summary>
         /// <returns></returns>
         public override bool Equals(Object obj)
@@ -182,7 +183,9 @@ namespace Entidades
             return c != null && this == c;
         }
         /// <summary>
-        /// Sobrecarga del metodo GetHashCode()
+        /// Sobrecarga del metodo GetHashCode().
+        /// Requerido para el operador != (distinto).
+        /// Reutilisacion de la base de GetHashCode().
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode()
@@ -193,7 +196,8 @@ namespace Entidades
 
         #region Metodos
         /// <summary>
-        /// Sobrescribe el metodo ToString()
+        /// Sobrescribe el metodo ToString().
+        /// Imprime los datos de la computadora, incluyendo el costo por minuto.
         /// </summary>
         /// <returns></returns>
         public override string ToString()

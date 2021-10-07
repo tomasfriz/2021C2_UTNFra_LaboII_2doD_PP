@@ -59,7 +59,7 @@ namespace Cibercafe_ElVicio
         {
             if (rbtLimitado.Checked == true && numTiempoLimite.Value % 30 != 0)
             {
-                MessageBox.Show("La duración fija debe fijarse en bloques de media hora", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La duración limitada debe limitarse en bloques de media hora", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -130,8 +130,8 @@ namespace Cibercafe_ElVicio
             {                
                 btnConectar.Enabled = false;
                 btnConectar.BackColor = Color.DarkGray;
-                //cmbComputadoras.SelectedIndex = 0;
-                cmbComputadoras.Items.Add("No hay computadoras con los requisitos esperados");
+                cmbComputadoras.SelectedIndex = 0;
+                cmbComputadoras.Items.Add("No hay computadoras disponibles");
             }
         }
         #endregion

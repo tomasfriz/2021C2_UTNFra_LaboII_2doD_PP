@@ -26,7 +26,7 @@ namespace Entidades
 
         #region Propiedades
         /// <summary>
-        /// Propiedad solo lectura de lista.
+        /// Propiedad de la lista de Equipo de lista.
         /// </summary>
         public static List<Equipo> Lista
         {
@@ -36,7 +36,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad solo lectura de equipo disponibles.
+        /// Propiedad de la lista de Equipo de equipo disponibles, devuelve el estado del equipo.
         /// </summary>
         public static List<Equipo> equipoDisponible
         {
@@ -46,7 +46,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad solo lectura de clientes.
+        /// Propiedad del Queue de Cliente de clientes.
         /// </summary>
         public static Queue<Cliente> Clientes
         {
@@ -59,10 +59,10 @@ namespace Entidades
 
         #region Metodos
         /// <summary>
-        /// Agrega un cliente a la lista, si ya no se encuentra en la misma 
+        /// Agrega un cliente a la lista de clientes, si ya no se encuentra en la misma. 
         /// </summary>
         /// <param name="cliente"></param>
-        /// <returns>true: si se agrega, false: sino se pudo agregar o ya estaba en la lista</returns>
+        /// <returns>true si se agrego a la lista y false sino se pudo agregar a la lista o ya estaba en la lista</returns>
         public static bool AgregarCliente(Cliente cliente)
         {
             foreach (Cliente c in Clientes)
@@ -76,10 +76,10 @@ namespace Entidades
             return true;
         }
         /// <summary>
-        /// Agrega un equipo al cibercafe. 
+        /// Agrega un equipo a la lista de equipo, si ya no se encuentra en la misma. 
         /// </summary>
         /// <param name="equipo"></param>
-        /// <returns>True: si se pudo cargar y false si ya existia el equipo con ese id</returns>
+        /// <returns>True si se agrego a la lista y false si ya existia el equipo en la lista</returns>
         public static bool AgregarEquipo(Equipo equipo)
         {
             foreach (Equipo e in Lista)
@@ -93,11 +93,11 @@ namespace Entidades
             return true;
         }
         /// <summary>
-        /// Agrega un servicio a un determinado equipo.
+        /// Agrega un servicio a un determinado equipo(computadora/telefono).
         /// </summary>
         /// <param name="e"></param>
         /// <param name="s"></param>
-        /// <returns>true si sale todo bien</returns>
+        /// <returns>true si se pudo agregar el servicio y false si no se pudo agregar el servicio</returns>
         public static bool AgregarServicio(Equipo e, Servicio s)
         {
             if (e.Estado == Estado.Disponible)
@@ -110,10 +110,10 @@ namespace Entidades
             return false;
         }
         /// <summary>
-        /// Finaliza un servicio, establece su duracion en minutos y libera el equipo
+        /// Finaliza un servicio, establece su duracion en minutos y libera el equipo.
         /// </summary>
         /// <param name="e"></param>
-        /// <returns>true si sale todo bien, false si algo sale mal o el equipo estaba disponible</returns>
+        /// <returns>true si se pudo finalizar el servicio y false si no se pudo finalizar o el equipo estaba disponible</returns>
         public static bool FinalizarServicio(Equipo e)
         {
             if (e.Estado == Estado.En_Uso)
@@ -132,11 +132,11 @@ namespace Entidades
             return false;
         }
         /// <summary>
-        /// Revisa que los requisitos solicitado enten disponibles en la compu.
+        /// Revisa que los requisitos solicitado por el cliente esten disponibles en la computadora.
         /// </summary>
         /// <param name="cc"></param>
         /// <param name="c"></param>
-        /// <returns>True: si se cumplen los requisitos / False: si no se cumplen los requisitos</returns>
+        /// <returns>True si se cumplen los requisitos del cliente con respecto a la computadora y false si no se cumplen los requisitos del cliente con respecto a la computadora.</returns>
         public static bool RevisarRequisitos(ClienteComputadora cc, Computadora c)
         {
             foreach (Software software in cc.Software)
@@ -163,9 +163,9 @@ namespace Entidades
             return true;
         }
         /// <summary>
-        /// Revisa los equipos disponibles.
+        /// Revisa los equipos disponibles, es decir que esten libres para su uso.
         /// </summary>
-        /// <returns>Devuelve una lista de los equipos disponibles</returns>
+        /// <returns>Devuelve una lista de los equipos que puede usar el cliente</returns>
         private static List<Equipo> RevisarEquipos()
         {
             List<Equipo> EquipoDisponible = new List<Equipo>();
@@ -179,57 +179,56 @@ namespace Entidades
             return EquipoDisponible;
         }
         /// <summary>
-        /// Calcula los minutos entre una hora dada y la hora actual
+        /// Calcula los minutos entre una hora dada y la hora actual, para sacar la duracion en que estuvo el cliente en el equipo.
         /// Un segundo de la vida real será equivalente a un minuto en el cibercafe.
         /// </summary>
-        /// <param name="horaInicio"></param>
-        /// <returns>Diferencia en minutos</returns>
+        /// <param name="inicio"></param>
+        /// <returns>Devuelve la diferencia en minutos entre la hora de inicio con la hora actual.</returns>
         private static int CalcularMinutos(DateTime inicio)
         {
             TimeSpan t = DateTime.Now - inicio;
             return (int)t.TotalSeconds;
         }
         /// <summary>
-        /// Muestra puestos ordenados de forma descendente por minutos de uso, según el tipo pasado por parámetro
+        /// Muestra los equipos ordenados de forma descendente con el criterio de minutos de uso.
         /// </summary>
-        /// <param name="tipo"></param>
-        /// <returns>string con la lista de puestos ordenado por minutos de uso en forma descendente</returns>
-        public static string OrdenamientoDecendenteTiempo(TipoEquipo tipo)
+        /// <param name="t"></param>
+        /// <returns>Imprime la lista de equipos ordenados por minutos de uso en forma descendente</returns>
+        public static string OrdenamientoDecendenteTiempo(TipoEquipo t)
         {
             StringBuilder sb = new StringBuilder();
             List<Equipo> e = new List<Equipo>();
-
-            foreach (Equipo p in Lista)
+            foreach (Equipo equipo in Lista)
             {
-                if (tipo == TipoEquipo.Cabina && p is Telefono)
+                if (t == TipoEquipo.Cabina && equipo is Telefono)
                 {
-                    e.Add(p);
+                    e.Add(equipo);
                 }
-                else if (tipo == TipoEquipo.Computadora && p is Computadora)
+                else if (t == TipoEquipo.Computadora && equipo is Computadora)
                 {
-                    e.Add(p);
+                    e.Add(equipo);
                 }
             }
             e.Sort(CompararEquipos);
-
-            foreach (Equipo p in e)
+            foreach (Equipo equipo in e)
             {
-                sb.AppendLine($"{p}\n");
+                sb.AppendLine($"{equipo}\n");
             }
             return sb.ToString();
         }
         /// <summary>
-        /// Compara dos equipos segun sus minutos.
+        /// Compara dos equipos segun sus minutos de uso.
+        /// Esta funcion se usa para el ordanamiento descendente de equipos segun el tiempo de uso.
         /// </summary>
-        /// <param name="p1"></param>
-        /// <param name="p2"></param>
-        /// <returns>1 si p1 es mayor o igual a p2, 0 si es menor, -1 si ha ocurrido algun error</returns>
-        public static int CompararEquipos(Equipo p1, Equipo p2)
+        /// <param name="e1"></param>
+        /// <param name="e2"></param>
+        /// <returns>1 si e1 es mayor o igual a e2, 0 si e1 es menor a e2 y -1 si ha ocurrido algun error</returns>
+        public static int CompararEquipos(Equipo e1, Equipo e2)
         {
             int retorno = -1;
-            if (p1 is not null && p2 is not null)
+            if (e1 is not null && e2 is not null)
             {
-                if (p1.Minutos >= p2.Minutos)
+                if (e1.Minutos >= e2.Minutos)
                 {
                     retorno = 1;
                 }
@@ -241,35 +240,36 @@ namespace Entidades
             return retorno;
         }
         /// <summary>
-        /// Calcula las ganancias totales y clasificadas por servicio.
+        /// Calcula las ganancias totales y las clasifica por servicio (Computadora/telefono).
         /// </summary>
-        /// <returns>Cadena con la informacion de ganancias</returns>
+        /// <returns>Devuelve la informacion de las ganancias totales, de las ganancias del servicio de computadoras y de las ganancias del servicio de telefonos</returns>
         public static string CalcularGanancias()
         {
             StringBuilder sb = new StringBuilder();
-            float gananciasComputadora = 0;
-            float gananciasTelefono = 0;
-            foreach (Equipo p in Lista)
+            float gananciasComputadoras = 0;
+            float gananciasTelefonos = 0;
+            foreach (Equipo e in Lista)
             {
-                if (p.Lista.Count > 0)
+                if (e.Lista.Count > 0)
                 {
-                    foreach (Servicio s in p.Lista)
+                    foreach (Servicio s in e.Lista)
                     {
                         if (s is ClienteComputadora)
                         {
-                            gananciasComputadora += s.Costo;
+                            gananciasComputadoras += s.Costo;
                         }
                         else
                         {
-                            gananciasTelefono += s.Costo;
+                            gananciasTelefonos += s.Costo;
                         }
                     }
                 }
             }
-            sb.AppendLine($"GANANCIAS TOTALES: ${(gananciasComputadora + gananciasTelefono):N2}\n");
-            sb.AppendLine($"GANANCIAS DE COMPUTADORA / TELEFONOS\n");
-            sb.AppendLine($"Ganancias por computadoras: ${gananciasComputadora:N2}\n");
-            sb.AppendLine($"Ganancias por telefonos: ${gananciasTelefono:N2}\n");
+            sb.AppendLine($"GANANCIAS TOTALES: ${(gananciasComputadoras + gananciasTelefonos): N2}\n");
+            sb.AppendLine($"GANANCIAS DE COMPUTADORAS\n");
+            sb.AppendLine($"Ganancias por computadoras: ${gananciasComputadoras: N2}\n");
+            sb.AppendLine($"GANANCIAS DE TELEFONOS\n");
+            sb.AppendLine($"Ganancias por telefonos: ${gananciasTelefonos: N2}\n");
             return sb.ToString();
         }
         #endregion

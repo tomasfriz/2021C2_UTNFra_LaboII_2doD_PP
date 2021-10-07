@@ -16,6 +16,10 @@ namespace Entidades
         #endregion
 
         #region Constructores
+        /// <summary>
+        /// Constructor de la clase Equipo.
+        /// </summary>
+        /// <param name="id"></param>
         protected Equipo(string id)
         {
             this.id = id;
@@ -26,7 +30,7 @@ namespace Entidades
 
         #region Propiedades
         /// <summary>
-        /// Solo lectura.
+        /// 
         /// </summary>
         public string Id
         {
@@ -36,7 +40,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Devuelve los
+        /// Propiedad de Minutos, Devuelve los minutos de los equipos en uso.
         /// </summary>
         public int Minutos
         {
@@ -46,7 +50,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad solo lectura de disponible
+        /// Propiedad del Enumerado de Estado de estado.
         /// </summary>
         public Estado Estado
         {
@@ -60,7 +64,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad solo lectura del tipo
+        /// Propiedad del Enumerado de TipoEquipo de tipo.
         /// </summary>
         public TipoEquipo Tipo
         {
@@ -70,7 +74,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Solo lectura
+        /// Propiedad de la lista de Servicio de lista.
         /// </summary>
         public List<Servicio> Lista
         {
@@ -83,7 +87,7 @@ namespace Entidades
 
         #region Operadores
         /// <summary>
-        /// Sobrecarga del operador ==
+        /// Operador == (igual) para comparar si los equipos son iguales.
         /// </summary>
         /// <param name="t1"></param>
         /// <param name="t2"></param>
@@ -97,7 +101,7 @@ namespace Entidades
             return false;
         }
         /// <summary>
-        /// Sobrecarga del operador !=
+        /// Operador != (distinto) para comparar si los equipos son distintos.
         /// </summary>
         /// <param name="t1"></param>
         /// <param name="t2"></param>
@@ -110,7 +114,8 @@ namespace Entidades
 
         #region Sobrecargas
         /// <summary>
-        /// Sobrescribe el metodo Equals()
+        /// Sobrecarga del metodo Equals().
+        /// Requerido para el operador == (igual).
         /// </summary>
         /// <returns></returns>
         public override bool Equals(Object obj)
@@ -119,7 +124,8 @@ namespace Entidades
             return t != null && this == t;
         }
         /// <summary>
-        /// Sobrecarga del metodo GetHashCode()
+        /// Sobrecarga del metodo GetHashCode().
+        /// Requerido para el operador != (distinto).
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode()
@@ -143,7 +149,8 @@ namespace Entidades
             return total;
         }
         /// <summary>
-        /// Sobrescribe el metodo ToString()
+        /// Sobrescribe el metodo ToString().
+        /// Imprime el tipo de equipo(computadora/telefono), el id del mismo, el estado (Libre/En_Uso) y la duracion en minutos del tiempo de uso del mismo.
         /// </summary>
         /// <returns></returns>
         public override string ToString()

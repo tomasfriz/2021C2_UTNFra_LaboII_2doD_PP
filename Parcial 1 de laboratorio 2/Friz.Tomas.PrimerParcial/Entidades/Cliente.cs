@@ -93,7 +93,7 @@ namespace Entidades
 
         #region Sobrecargas
         /// <summary>
-        /// Sobrescribe el metodo Equals().
+        /// Sobrecarga del metodo Equals().
         /// Requerible para el operador == (igual).
         /// </summary>
         /// <returns></returns>

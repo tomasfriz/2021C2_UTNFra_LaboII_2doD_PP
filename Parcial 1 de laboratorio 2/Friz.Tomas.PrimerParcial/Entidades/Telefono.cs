@@ -15,7 +15,7 @@ namespace Entidades
 
         #region Constructores
         /// <summary>
-        /// Constructor de la clase telefono
+        /// Constructor de la clase telefono.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="tipoTecla"></param>
@@ -31,7 +31,9 @@ namespace Entidades
 
         #region Metodos
         /// <summary>
-        /// Sobrescribe el metodo ToString()
+        /// Sobrescribe el metodo ToString().
+        /// Imprime los datos del telefono.
+        /// Reutilizacion de la base de ToString.
         /// </summary>
         /// <returns></returns>
         public override string ToString()
