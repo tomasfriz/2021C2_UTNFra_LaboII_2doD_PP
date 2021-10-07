@@ -119,9 +119,9 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tipo: {GetType()}");
-            sb.AppendLine($"Tiempo de inicio: {Inicio}");
-            sb.AppendLine($"Duración: {Duracion} minutos");
+            sb.AppendLine($"\nTIPO: {GetType()}");
+            sb.AppendLine($"\nINICIO DEL TIEMPO DEL SERVICIO: {Inicio}");
+            sb.AppendLine($"\nDURACIÓN: {Duracion} MIN");
             return sb.ToString();
         }
         #endregion

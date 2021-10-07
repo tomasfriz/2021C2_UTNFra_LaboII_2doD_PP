@@ -40,8 +40,8 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(base.ToString());
-            sb.AppendLine($"Estilo de tecla: {tipoTecla}\n");
-            sb.AppendLine($"Marca: {marca}\n");
+            sb.AppendLine($"\nESTILO DE TECLA: {tipoTecla}");
+            sb.AppendLine($"\nMARCA: {marca}");
             return sb.ToString();
         }
         #endregion

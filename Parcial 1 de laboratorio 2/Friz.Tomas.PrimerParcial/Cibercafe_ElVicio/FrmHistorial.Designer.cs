@@ -38,15 +38,18 @@ namespace Cibercafe_ElVicio
             this.btnPeriferico = new System.Windows.Forms.Button();
             this.btnJuego = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.rtbHistorial = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btnListCompu
             // 
-            this.btnListCompu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListCompu.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnListCompu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnListCompu.Location = new System.Drawing.Point(10, 12);
+            this.btnListCompu.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnListCompu.Location = new System.Drawing.Point(11, 6);
+            this.btnListCompu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnListCompu.Name = "btnListCompu";
-            this.btnListCompu.Size = new System.Drawing.Size(487, 27);
+            this.btnListCompu.Size = new System.Drawing.Size(498, 32);
             this.btnListCompu.TabIndex = 1;
             this.btnListCompu.Text = "Lista de computadoras ordenadas por minutos de uso de forma descendente";
             this.btnListCompu.UseVisualStyleBackColor = false;
@@ -54,11 +57,13 @@ namespace Cibercafe_ElVicio
             // 
             // btnListCabin
             // 
-            this.btnListCabin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListCabin.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnListCabin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnListCabin.Location = new System.Drawing.Point(10, 45);
+            this.btnListCabin.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnListCabin.Location = new System.Drawing.Point(11, 46);
+            this.btnListCabin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnListCabin.Name = "btnListCabin";
-            this.btnListCabin.Size = new System.Drawing.Size(487, 23);
+            this.btnListCabin.Size = new System.Drawing.Size(498, 28);
             this.btnListCabin.TabIndex = 2;
             this.btnListCabin.Text = "Lista de cabinas ordenadas por minutos de uso de forma descendente";
             this.btnListCabin.UseVisualStyleBackColor = false;
@@ -68,9 +73,10 @@ namespace Cibercafe_ElVicio
             // 
             this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAyuda.Location = new System.Drawing.Point(12, 227);
+            this.btnAyuda.Location = new System.Drawing.Point(14, 256);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(75, 23);
+            this.btnAyuda.Size = new System.Drawing.Size(86, 28);
             this.btnAyuda.TabIndex = 0;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
@@ -78,11 +84,13 @@ namespace Cibercafe_ElVicio
             // 
             // btnGanancias
             // 
-            this.btnGanancias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGanancias.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnGanancias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnGanancias.Location = new System.Drawing.Point(12, 74);
+            this.btnGanancias.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGanancias.Location = new System.Drawing.Point(14, 81);
+            this.btnGanancias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGanancias.Name = "btnGanancias";
-            this.btnGanancias.Size = new System.Drawing.Size(485, 23);
+            this.btnGanancias.Size = new System.Drawing.Size(495, 28);
             this.btnGanancias.TabIndex = 3;
             this.btnGanancias.Text = "Ganancias totales y clasificadas por servicio (teléfono/computadora)";
             this.btnGanancias.UseVisualStyleBackColor = false;
@@ -90,11 +98,13 @@ namespace Cibercafe_ElVicio
             // 
             // btnRecaudacion
             // 
-            this.btnRecaudacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecaudacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnRecaudacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnRecaudacion.Location = new System.Drawing.Point(12, 103);
+            this.btnRecaudacion.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRecaudacion.Location = new System.Drawing.Point(14, 116);
+            this.btnRecaudacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRecaudacion.Name = "btnRecaudacion";
-            this.btnRecaudacion.Size = new System.Drawing.Size(485, 23);
+            this.btnRecaudacion.Size = new System.Drawing.Size(495, 28);
             this.btnRecaudacion.TabIndex = 4;
             this.btnRecaudacion.Text = "Horas totales y la recaudación por tipo de llamada";
             this.btnRecaudacion.UseVisualStyleBackColor = false;
@@ -102,11 +112,13 @@ namespace Cibercafe_ElVicio
             // 
             // btnSoftware
             // 
-            this.btnSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSoftware.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnSoftware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnSoftware.Location = new System.Drawing.Point(12, 133);
+            this.btnSoftware.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSoftware.Location = new System.Drawing.Point(14, 152);
+            this.btnSoftware.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSoftware.Name = "btnSoftware";
-            this.btnSoftware.Size = new System.Drawing.Size(485, 23);
+            this.btnSoftware.Size = new System.Drawing.Size(495, 28);
             this.btnSoftware.TabIndex = 5;
             this.btnSoftware.Text = "El software más pedido por los clientes";
             this.btnSoftware.UseVisualStyleBackColor = false;
@@ -114,11 +126,13 @@ namespace Cibercafe_ElVicio
             // 
             // btnPeriferico
             // 
-            this.btnPeriferico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPeriferico.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnPeriferico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnPeriferico.Location = new System.Drawing.Point(12, 161);
+            this.btnPeriferico.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPeriferico.Location = new System.Drawing.Point(14, 185);
+            this.btnPeriferico.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPeriferico.Name = "btnPeriferico";
-            this.btnPeriferico.Size = new System.Drawing.Size(485, 23);
+            this.btnPeriferico.Size = new System.Drawing.Size(495, 28);
             this.btnPeriferico.TabIndex = 6;
             this.btnPeriferico.Text = "El periférico más pedido por los clientes";
             this.btnPeriferico.UseVisualStyleBackColor = false;
@@ -126,11 +140,13 @@ namespace Cibercafe_ElVicio
             // 
             // btnJuego
             // 
-            this.btnJuego.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnJuego.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnJuego.Location = new System.Drawing.Point(12, 190);
+            this.btnJuego.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnJuego.Location = new System.Drawing.Point(14, 220);
+            this.btnJuego.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnJuego.Name = "btnJuego";
-            this.btnJuego.Size = new System.Drawing.Size(485, 23);
+            this.btnJuego.Size = new System.Drawing.Size(495, 28);
             this.btnJuego.TabIndex = 7;
             this.btnJuego.Text = "El juego más pedido por los clientes";
             this.btnJuego.UseVisualStyleBackColor = false;
@@ -140,20 +156,31 @@ namespace Cibercafe_ElVicio
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnSalir.Location = new System.Drawing.Point(422, 227);
+            this.btnSalir.Location = new System.Drawing.Point(745, 256);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(86, 28);
             this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // rtbHistorial
+            // 
+            this.rtbHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbHistorial.Location = new System.Drawing.Point(515, 6);
+            this.rtbHistorial.Name = "rtbHistorial";
+            this.rtbHistorial.Size = new System.Drawing.Size(313, 243);
+            this.rtbHistorial.TabIndex = 9;
+            this.rtbHistorial.Text = "";
+            // 
             // FrmHistorial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(158)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(505, 253);
+            this.ClientSize = new System.Drawing.Size(840, 288);
+            this.Controls.Add(this.rtbHistorial);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnJuego);
             this.Controls.Add(this.btnPeriferico);
@@ -163,7 +190,8 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnListCabin);
             this.Controls.Add(this.btnListCompu);
-            this.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmHistorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHistorial";
@@ -182,5 +210,6 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Button btnPeriferico;
         private System.Windows.Forms.Button btnJuego;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.RichTextBox rtbHistorial;
     }
 }

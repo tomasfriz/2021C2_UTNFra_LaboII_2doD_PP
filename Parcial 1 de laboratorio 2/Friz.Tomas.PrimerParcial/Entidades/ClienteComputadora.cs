@@ -124,20 +124,20 @@ namespace Entidades
         public string MostrarEspecificaciones()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Software: ");
+            sb.AppendLine($"\nSOFTWARE: ");
             foreach (Software software in software)
             {
-                sb.AppendLine($"{software}\n");
+                sb.AppendLine($"{software}");
             }
-            sb.AppendLine($"Periferico: ");
+            sb.AppendLine($"\nPERIFERICOS: ");
             foreach (Periferico periferico in perifericos)
             {
-                sb.AppendLine($"{periferico}\n");
+                sb.AppendLine($"{periferico}");
             }
-            sb.AppendLine($"Juego: ");
+            sb.AppendLine($"\nJUEGOS: ");
             foreach (Juego juego in juegos)
             {
-                sb.AppendLine($"{juego}\n");
+                sb.AppendLine($"{juego}");
             }
             return sb.ToString();
         }
@@ -149,10 +149,10 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tipo: {tipo}\n");
+            sb.AppendLine($"\nTIPO: {tipo}");
             if (tipo != TipoCompu.Libre)
             {
-                sb.AppendLine($"Minutos Establecidos: {Duracion}\n");
+                sb.AppendLine($"\nMINUTOS: {Duracion}");
             }
             sb.AppendLine(MostrarEspecificaciones());
             return sb.ToString();

@@ -212,7 +212,9 @@ namespace Entidades
             e.Sort(CompararEquipos);
             foreach (Equipo equipo in e)
             {
+                sb.AppendLine($"------------------------------------------------------------------");
                 sb.AppendLine($"{equipo}\n");
+                sb.AppendLine($"------------------------------------------------------------------");
             }
             return sb.ToString();
         }
@@ -265,11 +267,9 @@ namespace Entidades
                     }
                 }
             }
-            sb.AppendLine($"GANANCIAS TOTALES: ${(gananciasComputadoras + gananciasTelefonos): N2}\n");
-            sb.AppendLine($"GANANCIAS DE COMPUTADORAS\n");
-            sb.AppendLine($"Ganancias por computadoras: ${gananciasComputadoras: N2}\n");
-            sb.AppendLine($"GANANCIAS DE TELEFONOS\n");
-            sb.AppendLine($"Ganancias por telefonos: ${gananciasTelefonos: N2}\n");
+            sb.AppendLine($"GANANCIAS TOTALES: $ {(gananciasComputadoras + gananciasTelefonos)}\n");
+            sb.AppendLine($"GANANCIAS DE COMPUTADORAS: $ {gananciasComputadoras}\n");
+            sb.AppendLine($"GANANCIAS DE TELEFONOS: $ {gananciasTelefonos}\n");
             return sb.ToString();
         }
         #endregion

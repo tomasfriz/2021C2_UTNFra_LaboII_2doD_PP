@@ -14,8 +14,8 @@ namespace Cibercafe_ElVicio
     public partial class FrmTelefonos : Form
     {
         #region Atributos
-        private ClienteTelefono clienteTelefono;
         private Cliente cliente;
+        private ClienteTelefono telefono;
         #endregion
 
         #region Constructor
@@ -25,8 +25,9 @@ namespace Cibercafe_ElVicio
         public FrmTelefonos()
         {
             InitializeComponent();
-            clienteTelefono = (ClienteTelefono)cliente.Servicio; //posible excepcion no controlada.
+
             cliente = Usuario.Clientes.Peek();
+            telefono = (ClienteTelefono)cliente.Servicio; //posible excepcion no controlada.
         }
         #endregion
 
@@ -58,14 +59,14 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnLlamar_Click(object sender, EventArgs e)
         {
-            clienteTelefono.Codigo = txtCodigo.Text;
-            clienteTelefono.Localidad = txtLocalidad.Text;
-            clienteTelefono.Num = txtNumero.Text;
+            telefono.Codigo = txtCodigo.Text;
+            telefono.Localidad = txtLocalidad.Text;
+            telefono.Num = txtNumero.Text;
             ValidadorNuget validar = new ValidadorNuget();
-            if (!(validar.Validate(clienteTelefono)).IsValid)
+            if (!(validar.Validate(telefono)).IsValid)
             {
                 StringBuilder sb = new();
-                foreach (var error in validar.Validate(clienteTelefono).Errors)
+                foreach (var error in validar.Validate(telefono).Errors)
                 {
                     sb.AppendLine($"+ {error.ErrorMessage}");
                 }
@@ -77,7 +78,7 @@ namespace Cibercafe_ElVicio
                 {
                     if (equipo.Id == (string)cmbTelefonos.SelectedItem)
                     {
-                        if (Usuario.AgregarServicio(equipo,clienteTelefono))
+                        if (Usuario.AgregarServicio(equipo,telefono))
                         {
                             Usuario.Clientes.Dequeue();
                         }

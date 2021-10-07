@@ -204,27 +204,27 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(base.ToString());
-            sb.AppendLine($"Software: ");
+            sb.AppendLine($"\nSOFTWARE: ");
             foreach (Software software in software)
             {
-                sb.AppendLine($"{software}\n");
+                sb.AppendLine($"{software}");
             }
-            sb.AppendLine($"Perifericos: ");
+            sb.AppendLine($"\nPERIFERICOS: ");
             foreach (Periferico periferico in perifericos)
             {
-                sb.AppendLine($"{periferico}\n");
+                sb.AppendLine($"{periferico}");
             }
-            sb.AppendLine($"Juegos: ");
+            sb.AppendLine($"\nJUEGOS: ");
             foreach (Juego juego in juegos)
             {
-                sb.AppendLine($"{juego}\n");
+                sb.AppendLine($"{juego}");
             }
-            sb.AppendLine($"Hardware: ");
+            sb.AppendLine($"\nHARDWARE: ");
             foreach (KeyValuePair<string, string> e in hardware)
             {
-                sb.AppendLine($"{e.Key}: {e.Value}\n");
+                sb.AppendLine($"\n{e.Key}: {e.Value}");
             }
-            sb.AppendLine($"Costo: {Minutos}");
+            sb.AppendLine($"\nCOSTO: $ {Minutos}");
             return sb.ToString();
         }
         #endregion

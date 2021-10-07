@@ -185,8 +185,8 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Tipo de llamada: {Tipo}\n");
-            sb.AppendLine($"Numero: +{codigo} ({localidad}) {num}\n");
+            sb.AppendLine($"\nTIPO DE LLAMADA: {Tipo}");
+            sb.AppendLine($"\nNUMERO TEL: +{codigo} ({localidad}) {num}");
             return sb.ToString();
         }
         #endregion

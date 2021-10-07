@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace Cibercafe_ElVicio
 {
@@ -49,7 +50,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnListCompu_Click(object sender, EventArgs e)
         {
-
+            rtbHistorial.Text = Usuario.OrdenamientoDecendenteTiempo(TipoEquipo.Computadora);
         }
         /// <summary>
         /// Muestra la lista de cabinas ordenadas por minutos de uso de forma descendente.
@@ -58,7 +59,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnListCabin_Click(object sender, EventArgs e)
         {
-
+            rtbHistorial.Text = Usuario.OrdenamientoDecendenteTiempo(TipoEquipo.Cabina);
         }
         /// <summary>
         /// Muestra las ganancias totales y clasificadas por servicio (teléfono/computadora).
@@ -67,7 +68,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnGanancias_Click(object sender, EventArgs e)
         {
-
+            rtbHistorial.Text = Usuario.CalcularGanancias();
         }
         /// <summary>
         /// Muestra las horas totales y la recaudación por tipo de llamada.
@@ -76,7 +77,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnRecaudacion_Click(object sender, EventArgs e)
         {
-
+            rtbHistorial.Text = "Falta terminar";
         }
         /// <summary>
         /// Muestra el software más pedido por los clientes.
@@ -85,7 +86,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnSoftware_Click(object sender, EventArgs e)
         {
-
+            rtbHistorial.Text = "Falta terminar";
         }
         /// <summary>
         /// Muestra el periférico más pedido por los clientes.
@@ -94,7 +95,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnPeriferico_Click(object sender, EventArgs e)
         {
-
+            rtbHistorial.Text = "Falta terminar";
         }
         /// <summary>
         /// Muestra el juego más pedido por los clientes.
@@ -103,7 +104,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void btnJuego_Click(object sender, EventArgs e)
         {
-
+            rtbHistorial.Text = "Falta terminar";
         }
         #endregion
     }

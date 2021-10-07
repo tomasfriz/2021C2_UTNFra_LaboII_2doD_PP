@@ -156,9 +156,10 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Tipo: {tipo} - Id: {id}\n");
-            sb.AppendLine($"Estado: {estado}\n");
-            sb.AppendLine($"Minutos: {Minutos}\n");
+            sb.AppendLine($"\nID: {id}");
+            sb.AppendLine($"\nTIPO: {tipo}");
+            sb.AppendLine($"\nESTADO: {estado}");
+            sb.AppendLine($"\nMINUTOS: {Minutos}");
             return sb.ToString();
         }
         #endregion
