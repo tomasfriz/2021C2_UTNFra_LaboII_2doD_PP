@@ -29,6 +29,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFactura));
             this.label1 = new System.Windows.Forms.Label();
             this.lblIVA = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
@@ -225,6 +226,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.lblIVA);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(403, 313);

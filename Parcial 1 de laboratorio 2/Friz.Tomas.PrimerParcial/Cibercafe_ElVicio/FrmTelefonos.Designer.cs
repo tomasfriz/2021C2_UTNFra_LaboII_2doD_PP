@@ -29,6 +29,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTelefonos));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -229,6 +230,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLlamar);
             this.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(344, 374);
             this.Name = "FrmTelefonos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -29,6 +29,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHistorial));
             this.btnListCompu = new System.Windows.Forms.Button();
             this.btnListCabin = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
@@ -193,6 +194,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.btnListCabin);
             this.Controls.Add(this.btnListCompu);
             this.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(856, 327);
             this.Name = "FrmHistorial";
