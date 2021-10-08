@@ -9,10 +9,10 @@ namespace Entidades
     public sealed class Computadora: Equipo
     {
         #region Atributos
-        private List<Software> software;
-        private List<Periferico> perifericos;
-        private List<Juego> juegos;
-        private Dictionary<string, string> hardware;
+        private readonly List<Software> software;
+        private readonly List<Periferico> perifericos;
+        private readonly List<Juego> juegos;
+        private readonly Dictionary<string, string> hardware;
         #endregion
 
         #region Constructores
@@ -202,7 +202,7 @@ namespace Entidades
         /// <returns></returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             sb.AppendLine(base.ToString());
             sb.AppendLine($"\nSOFTWARE: ");
             foreach (Software software in software)

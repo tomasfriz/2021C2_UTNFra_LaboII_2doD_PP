@@ -15,8 +15,8 @@ namespace Cibercafe_ElVicio
     public partial class FrmMenu : Form
     {
         #region Atributos
-        private Random random;
-        private Equipo equipo;
+        private readonly Random random;
+        private readonly Equipo equipo; ///warning
         #endregion
 
         #region Constructor
@@ -38,41 +38,42 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         /// <summary>
         /// Sirve para orientar al usuario a saber que hace cada boton de la aplicacion.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAyuda_Click(object sender, EventArgs e)
+        private void BtnAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
                 "+ El boton 'Cerrar' te preguntara si deseas cerrar. 'SI' cerrara la aplicacion, incluyendo las ventanas abiertas. 'NO' regresaras al menu principal.\n" +
-                "+ El boton 'Asignar Equipo' te permitira asignar un equipo al cliente y tambien detener el uso de la misma.\n" +
-                "+ El boton 'Mostrar Equipo' te permitira ver los equipo y sus especificaciones y tambien detener el uso de la misma.\n" +
-                "+ El boton 'Estadisticas Historicas' te permitira ver el historial", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "+ El boton 'Asignar Equipo' te permitira asignar un equipo al cliente.\n" +
+                "+ El boton 'Estadisticas Historicas' te permitira ver el historial segun el criterio que elijas\n" +
+                "+ Podra ver la lista de espera de los clientes en el cuadro blanco del centro\n" +
+                "+ En el lado superior podra ver el nombre del negocio y el usuario conectado mas la fecha del dia de hoy\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
         /// Sirve para asignar los equipos de los clientes en orden de llegada.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAsigEquipo_Click(object sender, EventArgs e)
+        private void BtnAsigEquipo_Click(object sender, EventArgs e)
         {
             if (Usuario.Clientes.Count > 0)
             {
                 Cliente c = Usuario.Clientes.Peek();
                 if (c.Servicio is ClienteComputadora)
                 {
-                    FrmComputadoras frmComputadoras = new FrmComputadoras();
+                    FrmComputadoras frmComputadoras = new();
                     frmComputadoras.Show();
                 }
                 else
                 {
-                    FrmTelefonos frmTelefonos = new FrmTelefonos();
+                    FrmTelefonos frmTelefonos = new();
                     frmTelefonos.Show();
                 }
             }
@@ -82,9 +83,9 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnHistorial_Click(object sender, EventArgs e)
+        private void BtnHistorial_Click(object sender, EventArgs e)
         {
-            FrmHistorial frmHistorial = new FrmHistorial();
+            FrmHistorial frmHistorial = new();
             frmHistorial.Show();
         }
         /// <summary>
@@ -95,14 +96,14 @@ namespace Cibercafe_ElVicio
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             MessageBox.Show("¡BIENVENIDO USUARIO!");
-            List<Cliente> lista = new List<Cliente>()
+            List<Cliente> lista = new()
             {
-                new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
-                //new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
-                new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
-                //new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono()),
+                new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),                
+                new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),       
                 new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
-                //new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono())
+                //new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono()),
+                //new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
+                //new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono())
             };
             foreach (Cliente cliente in lista)
             {
@@ -114,7 +115,7 @@ namespace Cibercafe_ElVicio
             {
                 listCliente.Items.Add(cliente.ToString());
             }
-            List<Equipo> listaComputadora = new List<Equipo>()
+            List<Equipo> listaComputadora = new()
             {
                 new Computadora("C01", new List<Software>(){Software.ares,Software.messenger}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike,Juego.MuOnline,Juego.DiabloII,Juego.WarcraftIII}, new Dictionary<string, string> {{"MEMORIA RAM", "6GB"}, {"PROCESADOR","Intel Pentium 2"}, {"PLACA DE VIDEO", "9600GT"} }),
                 new Computadora("C02", new List<Software>(){Software.icq,Software.office}, new List<Periferico>() {Periferico.cámara,Periferico.auriculares}, new List<Juego>() {Juego.AgeOfEmpiresII,Juego.CounterStrike,Juego.MuOnline,Juego.LineageII}, new Dictionary<string, string> {{"MEMORIA RAM", "3GB"}, {"PROCESADOR", "Intel Pentium 4"}, {"PLACA DE VIDEO", "Geforce 4"}}),
@@ -131,7 +132,7 @@ namespace Cibercafe_ElVicio
             {
                 Usuario.AgregarEquipo(p);
             }
-            List<Equipo> listaTelefonos = new List<Equipo>()
+            List<Equipo> listaTelefonos = new()
             {
                 new Telefono("T01", TipoTecla.Disco, "Telefonica"),
                 new Telefono("T02", TipoTecla.Teclado, "Panasonic"),
@@ -152,12 +153,12 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void lblComputadoras_Click(object sender, EventArgs e) ///posible error en ejecucu
+        private void LblComputadoras_Click(object sender, EventArgs e) ///posible error en ejecucu
         {
             if (equipo.Estado == Estado.En_Uso)
             {
                 Usuario.FinalizarServicio(equipo);
-                FrmFactura frmFactura = new FrmFactura(equipo.Lista.Last());
+                FrmFactura frmFactura = new(equipo.Lista.Last());
                 frmFactura.ShowDialog();
                 Close();
             }
@@ -167,12 +168,12 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void lblTelefonos_Click(object sender, EventArgs e)
+        private void LblTelefonos_Click(object sender, EventArgs e)
         {
             if (equipo.Estado == Estado.En_Uso)
             {
                 Usuario.FinalizarServicio(equipo);
-                FrmFactura frmFactura = new FrmFactura(equipo.Lista.Last());
+                FrmFactura frmFactura = new(equipo.Lista.Last());
                 frmFactura.ShowDialog();
                 Close();
             }

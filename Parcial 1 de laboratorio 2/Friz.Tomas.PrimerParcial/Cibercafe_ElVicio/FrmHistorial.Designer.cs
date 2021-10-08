@@ -53,7 +53,7 @@ namespace Cibercafe_ElVicio
             this.btnListCompu.TabIndex = 1;
             this.btnListCompu.Text = "Lista de computadoras ordenadas por minutos de uso de forma descendente";
             this.btnListCompu.UseVisualStyleBackColor = false;
-            this.btnListCompu.Click += new System.EventHandler(this.btnListCompu_Click);
+            this.btnListCompu.Click += new System.EventHandler(this.BtnListCompu_Click);
             // 
             // btnListCabin
             // 
@@ -67,7 +67,7 @@ namespace Cibercafe_ElVicio
             this.btnListCabin.TabIndex = 2;
             this.btnListCabin.Text = "Lista de cabinas ordenadas por minutos de uso de forma descendente";
             this.btnListCabin.UseVisualStyleBackColor = false;
-            this.btnListCabin.Click += new System.EventHandler(this.btnListCabin_Click);
+            this.btnListCabin.Click += new System.EventHandler(this.BtnListCabin_Click);
             // 
             // btnAyuda
             // 
@@ -80,7 +80,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.TabIndex = 0;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            this.btnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
             // 
             // btnGanancias
             // 
@@ -94,7 +94,7 @@ namespace Cibercafe_ElVicio
             this.btnGanancias.TabIndex = 3;
             this.btnGanancias.Text = "Ganancias totales y clasificadas por servicio (teléfono/computadora)";
             this.btnGanancias.UseVisualStyleBackColor = false;
-            this.btnGanancias.Click += new System.EventHandler(this.btnGanancias_Click);
+            this.btnGanancias.Click += new System.EventHandler(this.BtnGanancias_Click);
             // 
             // btnRecaudacion
             // 
@@ -108,7 +108,7 @@ namespace Cibercafe_ElVicio
             this.btnRecaudacion.TabIndex = 4;
             this.btnRecaudacion.Text = "Horas totales y la recaudación por tipo de llamada";
             this.btnRecaudacion.UseVisualStyleBackColor = false;
-            this.btnRecaudacion.Click += new System.EventHandler(this.btnRecaudacion_Click);
+            this.btnRecaudacion.Click += new System.EventHandler(this.BtnRecaudacion_Click);
             // 
             // btnSoftware
             // 
@@ -122,7 +122,7 @@ namespace Cibercafe_ElVicio
             this.btnSoftware.TabIndex = 5;
             this.btnSoftware.Text = "El software más pedido por los clientes";
             this.btnSoftware.UseVisualStyleBackColor = false;
-            this.btnSoftware.Click += new System.EventHandler(this.btnSoftware_Click);
+            this.btnSoftware.Click += new System.EventHandler(this.BtnSoftware_Click);
             // 
             // btnPeriferico
             // 
@@ -136,7 +136,7 @@ namespace Cibercafe_ElVicio
             this.btnPeriferico.TabIndex = 6;
             this.btnPeriferico.Text = "El periférico más pedido por los clientes";
             this.btnPeriferico.UseVisualStyleBackColor = false;
-            this.btnPeriferico.Click += new System.EventHandler(this.btnPeriferico_Click);
+            this.btnPeriferico.Click += new System.EventHandler(this.BtnPeriferico_Click);
             // 
             // btnJuego
             // 
@@ -150,7 +150,7 @@ namespace Cibercafe_ElVicio
             this.btnJuego.TabIndex = 7;
             this.btnJuego.Text = "El juego más pedido por los clientes";
             this.btnJuego.UseVisualStyleBackColor = false;
-            this.btnJuego.Click += new System.EventHandler(this.btnJuego_Click);
+            this.btnJuego.Click += new System.EventHandler(this.BtnJuego_Click);
             // 
             // btnSalir
             // 
@@ -163,13 +163,15 @@ namespace Cibercafe_ElVicio
             this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // rtbHistorial
             // 
             this.rtbHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbHistorial.Location = new System.Drawing.Point(515, 6);
+            this.rtbHistorial.MinimumSize = new System.Drawing.Size(313, 243);
             this.rtbHistorial.Name = "rtbHistorial";
+            this.rtbHistorial.ReadOnly = true;
             this.rtbHistorial.Size = new System.Drawing.Size(313, 243);
             this.rtbHistorial.TabIndex = 9;
             this.rtbHistorial.Text = "";
@@ -192,6 +194,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.btnListCompu);
             this.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(856, 327);
             this.Name = "FrmHistorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHistorial";

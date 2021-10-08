@@ -36,40 +36,46 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         /// <summary>
         /// Sirve para orientar al usuario a saber que hace cada boton de la aplicacion.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAyuda_Click(object sender, EventArgs e)
+        private void BtnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("-El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
-                "-El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
+                "+ El boton 'Cerrar' cierra la ventana actual.\n" +
+                "+ El boton 'Conectar' le dara al cliente la computadora asignada.\n" +
+                "+ En el cuadro blanco del lado izquierdo se mostraran las especificaciones del cliente.\n" +
+                "+ En el cuadro gris del lado derecho inferior se mostraran los datos del cliente.\n" +
+                "+ En el lado superior derecho se podra elegir si el cliente lo quiere la maquina sin temporizador o con temporizador.\n" +
+                "+ Aparecera un temporizador para marcar los minutos que decida usar el cliente cuando este marcada el check de 'Tiempo Limitado'.\n" +
+                "+ En el cuadro gris del lado izquierdo en el centro estaran las computadoras disponibles con las especificaciones del cliente.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
         /// Sirve para conectar al cliente a una computadora.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnConectar_Click(object sender, EventArgs e)
+        private void BtnConectar_Click(object sender, EventArgs e)
         {
-            if (rbtLimitado.Checked == true && numTiempoLimite.Value % 30 != 0)
+            if (rbtLimitado.Checked && nudTiempoLimite.Value % 30 != 0)
             {
-                MessageBox.Show("La duración limitada debe limitarse en bloques de media hora", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La duración limite debe limitarse en bloques de media hora", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (rbtIlimitado.Checked == true)
+                if (rbtIlimitado.Checked)
                 {
                     computadora.Tipo = TipoCompu.Libre;
                 }
                 else
                 {
-                    computadora.Duracion = (int)numTiempoLimite.Value;
+                    computadora.Duracion = (int)nudTiempoLimite.Value;
                     computadora.Tipo = TipoCompu.Limitado;
                 }
 
@@ -79,7 +85,7 @@ namespace Cibercafe_ElVicio
                     {
                         if (Usuario.AgregarServicio(equipo, computadora))
                         {
-                            this.Close();
+                            Close();
                             Usuario.Clientes.Dequeue();
                         }
                     }
@@ -96,15 +102,14 @@ namespace Cibercafe_ElVicio
         {
             lblDatos.Text = cliente.ToString();
             rctEspecificaciones.Text = computadora.MostrarEspecificaciones();
-            rbtIlimitado.Checked = true;
-            List<string> computadorasDisponibles = new List<string>();
+            List<string> computadorasDisponibles = new();
             foreach (Equipo equipo in Usuario.Lista)
             {
-                if (equipo is Computadora)
+                if (equipo is Computadora compu)
                 {
                     if (equipo.Estado == Estado.Disponible)
                     {
-                        if (Usuario.RevisarRequisitos((ClienteComputadora)(cliente.Servicio),(Computadora)equipo))
+                        if (Usuario.RevisarRequisitos((ClienteComputadora)(cliente.Servicio),compu))
                         {
                             computadorasDisponibles.Add(equipo.Id);
                         }
@@ -130,18 +135,18 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void rbtIlimitado_CheckedChanged(object sender, EventArgs e)
+        private void RbtIlimitado_CheckedChanged(object sender, EventArgs e)
         {
-            numTiempoLimite.Visible = false;
+            nudTiempoLimite.Visible = false;
         }
         /// <summary>
         /// Se encarga de poner visible el numTiempoLimite cuando el check esta marcado en tiempo limitado.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void rbtLimitado_CheckedChanged(object sender, EventArgs e)
+        private void RbtLimitado_CheckedChanged(object sender, EventArgs e)
         {
-            numTiempoLimite.Visible = true;
+            nudTiempoLimite.Visible = true;
         }
         #endregion
     }

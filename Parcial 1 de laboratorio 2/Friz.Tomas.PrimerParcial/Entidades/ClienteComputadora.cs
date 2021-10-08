@@ -9,9 +9,9 @@ namespace Entidades
     public sealed class ClienteComputadora : Servicio
     {
         #region Atributos
-        private List<Software> software;
-        private List<Periferico> perifericos;
-        private List<Juego> juegos;
+        private readonly List<Software> software;
+        private readonly List<Periferico> perifericos;
+        private readonly List<Juego> juegos;
         private TipoCompu tipo;
         private const float costo = 0.5F;
         #endregion
@@ -123,7 +123,7 @@ namespace Entidades
         /// <returns></returns>
         public string MostrarEspecificaciones()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             sb.AppendLine($"\nSOFTWARE: ");
             foreach (Software software in software)
             {
@@ -148,7 +148,7 @@ namespace Entidades
         /// <returns></returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             sb.AppendLine($"\nTIPO: {tipo}");
             if (tipo != TipoCompu.Libre)
             {

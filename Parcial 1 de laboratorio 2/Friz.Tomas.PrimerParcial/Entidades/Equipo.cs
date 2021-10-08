@@ -155,7 +155,7 @@ namespace Entidades
         /// <returns></returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             sb.AppendLine($"\nID: {id}");
             sb.AppendLine($"\nTIPO: {tipo}");
             sb.AppendLine($"\nESTADO: {estado}");

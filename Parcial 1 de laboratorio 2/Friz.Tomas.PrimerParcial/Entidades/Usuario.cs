@@ -9,8 +9,8 @@ namespace Entidades
     public static class Usuario
     {
         #region Atributo
-        private static List<Equipo> equipos;
-        private static Queue<Cliente> clientes;
+        private static readonly List<Equipo> equipos;
+        private static readonly Queue<Cliente> clientes;
         #endregion
 
         #region Constructores
@@ -121,7 +121,7 @@ namespace Entidades
                 if (e.Lista.Count > 0)
                 {
                     Servicio s = e.Lista.Last();
-                    if (s is ClienteTelefono || (s is ClienteComputadora && ((ClienteComputadora)s).Tipo == TipoCompu.Libre))
+                    if (s is ClienteTelefono || (s is ClienteComputadora computadora && computadora.Tipo == TipoCompu.Libre))
                     {
                         s.Duracion = CalcularMinutos(s.Inicio);
                     }
@@ -168,7 +168,7 @@ namespace Entidades
         /// <returns>Devuelve una lista de los equipos que puede usar el cliente</returns>
         private static List<Equipo> RevisarEquipos()
         {
-            List<Equipo> EquipoDisponible = new List<Equipo>();
+            List<Equipo> EquipoDisponible = new();
             foreach (Equipo e in Lista)
             {
                 if (e.Estado == Estado.Disponible)
@@ -196,8 +196,8 @@ namespace Entidades
         /// <returns>Imprime la lista de equipos ordenados por minutos de uso en forma descendente</returns>
         public static string OrdenamientoDecendenteTiempo(TipoEquipo t)
         {
-            StringBuilder sb = new StringBuilder();
-            List<Equipo> e = new List<Equipo>();
+            StringBuilder sb = new();
+            List<Equipo> e = new();
             foreach (Equipo equipo in Lista)
             {
                 if (t == TipoEquipo.Cabina && equipo is Telefono)
@@ -247,7 +247,7 @@ namespace Entidades
         /// <returns>Devuelve la informacion de las ganancias totales, de las ganancias del servicio de computadoras y de las ganancias del servicio de telefonos</returns>
         public static string CalcularGanancias()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             float gananciasComputadoras = 0;
             float gananciasTelefonos = 0;
             foreach (Equipo e in Lista)

@@ -34,7 +34,7 @@ namespace Cibercafe_ElVicio
             this.label3 = new System.Windows.Forms.Label();
             this.cmbComputadoras = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.numTiempoLimite = new System.Windows.Forms.NumericUpDown();
+            this.nudTiempoLimite = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtLimitado = new System.Windows.Forms.RadioButton();
             this.rbtIlimitado = new System.Windows.Forms.RadioButton();
@@ -44,7 +44,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numTiempoLimite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTiempoLimite)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@ namespace Cibercafe_ElVicio
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cmbComputadoras);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.numTiempoLimite);
+            this.panel1.Controls.Add(this.nudTiempoLimite);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblDatos);
@@ -74,6 +74,7 @@ namespace Cibercafe_ElVicio
             this.rctEspecificaciones.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.rctEspecificaciones.Location = new System.Drawing.Point(3, 34);
             this.rctEspecificaciones.Name = "rctEspecificaciones";
+            this.rctEspecificaciones.ReadOnly = true;
             this.rctEspecificaciones.Size = new System.Drawing.Size(274, 364);
             this.rctEspecificaciones.TabIndex = 24;
             this.rctEspecificaciones.Text = "";
@@ -116,35 +117,36 @@ namespace Cibercafe_ElVicio
             this.label2.Text = "Datos del cliente";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numTiempoLimite
+            // nudTiempoLimite
             // 
-            this.numTiempoLimite.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.numTiempoLimite.Increment = new decimal(new int[] {
+            this.nudTiempoLimite.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.nudTiempoLimite.Increment = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numTiempoLimite.Location = new System.Drawing.Point(283, 109);
-            this.numTiempoLimite.Maximum = new decimal(new int[] {
+            this.nudTiempoLimite.Location = new System.Drawing.Point(283, 109);
+            this.nudTiempoLimite.Maximum = new decimal(new int[] {
             240,
             0,
             0,
             0});
-            this.numTiempoLimite.Minimum = new decimal(new int[] {
+            this.nudTiempoLimite.Minimum = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numTiempoLimite.Name = "numTiempoLimite";
-            this.numTiempoLimite.Size = new System.Drawing.Size(268, 23);
-            this.numTiempoLimite.TabIndex = 20;
-            this.numTiempoLimite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numTiempoLimite.Value = new decimal(new int[] {
+            this.nudTiempoLimite.Name = "nudTiempoLimite";
+            this.nudTiempoLimite.ReadOnly = true;
+            this.nudTiempoLimite.Size = new System.Drawing.Size(268, 23);
+            this.nudTiempoLimite.TabIndex = 20;
+            this.nudTiempoLimite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudTiempoLimite.Value = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numTiempoLimite.Visible = false;
+            this.nudTiempoLimite.Visible = false;
             // 
             // groupBox1
             // 
@@ -167,18 +169,20 @@ namespace Cibercafe_ElVicio
             this.rbtLimitado.TabIndex = 1;
             this.rbtLimitado.Text = "Tiempo Limitado";
             this.rbtLimitado.UseVisualStyleBackColor = true;
-            this.rbtLimitado.CheckedChanged += new System.EventHandler(this.rbtLimitado_CheckedChanged);
+            this.rbtLimitado.CheckedChanged += new System.EventHandler(this.RbtLimitado_CheckedChanged);
             // 
             // rbtIlimitado
             // 
             this.rbtIlimitado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rbtIlimitado.Checked = true;
             this.rbtIlimitado.Location = new System.Drawing.Point(15, 22);
             this.rbtIlimitado.Name = "rbtIlimitado";
             this.rbtIlimitado.Size = new System.Drawing.Size(232, 32);
             this.rbtIlimitado.TabIndex = 0;
+            this.rbtIlimitado.TabStop = true;
             this.rbtIlimitado.Text = "Tiempo Ilimitado";
             this.rbtIlimitado.UseVisualStyleBackColor = true;
-            this.rbtIlimitado.CheckedChanged += new System.EventHandler(this.rbtIlimitado_CheckedChanged);
+            this.rbtIlimitado.CheckedChanged += new System.EventHandler(this.RbtIlimitado_CheckedChanged);
             // 
             // label1
             // 
@@ -217,7 +221,7 @@ namespace Cibercafe_ElVicio
             this.btnConectar.TabIndex = 1;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
-            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
+            this.btnConectar.Click += new System.EventHandler(this.BtnConectar_Click);
             // 
             // btnAyuda
             // 
@@ -229,7 +233,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.TabIndex = 0;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            this.btnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
             // 
             // btnCerrar
             // 
@@ -241,7 +245,7 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.TabIndex = 3;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // FrmComputadoras
             // 
@@ -254,12 +258,13 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnConectar);
             this.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MinimumSize = new System.Drawing.Size(598, 495);
             this.Name = "FrmComputadoras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmComputadoras";
             this.Load += new System.EventHandler(this.FrmComputadoras_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numTiempoLimite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTiempoLimite)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -277,7 +282,7 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.RadioButton rbtLimitado;
         private System.Windows.Forms.RadioButton rbtIlimitado;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numTiempoLimite;
+        private System.Windows.Forms.NumericUpDown nudTiempoLimite;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbComputadoras;
         private System.Windows.Forms.RichTextBox rctEspecificaciones;

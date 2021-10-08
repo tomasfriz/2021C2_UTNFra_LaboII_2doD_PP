@@ -57,7 +57,7 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // btnAyuda
             // 
@@ -70,7 +70,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.TabIndex = 0;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            this.btnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
             // 
             // panel1
             // 
@@ -216,7 +216,7 @@ namespace Cibercafe_ElVicio
             this.btnLlamar.TabIndex = 4;
             this.btnLlamar.Text = "Llamar";
             this.btnLlamar.UseVisualStyleBackColor = false;
-            this.btnLlamar.Click += new System.EventHandler(this.btnLlamar_Click);
+            this.btnLlamar.Click += new System.EventHandler(this.BtnLlamar_Click);
             // 
             // FrmTelefonos
             // 
@@ -229,6 +229,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLlamar);
             this.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MinimumSize = new System.Drawing.Size(344, 374);
             this.Name = "FrmTelefonos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTelefonos";

@@ -29,26 +29,34 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         /// <summary>
         /// Sirve para orientar al usuario a saber que hace cada boton de la aplicacion.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAyuda_Click(object sender, EventArgs e)
+        private void BtnAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
-                "+ El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "+ El boton 'Cerrar' cierra la ventana actual.\n" +
+                "+ En el cuadro blanco del lado derecho se mostraran la informacion de los botones.\n" +
+                "+ En el primer boton del lado superior ordenara de forma decendente y por minutos de uso las computadoras.\n" +
+                "+ En el segundo boton ordenara de forma decendente y por minutos de uso los telefonos.\n" +
+                "+ En el tercer boton mostraran las ganancias totales y tambien segun su servicio.\n" +
+                "+ En el cuarto boton mostraran las horas totales y tambien la recaudacion por tipo de llamadas.\n" +
+                "+ En el quinto boton mostrara el software mas pedido por los clientes.\n" +
+                "+ En el sexto boton mostrara el periferico mas pedido por los clientes.\n" +
+                "+ En el septimo boton mostrara el juego mas pedido por los clientes.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
         /// Muestra la lista de computadoras ordenadas por minutos de uso de forma descendente.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnListCompu_Click(object sender, EventArgs e)
+        private void BtnListCompu_Click(object sender, EventArgs e)
         {
             rtbHistorial.Text = Usuario.OrdenamientoDecendenteTiempo(TipoEquipo.Computadora);
         }
@@ -57,7 +65,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnListCabin_Click(object sender, EventArgs e)
+        private void BtnListCabin_Click(object sender, EventArgs e)
         {
             rtbHistorial.Text = Usuario.OrdenamientoDecendenteTiempo(TipoEquipo.Cabina);
         }
@@ -66,7 +74,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnGanancias_Click(object sender, EventArgs e)
+        private void BtnGanancias_Click(object sender, EventArgs e)
         {
             rtbHistorial.Text = Usuario.CalcularGanancias();
         }
@@ -75,7 +83,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnRecaudacion_Click(object sender, EventArgs e)
+        private void BtnRecaudacion_Click(object sender, EventArgs e)
         {
             rtbHistorial.Text = "Falta terminar";
         }
@@ -84,7 +92,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnSoftware_Click(object sender, EventArgs e)
+        private void BtnSoftware_Click(object sender, EventArgs e)
         {
             rtbHistorial.Text = "Falta terminar";
         }
@@ -93,7 +101,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnPeriferico_Click(object sender, EventArgs e)
+        private void BtnPeriferico_Click(object sender, EventArgs e)
         {
             rtbHistorial.Text = "Falta terminar";
         }
@@ -102,7 +110,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnJuego_Click(object sender, EventArgs e)
+        private void BtnJuego_Click(object sender, EventArgs e)
         {
             rtbHistorial.Text = "Falta terminar";
         }

@@ -9,8 +9,8 @@ namespace Entidades
     public sealed class Telefono : Equipo
     {
         #region Atributos
-        private TipoTecla tipoTecla;
-        private string marca;
+        private readonly TipoTecla tipoTecla;
+        private readonly string marca;
         #endregion
 
         #region Constructores
@@ -38,7 +38,7 @@ namespace Entidades
         /// <returns></returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             sb.AppendLine(base.ToString());
             sb.AppendLine($"\nESTILO DE TECLA: {tipoTecla}");
             sb.AppendLine($"\nMARCA: {marca}");

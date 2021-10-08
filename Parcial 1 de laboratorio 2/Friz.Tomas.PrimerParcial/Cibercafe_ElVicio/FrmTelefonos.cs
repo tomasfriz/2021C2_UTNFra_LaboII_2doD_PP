@@ -14,8 +14,8 @@ namespace Cibercafe_ElVicio
     public partial class FrmTelefonos : Form
     {
         #region Atributos
-        private Cliente cliente;
-        private ClienteTelefono telefono;
+        private readonly Cliente cliente;
+        private readonly ClienteTelefono telefono;
         #endregion
 
         #region Constructor
@@ -37,19 +37,23 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         /// <summary>
         /// Sirve para orientar al usuario a saber que hace cada boton de la aplicacion.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAyuda_Click(object sender, EventArgs e)
+        private void BtnAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
-                "+ El boton 'Cerrar' cierra la ventana actual.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "+ El boton 'Cerrar' cierra la ventana actual.\n" +
+                "+ El boton 'Llamar' le dara al cliente el telefono asignado.\n" +
+                "+ En el cuadro gris del lado inferior se mostraran los datos del cliente.\n" +
+                "+ En el lado superior se colocara el codigo, la localidad y el numero telefonico al que quiere llamar el cliente.\n" +
+                "+ En el lado central estaran los telefonos disponibles para el cliente.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
         /// Sirve para agregar un cliente a un telefono.
@@ -57,12 +61,12 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnLlamar_Click(object sender, EventArgs e)
+        private void BtnLlamar_Click(object sender, EventArgs e)
         {
             telefono.Codigo = txtCodigo.Text;
             telefono.Localidad = txtLocalidad.Text;
             telefono.Num = txtNumero.Text;
-            ValidadorNuget validar = new ValidadorNuget();
+            ValidadorNuget validar = new();
             if (!(validar.Validate(telefono)).IsValid)
             {
                 StringBuilder sb = new();

@@ -71,7 +71,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.ForeColor = System.Drawing.Color.Black;
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            this.btnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
             // 
             // label1
             // 
@@ -109,7 +109,7 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // panel1
             // 
@@ -138,7 +138,7 @@ namespace Cibercafe_ElVicio
             this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.UseVisualStyleBackColor = false;
-            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            this.btnHistorial.Click += new System.EventHandler(this.BtnHistorial_Click);
             // 
             // btnAsigEquipo
             // 
@@ -146,7 +146,7 @@ namespace Cibercafe_ElVicio
             this.btnAsigEquipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAsigEquipo.Name = "btnAsigEquipo";
             this.btnAsigEquipo.UseVisualStyleBackColor = false;
-            this.btnAsigEquipo.Click += new System.EventHandler(this.btnAsigEquipo_Click);
+            this.btnAsigEquipo.Click += new System.EventHandler(this.BtnAsigEquipo_Click);
             // 
             // gpbComputadoras
             // 
@@ -170,70 +170,70 @@ namespace Cibercafe_ElVicio
             resources.ApplyResources(this.label14, "label14");
             this.label14.BackColor = System.Drawing.Color.Lime;
             this.label14.Name = "label14";
-            this.label14.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label14.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // label13
             // 
             resources.ApplyResources(this.label13, "label13");
             this.label13.BackColor = System.Drawing.Color.Lime;
             this.label13.Name = "label13";
-            this.label13.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label13.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
             this.label12.BackColor = System.Drawing.Color.Lime;
             this.label12.Name = "label12";
-            this.label12.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label12.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
             this.label11.BackColor = System.Drawing.Color.Lime;
             this.label11.Name = "label11";
-            this.label11.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label11.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
             this.label10.BackColor = System.Drawing.Color.Lime;
             this.label10.Name = "label10";
-            this.label10.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label10.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
             this.label9.BackColor = System.Drawing.Color.Lime;
             this.label9.Name = "label9";
-            this.label9.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label9.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
             this.label8.BackColor = System.Drawing.Color.Lime;
             this.label8.Name = "label8";
-            this.label8.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label8.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
             this.label7.BackColor = System.Drawing.Color.Lime;
             this.label7.Name = "label7";
-            this.label7.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label7.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Lime;
             this.label5.Name = "label5";
-            this.label5.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label5.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
             this.label6.BackColor = System.Drawing.Color.Lime;
             this.label6.Name = "label6";
-            this.label6.Click += new System.EventHandler(this.lblComputadoras_Click);
+            this.label6.Click += new System.EventHandler(this.LblComputadoras_Click);
             // 
             // gpbTelefonos
             // 
@@ -252,35 +252,35 @@ namespace Cibercafe_ElVicio
             resources.ApplyResources(this.label15, "label15");
             this.label15.BackColor = System.Drawing.Color.Lime;
             this.label15.Name = "label15";
-            this.label15.Click += new System.EventHandler(this.lblTelefonos_Click);
+            this.label15.Click += new System.EventHandler(this.LblTelefonos_Click);
             // 
             // label16
             // 
             resources.ApplyResources(this.label16, "label16");
             this.label16.BackColor = System.Drawing.Color.Lime;
             this.label16.Name = "label16";
-            this.label16.Click += new System.EventHandler(this.lblTelefonos_Click);
+            this.label16.Click += new System.EventHandler(this.LblTelefonos_Click);
             // 
             // label17
             // 
             resources.ApplyResources(this.label17, "label17");
             this.label17.BackColor = System.Drawing.Color.Lime;
             this.label17.Name = "label17";
-            this.label17.Click += new System.EventHandler(this.lblTelefonos_Click);
+            this.label17.Click += new System.EventHandler(this.LblTelefonos_Click);
             // 
             // label18
             // 
             resources.ApplyResources(this.label18, "label18");
             this.label18.BackColor = System.Drawing.Color.Lime;
             this.label18.Name = "label18";
-            this.label18.Click += new System.EventHandler(this.lblTelefonos_Click);
+            this.label18.Click += new System.EventHandler(this.LblTelefonos_Click);
             // 
             // label19
             // 
             resources.ApplyResources(this.label19, "label19");
             this.label19.BackColor = System.Drawing.Color.Lime;
             this.label19.Name = "label19";
-            this.label19.Click += new System.EventHandler(this.lblTelefonos_Click);
+            this.label19.Click += new System.EventHandler(this.LblTelefonos_Click);
             // 
             // FrmMenu
             // 

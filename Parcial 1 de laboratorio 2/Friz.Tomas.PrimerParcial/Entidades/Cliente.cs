@@ -6,10 +6,10 @@ namespace Entidades
     public class Cliente
     {
         #region Atributos
-        private int dni;
-        private string nombre;
-        private string apellido;
-        private short edad;
+        private readonly int dni;
+        private readonly string nombre;
+        private readonly string apellido;
+        private readonly short edad;
         private Servicio servicio;
         #endregion
 
@@ -54,9 +54,9 @@ namespace Entidades
         /// <returns></returns>
         public static Cliente operator +(Cliente c, Servicio s)
         {
-            if (s is ClienteTelefono)
+            if (s is ClienteTelefono telefono)
             {
-                c.servicio = (ClienteTelefono)s;
+                c.servicio = telefono;
             }
             else
             {
@@ -121,11 +121,11 @@ namespace Entidades
         /// <returns></returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Nombre: {nombre}\n");
-            sb.AppendLine($"Apellido: {apellido}\n");
-            sb.AppendLine($"DNI: {dni}\n");
-            sb.AppendLine($"Edad: {edad} años\n");
+            StringBuilder sb = new();
+            sb.AppendLine($"- Nombre: {nombre} \n");
+            sb.AppendLine($"- Apellido: {apellido} \n");
+            sb.AppendLine($"- DNI: {dni} \n");
+            sb.AppendLine($"- Edad: {edad} años \n");
             return sb.ToString();
         }
         #endregion
