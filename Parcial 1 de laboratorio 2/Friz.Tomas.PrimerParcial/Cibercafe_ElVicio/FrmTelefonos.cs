@@ -97,6 +97,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         private void FrmTelefonos_Load(object sender, EventArgs e)
         {
+            lblDatos.Text = cliente.ToString();
             List<string> telefono = new();
             foreach (Equipo equipo in Usuario.EquipoDisponible)
             {

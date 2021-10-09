@@ -52,7 +52,7 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnCerrar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCerrar.Location = new System.Drawing.Point(244, 303);
+            this.btnCerrar.Location = new System.Drawing.Point(244, 367);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(72, 28);
             this.btnCerrar.TabIndex = 6;
@@ -65,7 +65,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAyuda.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAyuda.Location = new System.Drawing.Point(11, 302);
+            this.btnAyuda.Location = new System.Drawing.Point(11, 366);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(72, 29);
             this.btnAyuda.TabIndex = 0;
@@ -93,7 +93,7 @@ namespace Cibercafe_ElVicio
             this.panel1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 282);
+            this.panel1.Size = new System.Drawing.Size(304, 346);
             this.panel1.TabIndex = 7;
             // 
             // label4
@@ -163,7 +163,7 @@ namespace Cibercafe_ElVicio
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(3, 92);
+            this.label1.Location = new System.Drawing.Point(3, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 28);
             this.label1.TabIndex = 18;
@@ -175,7 +175,7 @@ namespace Cibercafe_ElVicio
             this.cmbTelefonos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTelefonos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTelefonos.FormattingEnabled = true;
-            this.cmbTelefonos.Location = new System.Drawing.Point(3, 123);
+            this.cmbTelefonos.Location = new System.Drawing.Point(3, 130);
             this.cmbTelefonos.Name = "cmbTelefonos";
             this.cmbTelefonos.Size = new System.Drawing.Size(294, 26);
             this.cmbTelefonos.TabIndex = 17;
@@ -187,11 +187,11 @@ namespace Cibercafe_ElVicio
             this.lblDatos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDatos.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDatos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblDatos.Location = new System.Drawing.Point(3, 198);
+            this.lblDatos.Location = new System.Drawing.Point(3, 200);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(294, 80);
+            this.lblDatos.Size = new System.Drawing.Size(294, 142);
             this.lblDatos.TabIndex = 16;
-            this.lblDatos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
@@ -199,7 +199,7 @@ namespace Cibercafe_ElVicio
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.label6.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(3, 170);
+            this.label6.Location = new System.Drawing.Point(3, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(294, 28);
             this.label6.TabIndex = 15;
@@ -211,7 +211,7 @@ namespace Cibercafe_ElVicio
             this.btnLlamar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLlamar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnLlamar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLlamar.Location = new System.Drawing.Point(89, 303);
+            this.btnLlamar.Location = new System.Drawing.Point(89, 367);
             this.btnLlamar.Name = "btnLlamar";
             this.btnLlamar.Size = new System.Drawing.Size(149, 28);
             this.btnLlamar.TabIndex = 4;
@@ -224,14 +224,14 @@ namespace Cibercafe_ElVicio
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(328, 335);
+            this.ClientSize = new System.Drawing.Size(328, 399);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLlamar);
             this.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(344, 374);
+            this.MinimumSize = new System.Drawing.Size(344, 438);
             this.Name = "FrmTelefonos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTelefonos";

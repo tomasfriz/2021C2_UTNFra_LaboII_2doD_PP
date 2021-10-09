@@ -29,7 +29,7 @@ namespace Cibercafe_ElVicio
         /// 
         /// </summary>
         /// <param name="servicio"></param>
-        public FrmFactura(Servicio s): this()
+        public FrmFactura(Servicio s) : this()
         {
             factura = s;
         }
@@ -44,6 +44,19 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void BtnPagar_Click(object sender, EventArgs e)
         {
+            txtDuracion.Text = $"{factura.Duracion} minutos";
+            txtCosto.Text = $"${factura.Costo + PreciosAperitivos()}";
+            txtIVA.Text = $"${factura.AgregarIVA() }";
+            btnCerrar.Enabled = true;
+            gpbAperitivos.Enabled = false;
+        }
+        /// <summary>
+        /// Sirve para cerrar la ventana.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
             Close();
         }
         /// <summary>
@@ -54,7 +67,8 @@ namespace Cibercafe_ElVicio
         private void BtnAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
-                "+ El boton 'Pagar' sirve para pagar el servicio y si compraste un aperitivo y cierra la ventana actual.\n" +
+                "+ El boton 'Pagar' sirve para pagar el servicio y si compraste un aperitivo.\n" +
+                "+ El boton 'Cerrar' cierra la ventana actual.\n" +
                 "+ En el lado superior estara un cuadro gris para seleccionar que pidio de aperitivo el cliente (opcional).\n" +
                 "+ En el lado inferior estara los detalles de la duracion del equipo que uso el cliente, el costo de uso del equipo mas si pidio un aperitivo y el iva de los costos del cliente.\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -66,49 +80,33 @@ namespace Cibercafe_ElVicio
         private void FrmFactura_Load(object sender, EventArgs e)
         {
             txtDuracion.Text = $"{factura.Duracion} minutos";
-            txtCosto.Text = $"${factura.Costo + Precios()} ";
+            txtCosto.Text = $"${factura.Costo}";
             txtIVA.Text = $"${factura.AgregarIVA()}";
+            btnCerrar.Enabled = false;
         }
 
         #endregion
 
-        //private float groupBox1_Enter(object sender, EventArgs e)
-        //{
-        //    Aperitivos aperitivos = new();
-        //    int indice;
-
-        //    //float ape = aperitivos[indice];
-        //    float ape;
-        //    if (cbCafe.Checked)
-        //    {
-        //        indice = 1;
-        //        ape = aperitivos[indice];
-        //    }
-        //    return ape;
-        //}
-        private float Precios()
+        private float PreciosAperitivos()
         {
-            //Aperitivos aperitivos = new();
             int indice = 0;
-
-            //float ape = aperitivos[indice];
-            //float ape = 0;
             if (cbCafe.Checked)
             {
-                indice = 34;
-                //ape = aperitivos[indice];
+                indice += 34;
+            }
+            if (cbSoda.Checked)
+            {
+                indice += 34;
             }
             if (cbTostado.Checked)
             {
                 indice += 54;
-             
+            }
+            if (cbDona.Checked)
+            {
+                indice += 34;
             }
             return indice;
-        }
-
-        private void cbTostado_CheckedChanged(object sender, EventArgs e)
-        {
-            Precios();
         }
     }
 }
