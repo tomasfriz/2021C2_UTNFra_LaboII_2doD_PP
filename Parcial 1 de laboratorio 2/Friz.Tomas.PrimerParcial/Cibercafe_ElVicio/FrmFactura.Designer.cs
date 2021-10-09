@@ -155,6 +155,7 @@ namespace Cibercafe_ElVicio
             this.cbTostado.TabIndex = 8;
             this.cbTostado.Text = "Tostado";
             this.cbTostado.UseVisualStyleBackColor = true;
+            this.cbTostado.CheckedChanged += new System.EventHandler(this.cbTostado_CheckedChanged);
             // 
             // groupBox1
             // 

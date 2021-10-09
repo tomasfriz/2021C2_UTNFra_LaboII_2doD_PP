@@ -66,9 +66,49 @@ namespace Cibercafe_ElVicio
         private void FrmFactura_Load(object sender, EventArgs e)
         {
             txtDuracion.Text = $"{factura.Duracion} minutos";
-            txtCosto.Text = $"${factura.Costo}";
+            txtCosto.Text = $"${factura.Costo + Precios()} ";
             txtIVA.Text = $"${factura.AgregarIVA()}";
         }
+
         #endregion
+
+        //private float groupBox1_Enter(object sender, EventArgs e)
+        //{
+        //    Aperitivos aperitivos = new();
+        //    int indice;
+
+        //    //float ape = aperitivos[indice];
+        //    float ape;
+        //    if (cbCafe.Checked)
+        //    {
+        //        indice = 1;
+        //        ape = aperitivos[indice];
+        //    }
+        //    return ape;
+        //}
+        private float Precios()
+        {
+            //Aperitivos aperitivos = new();
+            int indice = 0;
+
+            //float ape = aperitivos[indice];
+            //float ape = 0;
+            if (cbCafe.Checked)
+            {
+                indice = 34;
+                //ape = aperitivos[indice];
+            }
+            if (cbTostado.Checked)
+            {
+                indice += 54;
+             
+            }
+            return indice;
+        }
+
+        private void cbTostado_CheckedChanged(object sender, EventArgs e)
+        {
+            Precios();
+        }
     }
 }

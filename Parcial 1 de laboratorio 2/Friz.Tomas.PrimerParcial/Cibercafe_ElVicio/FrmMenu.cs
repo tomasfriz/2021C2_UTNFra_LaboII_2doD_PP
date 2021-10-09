@@ -16,7 +16,7 @@ namespace Cibercafe_ElVicio
     {
         #region Atributos
         private readonly Random random;
-        private readonly Equipo equipo; ///warning
+        //private readonly Equipo equipo; ///warning
         #endregion
 
         #region Constructor
@@ -101,9 +101,9 @@ namespace Cibercafe_ElVicio
                 new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),                
                 new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),       
                 new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
-                //new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono()),
-                //new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
-                //new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono())
+                new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono()),
+                new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
+                new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono())
             };
             foreach (Cliente cliente in lista)
             {
@@ -155,12 +155,18 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void LblComputadoras_Click(object sender, EventArgs e) ///posible error en ejecucu
         {
-            if (equipo.Estado == Estado.En_Uso)
+            for(int i = 0; i < Usuario.Lista.Count; i++)
             {
-                Usuario.FinalizarServicio(equipo);
-                FrmFactura frmFactura = new(equipo.Lista.Last());
-                frmFactura.ShowDialog();
-                Close();
+                if (((Label)sender).Text == Usuario.Lista[i].Id)
+                {
+                    Equipo computadora = Usuario.Lista[i];
+                    if (computadora.Estado == Estado.En_Uso)
+                    {
+                        Usuario.FinalizarServicio(computadora);
+                        FrmFactura frmFactura = new(computadora.Lista.Last());
+                        frmFactura.ShowDialog();
+                    }
+                }
             }
         }
         /// <summary>
@@ -170,12 +176,18 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void LblTelefonos_Click(object sender, EventArgs e)
         {
-            if (equipo.Estado == Estado.En_Uso)
+            for (int i = 0; i < Usuario.Lista.Count; i++)
             {
-                Usuario.FinalizarServicio(equipo);
-                FrmFactura frmFactura = new(equipo.Lista.Last());
-                frmFactura.ShowDialog();
-                Close();
+                if (((Label)sender).Text == Usuario.Lista[i].Id)
+                {
+                    Equipo telefono = Usuario.Lista[i];
+                    if (telefono.Estado == Estado.En_Uso)
+                    {
+                        Usuario.FinalizarServicio(telefono);
+                        FrmFactura frmFactura = new(telefono.Lista.Last());
+                        frmFactura.ShowDialog();
+                    }
+                }
             }
         }
         #endregion
