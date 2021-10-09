@@ -77,7 +77,7 @@ namespace Cibercafe_ElVicio
             this.rctEspecificaciones.Name = "rctEspecificaciones";
             this.rctEspecificaciones.ReadOnly = true;
             this.rctEspecificaciones.Size = new System.Drawing.Size(274, 364);
-            this.rctEspecificaciones.TabIndex = 24;
+            this.rctEspecificaciones.TabIndex = 1;
             this.rctEspecificaciones.Text = "";
             // 
             // label3
@@ -102,7 +102,7 @@ namespace Cibercafe_ElVicio
             this.cmbComputadoras.Location = new System.Drawing.Point(283, 187);
             this.cmbComputadoras.Name = "cmbComputadoras";
             this.cmbComputadoras.Size = new System.Drawing.Size(268, 26);
-            this.cmbComputadoras.TabIndex = 22;
+            this.cmbComputadoras.TabIndex = 4;
             // 
             // label2
             // 
@@ -140,7 +140,7 @@ namespace Cibercafe_ElVicio
             this.nudTiempoLimite.Name = "nudTiempoLimite";
             this.nudTiempoLimite.ReadOnly = true;
             this.nudTiempoLimite.Size = new System.Drawing.Size(268, 23);
-            this.nudTiempoLimite.TabIndex = 20;
+            this.nudTiempoLimite.TabIndex = 3;
             this.nudTiempoLimite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudTiempoLimite.Value = new decimal(new int[] {
             30,
@@ -157,7 +157,7 @@ namespace Cibercafe_ElVicio
             this.groupBox1.Location = new System.Drawing.Point(283, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(268, 100);
-            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de tiempo:";
             // 
@@ -167,7 +167,7 @@ namespace Cibercafe_ElVicio
             this.rbtLimitado.Location = new System.Drawing.Point(15, 60);
             this.rbtLimitado.Name = "rbtLimitado";
             this.rbtLimitado.Size = new System.Drawing.Size(232, 34);
-            this.rbtLimitado.TabIndex = 1;
+            this.rbtLimitado.TabIndex = 3;
             this.rbtLimitado.Text = "Tiempo Limitado";
             this.rbtLimitado.UseVisualStyleBackColor = true;
             this.rbtLimitado.CheckedChanged += new System.EventHandler(this.RbtLimitado_CheckedChanged);
@@ -179,7 +179,7 @@ namespace Cibercafe_ElVicio
             this.rbtIlimitado.Location = new System.Drawing.Point(15, 22);
             this.rbtIlimitado.Name = "rbtIlimitado";
             this.rbtIlimitado.Size = new System.Drawing.Size(232, 32);
-            this.rbtIlimitado.TabIndex = 0;
+            this.rbtIlimitado.TabIndex = 2;
             this.rbtIlimitado.TabStop = true;
             this.rbtIlimitado.Text = "Tiempo Ilimitado";
             this.rbtIlimitado.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@ namespace Cibercafe_ElVicio
             this.btnConectar.Location = new System.Drawing.Point(220, 426);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(142, 23);
-            this.btnConectar.TabIndex = 1;
+            this.btnConectar.TabIndex = 5;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
             this.btnConectar.Click += new System.EventHandler(this.BtnConectar_Click);
@@ -243,7 +243,7 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.Location = new System.Drawing.Point(495, 426);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCerrar.TabIndex = 3;
+            this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);

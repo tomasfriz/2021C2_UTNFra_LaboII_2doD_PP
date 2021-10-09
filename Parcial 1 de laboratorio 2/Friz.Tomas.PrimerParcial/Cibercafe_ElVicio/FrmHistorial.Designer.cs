@@ -34,7 +34,7 @@ namespace Cibercafe_ElVicio
             this.btnListCabin = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnGanancias = new System.Windows.Forms.Button();
-            this.btnRecaudacion = new System.Windows.Forms.Button();
+            this.btnHorasYRecaudacion = new System.Windows.Forms.Button();
             this.btnSoftware = new System.Windows.Forms.Button();
             this.btnPeriferico = new System.Windows.Forms.Button();
             this.btnJuego = new System.Windows.Forms.Button();
@@ -97,19 +97,19 @@ namespace Cibercafe_ElVicio
             this.btnGanancias.UseVisualStyleBackColor = false;
             this.btnGanancias.Click += new System.EventHandler(this.BtnGanancias_Click);
             // 
-            // btnRecaudacion
+            // btnHorasYRecaudacion
             // 
-            this.btnRecaudacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnRecaudacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnRecaudacion.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRecaudacion.Location = new System.Drawing.Point(14, 116);
-            this.btnRecaudacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnRecaudacion.Name = "btnRecaudacion";
-            this.btnRecaudacion.Size = new System.Drawing.Size(495, 28);
-            this.btnRecaudacion.TabIndex = 4;
-            this.btnRecaudacion.Text = "Horas totales y la recaudación por tipo de llamada";
-            this.btnRecaudacion.UseVisualStyleBackColor = false;
-            this.btnRecaudacion.Click += new System.EventHandler(this.BtnRecaudacion_Click);
+            this.btnHorasYRecaudacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnHorasYRecaudacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnHorasYRecaudacion.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHorasYRecaudacion.Location = new System.Drawing.Point(14, 116);
+            this.btnHorasYRecaudacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHorasYRecaudacion.Name = "btnHorasYRecaudacion";
+            this.btnHorasYRecaudacion.Size = new System.Drawing.Size(495, 28);
+            this.btnHorasYRecaudacion.TabIndex = 4;
+            this.btnHorasYRecaudacion.Text = "Horas totales y la recaudación por tipo de llamada";
+            this.btnHorasYRecaudacion.UseVisualStyleBackColor = false;
+            this.btnHorasYRecaudacion.Click += new System.EventHandler(this.BtnHorasYRecaudacion_Click);
             // 
             // btnSoftware
             // 
@@ -161,7 +161,7 @@ namespace Cibercafe_ElVicio
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 28);
-            this.btnSalir.TabIndex = 8;
+            this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
@@ -174,7 +174,7 @@ namespace Cibercafe_ElVicio
             this.rtbHistorial.Name = "rtbHistorial";
             this.rtbHistorial.ReadOnly = true;
             this.rtbHistorial.Size = new System.Drawing.Size(313, 243);
-            this.rtbHistorial.TabIndex = 9;
+            this.rtbHistorial.TabIndex = 8;
             this.rtbHistorial.Text = "";
             // 
             // FrmHistorial
@@ -188,7 +188,7 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.btnJuego);
             this.Controls.Add(this.btnPeriferico);
             this.Controls.Add(this.btnSoftware);
-            this.Controls.Add(this.btnRecaudacion);
+            this.Controls.Add(this.btnHorasYRecaudacion);
             this.Controls.Add(this.btnGanancias);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnListCabin);
@@ -210,7 +210,7 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Button btnListCabin;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnGanancias;
-        private System.Windows.Forms.Button btnRecaudacion;
+        private System.Windows.Forms.Button btnHorasYRecaudacion;
         private System.Windows.Forms.Button btnSoftware;
         private System.Windows.Forms.Button btnPeriferico;
         private System.Windows.Forms.Button btnJuego;

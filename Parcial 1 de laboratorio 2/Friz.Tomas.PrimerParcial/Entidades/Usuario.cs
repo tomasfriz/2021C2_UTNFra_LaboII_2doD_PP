@@ -272,6 +272,51 @@ namespace Entidades
             sb.AppendLine($"GANANCIAS DE TELEFONOS: $ {gananciasTelefonos}\n");
             return sb.ToString();
         }
+        /// <summary>
+        /// Calcula el total de horas que se uso en los equipos y tambien el costo de cada tipo de llamadas(local/larga distancia/internacional)
+        /// </summary>
+        /// <returns></returns>
+        public static string CalcularHorasYRecaudacion()
+        {
+            int duracionTotal = 0;
+            double local = 0;
+            double largaDistancia = 0;
+            double internacional = 0;
+            foreach (Equipo e in Lista)
+            {
+                foreach (Servicio s in e.Lista)
+                {
+                    if (s is not null)
+                    {
+                        duracionTotal += s.Duracion;
+                    }
+                }
+                foreach (Servicio s in e.Lista)
+                {
+                    if (s is ClienteTelefono t)
+                    {
+                        if (t.Tipo == TipoLocalidad.Local)
+                        {
+                            local += s.Costo;
+                        }
+                        if (t.Tipo == TipoLocalidad.LargaDistancia)
+                        {
+                            largaDistancia += s.Costo;
+                        }
+                        if (t.Tipo == TipoLocalidad.Internacional)
+                        {
+                            internacional += s.Costo;
+                        }
+                    }
+                }
+            }
+            StringBuilder sb = new();
+            sb.AppendLine($"HORAS TOTALES: {duracionTotal / 60}");
+            sb.AppendLine($"RECAUDACION POR LLAMADAS DE TIPO LOCAL: ${local}\n");
+            sb.AppendLine($"RECAUDACION POR LLAMADAS DE TIPO LARGA DISTANCIA: ${largaDistancia}\n");
+            sb.AppendLine($"RECAUDACION POR LLAMADAS DE TIPO INTERNACIONAL: ${internacional}\n");
+            return sb.ToString();
+        }
         #endregion
     }
 }

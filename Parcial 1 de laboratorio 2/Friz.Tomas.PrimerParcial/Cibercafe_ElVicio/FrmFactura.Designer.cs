@@ -172,7 +172,7 @@ namespace Cibercafe_ElVicio
             this.gpbAperitivos.Location = new System.Drawing.Point(5, 34);
             this.gpbAperitivos.Name = "gpbAperitivos";
             this.gpbAperitivos.Size = new System.Drawing.Size(390, 78);
-            this.gpbAperitivos.TabIndex = 13;
+            this.gpbAperitivos.TabIndex = 1;
             this.gpbAperitivos.TabStop = false;
             this.gpbAperitivos.Text = "Tipos de aperitivos";
             // 
@@ -184,7 +184,7 @@ namespace Cibercafe_ElVicio
             this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(120, 28);
-            this.btnAyuda.TabIndex = 14;
+            this.btnAyuda.TabIndex = 0;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
@@ -196,7 +196,7 @@ namespace Cibercafe_ElVicio
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.ReadOnly = true;
             this.txtDuracion.Size = new System.Drawing.Size(182, 23);
-            this.txtDuracion.TabIndex = 15;
+            this.txtDuracion.TabIndex = 2;
             // 
             // txtCosto
             // 
@@ -205,7 +205,7 @@ namespace Cibercafe_ElVicio
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.ReadOnly = true;
             this.txtCosto.Size = new System.Drawing.Size(182, 23);
-            this.txtCosto.TabIndex = 16;
+            this.txtCosto.TabIndex = 3;
             // 
             // txtIVA
             // 
@@ -214,7 +214,7 @@ namespace Cibercafe_ElVicio
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.ReadOnly = true;
             this.txtIVA.Size = new System.Drawing.Size(182, 23);
-            this.txtIVA.TabIndex = 17;
+            this.txtIVA.TabIndex = 4;
             // 
             // btnCerrar
             // 
@@ -224,7 +224,7 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(120, 28);
-            this.btnCerrar.TabIndex = 18;
+            this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);

@@ -290,7 +290,7 @@
     <value>101, 28</value>
   </data>
   <data name="btnCerrar.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btnCerrar.Text" xml:space="preserve">
     <value>Cerrar</value>
@@ -329,7 +329,7 @@
     <value>663, 166</value>
   </data>
   <data name="listCliente.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;listCliente.Name" xml:space="preserve">
     <value>listCliente</value>
@@ -392,7 +392,7 @@
     <value>674, 209</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
@@ -425,7 +425,7 @@
     <value>159, 28</value>
   </data>
   <data name="btnHistorial.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="btnHistorial.Text" xml:space="preserve">
     <value>Estadisticas Historicas</value>
@@ -659,7 +659,7 @@
     <value>194, 33</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>C06</value>
@@ -815,7 +815,7 @@
     <value>197, 33</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>C01</value>
@@ -881,7 +881,7 @@
     <value>409, 239</value>
   </data>
   <data name="gpbComputadoras.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="gpbComputadoras.Text" xml:space="preserve">
     <value>COMPUTADORAS:</value>
@@ -1106,7 +1106,7 @@
     <value>254, 239</value>
   </data>
   <data name="gpbTelefonos.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="gpbTelefonos.Text" xml:space="preserve">
     <value>TELEFONOS:</value>

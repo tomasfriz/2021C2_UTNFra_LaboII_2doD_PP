@@ -83,9 +83,9 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BtnRecaudacion_Click(object sender, EventArgs e)
+        private void BtnHorasYRecaudacion_Click(object sender, EventArgs e)
         {
-            rtbHistorial.Text = "Falta terminar";
+            rtbHistorial.Text = Usuario.CalcularHorasYRecaudacion();
         }
         /// <summary>
         /// Muestra el software más pedido por los clientes.
