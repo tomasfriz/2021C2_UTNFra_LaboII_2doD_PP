@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Cibercafe_ElVicio.FrmComputadoras" Collapsed="true">
-    <Position X="3" Y="0.75" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Cibercafe_ElVicio.FrmComputadoras">
+    <Position X="5.5" Y="0.5" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AACCBAIAIKAAABAAiACAAAACgIEAgCAAACEAQYEAAQA=</HashCode>
+      <HashCode>AAAABAABIKgAABAAiACAAQECgIAAgCIAACAAAYAAgQA=</HashCode>
       <FileName>FrmComputadoras.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cibercafe_ElVicio.FrmFactura" Collapsed="true">
-    <Position X="4.75" Y="0.75" Width="1.5" />
+  <Class Name="Cibercafe_ElVicio.FrmFactura">
+    <Position X="10" Y="6.5" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEBACAAABAAAACCAAACAAAAAQAAACAAAAAAEAA=</HashCode>
+      <HashCode>AFAAAAEBCKAAABAAAAKAAQICAAAEiSAAAAQDAAAAkAA=</HashCode>
       <FileName>FrmFactura.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cibercafe_ElVicio.FrmHistorial" Collapsed="true">
-    <Position X="6.5" Y="0.75" Width="1.5" />
+  <Class Name="Cibercafe_ElVicio.FrmHistorial">
+    <Position X="5.5" Y="7" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>QAKAAAIGAiAgBAACAACACAACAAEAgAACCEAAAAAAAAg=</HashCode>
+      <HashCode>IAIAgAICgSAABAAIKACACUACAghIhAACCEAgACAAAIA=</HashCode>
       <FileName>FrmHistorial.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cibercafe_ElVicio.FrmMenu" Collapsed="true">
-    <Position X="3" Y="1.75" Width="1.5" />
+  <Class Name="Cibercafe_ElVicio.FrmMenu">
+    <Position X="0.5" Y="0.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>/wSAAAASEKABABAAAQKAAAACAQEQiAUAADQABQAAADA=</HashCode>
+      <HashCode>/wQAAAASEKABABAAAECAAQACEQAAiIEAAAQABQAAgDA=</HashCode>
       <FileName>FrmMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cibercafe_ElVicio.FrmTelefonos" Collapsed="true">
-    <Position X="4.75" Y="1.75" Width="1.5" />
+  <Class Name="Cibercafe_ElVicio.FrmTelefonos">
+    <Position X="10" Y="0.5" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>ACCAAAAAIKAAABAAAACAgABCAAEAgAAQEAAIAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAIKAAABAQACCAgRBCgAAAgAAAAAAIARAAgAI=</HashCode>
       <FileName>FrmTelefonos.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cibercafe_ElVicio.Program" Collapsed="true">
-    <Position X="6.5" Y="1.75" Width="1.5" />
+  <Class Name="Cibercafe_ElVicio.Program">
+    <Position X="0.5" Y="10.25" Width="4.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
