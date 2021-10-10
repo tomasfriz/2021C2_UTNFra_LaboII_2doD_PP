@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//HECHO POR TOMAS AGUSTIN FRIZ
 namespace Entidades
 {
+    //HECHO POR TOMAS AGUSTIN FRIZ
     public abstract class Servicio
     {
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         protected int duracion;
         protected DateTime inicio;
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Propiedades
         /// <summary>
         /// Propiedad de Duracion.
@@ -48,7 +50,7 @@ namespace Entidades
             }
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Operadores
         /// <summary>
         /// Operador == (igual) para comparar si los servicios son iguales.
@@ -72,7 +74,7 @@ namespace Entidades
             return !(s1 == s2);
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
@@ -95,7 +97,7 @@ namespace Entidades
             return (Inicio,GetType(),Duracion).GetHashCode();
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Metodos 
         /// <summary>
         /// Calcula el costo del servicio.

@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//HECHO POR TOMAS AGUSTIN FRIZ
 namespace Entidades
 {
+    //HECHO POR TOMAS AGUSTIN FRIZ
     public sealed class Computadora: Equipo
     {
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         private readonly List<Software> software;
         private readonly List<Periferico> perifericos;
         private readonly List<Juego> juegos;
         private readonly Dictionary<string, string> hardware;
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Constructores
         /// <summary>
         /// Constructor de la clase de Computadora para los componentes del mismo.
@@ -44,7 +46,7 @@ namespace Entidades
             this.hardware = hardware;
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Propiedades
         /// <summary>
         /// Propiedad del Enumerado de Software de software.
@@ -77,7 +79,7 @@ namespace Entidades
             }
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Operadores
         /// <summary>
         /// Operador == (igual) para comparar que el software este instalado en la computadora.
@@ -170,7 +172,7 @@ namespace Entidades
             return !(c == j);
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
@@ -193,7 +195,7 @@ namespace Entidades
             return base.GetHashCode();
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Metodos
         /// <summary>
         /// Sobrescribe el metodo ToString().

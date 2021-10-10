@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-
+//HECHO POR TOMAS AGUSTIN FRIZ
 namespace Cibercafe_ElVicio
 {
+    //HECHO POR TOMAS AGUSTIN FRIZ
     public partial class FrmHistorial : Form
     {
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Constructor
         /// <summary>
         /// Constructor de FrmHistorial.
@@ -22,7 +24,7 @@ namespace Cibercafe_ElVicio
             InitializeComponent();
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Botones
         /// <summary>
         /// Sirve para cerrar la ventana.
@@ -115,7 +117,7 @@ namespace Cibercafe_ElVicio
             rtbHistorial.Text = MostrarJuegoFavoritoClientes();
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Historial
         /// <summary>
         /// Muestra los equipos ordenados de forma descendente con el criterio de minutos de uso.
@@ -358,7 +360,7 @@ namespace Cibercafe_ElVicio
             }
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Metodos del historial
         /// <summary>
         /// Compara dos equipos segun sus minutos de uso.
@@ -388,8 +390,6 @@ namespace Cibercafe_ElVicio
             }
             return s;
         }
-        #endregion
-
-        
+        #endregion 
     }
 }

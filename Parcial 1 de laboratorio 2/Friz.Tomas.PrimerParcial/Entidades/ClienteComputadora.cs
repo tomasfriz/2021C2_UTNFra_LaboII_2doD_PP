@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//HECHO POR TOMAS AGUSTIN FRIZ
 namespace Entidades
 {
+    //HECHO POR TOMAS AGUSTIN FRIZ
     public sealed class ClienteComputadora : Servicio
     {
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         private readonly List<Software> software;
         private readonly List<Periferico> perifericos;
@@ -15,7 +17,7 @@ namespace Entidades
         private TipoCompu tipo;
         private const float costo = 0.5F;
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Constructores
         /// <summary>
         /// Constructor de especificaciones para crear listas.
@@ -39,7 +41,7 @@ namespace Entidades
             this.juegos = juego;
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Propiedades
         /// <summary>
         /// Propiedad de Duracion.
@@ -100,7 +102,7 @@ namespace Entidades
             }
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Metodos
         /// <summary>
         /// Sobreescribe el metodo CalcularCosto() y calcula el costo de un equipo(computadora o telefono) segun su duracion y el costo del mismo.

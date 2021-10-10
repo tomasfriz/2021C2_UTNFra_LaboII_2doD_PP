@@ -9,16 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-
+//HECHO POR TOMAS AGUSTIN FRIZ
 namespace Cibercafe_ElVicio
 {
+    //HECHO POR TOMAS AGUSTIN FRIZ
     public partial class FrmMenu : Form
     {
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         private readonly Random random;
         //private readonly Equipo equipo; ///warning
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Constructor
         /// <summary>
         /// Coloca el nombre del usuario en la barra superior del form y tambien la fecha de hoy.
@@ -31,7 +33,7 @@ namespace Cibercafe_ElVicio
             random = new Random();
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Botones
         /// <summary>
         /// Sirve para cerrar la aplicacion.
@@ -146,7 +148,7 @@ namespace Cibercafe_ElVicio
             }
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Labels
         /// <summary>
         /// Se encarga de desconectar la computadora y genera una factura.
@@ -191,7 +193,7 @@ namespace Cibercafe_ElVicio
             }
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Metodos del Form
         /// <summary>
         /// Sirve para confirmar el cerrado del programa.

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Text;
-
+//HECHO POR TOMAS AGUSTIN FRIZ
 namespace Entidades
 {
+    //HECHO POR TOMAS AGUSTIN FRIZ
     public class Cliente
     {
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         private readonly int dni;
         private readonly string nombre;
@@ -12,7 +14,7 @@ namespace Entidades
         private readonly short edad;
         private Servicio servicio;
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Constructores
         /// <summary>
         /// Constructor de la clase Cliente
@@ -31,7 +33,7 @@ namespace Entidades
             this.servicio = servicio;
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Propiedades
         /// <summary>
         /// Propiedad de Servicio.
@@ -44,7 +46,7 @@ namespace Entidades
             }
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Operadores
         /// <summary>
         /// Operador + para agregar un cliente a un servicio(Telefono/Computadora).
@@ -90,7 +92,7 @@ namespace Entidades
             return !(c1 == c2);
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
@@ -112,7 +114,7 @@ namespace Entidades
             return dni.GetHashCode();
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Metodos
         /// <summary>
         /// Sobrescribe el metodo ToString()

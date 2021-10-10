@@ -8,16 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-
+//HECHO POR TOMAS AGUSTIN FRIZ
 namespace Cibercafe_ElVicio
 {
+    //HECHO POR TOMAS AGUSTIN FRIZ
     public partial class FrmTelefonos : Form
     {
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         private readonly Cliente cliente;
         private readonly ClienteTelefono telefono;
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Constructor
         /// <summary>
         /// Constructor de FrmTelefonos.
@@ -30,7 +32,7 @@ namespace Cibercafe_ElVicio
             telefono = (ClienteTelefono)cliente.Servicio; //posible excepcion no controlada.
         }
         #endregion
-
+        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Botones
         /// <summary>
         /// Sirve para cerrar la ventana.
