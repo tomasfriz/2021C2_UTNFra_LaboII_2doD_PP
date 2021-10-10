@@ -108,13 +108,6 @@ namespace Entidades
         /// <returns></returns>
         protected override float CalcularCosto()
         {
-            //if (Duracion % 30 > 0)
-            //{
-            //    double d = Duracion / 30;
-            //    return (float)Math.Ceiling(d) * costo;
-            //}
-            //return (Duracion / 30) * costo;
-
             return (float)Math.Ceiling(Duracion / 30F) * costo;
         }
         /// <summary>
@@ -139,22 +132,6 @@ namespace Entidades
             {
                 sb.AppendLine($"{juego}");
             }
-            return sb.ToString();
-        }
-        /// <summary>
-        /// Sobrescribe el metodo ToString()
-        /// Muestra los detalles de la computadora que pidio el cliente.
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            StringBuilder sb = new();
-            sb.AppendLine($"\nTIPO: {tipo}");
-            if (tipo != TipoCompu.Libre)
-            {
-                sb.AppendLine($"\nMINUTOS: {Duracion}");
-            }
-            sb.AppendLine(MostrarEspecificaciones());
             return sb.ToString();
         }
         #endregion

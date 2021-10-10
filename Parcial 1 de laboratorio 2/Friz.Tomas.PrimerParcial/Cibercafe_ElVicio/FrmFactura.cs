@@ -87,26 +87,28 @@ namespace Cibercafe_ElVicio
 
         #endregion
 
+        #region Metodos
         private float PreciosAperitivos()
         {
             int indice = 0;
             if (cbCafe.Checked)
             {
-                indice += 34;
+                indice += 10;
             }
             if (cbSoda.Checked)
             {
-                indice += 34;
+                indice += 5;
             }
             if (cbTostado.Checked)
             {
-                indice += 54;
+                indice += 25;
             }
             if (cbDona.Checked)
             {
-                indice += 34;
+                indice += 20;
             }
             return indice;
         }
+        #endregion
     }
 }

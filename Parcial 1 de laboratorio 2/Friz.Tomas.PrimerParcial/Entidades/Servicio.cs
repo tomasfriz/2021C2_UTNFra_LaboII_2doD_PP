@@ -110,20 +110,6 @@ namespace Entidades
         {
             return Costo * 1.21F;
         }
-        /// <summary>
-        /// Sobrescribe el metodo ToString().
-        /// Imprime los datos del Servicio dado.
-        /// Reutilizacion del metodo GetType() para devolver el tipo de tiempo de ejecucion exacto.
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            StringBuilder sb = new();
-            sb.AppendLine($"\nTIPO: {GetType()}");
-            sb.AppendLine($"\nINICIO DEL TIEMPO DEL SERVICIO: {Inicio}");
-            sb.AppendLine($"\nDURACIÓN: {Duracion} MIN");
-            return sb.ToString();
-        }
         #endregion
     }
 }

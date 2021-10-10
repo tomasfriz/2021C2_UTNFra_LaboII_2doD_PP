@@ -168,7 +168,8 @@ namespace Cibercafe_ElVicio
             // 
             // rtbHistorial
             // 
-            this.rtbHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbHistorial.Location = new System.Drawing.Point(515, 6);
             this.rtbHistorial.MinimumSize = new System.Drawing.Size(313, 243);
             this.rtbHistorial.Name = "rtbHistorial";

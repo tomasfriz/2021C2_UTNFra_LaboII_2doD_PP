@@ -30,7 +30,7 @@ namespace Entidades
 
         #region Propiedades
         /// <summary>
-        /// 
+        /// Propiedad de id.
         /// </summary>
         public string Id
         {

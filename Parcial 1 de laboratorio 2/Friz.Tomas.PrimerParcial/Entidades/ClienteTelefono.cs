@@ -176,19 +176,6 @@ namespace Entidades
                 }
             }
         }
-        /// <summary>
-        /// Sobrescribe el metodo ToString()
-        /// Imprime los datos del telefono.
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            StringBuilder sb = new();
-
-            sb.AppendLine($"\nTIPO DE LLAMADA: {Tipo}");
-            sb.AppendLine($"\nNUMERO TEL: +{codigo} ({localidad}) {num}");
-            return sb.ToString();
-        }
         #endregion
     }
 }
