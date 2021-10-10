@@ -30,7 +30,6 @@ namespace Cibercafe_ElVicio
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
-            this.btnAyuda = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -59,19 +58,11 @@ namespace Cibercafe_ElVicio
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.ibtnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.gpbComputadoras.SuspendLayout();
             this.gpbTelefonos.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAyuda
-            // 
-            resources.ApplyResources(this.btnAyuda, "btnAyuda");
-            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAyuda.ForeColor = System.Drawing.Color.Black;
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
             // 
             // label1
             // 
@@ -282,12 +273,25 @@ namespace Cibercafe_ElVicio
             this.label19.Name = "label19";
             this.label19.Click += new System.EventHandler(this.LblTelefonos_Click);
             // 
+            // ibtnAyuda
+            // 
+            this.ibtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ibtnAyuda.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.ibtnAyuda.IconColor = System.Drawing.Color.Black;
+            this.ibtnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnAyuda.IconSize = 25;
+            resources.ApplyResources(this.ibtnAyuda, "ibtnAyuda");
+            this.ibtnAyuda.Name = "ibtnAyuda";
+            this.ibtnAyuda.UseVisualStyleBackColor = false;
+            this.ibtnAyuda.Click += new System.EventHandler(this.IbtnAyuda_Click);
+            // 
             // FrmMenu
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
+            this.Controls.Add(this.ibtnAyuda);
             this.Controls.Add(this.gpbTelefonos);
             this.Controls.Add(this.gpbComputadoras);
             this.Controls.Add(this.btnAsigEquipo);
@@ -299,7 +303,6 @@ namespace Cibercafe_ElVicio
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAyuda);
             this.Name = "FrmMenu";
             this.Activated += new System.EventHandler(this.FrmMenu_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCibercafe_FormClosing);
@@ -312,8 +315,6 @@ namespace Cibercafe_ElVicio
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblUsuario;
@@ -342,6 +343,7 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private FontAwesome.Sharp.IconButton ibtnAyuda;
     }
 }
 

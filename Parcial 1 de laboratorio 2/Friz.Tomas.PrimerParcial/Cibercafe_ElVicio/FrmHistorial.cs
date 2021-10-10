@@ -38,7 +38,7 @@ namespace Cibercafe_ElVicio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BtnAyuda_Click(object sender, EventArgs e)
+        private void IbtnAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
                 "+ El boton 'Cerrar' cierra la ventana actual.\n" +
@@ -389,5 +389,7 @@ namespace Cibercafe_ElVicio
             return s;
         }
         #endregion
+
+        
     }
 }

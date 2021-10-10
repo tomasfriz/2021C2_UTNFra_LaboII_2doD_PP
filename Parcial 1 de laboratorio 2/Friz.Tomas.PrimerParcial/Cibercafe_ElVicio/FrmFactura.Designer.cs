@@ -41,11 +41,11 @@ namespace Cibercafe_ElVicio
             this.cbDona = new System.Windows.Forms.CheckBox();
             this.cbTostado = new System.Windows.Forms.CheckBox();
             this.gpbAperitivos = new System.Windows.Forms.GroupBox();
-            this.btnAyuda = new System.Windows.Forms.Button();
             this.txtDuracion = new System.Windows.Forms.TextBox();
             this.txtCosto = new System.Windows.Forms.TextBox();
             this.txtIVA = new System.Windows.Forms.TextBox();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.ibtnAyuda = new FontAwesome.Sharp.IconButton();
             this.gpbAperitivos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,19 +176,6 @@ namespace Cibercafe_ElVicio
             this.gpbAperitivos.TabStop = false;
             this.gpbAperitivos.Text = "Tipos de aperitivos";
             // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAyuda.Location = new System.Drawing.Point(5, 237);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(120, 28);
-            this.btnAyuda.TabIndex = 0;
-            this.btnAyuda.Text = "Ayuda";
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
-            // 
             // txtDuracion
             // 
             this.txtDuracion.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -229,17 +216,34 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
+            // ibtnAyuda
+            // 
+            this.ibtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ibtnAyuda.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.ibtnAyuda.IconColor = System.Drawing.Color.Black;
+            this.ibtnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnAyuda.IconSize = 25;
+            this.ibtnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnAyuda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ibtnAyuda.Location = new System.Drawing.Point(5, 237);
+            this.ibtnAyuda.Name = "ibtnAyuda";
+            this.ibtnAyuda.Size = new System.Drawing.Size(116, 28);
+            this.ibtnAyuda.TabIndex = 13;
+            this.ibtnAyuda.Text = "Ayuda";
+            this.ibtnAyuda.UseVisualStyleBackColor = false;
+            this.ibtnAyuda.Click += new System.EventHandler(this.IbtnAyuda_Click);
+            // 
             // FrmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(158)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(400, 274);
+            this.Controls.Add(this.ibtnAyuda);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtIVA);
             this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.txtDuracion);
-            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.gpbAperitivos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblCosto);
@@ -275,10 +279,10 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.CheckBox cbDona;
         private System.Windows.Forms.CheckBox cbTostado;
         private System.Windows.Forms.GroupBox gpbAperitivos;
-        private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.TextBox txtDuracion;
         private System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.TextBox txtIVA;
         private System.Windows.Forms.Button btnCerrar;
+        private FontAwesome.Sharp.IconButton ibtnAyuda;
     }
 }

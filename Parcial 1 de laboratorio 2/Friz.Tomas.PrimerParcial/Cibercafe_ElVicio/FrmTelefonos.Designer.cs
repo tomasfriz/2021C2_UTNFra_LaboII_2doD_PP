@@ -31,7 +31,6 @@ namespace Cibercafe_ElVicio
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTelefonos));
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnAyuda = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@ namespace Cibercafe_ElVicio
             this.lblDatos = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnLlamar = new System.Windows.Forms.Button();
+            this.ibtnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,19 +59,6 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAyuda.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAyuda.Location = new System.Drawing.Point(11, 366);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(72, 29);
-            this.btnAyuda.TabIndex = 0;
-            this.btnAyuda.Text = "Ayuda";
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
             // 
             // panel1
             // 
@@ -220,14 +207,33 @@ namespace Cibercafe_ElVicio
             this.btnLlamar.UseVisualStyleBackColor = false;
             this.btnLlamar.Click += new System.EventHandler(this.BtnLlamar_Click);
             // 
+            // ibtnAyuda
+            // 
+            this.ibtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ibtnAyuda.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ibtnAyuda.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.ibtnAyuda.IconColor = System.Drawing.Color.Black;
+            this.ibtnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnAyuda.IconSize = 25;
+            this.ibtnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnAyuda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ibtnAyuda.Location = new System.Drawing.Point(4, 367);
+            this.ibtnAyuda.Name = "ibtnAyuda";
+            this.ibtnAyuda.Size = new System.Drawing.Size(84, 28);
+            this.ibtnAyuda.TabIndex = 8;
+            this.ibtnAyuda.Text = "Ayuda";
+            this.ibtnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnAyuda.UseVisualStyleBackColor = false;
+            this.ibtnAyuda.Click += new System.EventHandler(this.IbtnAyuda_Click);
+            // 
             // FrmTelefonos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(328, 399);
+            this.Controls.Add(this.ibtnAyuda);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLlamar);
             this.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -246,7 +252,6 @@ namespace Cibercafe_ElVicio
         #endregion
 
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLlamar;
         private System.Windows.Forms.Label label6;
@@ -259,5 +264,6 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconButton ibtnAyuda;
     }
 }
