@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentValidation;
-//HECHO POR TOMAS AGUSTIN FRIZ
+
 namespace Entidades
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     /// <summary>
     /// Uso este paquete nuget FluentValidation porque es un paquete muy popular en temas de validacion y ademas muy completo.
     /// Resuelve hasta los dolores de cabeza jajaja XD.
     /// </summary>
     public class ValidadorNuget : AbstractValidator<ClienteTelefono>
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Metodo de Validacion
         /// <summary>
         /// Valida que los números ingresados sean correctos con los parametros del paquete nuget, caso contrario salta error mas un mensaje descriptivo.

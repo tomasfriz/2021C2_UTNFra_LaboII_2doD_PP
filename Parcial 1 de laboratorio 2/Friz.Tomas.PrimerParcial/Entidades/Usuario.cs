@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//HECHO POR TOMAS AGUSTIN FRIZ
+
 namespace Entidades
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     public static class Usuario
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributo
         private static readonly List<Equipo> equipos;
         private static readonly Queue<Cliente> clientes;
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Constructores
         /// <summary>
         /// Constructor de la clase Usuario.
@@ -25,7 +23,7 @@ namespace Entidades
             clientes = new Queue<Cliente>();
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Propiedades
         /// <summary>
         /// Propiedad de la lista de Equipo de lista.
@@ -58,7 +56,7 @@ namespace Entidades
             }
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Metodos
         /// <summary>
         /// Agrega un cliente a la lista de clientes, si ya no se encuentra en la misma. 

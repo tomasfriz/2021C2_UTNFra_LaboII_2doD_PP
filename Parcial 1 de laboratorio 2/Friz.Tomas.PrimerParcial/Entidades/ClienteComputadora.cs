@@ -3,45 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//HECHO POR TOMAS AGUSTIN FRIZ
+
 namespace Entidades
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     public sealed class ClienteComputadora : Servicio
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         private readonly List<Software> software;
         private readonly List<Periferico> perifericos;
         private readonly List<Juego> juegos;
         private TipoCompu tipo;
         private const float costo = 0.5F;
+        private readonly Random random;
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Constructores
-        /// <summary>
-        /// Constructor de especificaciones para crear listas.
-        /// </summary>
-        private ClienteComputadora()
-        {
-            software = new List<Software>();
-            perifericos = new List<Periferico>();
-            juegos = new List<Juego>();
-        }
         /// <summary>
         /// Constructor de la clase Especificacion para cargar las listas.
         /// </summary>
         /// <param name="software"></param>
         /// <param name="periferico"></param>
         /// <param name="juego"></param>
-        public ClienteComputadora(List<Software> software,List<Periferico> periferico,List<Juego> juego): this()
+        public ClienteComputadora()
         {
-            this.software = software;
-            this.perifericos = periferico;
-            this.juegos = juego;
+            random = new Random();
+            this.software = new List<Software>() { (Software)random.Next(0, 4) };
+            this.perifericos = new List<Periferico>() { (Periferico)random.Next(0, 3) };
+            this.juegos = new List<Juego>() { (Juego)random.Next(0, 6) };
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Propiedades
         /// <summary>
         /// Propiedad de Duracion.
@@ -102,7 +93,7 @@ namespace Entidades
             }
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Metodos
         /// <summary>
         /// Sobreescribe el metodo CalcularCosto() y calcula el costo de un equipo(computadora o telefono) segun su duracion y el costo del mismo.

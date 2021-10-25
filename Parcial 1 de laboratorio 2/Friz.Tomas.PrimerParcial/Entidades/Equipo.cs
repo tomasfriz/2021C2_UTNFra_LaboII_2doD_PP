@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//HECHO POR TOMAS AGUSTIN FRIZ
+
 namespace Entidades
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     public abstract class Equipo
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         protected string id;
         protected Estado estado;
         protected TipoEquipo tipo;
         protected List<Servicio> lista;
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Constructores
         /// <summary>
         /// Constructor de la clase Equipo.
@@ -29,7 +27,7 @@ namespace Entidades
             this.estado = Estado.Disponible;
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Propiedades
         /// <summary>
         /// Propiedad de id.
@@ -86,7 +84,7 @@ namespace Entidades
             }
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Operadores
         /// <summary>
         /// Operador == (igual) para comparar si los equipos son iguales.
@@ -113,7 +111,7 @@ namespace Entidades
             return !(t1 == t2);
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
@@ -135,7 +133,7 @@ namespace Entidades
             return id.GetHashCode();
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Metodos 
         /// <summary>
         /// Calcula los minutos de uso del equipo mas la duracion del mismo.

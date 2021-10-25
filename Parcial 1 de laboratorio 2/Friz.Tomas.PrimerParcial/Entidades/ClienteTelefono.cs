@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//HECHO POR TOMAS AGUSTIN FRIZ
+
 namespace Entidades
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     public sealed class ClienteTelefono : Servicio
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         private string codigo;
         private string localidad;
         private string num;
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Propiedades
         /// <summary>
         /// Propiedad de NumDestino y devuelve el numero de destino.
@@ -96,7 +94,7 @@ namespace Entidades
             }
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Operadores
         /// <summary>
         /// Operador == (igual) para comparar los datos del ClienteTelefono (Se reutiliza el metodo de GetHashCode).
@@ -123,7 +121,7 @@ namespace Entidades
             return !(c1 == c2);
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
@@ -146,7 +144,7 @@ namespace Entidades
             return base.GetHashCode() + NumDestino.GetHashCode();
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Métodos
         /// <summary>
         /// Calcula el costo de la llamada segun su duracion y el tipo de valor del minuto.

@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//HECHO POR TOMAS AGUSTIN FRIZ
+
 namespace Entidades
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     public sealed class Telefono : Equipo
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         private readonly TipoTecla tipoTecla;
         private readonly string marca;
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Constructores
         /// <summary>
         /// Constructor de la clase telefono.
@@ -30,7 +28,7 @@ namespace Entidades
             this.tipo = TipoEquipo.Cabina;
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Metodos
         /// <summary>
         /// Sobrescribe el metodo ToString().

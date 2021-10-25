@@ -9,18 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-//HECHO POR TOMAS AGUSTIN FRIZ
+
 namespace Cibercafe_ElVicio
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     public partial class FrmMenu : Form
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
-        #region Atributos
-        private readonly Random random;
-        //private readonly Equipo equipo; ///warning
-        #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Constructor
         /// <summary>
         /// Coloca el nombre del usuario en la barra superior del form y tambien la fecha de hoy.
@@ -30,10 +24,9 @@ namespace Cibercafe_ElVicio
             InitializeComponent();
             lblUsuario.Text = "Tomás Agustín Friz";
             lblFecha.Text = DateTime.Now.ToShortDateString();
-            random = new Random();
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Botones
         /// <summary>
         /// Sirve para cerrar la aplicacion.
@@ -100,9 +93,9 @@ namespace Cibercafe_ElVicio
             MessageBox.Show("¡BIENVENIDO USUARIO!");
             List<Cliente> lista = new()
             {
-                new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),                
-                new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),       
-                new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora(new List<Software>(){(Software)random.Next(0,4)},new List<Periferico>(){(Periferico)random.Next(0,3)},new List<Juego>(){(Juego)random.Next(0,6)})),
+                new Cliente(41918909, "Tomás", "Sánchez", 22, new ClienteComputadora()),                
+                new Cliente(31456980, "Gustavo", "Doria", 53, new ClienteComputadora()),       
+                new Cliente(27643934, "Brisa", "Quinteros", 48, new ClienteComputadora()),
                 new Cliente(19934027, "Pedro", "Macri", 61, new ClienteTelefono()),
                 new Cliente(34067132, "Mauricio", "Prieto", 35, new ClienteTelefono()),
                 new Cliente(36897132, "Belén", "Trinidad", 16, new ClienteTelefono())
@@ -148,7 +141,7 @@ namespace Cibercafe_ElVicio
             }
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Labels
         /// <summary>
         /// Se encarga de desconectar la computadora y genera una factura.
@@ -193,7 +186,7 @@ namespace Cibercafe_ElVicio
             }
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Metodos del Form
         /// <summary>
         /// Sirve para confirmar el cerrado del programa.

@@ -1,15 +1,13 @@
 ﻿
 namespace Cibercafe_ElVicio
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     partial class FrmTelefonos
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Cibercafe_ElVicio
             }
             base.Dispose(disposing);
         }
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -252,7 +250,7 @@ namespace Cibercafe_ElVicio
         }
 
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLlamar;

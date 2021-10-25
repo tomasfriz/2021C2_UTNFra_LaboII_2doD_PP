@@ -1,7 +1,6 @@
-﻿//HECHO POR TOMAS AGUSTIN FRIZ
+﻿
 namespace Entidades
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     #region Enumerado
     /// <summary>
     /// Enumera los tipos de Software.

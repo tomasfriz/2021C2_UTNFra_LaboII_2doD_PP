@@ -8,17 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-//HECHO POR TOMAS AGUSTIN FRIZ
+
 namespace Cibercafe_ElVicio
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     public partial class FrmFactura : Form
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         private readonly Servicio factura;
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Constructor
         /// <summary>
         /// Constructor de Frmfactura
@@ -36,7 +34,7 @@ namespace Cibercafe_ElVicio
             factura = s;
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Botones
         /// <summary>
         /// Sirve para pagar el uso de los equipos mas si pidio un aperitivo (incluye IVA integrado).
@@ -87,7 +85,7 @@ namespace Cibercafe_ElVicio
             btnCerrar.Enabled = false;
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Metodos
         private float PreciosAperitivos()
         {

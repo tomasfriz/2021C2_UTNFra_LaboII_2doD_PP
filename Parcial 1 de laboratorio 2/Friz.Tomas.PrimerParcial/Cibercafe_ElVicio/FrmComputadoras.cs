@@ -8,18 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-//HECHO POR TOMAS AGUSTIN FRIZ
+
 namespace Cibercafe_ElVicio
 {
-    //HECHO POR TOMAS AGUSTIN FRIZ
     public partial class FrmComputadoras : Form
     {
-        //HECHO POR TOMAS AGUSTIN FRIZ
         #region Atributos
         protected Cliente cliente;
         protected ClienteComputadora computadora;
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Constructor
         /// <summary>
         /// Constructor de FrmComputadoras.
@@ -31,7 +29,7 @@ namespace Cibercafe_ElVicio
             computadora = (ClienteComputadora)cliente.Servicio;
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Botones
         /// <summary>
         /// Sirve para cerrar la ventana.
@@ -130,7 +128,7 @@ namespace Cibercafe_ElVicio
             }
         }
         #endregion
-        //HECHO POR TOMAS AGUSTIN FRIZ
+
         #region Metodos del form
         /// <summary>
         /// Se encarga de poner invisible el numTiempoLimite cuando el check esta marcado en tiempo ilimitado.
