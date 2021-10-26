@@ -80,13 +80,16 @@ namespace Entidades
     /// </summary>
     public enum TipoLocalidad
     {
-        Local = 100, LargaDistancia = 250, Internacional = 500
+        Local = 100, 
+        LargaDistancia = 250, 
+        Internacional = 500
     }
     /// <summary>
     /// Enumera los distintos tipos de duraciones de computadora.
     /// </summary>
     public enum TipoCompu
     {
-        Libre, Limitado
+        Libre, 
+        Limitado
     }
 }

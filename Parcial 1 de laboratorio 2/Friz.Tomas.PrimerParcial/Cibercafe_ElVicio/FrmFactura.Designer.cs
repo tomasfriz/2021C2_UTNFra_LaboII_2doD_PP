@@ -46,6 +46,8 @@ namespace Cibercafe_ElVicio
             this.txtIVA = new System.Windows.Forms.TextBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.ibtnAyuda = new FontAwesome.Sharp.IconButton();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.gpbAperitivos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@ namespace Cibercafe_ElVicio
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 115);
+            this.label1.Location = new System.Drawing.Point(5, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(392, 22);
             this.label1.TabIndex = 1;
@@ -63,7 +65,7 @@ namespace Cibercafe_ElVicio
             // lblIVA
             // 
             this.lblIVA.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblIVA.Location = new System.Drawing.Point(5, 205);
+            this.lblIVA.Location = new System.Drawing.Point(5, 246);
             this.lblIVA.Name = "lblIVA";
             this.lblIVA.Size = new System.Drawing.Size(180, 28);
             this.lblIVA.TabIndex = 4;
@@ -74,7 +76,7 @@ namespace Cibercafe_ElVicio
             // 
             this.btnPagar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnPagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnPagar.Location = new System.Drawing.Point(129, 237);
+            this.btnPagar.Location = new System.Drawing.Point(129, 320);
             this.btnPagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(140, 28);
@@ -86,7 +88,7 @@ namespace Cibercafe_ElVicio
             // lblDuracion
             // 
             this.lblDuracion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblDuracion.Location = new System.Drawing.Point(5, 149);
+            this.lblDuracion.Location = new System.Drawing.Point(5, 190);
             this.lblDuracion.Name = "lblDuracion";
             this.lblDuracion.Size = new System.Drawing.Size(180, 28);
             this.lblDuracion.TabIndex = 10;
@@ -96,7 +98,7 @@ namespace Cibercafe_ElVicio
             // lblCosto
             // 
             this.lblCosto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCosto.Location = new System.Drawing.Point(5, 177);
+            this.lblCosto.Location = new System.Drawing.Point(5, 218);
             this.lblCosto.Name = "lblCosto";
             this.lblCosto.Size = new System.Drawing.Size(180, 28);
             this.lblCosto.TabIndex = 11;
@@ -176,7 +178,7 @@ namespace Cibercafe_ElVicio
             // txtDuracion
             // 
             this.txtDuracion.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtDuracion.Location = new System.Drawing.Point(213, 151);
+            this.txtDuracion.Location = new System.Drawing.Point(213, 192);
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.ReadOnly = true;
             this.txtDuracion.Size = new System.Drawing.Size(182, 23);
@@ -185,7 +187,7 @@ namespace Cibercafe_ElVicio
             // txtCosto
             // 
             this.txtCosto.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtCosto.Location = new System.Drawing.Point(213, 179);
+            this.txtCosto.Location = new System.Drawing.Point(213, 220);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.ReadOnly = true;
             this.txtCosto.Size = new System.Drawing.Size(182, 23);
@@ -194,7 +196,7 @@ namespace Cibercafe_ElVicio
             // txtIVA
             // 
             this.txtIVA.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtIVA.Location = new System.Drawing.Point(213, 207);
+            this.txtIVA.Location = new System.Drawing.Point(213, 248);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.ReadOnly = true;
             this.txtIVA.Size = new System.Drawing.Size(182, 23);
@@ -204,7 +206,7 @@ namespace Cibercafe_ElVicio
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnCerrar.Location = new System.Drawing.Point(275, 237);
+            this.btnCerrar.Location = new System.Drawing.Point(275, 320);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(120, 28);
@@ -223,7 +225,7 @@ namespace Cibercafe_ElVicio
             this.ibtnAyuda.IconSize = 25;
             this.ibtnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnAyuda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ibtnAyuda.Location = new System.Drawing.Point(5, 237);
+            this.ibtnAyuda.Location = new System.Drawing.Point(5, 320);
             this.ibtnAyuda.Name = "ibtnAyuda";
             this.ibtnAyuda.Size = new System.Drawing.Size(116, 28);
             this.ibtnAyuda.TabIndex = 13;
@@ -231,12 +233,33 @@ namespace Cibercafe_ElVicio
             this.ibtnAyuda.UseVisualStyleBackColor = false;
             this.ibtnAyuda.Click += new System.EventHandler(this.IbtnAyuda_Click);
             // 
+            // lblTipo
+            // 
+            this.lblTipo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTipo.Location = new System.Drawing.Point(5, 165);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(180, 28);
+            this.lblTipo.TabIndex = 14;
+            this.lblTipo.Text = "Tipo: ";
+            this.lblTipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtTipo.Location = new System.Drawing.Point(213, 167);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.ReadOnly = true;
+            this.txtTipo.Size = new System.Drawing.Size(182, 23);
+            this.txtTipo.TabIndex = 15;
+            // 
             // FrmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(158)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(400, 274);
+            this.ClientSize = new System.Drawing.Size(400, 357);
+            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.ibtnAyuda);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtIVA);
@@ -280,5 +303,7 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.TextBox txtIVA;
         private System.Windows.Forms.Button btnCerrar;
         private FontAwesome.Sharp.IconButton ibtnAyuda;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.TextBox txtTipo;
     }
 }

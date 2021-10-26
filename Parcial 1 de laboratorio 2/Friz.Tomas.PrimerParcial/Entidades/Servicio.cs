@@ -10,6 +10,7 @@ namespace Entidades
     {
         protected int duracion;
         protected DateTime inicio;
+        protected TipoEquipo tipoServicio;
 
         /// <summary>
         /// Propiedad de Duracion.
@@ -28,6 +29,16 @@ namespace Entidades
             get
             {
                 return CalcularCosto();
+            }
+        }
+        /// <summary>
+        /// Propiedad del Enumerado de TipoEquipo de tipo.
+        /// </summary>
+        public TipoEquipo TipoServicio
+        {
+            get
+            {
+                return tipoServicio;
             }
         }
         /// <summary>
@@ -85,7 +96,7 @@ namespace Entidades
         /// <returns></returns>
         public override int GetHashCode()
         {
-            return (Inicio,GetType(),Duracion).GetHashCode();
+            return (Inicio,GetType(),tipoServicio,Duracion).GetHashCode();
         }
 
         /// <summary>

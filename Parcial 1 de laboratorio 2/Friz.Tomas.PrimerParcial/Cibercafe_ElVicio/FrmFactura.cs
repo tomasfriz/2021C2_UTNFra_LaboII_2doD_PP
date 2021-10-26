@@ -25,7 +25,7 @@ namespace Cibercafe_ElVicio
         /// <summary>
         /// Constructor de Frmfactura para los servicios.
         /// </summary>
-        /// <param name="servicio"></param>
+        /// <param name="s"></param>
         public FrmFactura(Servicio s) : this()
         {
             factura = s;
@@ -74,6 +74,7 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void FrmFactura_Load(object sender, EventArgs e)
         {
+            txtTipo.Text = $"{factura}";
             txtDuracion.Text = $"{factura.Duracion} minutos";
             txtCosto.Text = $"${factura.Costo}";
             txtIVA.Text = $"${factura.AgregarIVA()}";

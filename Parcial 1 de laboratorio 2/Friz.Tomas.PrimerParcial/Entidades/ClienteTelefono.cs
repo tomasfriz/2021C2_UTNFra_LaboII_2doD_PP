@@ -12,6 +12,11 @@ namespace Entidades
         private string localidad;
         private string num;
 
+        public ClienteTelefono()
+        {
+            tipoServicio = TipoEquipo.Cabina;
+        }
+
         /// <summary>
         /// Propiedad de NumDestino y devuelve el numero de destino.
         /// </summary>
@@ -23,7 +28,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Propiedad del Enumerado de TipoLocalidad de Tipo y devuelve el tipo de localidad.
+        /// Propiedad del Enumerado de Tipo de Tipo y devuelve el tipo de localidad.
         /// </summary>
         public TipoLocalidad Tipo
         {
@@ -166,6 +171,18 @@ namespace Entidades
                     return TipoLocalidad.LargaDistancia;
                 }
             }
+        }
+        /// <summary>
+        /// Muestra la informacion del uso del telefono hecho por el cliente.
+        /// </summary>
+        /// <returns>String con informacion de la llamada</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Llamada {Tipo}\n");
+            sb.AppendLine($"{base.ToString()}");        
+            return sb.ToString();
         }
     }
 }

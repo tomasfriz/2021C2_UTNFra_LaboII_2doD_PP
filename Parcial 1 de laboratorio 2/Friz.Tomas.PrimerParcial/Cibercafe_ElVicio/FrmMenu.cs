@@ -44,7 +44,7 @@ namespace Cibercafe_ElVicio
                 "+ El boton 'Cerrar' te preguntara si deseas cerrar. 'SI' cerrara la aplicacion, incluyendo las ventanas abiertas. 'NO' regresaras al menu principal.\n" +
                 "+ El boton 'Asignar Equipo' te permitira asignar un equipo al cliente.\n" +
                 "+ El boton 'Estadisticas Historicas' te permitira ver el historial segun el criterio que elijas\n" +
-                "+ Podra ver la lista de espera de los clientes en el cuadro blanco del centro\n" +
+                "+ Podras ver la lista de espera de los clientes en el cuadro blanco del centro\n" +
                 "+ En el lado superior podra ver el nombre del negocio y el usuario conectado mas la fecha del dia de hoy\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
@@ -86,7 +86,8 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void BtnEspecificacion_Click(object sender, EventArgs e)
         {
-
+            FrmEspecificaciones frmEspecificaciones = new();
+            frmEspecificaciones.ShowDialog();
         }
         /// <summary>
         /// Se encarga de hardcodear los datos de los clientes y saludar al usuario.
