@@ -12,6 +12,15 @@ namespace Entidades
         ares
     }
     /// <summary>
+    /// Enumera los tipos de Hardware.
+    /// </summary>
+    public enum Hardware
+    {
+        RAM, 
+        procesador, 
+        placaVideo
+    }
+    /// <summary>
     /// Enumera los tipos de perifericos.
     /// </summary>
     public enum Periferico

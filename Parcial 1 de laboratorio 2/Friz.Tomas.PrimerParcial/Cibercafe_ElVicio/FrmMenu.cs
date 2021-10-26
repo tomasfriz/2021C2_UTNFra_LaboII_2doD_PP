@@ -23,7 +23,7 @@ namespace Cibercafe_ElVicio
             lblUsuario.Text = "Tomás Agustín Friz";
             lblFecha.Text = DateTime.Now.ToShortDateString();
         }
-
+        
         /// <summary>
         /// Sirve para cerrar la aplicacion.
         /// </summary>
@@ -80,6 +80,15 @@ namespace Cibercafe_ElVicio
             frmHistorial.ShowDialog();
         }
         /// <summary>
+        /// Sirve para ver las especificaciones de todas las computadoras.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnEspecificacion_Click(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
         /// Se encarga de hardcodear los datos de los clientes y saludar al usuario.
         /// </summary>
         /// <param name="sender"></param>
@@ -108,20 +117,20 @@ namespace Cibercafe_ElVicio
             }
             List<Equipo> listaComputadora = new()
             {
-                new Computadora("C01", new List<Software>(){Software.ares,Software.messenger,Software.icq}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike,Juego.MuOnline,Juego.DiabloII,Juego.WarcraftIII}, new Dictionary<string, string> {{"MEMORIA RAM", "6GB"}, {"PROCESADOR","Intel Pentium 2"}, {"PLACA DE VIDEO", "9600GT"} }),
-                new Computadora("C02", new List<Software>(){Software.icq,Software.office,Software.ares}, new List<Periferico>() {Periferico.cámara,Periferico.auriculares}, new List<Juego>() {Juego.AgeOfEmpiresII,Juego.CounterStrike,Juego.MuOnline,Juego.LineageII}, new Dictionary<string, string> {{"MEMORIA RAM", "3GB"}, {"PROCESADOR", "Intel Pentium 4"}, {"PLACA DE VIDEO", "Geforce 4"}}),
-                new Computadora("C03", new List<Software>(){Software.messenger,Software.icq,Software.office}, new List<Periferico>() {Periferico.micrófono,Periferico.auriculares}, new List<Juego>() {Juego.CounterStrike,Juego.MuOnline,Juego.LineageII,Juego.AgeOfEmpiresII}, new Dictionary<string, string> {{"MEMORIA RAM ","1GB"}, {"PROCESADOR", "Intel Pentium 4"}, {"PLACA DE VIDEO", "486 DLC" } }),
-                new Computadora("C04", new List<Software>(){Software.office,Software.messenger,Software.ares}, new List<Periferico>() {Periferico.auriculares,Periferico.cámara}, new List<Juego>() {Juego.DiabloII,Juego.CounterStrike,Juego.WarcraftIII,Juego.MuOnline}, new Dictionary<string, string> {{"MEMORIA RAM ","7GB"}, {"PROCESADOR", "Intel Pentium 1"}, {"PLACA DE VIDEO", "Geforce 4" } }),
-                new Computadora("C05", new List<Software>(){Software.ares,Software.icq,Software.messenger}, new List<Periferico>() {Periferico.cámara,Periferico.micrófono}, new List<Juego>() {Juego.LineageII,Juego.CounterStrike,Juego.AgeOfEmpiresII,Juego.MuOnline}, new Dictionary<string, string> {{"MEMORIA RAM ","14GB"}, {"PROCESADOR","Intel Pentium 3"}, {"PLACA DE VIDEO", "9600GT"}}),
-                new Computadora("C06", new List<Software>(){Software.icq,Software.messenger,Software.office}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara}, new List<Juego>() {Juego.WarcraftIII,Juego.DiabloII,Juego.CounterStrike,Juego.LineageII}, new Dictionary<string, string> {{"MEMORIA RAM ","8GB"}, {"PROCESADOR","Intel 4004"}, {"PLACA DE VIDEO", "486 DLC"}}),
-                new Computadora("C07", new List<Software>(){Software.messenger,Software.office,Software.icq}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.MuOnline,Juego.AgeOfEmpiresII,Juego.LineageII,Juego.WarcraftIII}, new Dictionary<string, string> {{"MEMORIA RAM","15GB"}, {"PROCESADOR", "Intel Pentium 3"}, {"PLACA DE VIDEO", "9600GT" } }),
-                new Computadora("C08", new List<Software>(){Software.office,Software.ares,Software.messenger}, new List<Periferico>() {Periferico.cámara,Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike,Juego.WarcraftIII,Juego.MuOnline,Juego.LineageII}, new Dictionary<string, string> {{"MEMORIA RAM ","2GB"}, {"PROCESADOR", "Intel 4004"}, {"PLACA DE VIDEO", "Geforce 4" } }),
-                new Computadora("C09", new List<Software>(){Software.ares,Software.office,Software.icq}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara}, new List<Juego>() {Juego.DiabloII,Juego.MuOnline,Juego.AgeOfEmpiresII,Juego.WarcraftIII}, new Dictionary<string, string> {{"MEMORIA RAM ","9GB"}, {"PROCESADOR", "Intel Pentium 1"}, {"PLACA DE VIDEO", "486 DLC"}}),
-                new Computadora("C10", new List<Software>(){Software.icq,Software.ares,Software.office}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.WarcraftIII,Juego.AgeOfEmpiresII,Juego.LineageII,Juego.CounterStrike}, new Dictionary<string, string> {{"MEMORIA RAM ","7GB"}, {"PROCESADOR", "Intel Pentium 1"}, {"PLACA DE VIDEO", "9600GT"}}),
+                new Computadora("C01", new List<Software>(){Software.ares,Software.messenger,Software.icq}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike,Juego.MuOnline,Juego.DiabloII,Juego.WarcraftIII}, new Dictionary<Hardware, string> {{Hardware.RAM, "6GB"}, {Hardware.procesador, "Intel Pentium 2"}, {Hardware.placaVideo, "9600GT"} }),
+                new Computadora("C02", new List<Software>(){Software.icq,Software.office,Software.ares}, new List<Periferico>() {Periferico.cámara,Periferico.auriculares}, new List<Juego>() {Juego.AgeOfEmpiresII,Juego.CounterStrike,Juego.MuOnline,Juego.LineageII}, new Dictionary<Hardware, string> {{Hardware.RAM, "3GB"}, {Hardware.procesador, "Intel Pentium 4"}, {Hardware.placaVideo, "Geforce 4"}}),
+                new Computadora("C03", new List<Software>(){Software.messenger,Software.icq,Software.office}, new List<Periferico>() {Periferico.micrófono,Periferico.auriculares}, new List<Juego>() {Juego.CounterStrike,Juego.MuOnline,Juego.LineageII,Juego.AgeOfEmpiresII}, new Dictionary<Hardware, string> {{Hardware.RAM, "1GB"}, {Hardware.procesador, "Intel Pentium 4"}, {Hardware.placaVideo, "486 DLC" } }),
+                new Computadora("C04", new List<Software>(){Software.office,Software.messenger,Software.ares}, new List<Periferico>() {Periferico.auriculares,Periferico.cámara}, new List<Juego>() {Juego.DiabloII,Juego.CounterStrike,Juego.WarcraftIII,Juego.MuOnline}, new Dictionary<Hardware, string> {{Hardware.RAM, "7GB"}, {Hardware.procesador, "Intel Pentium 1"}, {Hardware.placaVideo, "Geforce 4" } }),
+                new Computadora("C05", new List<Software>(){Software.ares,Software.icq,Software.messenger}, new List<Periferico>() {Periferico.cámara,Periferico.micrófono}, new List<Juego>() {Juego.LineageII,Juego.CounterStrike,Juego.AgeOfEmpiresII,Juego.MuOnline}, new Dictionary<Hardware, string> {{Hardware.RAM, "14GB"}, {Hardware.procesador, "Intel Pentium 3"}, {Hardware.placaVideo, "9600GT"}}),
+                new Computadora("C06", new List<Software>(){Software.icq,Software.messenger,Software.office}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara}, new List<Juego>() {Juego.WarcraftIII,Juego.DiabloII,Juego.CounterStrike,Juego.LineageII}, new Dictionary<Hardware, string> {{Hardware.RAM, "8GB"}, {Hardware.procesador, "Intel 4004"}, {Hardware.placaVideo, "486 DLC"}}),
+                new Computadora("C07", new List<Software>(){Software.messenger,Software.office,Software.icq}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.MuOnline,Juego.AgeOfEmpiresII,Juego.LineageII,Juego.WarcraftIII}, new Dictionary<Hardware, string> {{Hardware.RAM, "15GB"}, {Hardware.procesador, "Intel Pentium 3"}, {Hardware.placaVideo, "9600GT" } }),
+                new Computadora("C08", new List<Software>(){Software.office,Software.ares,Software.messenger}, new List<Periferico>() {Periferico.cámara,Periferico.micrófono}, new List<Juego>() {Juego.CounterStrike,Juego.WarcraftIII,Juego.MuOnline,Juego.LineageII}, new Dictionary<Hardware, string> {{Hardware.RAM, "2GB"}, {Hardware.procesador, "Intel 4004"}, {Hardware.placaVideo, "Geforce 4" } }),
+                new Computadora("C09", new List<Software>(){Software.ares,Software.office,Software.icq}, new List<Periferico>() {Periferico.micrófono,Periferico.cámara}, new List<Juego>() {Juego.DiabloII,Juego.MuOnline,Juego.AgeOfEmpiresII,Juego.WarcraftIII}, new Dictionary<Hardware, string> {{Hardware.RAM, "9GB"}, {Hardware.procesador, "Intel Pentium 1"}, {Hardware.placaVideo, "486 DLC"}}),
+                new Computadora("C10", new List<Software>(){Software.icq,Software.ares,Software.office}, new List<Periferico>() {Periferico.auriculares,Periferico.micrófono}, new List<Juego>() {Juego.WarcraftIII,Juego.AgeOfEmpiresII,Juego.LineageII,Juego.CounterStrike}, new Dictionary<Hardware, string> {{Hardware.RAM, "7GB"}, {Hardware.procesador, "Intel Pentium 1"}, {Hardware.placaVideo, "9600GT"}}),
             };
-            foreach (Equipo p in listaComputadora)
+            foreach (Equipo compu in listaComputadora)
             {
-                Usuario.AgregarEquipo(p);
+                Usuario.AgregarEquipo(compu);
             }
             List<Equipo> listaTelefonos = new()
             {
@@ -131,9 +140,9 @@ namespace Cibercafe_ElVicio
                 new Telefono("T04", TipoTecla.Teclado, "Siemens"),
                 new Telefono("T05", TipoTecla.Disco, "Panasonic")
             };
-            foreach (Equipo p in listaTelefonos)
+            foreach (Equipo telefono in listaTelefonos)
             {
-                Usuario.AgregarEquipo(p);
+                Usuario.AgregarEquipo(telefono);
             }
         }
 

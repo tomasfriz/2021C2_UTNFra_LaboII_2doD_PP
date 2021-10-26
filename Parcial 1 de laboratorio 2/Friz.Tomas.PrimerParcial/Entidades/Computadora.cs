@@ -11,7 +11,7 @@ namespace Entidades
         private readonly List<Software> software;
         private readonly List<Periferico> perifericos;
         private readonly List<Juego> juegos;
-        private readonly Dictionary<string, string> hardware;
+        private readonly Dictionary<Hardware, string> hardware;
 
         /// <summary>
         /// Constructor de la clase de Computadora para los componentes del mismo.
@@ -21,7 +21,7 @@ namespace Entidades
             software = new List<Software>();
             perifericos = new List<Periferico>();
             juegos = new List<Juego>();
-            hardware = new Dictionary<string, string>();
+            hardware = new Dictionary<Hardware, string>();
         }
         /// <summary>
         /// Constructor de Computadora en general(con todos los datos y especificaciones).
@@ -31,7 +31,7 @@ namespace Entidades
         /// <param name="perifericos"></param>
         /// <param name="juegos"></param>
         /// <param name="hardware"></param>
-        public Computadora(string id, List<Software> software,List<Periferico> perifericos, List<Juego> juegos,Dictionary<string, string> hardware): this(id)
+        public Computadora(string id, List<Software> software,List<Periferico> perifericos, List<Juego> juegos,Dictionary<Hardware, string> hardware): this(id)
         {
             this.id = id;
             this.tipo = TipoEquipo.Computadora;
@@ -49,6 +49,18 @@ namespace Entidades
             get
             {
                 return software;
+            }
+        }
+        /// <summary>
+        /// Indexador para el Enumerado de Hardware.
+        /// </summary>
+        /// <param name="h"></param>
+        /// <returns>Retorna las especificaciones de hardware que contiene cada computadora.</returns>
+        public string this[Hardware h]
+        {
+            get
+            {
+                return hardware[h];
             }
         }
         /// <summary>
@@ -209,11 +221,9 @@ namespace Entidades
                 sb.AppendLine($"{juego}");
             }
             sb.AppendLine($"\nHARDWARE: ");
-            foreach (KeyValuePair<string, string> e in hardware)
-            {
-                sb.AppendLine($"\n{e.Key}: {e.Value}");
-            }
-            sb.AppendLine($"\nCOSTO: $ {Minutos}");
+            sb.AppendLine($"RAM: {this[Hardware.RAM]}");
+            sb.AppendLine($"Placa de video: {this[Hardware.placaVideo]}");
+            sb.AppendLine($"Procesador: {this[Hardware.procesador]}");
             return sb.ToString();
         }
     }

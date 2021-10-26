@@ -59,6 +59,7 @@ namespace Cibercafe_ElVicio
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.ibtnAyuda = new FontAwesome.Sharp.IconButton();
+            this.btnEspecificacion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gpbComputadoras.SuspendLayout();
             this.gpbTelefonos.SuspendLayout();
@@ -285,12 +286,21 @@ namespace Cibercafe_ElVicio
             this.ibtnAyuda.UseVisualStyleBackColor = false;
             this.ibtnAyuda.Click += new System.EventHandler(this.IbtnAyuda_Click);
             // 
+            // btnEspecificacion
+            // 
+            this.btnEspecificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.btnEspecificacion, "btnEspecificacion");
+            this.btnEspecificacion.Name = "btnEspecificacion";
+            this.btnEspecificacion.UseVisualStyleBackColor = false;
+            this.btnEspecificacion.Click += new System.EventHandler(this.BtnEspecificacion_Click);
+            // 
             // FrmMenu
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
+            this.Controls.Add(this.btnEspecificacion);
             this.Controls.Add(this.ibtnAyuda);
             this.Controls.Add(this.gpbTelefonos);
             this.Controls.Add(this.gpbComputadoras);
@@ -344,6 +354,7 @@ namespace Cibercafe_ElVicio
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private FontAwesome.Sharp.IconButton ibtnAyuda;
+        private System.Windows.Forms.Button btnEspecificacion;
     }
 }
 
