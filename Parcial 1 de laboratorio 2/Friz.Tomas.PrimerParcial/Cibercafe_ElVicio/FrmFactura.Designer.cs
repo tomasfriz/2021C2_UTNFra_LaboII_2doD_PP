@@ -105,8 +105,7 @@ namespace Cibercafe_ElVicio
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(5, 9);
             this.label5.Name = "label5";
@@ -118,47 +117,45 @@ namespace Cibercafe_ElVicio
             // cbCafe
             // 
             this.cbCafe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbCafe.Location = new System.Drawing.Point(39, 36);
+            this.cbCafe.Location = new System.Drawing.Point(7, 35);
             this.cbCafe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbCafe.Name = "cbCafe";
-            this.cbCafe.Size = new System.Drawing.Size(77, 23);
+            this.cbCafe.Size = new System.Drawing.Size(90, 23);
             this.cbCafe.TabIndex = 6;
-            this.cbCafe.Text = "Cafe";
+            this.cbCafe.Text = "Cafe: $10";
             this.cbCafe.UseVisualStyleBackColor = true;
             // 
             // cbSoda
             // 
             this.cbSoda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbSoda.Location = new System.Drawing.Point(122, 36);
+            this.cbSoda.Location = new System.Drawing.Point(103, 34);
             this.cbSoda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbSoda.Name = "cbSoda";
-            this.cbSoda.Size = new System.Drawing.Size(77, 23);
+            this.cbSoda.Size = new System.Drawing.Size(86, 23);
             this.cbSoda.TabIndex = 7;
-            this.cbSoda.Text = "Soda";
+            this.cbSoda.Text = "Soda: $5";
             this.cbSoda.UseVisualStyleBackColor = true;
             // 
             // cbDona
             // 
             this.cbDona.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbDona.AutoSize = true;
-            this.cbDona.Location = new System.Drawing.Point(289, 36);
+            this.cbDona.Location = new System.Drawing.Point(300, 34);
             this.cbDona.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbDona.Name = "cbDona";
-            this.cbDona.Size = new System.Drawing.Size(60, 22);
+            this.cbDona.Size = new System.Drawing.Size(90, 22);
             this.cbDona.TabIndex = 9;
-            this.cbDona.Text = "Dona";
+            this.cbDona.Text = "Dona: $20";
             this.cbDona.UseVisualStyleBackColor = true;
             // 
             // cbTostado
             // 
             this.cbTostado.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbTostado.AutoSize = true;
-            this.cbTostado.Location = new System.Drawing.Point(206, 36);
+            this.cbTostado.Location = new System.Drawing.Point(185, 34);
             this.cbTostado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbTostado.Name = "cbTostado";
-            this.cbTostado.Size = new System.Drawing.Size(78, 22);
+            this.cbTostado.Size = new System.Drawing.Size(109, 22);
             this.cbTostado.TabIndex = 8;
-            this.cbTostado.Text = "Tostado";
+            this.cbTostado.Text = "Tostado: $25";
             this.cbTostado.UseVisualStyleBackColor = true;
             // 
             // gpbAperitivos
@@ -218,6 +215,7 @@ namespace Cibercafe_ElVicio
             // 
             // ibtnAyuda
             // 
+            this.ibtnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ibtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.ibtnAyuda.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
             this.ibtnAyuda.IconColor = System.Drawing.Color.Black;
@@ -254,14 +252,12 @@ namespace Cibercafe_ElVicio
             this.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(403, 313);
             this.Name = "FrmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFactura";
             this.Load += new System.EventHandler(this.FrmFactura_Load);
             this.gpbAperitivos.ResumeLayout(false);
-            this.gpbAperitivos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

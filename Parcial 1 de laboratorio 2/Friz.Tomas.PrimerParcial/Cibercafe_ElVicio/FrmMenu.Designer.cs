@@ -275,12 +275,12 @@ namespace Cibercafe_ElVicio
             // 
             // ibtnAyuda
             // 
+            resources.ApplyResources(this.ibtnAyuda, "ibtnAyuda");
             this.ibtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.ibtnAyuda.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
             this.ibtnAyuda.IconColor = System.Drawing.Color.Black;
             this.ibtnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnAyuda.IconSize = 25;
-            resources.ApplyResources(this.ibtnAyuda, "ibtnAyuda");
             this.ibtnAyuda.Name = "ibtnAyuda";
             this.ibtnAyuda.UseVisualStyleBackColor = false;
             this.ibtnAyuda.Click += new System.EventHandler(this.IbtnAyuda_Click);

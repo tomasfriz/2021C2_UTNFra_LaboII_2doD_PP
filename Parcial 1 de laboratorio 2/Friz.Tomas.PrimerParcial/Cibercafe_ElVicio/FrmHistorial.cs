@@ -13,7 +13,6 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmHistorial : Form
     {
-        #region Constructor
         /// <summary>
         /// Constructor de FrmHistorial.
         /// </summary>
@@ -21,9 +20,7 @@ namespace Cibercafe_ElVicio
         {
             InitializeComponent();
         }
-        #endregion
 
-        #region Botones
         /// <summary>
         /// Sirve para cerrar la ventana.
         /// </summary>
@@ -114,9 +111,7 @@ namespace Cibercafe_ElVicio
         {
             rtbHistorial.Text = MostrarJuegoFavoritoClientes();
         }
-        #endregion
 
-        #region Historial
         /// <summary>
         /// Muestra los equipos ordenados de forma descendente con el criterio de minutos de uso.
         /// Se utiliza en el historial del programa.
@@ -357,9 +352,7 @@ namespace Cibercafe_ElVicio
                 return $"NO HAY JUEGOS MAS PEDIDOS.\n";
             }
         }
-        #endregion
 
-        #region Metodos del historial
         /// <summary>
         /// Compara dos equipos segun sus minutos de uso.
         /// Esta funcion se usa para el ordanamiento descendente de equipos segun el tiempo de uso.
@@ -388,8 +381,5 @@ namespace Cibercafe_ElVicio
             }
             return s;
         }
-        #endregion
-
-        
     }
 }

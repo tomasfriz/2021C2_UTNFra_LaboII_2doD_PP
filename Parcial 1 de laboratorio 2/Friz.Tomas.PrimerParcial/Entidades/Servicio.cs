@@ -8,12 +8,9 @@ namespace Entidades
 {
     public abstract class Servicio
     {
-        #region Atributos
         protected int duracion;
         protected DateTime inicio;
-        #endregion
 
-        #region Propiedades
         /// <summary>
         /// Propiedad de Duracion.
         /// </summary>
@@ -47,9 +44,7 @@ namespace Entidades
                 inicio = value;
             }
         }
-        #endregion
 
-        #region Operadores
         /// <summary>
         /// Operador == (igual) para comparar si los servicios son iguales.
         /// Reutilizacion del metodo de GetHashCode().
@@ -71,9 +66,7 @@ namespace Entidades
         {
             return !(s1 == s2);
         }
-        #endregion
 
-        #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
         /// Requerido para el operador == (igual).
@@ -94,9 +87,7 @@ namespace Entidades
         {
             return (Inicio,GetType(),Duracion).GetHashCode();
         }
-        #endregion
 
-        #region Metodos 
         /// <summary>
         /// Calcula el costo del servicio.
         /// </summary>
@@ -110,6 +101,5 @@ namespace Entidades
         {
             return Costo * 1.21F;
         }
-        #endregion
     }
 }

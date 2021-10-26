@@ -8,14 +8,11 @@ namespace Entidades
 {
     public sealed class Computadora: Equipo
     {
-        #region Atributos
         private readonly List<Software> software;
         private readonly List<Periferico> perifericos;
         private readonly List<Juego> juegos;
         private readonly Dictionary<string, string> hardware;
-        #endregion
 
-        #region Constructores
         /// <summary>
         /// Constructor de la clase de Computadora para los componentes del mismo.
         /// </summary>
@@ -43,9 +40,7 @@ namespace Entidades
             this.juegos = juegos;
             this.hardware = hardware;
         }
-        #endregion
 
-        #region Propiedades
         /// <summary>
         /// Propiedad del Enumerado de Software de software.
         /// </summary>
@@ -76,9 +71,7 @@ namespace Entidades
                 return juegos;
             }
         }
-        #endregion
 
-        #region Operadores
         /// <summary>
         /// Operador == (igual) para comparar que el software este instalado en la computadora.
         /// </summary>
@@ -169,9 +162,7 @@ namespace Entidades
         {
             return !(c == j);
         }
-        #endregion
 
-        #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
         /// Requerido para el operador == (igual).
@@ -192,9 +183,7 @@ namespace Entidades
         {
             return base.GetHashCode();
         }
-        #endregion
 
-        #region Metodos
         /// <summary>
         /// Sobrescribe el metodo ToString().
         /// Imprime los datos de la computadora, incluyendo el costo por minuto.
@@ -227,6 +216,5 @@ namespace Entidades
             sb.AppendLine($"\nCOSTO: $ {Minutos}");
             return sb.ToString();
         }
-        #endregion
     }
 }

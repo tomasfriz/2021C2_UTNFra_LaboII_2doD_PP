@@ -8,12 +8,9 @@ namespace Entidades
 {
     public static class Usuario
     {
-        #region Atributo
         private static readonly List<Equipo> equipos;
         private static readonly Queue<Cliente> clientes;
-        #endregion
 
-        #region Constructores
         /// <summary>
         /// Constructor de la clase Usuario.
         /// </summary>
@@ -22,9 +19,7 @@ namespace Entidades
             equipos = new List<Equipo>();
             clientes = new Queue<Cliente>();
         }
-        #endregion
 
-        #region Propiedades
         /// <summary>
         /// Propiedad de la lista de Equipo de lista.
         /// </summary>
@@ -55,9 +50,7 @@ namespace Entidades
                 return clientes;
             }
         }
-        #endregion
 
-        #region Metodos
         /// <summary>
         /// Agrega un cliente a la lista de clientes, si ya no se encuentra en la misma. 
         /// </summary>
@@ -189,6 +182,5 @@ namespace Entidades
             TimeSpan t = DateTime.Now - inicio;
             return (int)t.TotalSeconds;
         }
-        #endregion
     }
 }

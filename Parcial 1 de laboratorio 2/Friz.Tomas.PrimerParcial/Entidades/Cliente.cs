@@ -5,15 +5,12 @@ namespace Entidades
 {
     public class Cliente
     {
-        #region Atributos
         private readonly int dni;
         private readonly string nombre;
         private readonly string apellido;
         private readonly short edad;
         private Servicio servicio;
-        #endregion
 
-        #region Constructores
         /// <summary>
         /// Constructor de la clase Cliente
         /// </summary>
@@ -30,9 +27,7 @@ namespace Entidades
             this.edad = edad;
             this.servicio = servicio;
         }
-        #endregion
 
-        #region Propiedades
         /// <summary>
         /// Propiedad de Servicio.
         /// </summary>
@@ -43,9 +38,7 @@ namespace Entidades
                 return servicio;
             }
         }
-        #endregion
 
-        #region Operadores
         /// <summary>
         /// Operador + para agregar un cliente a un servicio(Telefono/Computadora).
         /// </summary>
@@ -89,9 +82,7 @@ namespace Entidades
         {
             return !(c1 == c2);
         }
-        #endregion
 
-        #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
         /// Requerible para el operador == (igual).
@@ -111,9 +102,7 @@ namespace Entidades
         {
             return dni.GetHashCode();
         }
-        #endregion
 
-        #region Metodos
         /// <summary>
         /// Sobrescribe el metodo ToString()
         /// Imprime los datos del cliente.
@@ -128,6 +117,5 @@ namespace Entidades
             sb.AppendLine($"- Edad: {edad} años \n");
             return sb.ToString();
         }
-        #endregion
     }
 }

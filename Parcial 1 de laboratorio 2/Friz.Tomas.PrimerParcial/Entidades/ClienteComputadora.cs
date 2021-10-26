@@ -8,16 +8,13 @@ namespace Entidades
 {
     public sealed class ClienteComputadora : Servicio
     {
-        #region Atributos
         private readonly List<Software> software;
         private readonly List<Periferico> perifericos;
         private readonly List<Juego> juegos;
         private TipoCompu tipo;
         private const float costo = 0.5F;
         private readonly Random random;
-        #endregion
 
-        #region Constructores
         /// <summary>
         /// Constructor de la clase Especificacion para cargar las listas.
         /// </summary>
@@ -31,9 +28,7 @@ namespace Entidades
             this.perifericos = new List<Periferico>() { (Periferico)random.Next(0, 3) };
             this.juegos = new List<Juego>() { (Juego)random.Next(0, 6) };
         }
-        #endregion
 
-        #region Propiedades
         /// <summary>
         /// Propiedad de Duracion.
         /// </summary>
@@ -92,9 +87,7 @@ namespace Entidades
                 return juegos;
             }
         }
-        #endregion
 
-        #region Metodos
         /// <summary>
         /// Sobreescribe el metodo CalcularCosto() y calcula el costo de un equipo(computadora o telefono) segun su duracion y el costo del mismo.
         /// </summary>
@@ -127,6 +120,5 @@ namespace Entidades
             }
             return sb.ToString();
         }
-        #endregion
     }
 }

@@ -8,14 +8,11 @@ namespace Entidades
 {
     public abstract class Equipo
     {
-        #region Atributos
         protected string id;
         protected Estado estado;
         protected TipoEquipo tipo;
         protected List<Servicio> lista;
-        #endregion
 
-        #region Constructores
         /// <summary>
         /// Constructor de la clase Equipo.
         /// </summary>
@@ -26,9 +23,7 @@ namespace Entidades
             this.lista = new List<Servicio>();
             this.estado = Estado.Disponible;
         }
-        #endregion
 
-        #region Propiedades
         /// <summary>
         /// Propiedad de id.
         /// </summary>
@@ -83,9 +78,7 @@ namespace Entidades
                 return lista;
             }
         }
-        #endregion
 
-        #region Operadores
         /// <summary>
         /// Operador == (igual) para comparar si los equipos son iguales.
         /// </summary>
@@ -110,9 +103,7 @@ namespace Entidades
         {
             return !(t1 == t2);
         }
-        #endregion
 
-        #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
         /// Requerido para el operador == (igual).
@@ -132,9 +123,7 @@ namespace Entidades
         {
             return id.GetHashCode();
         }
-        #endregion
 
-        #region Metodos 
         /// <summary>
         /// Calcula los minutos de uso del equipo mas la duracion del mismo.
         /// </summary>
@@ -162,6 +151,5 @@ namespace Entidades
             sb.AppendLine($"\nMINUTOS: {Minutos}");
             return sb.ToString();
         }
-        #endregion
     }
 }

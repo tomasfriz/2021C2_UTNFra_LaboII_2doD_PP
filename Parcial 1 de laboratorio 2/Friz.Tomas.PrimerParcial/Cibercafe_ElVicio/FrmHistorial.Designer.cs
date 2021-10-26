@@ -167,6 +167,7 @@ namespace Cibercafe_ElVicio
             // 
             // ibtnAyuda
             // 
+            this.ibtnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ibtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.ibtnAyuda.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
             this.ibtnAyuda.IconColor = System.Drawing.Color.Black;

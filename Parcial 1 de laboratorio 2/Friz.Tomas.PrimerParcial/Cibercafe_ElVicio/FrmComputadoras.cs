@@ -13,12 +13,9 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmComputadoras : Form
     {
-        #region Atributos
         protected Cliente cliente;
         protected ClienteComputadora computadora;
-        #endregion
 
-        #region Constructor
         /// <summary>
         /// Constructor de FrmComputadoras.
         /// </summary>
@@ -28,9 +25,7 @@ namespace Cibercafe_ElVicio
             cliente = Usuario.Clientes.Peek();
             computadora = (ClienteComputadora)cliente.Servicio;
         }
-        #endregion
 
-        #region Botones
         /// <summary>
         /// Sirve para cerrar la ventana.
         /// </summary>
@@ -127,9 +122,7 @@ namespace Cibercafe_ElVicio
                 cmbComputadoras.Items.Add("No hay computadoras disponibles.");
             }
         }
-        #endregion
 
-        #region Metodos del form
         /// <summary>
         /// Se encarga de poner invisible el numTiempoLimite cuando el check esta marcado en tiempo ilimitado.
         /// </summary>
@@ -148,6 +141,5 @@ namespace Cibercafe_ElVicio
         {
             nudTiempoLimite.Visible = true;
         }
-        #endregion
     }
 }

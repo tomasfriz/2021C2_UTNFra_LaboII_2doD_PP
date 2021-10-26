@@ -13,11 +13,8 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmFactura : Form
     {
-        #region Atributos
         private readonly Servicio factura;
-        #endregion
 
-        #region Constructor
         /// <summary>
         /// Constructor de Frmfactura
         /// </summary>
@@ -26,16 +23,14 @@ namespace Cibercafe_ElVicio
             InitializeComponent();
         }
         /// <summary>
-        /// 
+        /// Constructor de Frmfactura para los servicios.
         /// </summary>
         /// <param name="servicio"></param>
         public FrmFactura(Servicio s) : this()
         {
             factura = s;
         }
-        #endregion
 
-        #region Botones
         /// <summary>
         /// Sirve para pagar el uso de los equipos mas si pidio un aperitivo (incluye IVA integrado).
         /// Cierra la ventana.
@@ -84,9 +79,11 @@ namespace Cibercafe_ElVicio
             txtIVA.Text = $"${factura.AgregarIVA()}";
             btnCerrar.Enabled = false;
         }
-        #endregion
 
-        #region Metodos
+        /// <summary>
+        /// Funcion para establecer los precios de los aperitivos en los checkbox.
+        /// </summary>
+        /// <returns></returns>
         private float PreciosAperitivos()
         {
             int indice = 0;
@@ -108,6 +105,5 @@ namespace Cibercafe_ElVicio
             }
             return indice;
         }
-        #endregion
     }
 }

@@ -8,13 +8,10 @@ namespace Entidades
 {
     public sealed class ClienteTelefono : Servicio
     {
-        #region Atributos
         private string codigo;
         private string localidad;
         private string num;
-        #endregion
 
-        #region Propiedades
         /// <summary>
         /// Propiedad de NumDestino y devuelve el numero de destino.
         /// </summary>
@@ -93,9 +90,7 @@ namespace Entidades
                 num = value;
             }
         }
-        #endregion
 
-        #region Operadores
         /// <summary>
         /// Operador == (igual) para comparar los datos del ClienteTelefono (Se reutiliza el metodo de GetHashCode).
         /// </summary>
@@ -120,9 +115,7 @@ namespace Entidades
         {
             return !(c1 == c2);
         }
-        #endregion
 
-        #region Sobrecargas
         /// <summary>
         /// Sobrecarga del metodo Equals().
         /// Requerido para el operador == (igual).
@@ -143,9 +136,7 @@ namespace Entidades
         {
             return base.GetHashCode() + NumDestino.GetHashCode();
         }
-        #endregion
 
-        #region Métodos
         /// <summary>
         /// Calcula el costo de la llamada segun su duracion y el tipo de valor del minuto.
         /// </summary>
@@ -176,6 +167,5 @@ namespace Entidades
                 }
             }
         }
-        #endregion
     }
 }

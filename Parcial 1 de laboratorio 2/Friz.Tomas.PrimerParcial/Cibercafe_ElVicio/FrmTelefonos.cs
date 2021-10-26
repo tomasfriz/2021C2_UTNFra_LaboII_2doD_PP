@@ -13,12 +13,9 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmTelefonos : Form
     {
-        #region Atributos
         private readonly Cliente cliente;
         private readonly ClienteTelefono telefono;
-        #endregion
 
-        #region Constructor
         /// <summary>
         /// Constructor de FrmTelefonos.
         /// </summary>
@@ -27,11 +24,9 @@ namespace Cibercafe_ElVicio
             InitializeComponent();
 
             cliente = Usuario.Clientes.Peek();
-            telefono = (ClienteTelefono)cliente.Servicio; //posible excepcion no controlada.
+            telefono = (ClienteTelefono)cliente.Servicio; 
         }
-        #endregion
 
-        #region Botones
         /// <summary>
         /// Sirve para cerrar la ventana.
         /// </summary>
@@ -120,6 +115,5 @@ namespace Cibercafe_ElVicio
                 cmbTelefonos.Items.Add("No hay telefonos disponibles.");
             }
         }
-        #endregion
     }
 }

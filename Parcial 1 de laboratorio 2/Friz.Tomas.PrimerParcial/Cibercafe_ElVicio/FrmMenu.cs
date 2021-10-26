@@ -14,8 +14,6 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmMenu : Form
     {
-
-        #region Constructor
         /// <summary>
         /// Coloca el nombre del usuario en la barra superior del form y tambien la fecha de hoy.
         /// </summary>
@@ -25,9 +23,7 @@ namespace Cibercafe_ElVicio
             lblUsuario.Text = "Tomás Agustín Friz";
             lblFecha.Text = DateTime.Now.ToShortDateString();
         }
-        #endregion
 
-        #region Botones
         /// <summary>
         /// Sirve para cerrar la aplicacion.
         /// </summary>
@@ -140,15 +136,13 @@ namespace Cibercafe_ElVicio
                 Usuario.AgregarEquipo(p);
             }
         }
-        #endregion
 
-        #region Labels
         /// <summary>
         /// Se encarga de desconectar la computadora y genera una factura.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void LblComputadoras_Click(object sender, EventArgs e) ///posible error en ejecucu
+        private void LblComputadoras_Click(object sender, EventArgs e) 
         {
             for(int i = 0; i < Usuario.Lista.Count; i++)
             {
@@ -185,9 +179,7 @@ namespace Cibercafe_ElVicio
                 }
             }
         }
-        #endregion
 
-        #region Metodos del Form
         /// <summary>
         /// Sirve para confirmar el cerrado del programa.
         /// </summary>
@@ -255,6 +247,5 @@ namespace Cibercafe_ElVicio
                 }
             }
         }
-        #endregion
     }
 }

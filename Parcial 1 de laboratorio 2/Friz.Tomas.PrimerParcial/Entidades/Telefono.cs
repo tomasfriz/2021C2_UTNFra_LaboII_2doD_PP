@@ -8,12 +8,9 @@ namespace Entidades
 {
     public sealed class Telefono : Equipo
     {
-        #region Atributos
         private readonly TipoTecla tipoTecla;
         private readonly string marca;
-        #endregion
 
-        #region Constructores
         /// <summary>
         /// Constructor de la clase telefono.
         /// </summary>
@@ -27,9 +24,7 @@ namespace Entidades
             this.marca = marca;
             this.tipo = TipoEquipo.Cabina;
         }
-        #endregion
 
-        #region Metodos
         /// <summary>
         /// Sobrescribe el metodo ToString().
         /// Imprime los datos del telefono.
@@ -44,6 +39,5 @@ namespace Entidades
             sb.AppendLine($"\nMARCA: {marca}");
             return sb.ToString();
         }
-        #endregion
     }
 }

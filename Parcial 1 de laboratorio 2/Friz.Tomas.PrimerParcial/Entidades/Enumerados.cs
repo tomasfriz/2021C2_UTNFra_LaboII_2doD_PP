@@ -1,7 +1,6 @@
 ﻿
 namespace Entidades
 {
-    #region Enumerado
     /// <summary>
     /// Enumera los tipos de Software.
     /// </summary>
@@ -81,5 +80,4 @@ namespace Entidades
     {
         Libre, Limitado
     }
-    #endregion
 }
