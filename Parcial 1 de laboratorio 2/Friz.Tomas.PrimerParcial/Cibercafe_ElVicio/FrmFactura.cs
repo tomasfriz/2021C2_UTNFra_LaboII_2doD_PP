@@ -74,7 +74,14 @@ namespace Cibercafe_ElVicio
         /// <param name="e"></param>
         private void FrmFactura_Load(object sender, EventArgs e)
         {
-            txtTipo.Text = $"{factura}";
+            if (factura is ClienteTelefono)
+            {
+                txtTipo.Text = $"{((ClienteTelefono)factura).Tipo}";
+            }
+            else
+            {
+                txtTipo.Text = $"{((ClienteComputadora)factura).Tipo}";
+            }
             txtDuracion.Text = $"{factura.Duracion} minutos";
             txtCosto.Text = $"${factura.Costo}";
             txtIVA.Text = $"${factura.AgregarIVA()}";

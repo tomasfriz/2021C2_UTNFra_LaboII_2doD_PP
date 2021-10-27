@@ -24,7 +24,6 @@ namespace Entidades
         public ClienteComputadora()
         {
             random = new Random();
-            tipoServicio = TipoEquipo.Computadora;
             this.software = new List<Software>() { (Software)random.Next(0, 4) };
             this.perifericos = new List<Periferico>() { (Periferico)random.Next(0, 3) };
             this.juegos = new List<Juego>() { (Juego)random.Next(0, 6) };
@@ -119,18 +118,6 @@ namespace Entidades
             {
                 sb.AppendLine($"{juego}");
             }
-            return sb.ToString();
-        }
-        /// <summary>
-        /// Muestra la informacion del uso de la computadora hecho por el cliente.
-        /// </summary>
-        /// <returns>String con informacion de la llamada</returns>
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine($"Tiempo {Tipo}\n");
-            sb.AppendLine($"{base.ToString()}");
             return sb.ToString();
         }
     }
