@@ -288,8 +288,8 @@ namespace Cibercafe_ElVicio
             // 
             // btnEspecificacion
             // 
-            this.btnEspecificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             resources.ApplyResources(this.btnEspecificacion, "btnEspecificacion");
+            this.btnEspecificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnEspecificacion.Name = "btnEspecificacion";
             this.btnEspecificacion.UseVisualStyleBackColor = false;
             this.btnEspecificacion.Click += new System.EventHandler(this.BtnEspecificacion_Click);
