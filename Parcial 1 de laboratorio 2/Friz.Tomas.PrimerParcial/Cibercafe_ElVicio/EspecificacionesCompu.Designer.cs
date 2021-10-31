@@ -34,7 +34,7 @@ namespace Cibercafe_ElVicio
             this.label4 = new System.Windows.Forms.Label();
             this.rtbEspecificaciones = new System.Windows.Forms.RichTextBox();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.ibtnAyuda = new FontAwesome.Sharp.IconButton();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,26 +89,26 @@ namespace Cibercafe_ElVicio
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // ibtnAyuda
+            // btnAyuda
             // 
-            this.ibtnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ibtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ibtnAyuda.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
-            this.ibtnAyuda.IconColor = System.Drawing.Color.Black;
-            this.ibtnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnAyuda.IconSize = 25;
-            this.ibtnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnAyuda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ibtnAyuda.Location = new System.Drawing.Point(12, 360);
-            this.ibtnAyuda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ibtnAyuda.Name = "ibtnAyuda";
-            this.ibtnAyuda.Size = new System.Drawing.Size(114, 28);
-            this.ibtnAyuda.TabIndex = 8;
-            this.ibtnAyuda.Text = "Ayuda";
-            this.ibtnAyuda.UseVisualStyleBackColor = false;
-            this.ibtnAyuda.Click += new System.EventHandler(this.ibtnAyuda_Click);
+            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 25;
+            this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAyuda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnAyuda.Location = new System.Drawing.Point(12, 360);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(114, 28);
+            this.btnAyuda.TabIndex = 8;
+            this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click_1);
             // 
             // FrmEspecificaciones
             // 
@@ -116,7 +116,7 @@ namespace Cibercafe_ElVicio
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(158)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(491, 401);
-            this.Controls.Add(this.ibtnAyuda);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -136,7 +136,7 @@ namespace Cibercafe_ElVicio
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCerrar;
-        private FontAwesome.Sharp.IconButton ibtnAyuda;
+        private FontAwesome.Sharp.IconButton btnAyuda;
         private System.Windows.Forms.RichTextBox rtbEspecificaciones;
         private System.Windows.Forms.Label label4;
     }

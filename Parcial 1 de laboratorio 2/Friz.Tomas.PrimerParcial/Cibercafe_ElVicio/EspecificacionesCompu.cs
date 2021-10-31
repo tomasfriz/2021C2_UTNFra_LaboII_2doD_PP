@@ -13,26 +13,41 @@ namespace Cibercafe_ElVicio
 {
     public partial class FrmEspecificaciones : Form
     {
+        /// <summary>
+        /// Constructor de FrmEspecificaciones
+        /// </summary>
         public FrmEspecificaciones()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Se encarga de caegar todas las especificaciones de las computadoras.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmEspecificaciones_Load(object sender, EventArgs e)
         {
             rtbEspecificaciones.Text = Mostrar();
         }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Sirve para cerrar la aplicacion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-        private void ibtnAyuda_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Sirve para orientar al usuario a saber que hace cada boton de la aplicacion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAyuda_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("+ El boton 'Ayuda' te ayudara a saber el funcionamiento de los botones.\n" +
-               "+ El boton 'Cerrar' cierra la ventana actual.\n" +
-               "+ Podras ver la lista de las especificaciones de las computadoras en el cuadro blanco del centro\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              "+ El boton 'Cerrar' cierra la ventana actual.\n" +
+              "+ Podras ver la lista de las especificaciones de las computadoras en el cuadro blanco del centro\n", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /// <summary>
@@ -58,5 +73,6 @@ namespace Cibercafe_ElVicio
             }
             return sb.ToString();
         }
+        
     }
 }
