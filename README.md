@@ -29,9 +29,9 @@ Espero que le sea de su agrado.
 ___
 ## Diagrama de clases
 
-![DiagramaDelCibercafe](https://user-images.githubusercontent.com/36195779/136791776-1942f531-0ac4-46c1-92e0-6544403e32f9.png)
+![DiagramaDelCibercafe](https://user-images.githubusercontent.com/36195779/139595947-8ddc097f-248d-4a61-89cf-d9c6b534ac3f.png)
 
-![DiagramaDeEntidades](https://user-images.githubusercontent.com/36195779/136791805-d460d552-a1d6-453b-a7be-9cd786b2f3ca.png)
+![DiagramaDeEntidades](https://user-images.githubusercontent.com/36195779/139595958-36c8adf0-4424-40a8-9b87-3b92a7142b9f.png)
 
 ___
 ## Justificación técnica
